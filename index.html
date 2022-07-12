@@ -10,6 +10,9 @@
   <script defer src="script.js"></script>
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
   <script defer src="app/js/script.js"></script>
+  <script defer src="https://sdk.amazonaws.com/js/aws-sdk-2.7.16.min.js"></script>
+  <script defer src="app/js/aws.cognito-sdk.min.js"></script>
+  <script defer src="app/js/amazon-cognito-identiy.min.js"></script>
 </head>
 
 <body>
@@ -17,7 +20,10 @@
   <div class="flex gap--md">
     <a class="btn btn--primary" target="_blank"
       href="https://crht5bcup6.execute-api.us-east-1.amazonaws.com/default/ConfigStation">Map Station</a>
-    <button class="btn btn--primary" target="_blank" href="#">Refresh</button>
+    <button class="btn btn--secondary flex ai-c gap--sm" target="_blank" href="#">
+      <img class="icon--sm" src="images/icons/refresh.svg" alt="Refresh Icon">
+      Refresh
+    </button>
   </div>
 
   <div class="flex gap--md mtop--md">
