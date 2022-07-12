@@ -13,33 +13,128 @@
 
 <body>
 
-  <div class="table-group">
-    <table class="table">
-      <tbody>
-        <tr>
-          <td>test</td>
-        </tr>
-        <tr>
-          <td>test</td>
-        </tr>
-      </tbody>
-    </table>
-    <table>
-      <tbody>
-        <tr>
-          <td>test</td>
-        </tr>
-        <tr>
-          <td>test</td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="flex gap--md">
+    <button class="btn btn--primary" target="_blank"
+      href="https://crht5bcup6.execute-api.us-east-1.amazonaws.com/default/ConfigStation">Map Station</button>
+    <button class="btn btn--primary" target="_blank" href="#">Refresh</button>
   </div>
 
-  <button class="btn btn--primary" target="_blank" href="https://crht5bcup6.execute-api.us-east-1.amazonaws.com/default/ConfigStation">Map Station</button>
-  <div class="btn-group">
-    <input id="inputData" class="input__number" type="number" placeholder="Enter value">
-    <button class="btn btn--primary" onclick="WebSocketTest();">Run WebSocket</button>
+  <div class="flex gap--md mtop--md">
+    <div class="table__container">
+      <table class="table table__1-col">
+        <tbody class="table__body">
+          <tr class="table__row table__row--add-border">
+            <th class="table__heading">PI List</th>
+          </tr>
+          <tr class="table__row">
+            <td>
+              Content goes here
+            </td>
+          </tr>
+          <tr class="table__row">
+            <td>
+              Content goes here
+            </td>
+          </tr>
+          <tr class="table__row">
+            <td>
+              Content goes here
+            </td>
+          </tr>
+          <tr class="table__row">
+            <td>
+              Content goes here
+            </td>
+          </tr>
+          <tr class="table__row">
+            <td>
+              Content goes here
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table__container">
+      <table class="table table__1-col">
+        <tbody class="table__body">
+          <tr class="table__row table__row--add-border">
+            <th class="table__heading">ESP List</th>
+          </tr>
+          <tr class="table__row">
+            <td>
+              Content goes here
+            </td>
+          </tr>
+          <tr class="table__row">
+            <td>
+              Content goes here
+            </td>
+          </tr>
+          <tr class="table__row">
+            <td>
+              Content goes here
+            </td>
+          </tr>
+          <tr class="table__row">
+            <td>
+              Content goes here
+            </td>
+          </tr>
+          <tr class="table__row">
+            <td>
+              Content goes here
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="flex gap--md mtop--md">
+    <div class="table__container">
+      <table class="table table__2-col">
+        <tbody class="table__body">
+          <tr class="table__row table__row--add-border">
+            <th class="table__heading">Station #1</th>
+            <th class="table__heading"></th>
+          </tr>
+          <tr class="table__row">
+            <td>
+              Content goes here
+            </td>
+            <td>
+              Content goes here
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table__container">
+      <table class="table table__2-col">
+        <tbody class="table__body">
+          <tr class="table__row table__row--add-border">
+            <th class="table__heading">Station #2</th>
+            <th class="table__heading"></th>
+          </tr>
+          <tr class="table__row">
+            <td>
+              Content goes here
+            </td>
+            <td>
+              Content goes here
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <div class="flex gap--md mtop--md">
+    <input id="inputData" class="fieldset__text" type="number" placeholder="Enter value">
+    <button class="btn btn--primary" onclick="WebSocketTest();">Run Test</button>
   </div>
 </body>
 

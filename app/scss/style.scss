@@ -1,7 +1,10 @@
 @use "base/colors";
+@use "base/shadows";
 @use "base/globals";
 @use "base/typography";
 @use "base/images";
 @use "components/table";
 @use "components/button";
 @use "components/form";
+@use "utils/flex";
+@use "utils/spacing";

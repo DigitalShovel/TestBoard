@@ -87,12 +87,12 @@ textarea {
 
   &__text,
   &__select {
-    width: 100%;
     height: 100%;
     padding: 10px;
-    border: 0;
+    border: 1px solid var(--cool-gray-300);
     background-color: white;
-    border-radius: 0 0 5px 5px;
+    border-radius: 5px;
+    box-shadow: var(--shadow-sm);
   }
 
   &__radio {

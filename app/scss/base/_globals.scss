@@ -16,12 +16,12 @@ html {
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 2rem;
   font-family: Inter, Roboto, sans-serif;
   line-height: 1.4;
   overflow-x: hidden;
-  color: var(--blue-900);
-  background-color: white;
+  color: var(--blue-100);
+  background-color: var(--blue-900);
 }
 
 h1,
