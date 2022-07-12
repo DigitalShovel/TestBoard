@@ -78,7 +78,7 @@ function insertItem() {
 }
 
 function readItem() {
-  auth()
+  checkLogin();
   var docClient = new AWS.DynamoDB.DocumentClient();
 
   var params = {
