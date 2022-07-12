@@ -43,13 +43,13 @@ function checkLogin() {
 
 function auth() {
   AWS.config.update({
-    region: "none",
+    region: 'us-east-1',
   });
 
   AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-    IdentityPoolId: "us-east-1:1144803f-1500-4817-8324-4dd306317f6c",
+    IdentityPoolId: 'us-east-1:1144803f-1500-4817-8324-4dd306317f6c',
     Logins: {
-      "cognito-idp.us-ease-1.amazonaws.com/us-east-1_vUE45CGKG": idToken
+      "cognito-idp.us-east-1.amazonaws.com/us-east-1_vUE45CGKG": idToken
     }
   });
 }
