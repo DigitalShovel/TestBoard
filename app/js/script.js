@@ -41,8 +41,6 @@ function checkLogin() {
   }
 }
 
-const AWS = require('aws-sdk');
-
 function auth() {
   AWS.config.update({
     region: 'us-east-1'
