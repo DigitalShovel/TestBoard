@@ -1,0 +1,51 @@
+// Color Palette
+
+:root {
+  --primary-color: hsla(213, 75%, 54%, 1);
+  --blue-100: hsla(213, 100%, 97%, 1);
+  --blue-150: hsla(213, 100%, 95%, 1);
+  --blue-200: hsla(213, 100%, 90%, 1);
+  --blue-300: hsla(213, 100%, 80%, 1);
+  --blue-400: hsla(213, 69%, 70%, 1);
+  --blue-600: hsla(213, 69%, 42%, 1);
+  --blue-700: hsla(213, 78%, 32%, 1);
+  --blue-800: hsla(213, 78%, 22%, 1);
+  --blue-900: hsla(213, 78%, 16%, 1);
+
+  --blend-color-dark: hsla(0, 0%, 0%, 0.5);
+  --blend-color-light: hsla(0, 0%, 100%, 0.5);
+
+  --warm-gray-100: hsla(216, 5%, 98%, 1);
+  --warm-gray-200: hsla(214, 5%, 90%, 1);
+  --warm-gray-300: hsla(211, 10%, 80%, 1);
+  --warm-gray-400: hsla(211, 15%, 70%, 1);
+  --warm-gray-500: hsla(211, 15%, 60%, 1);
+  --warm-gray-600: hsla(211, 15%, 43%, 1);
+
+  --cool-gray-100: hsla(216, 100%, 98%, 1);
+  --cool-gray-200: hsla(214, 50%, 95%, 1);
+  --cool-gray-300: hsla(211, 32%, 85%, 1);
+  --cool-gray-400: hsla(211, 30%, 70%, 1);
+  --cool-gray-500: hsla(211, 33%, 55%, 1);
+  --cool-gray-600: hsla(211, 30%, 43%, 1);
+  --cool-gray-700: hsla(211, 30%, 33%, 1);
+  --cool-gray-800: hsla(211, 30%, 23%, 1);
+
+  --danger-100: hsla(0, 49%, 97%, 1);
+  --danger-200: hsla(0, 49%, 90%, 1);
+  --danger-500: hsla(0, 74%, 65%, 1);
+  --danger-600: hsla(360, 54%, 55%, 1);
+  --danger-700: hsla(360, 50%, 45%, 1);
+
+  --warning-100: hsla(43, 49%, 97%, 1);
+  --warning-200: hsla(43, 49%, 90%, 1);
+  --warning-500: hsla(40, 74%, 65%, 1);
+  --warning-600: hsla(40, 54%, 55%, 1);
+  --warning-700: hsla(40, 50%, 45%, 1);
+
+  --success-100: hsla(148, 49%, 97%, 1);
+  --success-200: hsla(148, 49%, 90%, 1);
+  --success-500: hsla(148, 64%, 65%, 1);
+  --success-600: hsla(148, 54%, 55%, 1);
+  --success-700: hsla(148, 50%, 45%, 1);
+}

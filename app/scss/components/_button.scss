@@ -1,0 +1,71 @@
+.btn-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  cursor: pointer;
+  border-radius: 100vh;
+  padding: 7px 15px;
+  letter-spacing: -0.1px;
+  font-weight: 500;
+  max-width: max-content;
+  border: none;
+
+  &:hover {
+    .btn__chevron {
+      path {
+        transition: all 150ms ease-out;
+      }
+
+      path:nth-child(1) {
+        d: path("M1.5 6L10.5 6");
+      }
+
+      path:nth-child(2) {
+        transform: translateX(4px);
+      }
+    }
+  }
+
+  &__chevron {
+    margin-left: 0.3rem;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  &--primary {
+    background-color: var(--primary-color);
+    color: var(--blue-100);
+
+    .btn__chevron path {
+      stroke: var(--blue-100);
+    }
+  }
+
+  &--secondary {
+    border: 1px solid var(--primary-color);
+
+    .btn__chevron path {
+      stroke: var(--primary-color);
+    }
+  }
+
+  &--tertiary {
+    color: var(--blue-900);
+
+    .btn__chevron path {
+      stroke: var(--blue-900);
+    }
+  }
+
+  &--white {
+    background-color: var(--blue-100);
+    color: var(--primary-color);
+
+    .btn__chevron path {
+      stroke: var(--primary-color);
+    }
+  }
+}

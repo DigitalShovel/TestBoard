@@ -1,0 +1,148 @@
+table {
+  border-collapse: collapse;
+
+  th {
+    min-width: 200px;
+    text-align: left;
+    letter-spacing: -0.1px;
+    border-bottom: 1px solid var(--blue-100);
+    border-top: 1px solid var(--blue-100);
+    color: var(--blue-900);
+  }
+
+  td {
+    text-align: center;
+    font-size: 0.8rem;
+    background-color: white;
+    color: var(--blue-900);
+    border: 1px solid var(--blue-100);
+  }
+
+  img {
+    position: relative;
+    top: 10px;
+    max-width: 200px;
+    padding: 1rem;
+  }
+}
+
+.table {
+  background-color: var(--blue-100);
+  box-shadow: 0px 48px 96px 0px hsla(213, 78%, 16%, 0.25);
+
+  &__container {
+    @media (max-width: 1200px) {
+      position: relative;
+      overflow-x: auto;
+      overflow-y: hidden;
+      width: 100%;
+      margin: 0 auto 0 0;
+    }
+  }
+
+  &__row {
+    position: relative;
+
+    &--add-border {
+      border-top: 1.1px solid var(--blue-200);
+      border-bottom: 1.1px solid var(--blue-200);
+    }
+  }
+
+  &__heading {
+    padding: 1rem 2rem;
+    font-size: 0.9rem;
+
+    &:first-child {
+      border-left: 1px solid var(--blue-100);
+    }
+
+    &:last-child {
+      border-right: 1px solid var(--blue-100);
+    }
+  }
+
+  &__heading-img {
+    padding-top: 1rem;
+    font-weight: 400;
+    font-size: 0.9rem;
+  }
+
+  &__subheading {
+    position: relative;
+    line-height: 1.2;
+    font-size: 0.8rem;
+    font-weight: 400;
+    background-color: white;
+    border: 1px solid var(--blue-100);
+    color: var(--cool-gray-500);
+    transition: background-color 150ms ease-in;
+    padding: 1.5rem 2rem 1.5rem calc(2rem + 22px); // specific padding only for the table subheadings that include an icon on the left
+
+    &::before {
+      content: "";
+      width: 22px;
+      height: 22px;
+      position: absolute;
+      left: 22px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-image: url("../../../images/icons/icon_info.svg");
+      background-repeat: no-repeat;
+    }
+
+    &:hover {
+      background-color: var(--blue-100);
+
+      .table__tooltip {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+  }
+
+  &__tooltip {
+    pointer-events: none;
+    position: absolute;
+    z-index: 999;
+    width: 35ch;
+    left: 100%;
+    top: 50%;
+    opacity: 0;
+    padding: 1rem;
+    border-radius: 5px;
+    line-height: 1.4;
+    color: var(--blue-900);
+    background-color: white;
+    transform: translateY(-50%);
+    transition: all 150ms ease-in;
+    box-shadow: 0px 0px 24px 0px hsla(213deg, 78%, 16%, 0.15);
+
+    &::after {
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: 50%;
+      left: -25px;
+      border: 15px solid hsla(0deg, 0%, 0%, 0);
+      border-left: 12px solid hsl(0deg, 0%, 100%);
+      transform: rotate(180deg) translateY(50%);
+      z-index: 999;
+    }
+  }
+
+  &__checkmark {
+    background-image: url(../../../images/icons/icon_checkmark-regular.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 22px 22px;
+  }
+
+  &__x-mark {
+    background-image: url(../../../images/icons/icon_close-filled.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 22px 22px;
+  }
+}
