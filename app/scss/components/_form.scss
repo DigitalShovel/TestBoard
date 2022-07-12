@@ -52,13 +52,6 @@ select {
   padding-left: 7px;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
-  outline: 1px solid var(--blue-900);
-  outline-offset: -1px;
-}
-
 input::placeholder,
 textarea::placeholder {
   color: #9cb2ca;

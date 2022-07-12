@@ -39,9 +39,9 @@ p {
 
 a,
 button,
-input {
+input,
+textarea {
   text-decoration: none;
-  color: var(--primary-color);
 
   &:focus-visible {
     outline: 0 none;
