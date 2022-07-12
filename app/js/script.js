@@ -37,8 +37,9 @@ function checkLogin() {
   idToken = url.searchParams.get("id_token");
   if (idToken != null) {
     document.getElementById("welcomeMsg").innerHTML = "signed in";
-    auth();
+    //auth();
   }
+  auth();
 }
 
 function auth() {
