@@ -43,16 +43,13 @@ function checkLogin() {
 
 function auth() {
   AWS.config.update({
-    region: "us-east-2",
-    //  endpoint: 'http://localhost:8000', // If you use dynamoDB installed locally
-    //  accessKeyId: "(ACCESS_KEY_ID)",
-    //  secretAccessKey: "(SECRET_ACCESS_KEY)"
+    region: "us-east-1",
   });
 
   AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-    IdentityPoolId: "(IDENTITY POOL ID)",
+    IdentityPoolId: "us-east-1:1144803f-1500-4817-8324-4dd306317f6c",
     Logins: {
-      "cognito-idp.(AWS_REGION).amazonaws.com/(POOL_ID)": idToken,
+      "cognito-idp.us-ease-1.amazonaws.com/us-east-1_vUE45CGKG": idToken,
     },
   });
 }
@@ -84,10 +81,9 @@ function readItem() {
   var docClient = new AWS.DynamoDB.DocumentClient();
 
   var params = {
-    TableName: "Person",
+    TableName: "IoT_Testing_Unit_RaspPI",
     Key: {
-      FirstName: "John", // Partition Key
-      LastName: "Smith", // Sort/Range Key
+      MacAddress: "E4:5F:01:8F:E0:50",
     },
   };
   docClient.get(params, function (err, data) {
