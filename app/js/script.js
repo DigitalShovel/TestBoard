@@ -49,8 +49,8 @@ function auth() {
   AWS.config.credentials = new AWS.CognitoIdentityCredentials({
     IdentityPoolId: "us-east-1:1144803f-1500-4817-8324-4dd306317f6c",
     Logins: {
-      "cognito-idp.us-ease-1.amazonaws.com/us-east-1_vUE45CGKG": idToken,
-    },
+      "cognito-idp.us-ease-1.amazonaws.com/us-east-1_vUE45CGKG": idToken
+    }
   });
 }
 
