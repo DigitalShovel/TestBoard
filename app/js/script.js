@@ -43,7 +43,9 @@ function checkLogin() {
 
 function auth() {
   AWS.config.update({
-    region: 'us-east-1'
+    region: 'us-east-1',
+    accessKeyId: "xxxxxx",
+    secretAccessKey: "xxxxxx"
   });
 
   AWS.config.credentials = new AWS.CognitoIdentityCredentials({
