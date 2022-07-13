@@ -33,8 +33,8 @@ var idToken = null;
 
 function checkLogin() {
   var url_string = window.location.href;
-  console.log("URL String: "+url_string);
   var url = new URL(url_string);
+  console.log("URL: "+url);
   console.log("Before: "+idToken);
   idToken = url.searchParams.get("id_token");
   console.log("After: "+idToken);
