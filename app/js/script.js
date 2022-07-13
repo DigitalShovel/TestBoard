@@ -78,6 +78,14 @@ function insertItem() {
   });
 }
 
+function onScan(err, data){
+  if (err) {
+    document.getElementById("textarea").innerHTML = "Unable to read item: " + "\n" + JSON.stringify(err, undefined, 2);
+  } else {
+    document.getElementById("textarea").innerHTML = "GetItem succeeded: " + "\n" + JSON.stringify(data, undefined, 2);
+  }
+}
+
 function readItem() {
   var docClient = new AWS.DynamoDB.DocumentClient();
 
@@ -91,15 +99,15 @@ function readItem() {
   var item = {
     TableName: "IoT_Result_ESP32"
   };
-  docClient.query(item, function(err,data) {
+  docClient.query(item, onScan);
 
-  //docClient.get(params, function (err, data) {
+  /*docClient.get(params, function (err, data) {
     if (err) {
       document.getElementById("textarea").innerHTML = "Unable to read item: " + "\n" + JSON.stringify(err, undefined, 2);
     } else {
       document.getElementById("textarea").innerHTML = "GetItem succeeded: " + "\n" + JSON.stringify(data, undefined, 2);
     }
-  });
+  });*/
 }
 
 function signInButton() {
