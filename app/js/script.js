@@ -99,7 +99,7 @@ function readItem() {
   var item = {
     TableName: "IoT_Result_ESP32"
   };
-  await docClient.scan(item, onScan);
+  docClient.scan(item, onScan);
 
   /*docClient.get(params, function (err, data) {
     if (err) {
