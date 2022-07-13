@@ -32,7 +32,7 @@ function WebSocketTest() {
 var idToken = null;
 
 function checkLogin() {
-  signInButton();
+  idToken = signInButton();
   var url_string = window.location.href;
   var url = new URL(url_string);
   //idToken = url.searchParams.get("id_token");
@@ -130,7 +130,6 @@ function signInButton() {
     onSuccess: function (result) {
       //console.log(JSON.stringify(result));
       var accessToken = result.getAccessToken().getJwtToken();
-      idToken = accessToken;
       console.log(accessToken);
     },
 
@@ -138,4 +137,5 @@ function signInButton() {
       alert(err.message || JSON.stringify(err));
     },
   });
+  return accessToken;
 }
