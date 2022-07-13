@@ -89,26 +89,18 @@ function onScan(err, data){
 function readItem() {
   var docClient = new AWS.DynamoDB.DocumentClient();
 
-  var params = {
+  /*var params = {
     TableName: "IoT_Result_ESP32",
     Key: {
       MacAddress: "E4:5F:01:8F:E0:50",
     },
-  };
+  };*/
 
   var item = {
     TableName: "IoT_Result_ESP32",
     ProjectionExpression: "MacAddress"
   };
   docClient.scan(item, onScan);
-
-  /*docClient.get(params, function (err, data) {
-    if (err) {
-      document.getElementById("textarea").innerHTML = "Unable to read item: " + "\n" + JSON.stringify(err, undefined, 2);
-    } else {
-      document.getElementById("textarea").innerHTML = "GetItem succeeded: " + "\n" + JSON.stringify(data, undefined, 2);
-    }
-  });*/
 }
 
 function signInButton() {
