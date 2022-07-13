@@ -35,7 +35,7 @@ function checkLogin() {
   var url_string = window.location.href;
   var url = new URL(url_string);
   idToken = url.searchParams.get("id_token");
-  console.log(idToken)
+  //console.log(idToken)
   if (idToken != null) {
     document.getElementById("welcomeMsg").innerHTML = "signed in";
     auth();
@@ -127,9 +127,9 @@ function signInButton() {
 
   cognitoUser.authenticateUser(authenticationDetails, {
     onSuccess: function (result) {
-      console.log(JSON.stringify(result));
-      // var accessToken = result.getAccessToken().getJwtToken();
-      // console.log(accessToken);
+      //console.log(JSON.stringify(result));
+      var accessToken = result.getAccessToken().getJwtToken();
+      console.log(accessToken);
     },
 
     onFailure: function (err) {
