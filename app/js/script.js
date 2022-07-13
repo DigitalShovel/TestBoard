@@ -102,9 +102,9 @@ function readItem() {
     ExpressionAttributeValues: {
       ":v_station": "1"
     },
-    ProjectionExpression: 'MacAddress, Station'
+    ProjectionExpression: 'MacAddress'
   };
-  docClient.query(item, onScan);
+  docClient.scan(item, onScan);
 
   /*docClient.get(params, function (err, data) {
     if (err) {
