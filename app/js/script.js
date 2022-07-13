@@ -29,12 +29,14 @@ function WebSocketTest() {
   }
 }
 
-var idToken = null;
+let idToken = null;
 
 function checkLogin() {
-  var url_string = window.location.href;
-  var url = new URL(url_string);
+  let url_string = window.location.href;
+  let url = new URL(url_string);
+  console.log("Before: "+idToken);
   idToken = url.searchParams.get("id_token");
+  console.log("After: "+idToken);
   if (idToken != null) {
     document.getElementById("welcomeMsg").innerHTML = "signed in";
     auth();
@@ -43,7 +45,7 @@ function checkLogin() {
 
 function auth() {
   AWS.config.update({
-    region: 'none',
+    region: 'us-east-1'
   });
 
   AWS.config.credentials = new AWS.CognitoIdentityCredentials({
@@ -77,22 +79,29 @@ function insertItem() {
   });
 }
 
+function onScan(err, data){
+  if (err) {
+    document.getElementById("textarea").innerHTML = "Unable to read item: " + "\n" + JSON.stringify(err, undefined, 2);
+  } else {
+    document.getElementById("textarea").innerHTML = "GetItem succeeded: " + "\n" + JSON.stringify(data, undefined, 2);
+  }
+}
+
 function readItem() {
   var docClient = new AWS.DynamoDB.DocumentClient();
 
-  var params = {
-    TableName: "IoT_Testing_Unit_RaspPI",
+  /*var params = {
+    TableName: "IoT_Result_ESP32",
     Key: {
       MacAddress: "E4:5F:01:8F:E0:50",
     },
+  };*/
+
+  var item = {
+    TableName: "IoT_Testing_Unit_RaspPI",
+    ProjectionExpression: "MacAddress"
   };
-  docClient.get(params, function (err, data) {
-    if (err) {
-      document.getElementById("textarea").innerHTML = "Unable to read item: " + "\n" + JSON.stringify(err, undefined, 2);
-    } else {
-      document.getElementById("textarea").innerHTML = "GetItem succeeded: " + "\n" + JSON.stringify(data, undefined, 2);
-    }
-  });
+  docClient.scan(item, onScan);
 }
 
 function signInButton() {
@@ -104,8 +113,8 @@ function signInButton() {
   var authenticationDetails = new AmazonCognitoIdentity.AuthenticationDetails(authenticationData);
 
   var poolData = {
-    UserPoolId: "(POOL_ID)", // Your user pool id here
-    ClientId: "(APP_CLIENT_ID)", // Your client id here
+    UserPoolId: "us-east-1_vUE45CGKG", // Your user pool id here
+    ClientId: "73p6ql33opui1okr4hf9f60o8i", // Your client id here
   };
 
   var userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
@@ -119,13 +128,15 @@ function signInButton() {
 
   cognitoUser.authenticateUser(authenticationDetails, {
     onSuccess: function (result) {
-      console.log(JSON.stringify(result));
-      // var accessToken = result.getAccessToken().getJwtToken();
-      // console.log(accessToken);
+      //console.log(JSON.stringify(result));
+      let accessToken = result.getAccessToken().getJwtToken();
+      idToken = accessToken;
+      //console.log(accessToken);
     },
 
     onFailure: function (err) {
       alert(err.message || JSON.stringify(err));
     },
   });
+  return accessToken;
 }
