@@ -35,7 +35,7 @@ function checkLogin() {
   var url_string = window.location.href;
   var url = new URL(url_string);
   console.log("Before: "+idToken);
-  idToken = url.searchParams.get("id_token");
+  idToken = url.searchParams.get("#id_token");
   console.log("After: "+idToken);
   if (idToken != null) {
     document.getElementById("welcomeMsg").innerHTML = "signed in";
