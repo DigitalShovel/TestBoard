@@ -29,14 +29,14 @@ function WebSocketTest() {
   }
 }
 
-var idToken = null;
+let idToken = null;
 
 function checkLogin() {
-  var url_string = window.location.href;
-  var url = new URL(url_string);
-  console.log("URL: "+url);
+  let url_string = window.location.href;
+  let url = new URL(url_string);
   console.log("Before: "+idToken);
-  idToken = url.searchParams.get("id_token");
+  //idToken = url.searchParams.get("id_token");
+  idToken = new URLSearchParams(url.search);
   console.log("After: "+idToken);
   if (idToken != null) {
     document.getElementById("welcomeMsg").innerHTML = "signed in";
