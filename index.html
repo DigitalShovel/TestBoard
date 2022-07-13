@@ -12,7 +12,7 @@
   <script defer src="app/js/script.js"></script>
   <script defer src="https://sdk.amazonaws.com/js/aws-sdk-2.7.16.min.js"></script>
   <script defer src="app/js/aws.cognito-sdk.min.js"></script>
-  <script defer src="app/js/amazon-cognito-identiy.min.js"></script>
+  <script defer src="app/js/amazon-cognito-identity.min.js"></script>
 </head>
 
 <body onload="checkLogin()">  
@@ -141,6 +141,8 @@
     </div>
   </div>
 
+  <div id="welcomeMsg"></div> <br>
+  <a href="https://testboard.auth.us-east-1.amazoncognito.com/login?client_id=75c9agrkfbmc6a5hbs0v8a8o6f&response_type=token&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=https://ds-testboard.netlify.app/">Login</a>
 
   <div class="flex gap--md mtop--md">
     <input id="inputData" class="fieldset__text" type="number" placeholder="Enter value">
