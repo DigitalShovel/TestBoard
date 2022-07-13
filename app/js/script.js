@@ -97,18 +97,9 @@ function readItem() {
   };
 
   var item = {
-    TableName: "IoT_Result_ESP32",
-    IndexName: "StationIndex",
-    ProjectionExpression: 'CTESP',
-    ExpressionAttributeNames: {
-      '#Station': 'Station'
-    },
-    KeyConditionExpression: '#Station = :v_station',
-    ExpressionAttributeValues: {
-      ":v_station": "1"
-    }
+    TableName: "IoT_Result_ESP32"
   };
-  docClient.query(item, onScan);
+  await docClient.scan(item, onScan);
 
   /*docClient.get(params, function (err, data) {
     if (err) {
