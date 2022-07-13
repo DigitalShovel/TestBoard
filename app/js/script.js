@@ -87,7 +87,13 @@ function readItem() {
       MacAddress: "E4:5F:01:8F:E0:50",
     },
   };
-  docClient.get(params, function (err, data) {
+
+  var item = {
+    TableName: "IoT_Result_ESP32"
+  };
+  docClient.query(item, function(err,data) {
+
+  //docClient.get(params, function (err, data) {
     if (err) {
       document.getElementById("textarea").innerHTML = "Unable to read item: " + "\n" + JSON.stringify(err, undefined, 2);
     } else {
