@@ -97,7 +97,7 @@ function readItem() {
   };*/
 
   var item = {
-    TableName: "IoT_Result_ESP32",
+    TableName: "IoT_Testing_Unit_RaspPI",
     ProjectionExpression: "MacAddress"
   };
   docClient.scan(item, onScan);
