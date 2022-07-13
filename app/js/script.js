@@ -82,7 +82,7 @@ function readItem() {
   var docClient = new AWS.DynamoDB.DocumentClient();
 
   var params = {
-    TableName: "IoT_Testing_Unit_RaspPI",
+    TableName: "IoT_Result_ESP32",
     Key: {
       MacAddress: "E4:5F:01:8F:E0:50",
     },
