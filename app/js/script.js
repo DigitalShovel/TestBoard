@@ -106,8 +106,8 @@ function readItem() {
 
 function signInButton() {
   var authenticationData = {
-    Username: document.getElementById("inputUsername").value,
-    Password: document.getElementById("inputPassword").value,
+    Username: "hugo",//document.getElementById("inputUsername").value,
+    Password: "Pedrodepacas87"//document.getElementById("inputPassword").value,
   };
 
   var authenticationDetails = new AmazonCognitoIdentity.AuthenticationDetails(authenticationData);
@@ -120,7 +120,7 @@ function signInButton() {
   var userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
 
   var userData = {
-    Username: document.getElementById("inputUsername").value,
+    Username: "hugo",//document.getElementById("inputUsername").value,
     Pool: userPool,
   };
 
