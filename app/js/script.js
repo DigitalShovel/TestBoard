@@ -36,7 +36,7 @@ function checkLogin() {
   var url_string = window.location.href;
   var url = new URL(url_string);
   //idToken = url.searchParams.get("id_token");
-  //console.log(idToken)
+  console.log(idToken)
   if (idToken != null) {
     document.getElementById("welcomeMsg").innerHTML = "signed in";
     auth();
@@ -131,7 +131,7 @@ function signInButton() {
       //console.log(JSON.stringify(result));
       let accessToken = result.getAccessToken().getJwtToken();
       idToken = accessToken;
-      console.log(accessToken);
+      //console.log(accessToken);
     },
 
     onFailure: function (err) {
