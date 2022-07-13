@@ -97,8 +97,7 @@ function readItem() {
   };
 
   var item = {
-    TableName: "IoT_Result_ESP32",
-    KeyConditionExpression: "MacAddress = :v1"
+    TableName: "IoT_Result_ESP32"
   };
   docClient.query(item, onScan);
 
