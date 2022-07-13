@@ -98,7 +98,6 @@ function readItem() {
 
   var item = {
     TableName: "IoT_Result_ESP32",
-    IndexName: "StationIndex",
     KeyConditionExpression: 'Station = :v_station',
     ExpressionAttributeValues: {
       ":v_station": "1"
