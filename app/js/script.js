@@ -32,11 +32,11 @@ function WebSocketTest() {
 var idToken = null;
 
 function checkLogin() {
-  idToken = signInButton();
   var url_string = window.location.href;
   var url = new URL(url_string);
-  //idToken = url.searchParams.get("id_token");
-  console.log(idToken)
+  console.log("Before: "+idToken);
+  idToken = url.searchParams.get("id_token");
+  console.log("After: "+idToken);
   if (idToken != null) {
     document.getElementById("welcomeMsg").innerHTML = "signed in";
     auth();
@@ -106,8 +106,8 @@ function readItem() {
 
 function signInButton() {
   var authenticationData = {
-    Username: "hugo",//document.getElementById("inputUsername").value,
-    Password: "Pedrodepacas87"//document.getElementById("inputPassword").value,
+    Username: document.getElementById("inputUsername").value,
+    Password: document.getElementById("inputPassword").value,
   };
 
   var authenticationDetails = new AmazonCognitoIdentity.AuthenticationDetails(authenticationData);
@@ -120,7 +120,7 @@ function signInButton() {
   var userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
 
   var userData = {
-    Username: "hugo",//document.getElementById("inputUsername").value,
+    Username: document.getElementById("inputUsername").value,
     Pool: userPool,
   };
 
