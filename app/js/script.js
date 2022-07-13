@@ -98,6 +98,7 @@ function readItem() {
 
   var item = {
     TableName: "IoT_Result_ESP32",
+    IndexName: "MacAddressIndex",
     ProjectionExpression: 'MacAddress',
     ExpressionAttributeNames: {
       '#Station': 'Station'
