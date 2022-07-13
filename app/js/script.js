@@ -51,7 +51,7 @@ function auth() {
     Logins: {
       "cognito-idp.us-east-1.amazonaws.com/us-east-1_vUE45CGKG": idToken
     }
-  }, { region: 'us-east-1'});
+  });
 }
 
 function insertItem() {
@@ -78,8 +78,8 @@ function insertItem() {
 }
 
 function readItem() {
-  checkLogin();
-  auth();
+  //checkLogin();
+  //auth();
   var docClient = new AWS.DynamoDB.DocumentClient();
 
   var params = {
