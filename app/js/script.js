@@ -98,13 +98,16 @@ function readItem() {
 
   var item = {
     TableName: "IoT_Result_ESP32",
-    FilterExpression: 'Station = :v_station',
+    ProjectionExpression: 'MacAddress',
+    ExpressionAttributeNames: {
+      '#Station': 'Station'
+    },
+    KeyConditionExpression: '#Station = :v_station',
     ExpressionAttributeValues: {
       ":v_station": "1"
-    },
-    ProjectionExpression: 'MacAddress'
+    }
   };
-  docClient.scan(item, onScan);
+  docClient.query(item, onScan);
 
   /*docClient.get(params, function (err, data) {
     if (err) {
