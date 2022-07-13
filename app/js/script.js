@@ -47,11 +47,11 @@ function auth() {
   });
 
   AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-    identityPoolId: 'us-east-1:1144803f-1500-4817-8324-4dd306317f6c',
+    IdentityPoolId: 'us-east-1:1144803f-1500-4817-8324-4dd306317f6c',
     Logins: {
       "cognito-idp.us-east-1.amazonaws.com/us-east-1_vUE45CGKG": idToken
     }
-  });
+  }, { region: 'us-east-1'});
 }
 
 function insertItem() {
