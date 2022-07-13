@@ -98,7 +98,7 @@ function readItem() {
 
   var item = {
     TableName: "IoT_Result_ESP32",
-    ProjectionExpression: "MacAddress,Station"
+    ProjectionExpression: "MacAddress"
   };
   docClient.scan(item, onScan);
 
