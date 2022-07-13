@@ -34,9 +34,7 @@ let idToken = null;
 function checkLogin() {
   let url_string = window.location.href;
   let url = new URL(url_string);
-  console.log("Before: "+idToken);
   idToken = url.searchParams.get("id_token");
-  console.log("After: "+idToken);
   if (idToken != null) {
     document.getElementById("welcomeMsg").innerHTML = "signed in";
     auth();
@@ -130,13 +128,11 @@ function signInButton() {
     onSuccess: function (result) {
       //console.log(JSON.stringify(result));
       let accessToken = result.getAccessToken().getJwtToken();
-      idToken = accessToken;
-      //console.log(accessToken);
+      console.log(accessToken);
     },
 
     onFailure: function (err) {
       alert(err.message || JSON.stringify(err));
     },
   });
-  return accessToken;
 }
