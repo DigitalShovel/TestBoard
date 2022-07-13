@@ -112,7 +112,7 @@ function signInButton() {
 
   var poolData = {
     UserPoolId: "us-east-1_vUE45CGKG", // Your user pool id here
-    ClientId: "73p6ql33opui1okr4hf9f60o8i", // Your client id here
+    ClientId: "75c9agrkfbmc6a5hbs0v8a8o6f", // Your client id here
   };
 
   var userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
