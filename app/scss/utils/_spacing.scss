@@ -1,5 +1,5 @@
 .container {
-  max-width: 1080px;
+  max-width: 600px;
   margin: 0 auto;
   padding: 6rem 2rem;
 
@@ -13,6 +13,10 @@
 
   @media (max-width: 375px) {
     padding: 3rem 1rem;
+  }
+
+  &__input {
+    max-width: 400px;
   }
 }
 

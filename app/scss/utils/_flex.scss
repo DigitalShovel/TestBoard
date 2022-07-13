@@ -33,6 +33,9 @@
 }
 
 .gap {
+  &--xsm {
+    gap: 0.25rem;
+  }
   &--sm {
     gap: 0.5rem;
   }

@@ -1,12 +1,11 @@
 form {
   position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  background-color: var(--blue-600);
-  max-width: 600px;
-  padding: 2rem;
   border-radius: 10px;
+  margin: 0;
+
+  @media (max-width: 568px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 label {
@@ -30,7 +29,6 @@ input[type="radio"] {
 }
 
 .form {
-  margin-bottom: 10vh;
   padding: 0 2rem;
 
   &__container {
@@ -52,6 +50,14 @@ select {
   padding-left: 7px;
 }
 
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 0 none;
+  box-shadow: 0 0 0 3px var(--blend-color-light), 0 0 0 3px var(--primary-color);
+  border-color: var(--primary-color);
+}
+
 input::placeholder,
 textarea::placeholder {
   color: #9cb2ca;
@@ -64,10 +70,13 @@ textarea {
 
 .fieldset {
   position: relative;
+  border: 1px solid var(--cool-gray-300);
+  border-radius: 5px;
 
   &__label {
     position: relative;
     font-size: 12px;
+    text-align: left;
     font-weight: 600;
     left: 0;
     background-color: #f0f7ff;
@@ -80,12 +89,13 @@ textarea {
 
   &__text,
   &__select {
+    z-index: 99;
+    width: 100%;
     height: 100%;
     padding: 10px;
-    border: 1px solid var(--cool-gray-300);
+    border: 0;
     background-color: white;
-    border-radius: 5px;
-    box-shadow: var(--shadow-sm);
+    border-radius: 0 0 5px 5px;
   }
 
   &__radio {
@@ -97,6 +107,10 @@ textarea {
     text-align: center;
     background-color: white;
     color: var(--cool-gray-400);
+
+    @media (max-width: 568px) {
+      font-size: 0.8rem;
+    }
 
     &--add-border {
       border-right: 1px solid var(--cool-gray-300);
@@ -112,7 +126,17 @@ textarea {
     }
   }
 
+  &__message {
+    @media (max-width: 568px) {
+      height: 150px;
+    }
+  }
+
   &__full-width {
     grid-column: 1/3;
+
+    @media (max-width: 568px) {
+      grid-column: 1;
+    }
   }
 }
