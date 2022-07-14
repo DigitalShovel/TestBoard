@@ -31,6 +31,8 @@ function WebSocketTest() {
 
 let idToken = null;
 
+function empty(){}
+
 function checkLogin() {
   let url_string = window.location.href;
   let url = new URL(url_string);
@@ -46,29 +48,12 @@ function auth() {
     region: 'us-east-1',
   });
 
-  /*AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+  AWS.config.credentials = new AWS.CognitoIdentityCredentials({
     IdentityPoolId: 'us-east-1:1144803f-1500-4817-8324-4dd306317f6c',
     Logins: {
       "cognito-idp.us-east-1.amazonaws.com/us-east-1_vUE45CGKG": idToken
     }
-  });*/
-  var cognitoUser = userPool.getCurrentUser();
-  console.log("CognitoUser:"+cognitoUser);
-  if (cognitoUser != null) {
-    cognitoUser.getSession(function(err, result) {
-      if (result) {
-        console.log('You are now logged in.');
-
-        // Add the User's Id Token to the Cognito credentials login map.
-        AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-          IdentityPoolId: 'us-east-1:1144803f-1500-4817-8324-4dd306317f6c',
-          Logins: {
-            'cognito-idp.us-east-1.amazonaws.com/us-east-1_vUE45CGKG': result.getIdToken().getJwtToken()
-          }
-        });
-      }
-    });
-  }
+  });
 }
 
 function insertItem() {
@@ -120,6 +105,7 @@ function readItem() {
 }
 
 function signInButton() {
+  ///// Authenticating a user and estabilishing a user session with Amazon Cognito Identity service
   var authenticationData = {
     Username: document.getElementById("inputUsername").value,
     Password: document.getElementById("inputPassword").value,
@@ -133,20 +119,35 @@ function signInButton() {
   };
 
   var userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
-
   var userData = {
     Username: document.getElementById("inputUsername").value,
     Pool: userPool,
   };
 
   var cognitoUser = new AmazonCognitoIdentity.CognitoUser(userData);
-
   cognitoUser.authenticateUser(authenticationDetails, {
     onSuccess: function (result) {
-      //console.log(JSON.stringify(result));
-      var accessToken = result.getAccessToken().getJwtToken();
-      var idTokenJWT = result.getIdToken().getJwtToken();
-      location.replace("https://ds-testboard.netlify.app/testing.html?id_token="+idTokenJWT);
+      //var accessToken = result.getAccessToken().getJwtToken();
+      AWS.config.region = 'us-east-1';
+      AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+        IdentityPoolId: 'us-east-1:1144803f-1500-4817-8324-4dd306317f6c',
+        Logins: {
+          "cognito-idp.us-east-1.amazonaws.com/us-east-1_vUE45CGKG": result
+                      .getIdToken()
+                      .getJwtToken(),
+        },
+      });
+      location.replace("https://ds-testboard.netlify.app/testing.html?id_token="+result.getIdToken().getJwtToken());
+      //var idTokenJWT = result.getIdToken().getJwtToken();
+      AWS.config.credentials.refresh(error => {
+        if (error) {
+          console.error(error);
+        }
+        else {
+          console.log('Succesfully logged!');
+        }
+      });
+      //location.replace("https://ds-testboard.netlify.app/testing.html?id_token="+idTokenJWT);
     },
 
     onFailure: function (err) {
