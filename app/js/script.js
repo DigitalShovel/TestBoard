@@ -30,15 +30,67 @@ function WebSocketTest() {
 }
 
 let idToken = null;
+let user = null;
+let pass = null;
 
 function empty(){
-  AWS.config.credentials.refresh(error => {
-    if (error) {
-      console.error(error);
-    }
-    else {
-      console.log('Succesfully logged!');
-    }
+  let url_string = window.location.href;
+  let url = new URL(url_string);
+  user = url.searchParams.get("user");
+  pass = url.searchParams.get("password");
+  console.log("User: "+user+"\nPassword: "+pass);
+  verifyAuth();
+}
+
+function verifyAuth(){
+  ///// Authenticating a user and estabilishing a user session with Amazon Cognito Identity service
+  var authenticationData = {
+    Username: user,
+    Password: pass,
+  };
+
+  var authenticationDetails = new AmazonCognitoIdentity.AuthenticationDetails(authenticationData);
+
+  var poolData = {
+    UserPoolId: "us-east-1_vUE45CGKG", // Your user pool id here
+    ClientId: "73p6ql33opui1okr4hf9f60o8i", // Your client id here
+  };
+
+  var userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
+  var userData = {
+    Username: document.getElementById("inputUsername").value,
+    Pool: userPool,
+  };
+
+  var cognitoUser = new AmazonCognitoIdentity.CognitoUser(userData);
+  cognitoUser.authenticateUser(authenticationDetails, {
+    onSuccess: function (result) {
+      //var accessToken = result.getAccessToken().getJwtToken();
+      AWS.config.update({
+        region: 'us-east-1',
+      });
+      AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+        IdentityPoolId: 'us-east-1:1144803f-1500-4817-8324-4dd306317f6c',
+        Logins: {
+          "cognito-idp.us-east-1.amazonaws.com/us-east-1_vUE45CGKG": result
+                      .getIdToken()
+                      .getJwtToken(),
+        },
+      });
+
+      AWS.config.credentials.refresh(error => {
+        if (error) {
+          console.error(error);
+        }
+        else {
+          console.log('Succesfully logged!');
+        }
+      });
+    },
+
+    onFailure: function (err) {
+      alert(err.message || JSON.stringify(err));
+    },
   });
 }
 
@@ -149,9 +201,18 @@ function signInButton() {
         },
       });
       //location.replace("https://ds-testboard.netlify.app/testing.html?id_token="+result.getIdToken().getJwtToken());
-      location.replace("https://ds-testboard.netlify.app/testing.html");
+      location.replace("https://ds-testboard.netlify.app/testing.html?user="+Username+"?password="+Password);
       //var idTokenJWT = result.getIdToken().getJwtToken();
       
+      AWS.config.credentials.refresh(error => {
+        if (error) {
+          console.error(error);
+        }
+        else {
+          console.log('Succesfully logged!');
+        }
+      });
+
       //location.replace("https://ds-testboard.netlify.app/testing.html?id_token="+idTokenJWT);
     },
 
