@@ -29,179 +29,53 @@ function WebSocketTest() {
   }
 }
 
-let idToken = null;
-let user = null;
-let pass = null;
-
-function empty(){
-  let url_string = window.location.href;
-  let url = new URL(url_string);
-  user = url.searchParams.get("user");
-  pass = url.searchParams.get("password");
-  console.log("User: "+user+"\nPassword: "+pass);
-  verifyAuth();
-}
-
-function verifyAuth(){
-  var poolData = {
-    UserPoolId: "us-east-1_vUE45CGKG", // Your user pool id here
-    ClientId: "73p6ql33opui1okr4hf9f60o8i", // Your client id here
-  };
-
-  var userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
-  var userData = {
-    Username: user,
-    Pool: userPool,
-  };
-  ///// Authenticating a user and estabilishing a user session with Amazon Cognito Identity service
-  var authenticationData = {
-    Username: user,
-    Password: pass,
-  };
-  var authenticationDetails = new AWSCognito.CognitoIdentityServiceProvider.AuthenticationDetails(authenticationData);
-
-  var cognitoUser = new AWSCognito.CognitoIdentityServiceProvider.CognitoUser(userData);
-  cognitoUser.authenticateUser(authenticationDetails, {
-    onSuccess: function (result) {
-        console.log('access token + ' + result.getAccessToken().getJwtToken());
-        AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-          IdentityPoolId: 'us-east-1:1144803f-1500-4817-8324-4dd306317f6c',
-          Logins: {
-              'cognito-idp.us-east-1.amazonaws.com/us-east-1_vUE45CGKG': result.getIdToken().getJwtToken()
-          }
-        }); 
-    },
-
-    onFailure: function(err) {
-        alert(err);
-    },
-    mfaRequired: function(codeDeliveryDetails) {
-        var verificationCode = prompt('Please input verification code' ,'');
-        cognitoUser.sendMFACode(verificationCode, this);
-    }
-});
-
-  AWS.config.credentials.get(function(err){
-    if (err) {
-        alert(err);
-    }
-  });
-}
-
+////////////// Check for Login Token //////////////////
 function checkLogin() {
-  let url_string = window.location.href;
-  let url = new URL(url_string);
+  var idToken = null;
+  var url_string = window.location.href;
+  var url = new URL(url_string);
   idToken = url.searchParams.get("id_token");
-  console.log(idToken);
   if (idToken != null) {
-    auth();
+      console.log("User Signed In!");
+      auth();
   }
 }
+////////////////////////////////////////////////////////
 
+///////////////////// Authorize ////////////////////////
 function auth() {
   AWS.config.update({
-    region: 'us-east-1',
+    region: "us-east-1",
+  //  endpoint: 'http://localhost:8000', // If you use dynamoDB installed locally
+  //  accessKeyId: "(ACCESS_KEY_ID)",
+  //  secretAccessKey: "(SECRET_ACCESS_KEY)"
   });
 
   AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-    IdentityPoolId: 'us-east-1:1144803f-1500-4817-8324-4dd306317f6c',
-    Logins: {
-      "cognito-idp.us-east-1.amazonaws.com/us-east-1_vUE45CGKG": idToken
-    }
-  });
+          IdentityPoolId : 'us-east-1:d6b1278c-6298-4582-9074-51139238607e',
+          Logins : {
+            "cognito-idp.us-east-1.amazonaws.com/us-east-1_vUE45CGKG": idToken
+          }
+        });
 }
+/////////////////////////////////////////////////////////
 
-function insertItem() {
-  var docClient = new AWS.DynamoDB.DocumentClient();
-
-  var params = {
-    TableName: "Person",
-    Item: {
-      FirstName: "John", // Partition Key
-      LastName: "Smith", // Sort Key
-      info: {
-        FavoriteColor: "blue",
-        YearOfBirth: 1942,
-      },
-    },
-  };
-  docClient.put(params, function (err, data) {
-    if (err) {
-      document.getElementById("textarea").innerHTML = "Unable to add item: " + "\n" + JSON.stringify(err, undefined, 2);
-    } else {
-      document.getElementById("textarea").innerHTML = "PutItem succeeded: " + "\n" + JSON.stringify(data, undefined, 2);
-    }
-  });
-}
-
-function onScan(err, data){
-  if (err) {
-    document.getElementById("textarea").innerHTML = "Unable to read item: " + "\n" + JSON.stringify(err, undefined, 2);
-  } else {
-    document.getElementById("textarea").innerHTML = "GetItem succeeded: " + "\n" + JSON.stringify(data, undefined, 2);
-  }
-}
-
+///////////// Scan Database in DynamoDB /////////////////
 function readItem() {
   var docClient = new AWS.DynamoDB.DocumentClient();
-
-  /*var params = {
-    TableName: "IoT_Result_ESP32",
-    Key: {
-      MacAddress: "E4:5F:01:8F:E0:50",
-    },
-  };*/
 
   var item = {
     TableName: "IoT_Testing_Unit_RaspPI",
     ProjectionExpression: "MacAddress"
   };
-  docClient.scan(item, onScan);
+
+  docClient.scan(item, function(err, data) {
+    if (err) {
+      document.getElementById("textarea").innerHTML = "Unable to read item: " + "\n" + JSON.stringify(err, undefined, 2);
+    } else {
+      document.getElementById("textarea").innerHTML = "GetItem succeeded: " + "\n" + JSON.stringify(data, undefined, 2);
+    }
+  }
+  );
 }
-
-function signInButton() {
-  ///// Authenticating a user and estabilishing a user session with Amazon Cognito Identity service
-  var authenticationData = {
-    Username: document.getElementById("inputUsername").value,
-    Password: document.getElementById("inputPassword").value,
-  };
-
-  var authenticationDetails = new AmazonCognitoIdentity.AuthenticationDetails(authenticationData);
-
-  var poolData = {
-    UserPoolId: "us-east-1_vUE45CGKG", // Your user pool id here
-    ClientId: "73p6ql33opui1okr4hf9f60o8i", // Your client id here
-  };
-
-  var userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
-  var userData = {
-    Username: document.getElementById("inputUsername").value,
-    Pool: userPool,
-  };
-
-  var cognitoUser = new AmazonCognitoIdentity.CognitoUser(userData);
-  cognitoUser.authenticateUser(authenticationDetails, {
-    onSuccess: function (result) {
-      //var accessToken = result.getAccessToken().getJwtToken();
-      /*AWS.config.update({
-        region: 'us-east-1',
-      });
-      AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-        IdentityPoolId: 'us-east-1:1144803f-1500-4817-8324-4dd306317f6c',
-        Logins: {
-          "cognito-idp.us-east-1.amazonaws.com/us-east-1_vUE45CGKG": result
-                      .getIdToken()
-                      .getJwtToken(),
-        },
-      });*/
-      //location.replace("https://ds-testboard.netlify.app/testing.html?id_token="+result.getIdToken().getJwtToken());
-      location.replace("https://ds-testboard.netlify.app/testing.html?user="+authenticationData[Object.keys(authenticationData)[0]]+"&password="+authenticationData[Object.keys(authenticationData)[1]]);
-      //var idTokenJWT = result.getIdToken().getJwtToken();
-      //location.replace("https://ds-testboard.netlify.app/testing.html?id_token="+idTokenJWT);
-    },
-
-    onFailure: function (err) {
-      alert(err.message || JSON.stringify(err));
-    },
-  });
-}
+//////////////////////////////////////////////////////////
