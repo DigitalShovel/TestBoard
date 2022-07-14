@@ -37,6 +37,9 @@ function checkLogin() {
   var url_string = window.location.href;
   var url = new URL(url_string);
   idToken = url.searchParams.get("id_token");
+  AWS.config.update({
+    region: "us-east-1",
+  });
   if (idToken != null) {
       console.log("User Signed In!");
       auth();
@@ -52,6 +55,9 @@ function auth() {
 
   AWS.config.credentials = new AWS.CognitoIdentityCredentials({
           IdentityPoolId : 'us-east-1:d6b1278c-6298-4582-9074-51139238607e',
+          Logins: {
+            "cognito-idp.us-east-1.amazonaws.com/us-east-1_vUE45CGKG": idToken
+          }
         });
 }
 /////////////////////////////////////////////////////////
