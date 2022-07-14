@@ -172,7 +172,6 @@ function signInButton() {
     Password: document.getElementById("inputPassword").value,
   };
 
-  console.log(authenticationData[Object.keys(authenticationData)[0]]);
   var authenticationDetails = new AmazonCognitoIdentity.AuthenticationDetails(authenticationData);
 
   var poolData = {
@@ -202,7 +201,7 @@ function signInButton() {
         },
       });
       //location.replace("https://ds-testboard.netlify.app/testing.html?id_token="+result.getIdToken().getJwtToken());
-      location.replace("https://ds-testboard.netlify.app/testing.html?user="+Username+"?password="+Password);
+      location.replace("https://ds-testboard.netlify.app/testing.html?user="+authenticationData[Object.keys(authenticationData)[0]]+"?password="+authenticationData[Object.keys(authenticationData)[1]]);
       //var idTokenJWT = result.getIdToken().getJwtToken();
       //location.replace("https://ds-testboard.netlify.app/testing.html?id_token="+idTokenJWT);
     },
