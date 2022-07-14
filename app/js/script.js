@@ -31,7 +31,16 @@ function WebSocketTest() {
 
 let idToken = null;
 
-function empty(){}
+function empty(){
+  AWS.config.credentials.refresh(error => {
+    if (error) {
+      console.error(error);
+    }
+    else {
+      console.log('Succesfully logged!');
+    }
+  });
+}
 
 function checkLogin() {
   let url_string = window.location.href;
@@ -139,16 +148,10 @@ function signInButton() {
                       .getJwtToken(),
         },
       });
-      location.replace("https://ds-testboard.netlify.app/testing.html?id_token="+result.getIdToken().getJwtToken());
+      //location.replace("https://ds-testboard.netlify.app/testing.html?id_token="+result.getIdToken().getJwtToken());
+      location.replace("https://ds-testboard.netlify.app/testing.html");
       //var idTokenJWT = result.getIdToken().getJwtToken();
-      AWS.config.credentials.refresh(error => {
-        if (error) {
-          console.error(error);
-        }
-        else {
-          console.log('Succesfully logged!');
-        }
-      });
+      
       //location.replace("https://ds-testboard.netlify.app/testing.html?id_token="+idTokenJWT);
     },
 
