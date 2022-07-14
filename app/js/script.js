@@ -43,6 +43,16 @@ function empty(){
 }
 
 function verifyAuth(){
+  var poolData = {
+    UserPoolId: "us-east-1_vUE45CGKG", // Your user pool id here
+    ClientId: "73p6ql33opui1okr4hf9f60o8i", // Your client id here
+  };
+
+  var userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
+  var userData = {
+    Username: user,
+    Pool: userPool,
+  };
   ///// Authenticating a user and estabilishing a user session with Amazon Cognito Identity service
   var authenticationData = {
     Username: user,
