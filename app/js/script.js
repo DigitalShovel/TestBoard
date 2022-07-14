@@ -29,7 +29,6 @@ function WebSocketTest() {
   }
 }
 
-var AWS = require('aws-sdk');
 ////////////// Check for Login Token //////////////////
 var idToken = null;
 function checkLogin() {
