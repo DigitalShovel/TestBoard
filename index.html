@@ -1,12 +1,10 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <!-- Required meta tags -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Custom CSS -->
   <link rel="stylesheet" href="dist/style.min.css">
   <title>Digital Shovel - AWS Board Testing</title>
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
@@ -16,40 +14,139 @@
   <script defer src="app/js/amazon-cognito-identity.min.js"></script>
 </head>
 
-<body>
-  <div class="container">
-    <div class="card">
-      <div class="card-content">
-        <div class="card__image">
-          <img src="images/logo_gray-text.png" alt="">
-        </div>
-        <div class="card__headline">
-          <h1>Login</h1>
-          <small>Here you can login to the Digital Shovel AWS Test Board</small>
-        </div>
-        <form class="flex flex-col gap--sm" novalidate>
-          <div class="flex gap--sm">
-            <div class="fieldset flex flex-col">
-              <label class="fieldset__label" for="username">Username</label>
-              <input class="fieldset__text" type="text" id="inputUsername" name="contact" placeholder="Username">
-            </div>
-            <div class="fieldset flex flex-col">
-              <label class="fieldset__label" for="password">Password</label>
-              <input class="fieldset__text" type="password" id="inputPassword" name="contact" placeholder="Password">
-            </div>
-          </div>
-          <a class="btn btn--primary btn--card" type="submit" onclick="signInButton();">Login
-            <svg class="btn__chevron" width="13" height="12" viewBox="0 0 13 12" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M7.49 6L7.5 6" stroke="var(--blue-100)" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round" />
-              <path d="M2.5 1L7.95455 6L2.5 11" stroke="var(--blue-100)" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg>
-          </a>
-        </form>
-      </div>
+<body onload="empty()">
+
+  <div class="flex gap--md">
+    <a class="btn btn--primary" target="_blank"
+      href="https://crht5bcup6.execute-api.us-east-1.amazonaws.com/default/ConfigStation">Map Station</a>
+    <button class="btn btn--secondary flex ai-c gap--sm" target="_blank" href="#">
+      <img class="icon--sm" src="images/icons/refresh.svg" alt="Refresh Icon">
+      Refresh
+    </button>
+    <input class="btn btn--secondary" type="button" value="Read Item" onclick="readItem();">
+  </div>
+
+  <textarea id="textarea" class="mtop--md" readonly></textarea>
+
+  <div class="flex gap--md mtop--md">
+    <div class="table__container">
+      <table class="table table__1-col">
+        <tbody class="table__body">
+          <tr class="table__row table__row--add-border">
+            <th class="table__heading">PI List</th>
+          </tr>
+          <tr class="table__row">
+            <td>
+              Content goes here
+            </td>
+          </tr>
+          <tr class="table__row">
+            <td>
+              Content goes here
+            </td>
+          </tr>
+          <tr class="table__row">
+            <td>
+              Content goes here
+            </td>
+          </tr>
+          <tr class="table__row">
+            <td>
+              Content goes here
+            </td>
+          </tr>
+          <tr class="table__row">
+            <td>
+              Content goes here
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+
+    <div class="table__container">
+      <table class="table table__1-col">
+        <tbody class="table__body">
+          <tr class="table__row table__row--add-border">
+            <th class="table__heading">ESP List</th>
+          </tr>
+          <tr class="table__row">
+            <td>
+              Content goes here
+            </td>
+          </tr>
+          <tr class="table__row">
+            <td>
+              Content goes here
+            </td>
+          </tr>
+          <tr class="table__row">
+            <td>
+              Content goes here
+            </td>
+          </tr>
+          <tr class="table__row">
+            <td>
+              Content goes here
+            </td>
+          </tr>
+          <tr class="table__row">
+            <td>
+              Content goes here
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="flex gap--md mtop--md">
+    <div class="table__container">
+      <table class="table table__2-col">
+        <tbody class="table__body">
+          <tr class="table__row table__row--add-border">
+            <th class="table__heading">Station #1</th>
+            <th class="table__heading"></th>
+          </tr>
+          <tr class="table__row">
+            <td>
+              Content goes here
+            </td>
+            <td>
+              Content goes here
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table__container">
+      <table class="table table__2-col">
+        <tbody class="table__body">
+          <tr class="table__row table__row--add-border">
+            <th class="table__heading">Station #2</th>
+            <th class="table__heading"></th>
+          </tr>
+          <tr class="table__row">
+            <td>
+              Content goes here
+            </td>
+            <td>
+              Content goes here
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <div class="container__input flex flex-col gap--md mtop--md">
+    <div class="fieldset flex flex-col">
+      <label class="fieldset__label" for="inputData">Value</label>
+      <input class="fieldset__text" type="number" id="inputData" placeholder="Enter value">
+    </div>
+    <button class="btn btn--primary" onclick="WebSocketTest();">Run Test</button>
   </div>
 </body>
 
