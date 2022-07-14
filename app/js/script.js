@@ -37,6 +37,7 @@ function checkLogin() {
   idToken = url.searchParams.get("id_token");
   AWS.config.update({
     region: "us-east-1",
+    accessKeyId: '73p6ql33opui1okr4hf9f60o8i'
   });
   if (idToken != null) {
       console.log("User Signed In!");
