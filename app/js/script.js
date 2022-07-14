@@ -29,6 +29,8 @@ function WebSocketTest() {
   }
 }
 
+function empty(){}
+
 ////////////// Check for Login Token //////////////////
 var idToken = null;
 function checkLogin() {
@@ -46,9 +48,6 @@ function checkLogin() {
 function auth() {
   AWS.config.update({
     region: "us-east-1",
-  //  endpoint: 'http://localhost:8000', // If you use dynamoDB installed locally
-    accessKeyId: "73p6ql33opui1okr4hf9f60o8i",
-  //  secretAccessKey: "(SECRET_ACCESS_KEY)"
   });
 
   AWS.config.credentials = new AWS.CognitoIdentityCredentials({
