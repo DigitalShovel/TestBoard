@@ -64,6 +64,12 @@ function verifyAuth(){
   cognitoUser.authenticateUser(authenticationDetails, {
     onSuccess: function (result) {
         console.log('access token + ' + result.getAccessToken().getJwtToken());
+        AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+          IdentityPoolId: 'us-east-1:1144803f-1500-4817-8324-4dd306317f6c',
+          Logins: {
+              'cognito-idp.us-east-1.amazonaws.com/us-east-1_vUE45CGKG': result.getIdToken().getJwtToken()
+          }
+        });
     },
 
     onFailure: function(err) {
@@ -74,13 +80,6 @@ function verifyAuth(){
         cognitoUser.sendMFACode(verificationCode, this);
     }
 });
-
-  AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-    IdentityPoolId: 'us-east-1:1144803f-1500-4817-8324-4dd306317f6c',
-    Logins: {
-        'cognito-idp.us-east-1.amazonaws.com/us-east-1_vUE45CGKG': result.getIdToken().getJwtToken()
-    }
-  });
 
   AWS.config.credentials.get(function(err){
     if (err) {
