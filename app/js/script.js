@@ -69,7 +69,7 @@ function verifyAuth(){
           Logins: {
               'cognito-idp.us-east-1.amazonaws.com/us-east-1_vUE45CGKG': result.getIdToken().getJwtToken()
           }
-        });
+        }); 
     },
 
     onFailure: function(err) {
