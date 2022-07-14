@@ -34,6 +34,7 @@ var idToken = null;
 function checkLogin() {
   var url_string = window.location.href;
   var url_string_temp = url_string.replace('#', '?');
+  console.log(url_string_temp.indexOf('#'));
   if (url_string_temp.includes('#')){
     location.replace(url_string_temp);
   }
