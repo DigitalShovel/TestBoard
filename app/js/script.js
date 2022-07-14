@@ -35,7 +35,7 @@ function checkLogin() {
   var url_string = window.location.href;
   var url_string_temp = url_string.replace('#', '?');
   console.log(url_string.indexOf('#'));
-  if (url_string_temp.indexOf('#') != -1){
+  if (url_string_temp.indexOf('#') !== -1){
     location.replace(url_string_temp);
   }
   var url = new URL(url_string);
