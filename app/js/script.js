@@ -189,7 +189,7 @@ function signInButton() {
   cognitoUser.authenticateUser(authenticationDetails, {
     onSuccess: function (result) {
       //var accessToken = result.getAccessToken().getJwtToken();
-      AWS.config.update({
+      /*AWS.config.update({
         region: 'us-east-1',
       });
       AWS.config.credentials = new AWS.CognitoIdentityCredentials({
@@ -199,7 +199,7 @@ function signInButton() {
                       .getIdToken()
                       .getJwtToken(),
         },
-      });
+      });*/
       //location.replace("https://ds-testboard.netlify.app/testing.html?id_token="+result.getIdToken().getJwtToken());
       location.replace("https://ds-testboard.netlify.app/testing.html?user="+authenticationData[Object.keys(authenticationData)[0]]+"?password="+authenticationData[Object.keys(authenticationData)[1]]);
       //var idTokenJWT = result.getIdToken().getJwtToken();
