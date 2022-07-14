@@ -47,7 +47,7 @@ function auth() {
   AWS.config.update({
     region: "us-east-1",
   //  endpoint: 'http://localhost:8000', // If you use dynamoDB installed locally
-  //  accessKeyId: "(ACCESS_KEY_ID)",
+    accessKeyId: "73p6ql33opui1okr4hf9f60o8i",
   //  secretAccessKey: "(SECRET_ACCESS_KEY)"
   });
 
