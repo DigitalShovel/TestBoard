@@ -30,8 +30,8 @@ function WebSocketTest() {
 }
 
 ////////////// Check for Login Token //////////////////
+var idToken = null;
 function checkLogin() {
-  var idToken = null;
   var url_string = window.location.href;
   var url = new URL(url_string);
   idToken = url.searchParams.get("id_token");
