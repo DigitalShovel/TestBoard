@@ -34,7 +34,9 @@ var idToken = null;
 function checkLogin() {
   var url_string = window.location.href;
   var url_string_temp = url_string.replace('#', '?');
-  console.log(url_string_temp);
+  if (url_string_temp.includes('#')){
+    location.replace(url_string_temp);
+  }
   var url = new URL(url_string);
   idToken = url.searchParams.get("id_token");
   AWS.config.update({
