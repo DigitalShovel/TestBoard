@@ -48,41 +48,22 @@ function verifyAuth(){
     Username: user,
     Password: pass,
   };
+  var authenticationDetails = new AWSCognito.CognitoIdentityServiceProvider.AuthenticationDetails(authenticationData);
 
-  var authenticationDetails = new AmazonCognitoIdentity.AuthenticationDetails(authenticationData);
-
-  var poolData = {
-    UserPoolId: "us-east-1_vUE45CGKG", // Your user pool id here
-    ClientId: "73p6ql33opui1okr4hf9f60o8i", // Your client id here
-  };
-
-  var userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
-  var userData = {
-    Username: user,
-    Pool: userPool,
-  };
-
-  var cognitoUser = new AmazonCognitoIdentity.CognitoUser(userData);
+  var cognitoUser = new AWSCognito.CognitoIdentityServiceProvider.CognitoUser(userData);
   cognitoUser.authenticateUser(authenticationDetails, {
     onSuccess: function (result) {
-      //var accessToken = result.getAccessToken().getJwtToken();
-      AWS.config.update({
-        region: 'us-east-1',
-      });
-      AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-        IdentityPoolId: 'us-east-1:1144803f-1500-4817-8324-4dd306317f6c',
-        Logins: {
-          "cognito-idp.us-east-1.amazonaws.com/us-east-1_vUE45CGKG": result
-                      .getIdToken()
-                      .getJwtToken(),
-        },
-      });
+        console.log('access token + ' + result.getAccessToken().getJwtToken());
     },
 
-    onFailure: function (err) {
-      alert(err.message || JSON.stringify(err));
+    onFailure: function(err) {
+        alert(err);
     },
-  });
+    mfaRequired: function(codeDeliveryDetails) {
+        var verificationCode = prompt('Please input verification code' ,'');
+        cognitoUser.sendMFACode(verificationCode, this);
+    }
+});
 }
 
 function checkLogin() {
