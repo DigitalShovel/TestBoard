@@ -203,16 +203,6 @@ function signInButton() {
       //location.replace("https://ds-testboard.netlify.app/testing.html?id_token="+result.getIdToken().getJwtToken());
       location.replace("https://ds-testboard.netlify.app/testing.html?user="+Username+"?password="+Password);
       //var idTokenJWT = result.getIdToken().getJwtToken();
-      
-      AWS.config.credentials.refresh(error => {
-        if (error) {
-          console.error(error);
-        }
-        else {
-          console.log('Succesfully logged!');
-        }
-      });
-
       //location.replace("https://ds-testboard.netlify.app/testing.html?id_token="+idTokenJWT);
     },
 
