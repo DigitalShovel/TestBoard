@@ -172,7 +172,7 @@ function signInButton() {
     Password: document.getElementById("inputPassword").value,
   };
 
-  console.log(authenticationData[0]);
+  console.log(authenticationData[Object.keys(authenticationData)[0]]);
   var authenticationDetails = new AmazonCognitoIdentity.AuthenticationDetails(authenticationData);
 
   var poolData = {
