@@ -16,14 +16,17 @@
 
 <body onload="empty()">
 
-  <div class="flex gap--md">
-    <a class="btn btn--primary" target="_blank"
-      href="https://crht5bcup6.execute-api.us-east-1.amazonaws.com/default/ConfigStation">Map Station</a>
-    <button class="btn btn--secondary flex ai-c gap--sm" target="_blank" href="#">
-      <img class="icon--sm" src="images/icons/refresh.svg" alt="Refresh Icon">
-      Refresh
-    </button>
-    <input class="btn btn--secondary" type="button" value="Read Item" onclick="readItem();">
+  <div class="flex jc-sb">
+    <div class="flex gap--md">
+      <a class="btn btn--primary" target="_blank"
+        href="https://crht5bcup6.execute-api.us-east-1.amazonaws.com/default/ConfigStation">Map Station</a>
+      <button class="btn btn--secondary flex ai-c gap--sm" target="_blank" href="#">
+        <img class="icon--sm" src="images/icons/refresh.svg" alt="Refresh Icon">
+        Refresh
+      </button>
+      <input class="btn btn--secondary" type="button" value="Read Item" onclick="readItem();">
+    </div>
+    <a class="btn btn--primary as-end" href="https://testboard.auth.us-east-1.amazoncognito.com/login?client_id=73p6ql33opui1okr4hf9f60o8i&response_type=token&scope=aws.cognito.signin.user.admin+email+openid+profile&redirect_uri=https://ds-testboard.netlify.app/">Login</a>
   </div>
 
   <textarea id="textarea" class="mtop--md" readonly></textarea>
