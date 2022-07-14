@@ -77,15 +77,6 @@ function verifyAuth(){
                       .getJwtToken(),
         },
       });
-
-      AWS.config.credentials.refresh(error => {
-        if (error) {
-          console.error(error);
-        }
-        else {
-          console.log('Succesfully logged!');
-        }
-      });
     },
 
     onFailure: function (err) {
