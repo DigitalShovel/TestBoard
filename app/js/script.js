@@ -58,7 +58,7 @@ function verifyAuth(){
 
   var userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
   var userData = {
-    Username: document.getElementById("inputUsername").value,
+    Username: user,
     Pool: userPool,
   };
 
