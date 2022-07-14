@@ -35,8 +35,9 @@ function checkLogin() {
   let url_string = window.location.href;
   let url = new URL(url_string);
   idToken = url.searchParams.get("id_token");
+  console.log(idToken);
   if (idToken != null) {
-    document.getElementById("welcomeMsg").innerHTML = "signed in";
+    //document.getElementById("welcomeMsg").innerHTML = "signed in";
     auth();
   }
 }
@@ -52,6 +53,7 @@ function auth() {
       "cognito-idp.us-east-1.amazonaws.com/us-east-1_vUE45CGKG": idToken
     }
   });
+  //location.href = 'https://testboard.auth.us-east-1.amazoncognito.com/login?response_type=token&client_id=73p6ql33opui1okr4hf9f60o8i&redirect_uri=<your_callback_url>';
 }
 
 function insertItem() {
@@ -112,7 +114,7 @@ function signInButton() {
 
   var poolData = {
     UserPoolId: "us-east-1_vUE45CGKG", // Your user pool id here
-    ClientId: "75c9agrkfbmc6a5hbs0v8a8o6f", // Your client id here
+    ClientId: "73p6ql33opui1okr4hf9f60o8i", // Your client id here
   };
 
   var userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
@@ -127,8 +129,8 @@ function signInButton() {
   cognitoUser.authenticateUser(authenticationDetails, {
     onSuccess: function (result) {
       //console.log(JSON.stringify(result));
-      var accessToken = result.getAccessToken().getJwtToken();
-      console.log(accessToken);
+      accessToken = result.getAccessToken().getJwtToken();
+      location.replace("https://ds-testboard.netlify.app/testing.html?id_token="+accessToken);
     },
 
     onFailure: function (err) {
