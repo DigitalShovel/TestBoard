@@ -67,19 +67,28 @@ function auth() {
 
 ///////////// Scan Database in DynamoDB /////////////////
 let piQtyOLD = 0;
+let espQtyOLD = 0;
 function readItem() {
   var docClient = new AWS.DynamoDB.DocumentClient();
 
-  var item = {
+  var item1 = {
     TableName: "IoT_Testing_Unit_RaspPI",
     ProjectionExpression: "MacAddress"
   };
+  var item2 = {
+    TableName: "IoT_Testing_Unit_ESP32",
+    ProjectionExpression: "MacAddress"
+  };
+  scanning(item1, item2, docClient);
+}
 
-  docClient.scan(item, function(err, data) {
+function scanning(PIList, ESPList, dynamClient){
+  ///////////////////  Build PI List ////////////////////
+  dynamClient.scan(PIList, function(err, data) {
     if (err) {
       document.getElementById("textarea").innerHTML = "Unable to read item: " + "\n" + JSON.stringify(err, undefined, 2);
     } else {
-      document.getElementById("textarea").innerHTML = JSON.stringify(data, "Empty", 2);
+      //document.getElementById("textarea").innerHTML = JSON.stringify(data, "Empty", 2);
       var piQuantity = parseInt(JSON.stringify(data['Count'], "0", 2));
       for (let i = 0; i < piQtyOLD; i++) {
         document.getElementById("PI#"+i).innerHTML = JSON.stringify("Empty", "Empty", 2);
@@ -93,7 +102,27 @@ function readItem() {
     }
   }
   );
+  ///////////////////  Build PI List ////////////////////
+  dynamClient.scan(ESPList, function(err, data) {
+    if (err) {
+      document.getElementById("textarea").innerHTML = "Unable to read item: " + "\n" + JSON.stringify(err, undefined, 2);
+    } else {
+      //document.getElementById("textarea").innerHTML = JSON.stringify(data, "Empty", 2);
+      var espQty = parseInt(JSON.stringify(data['Count'], "0", 2));
+      for (let i = 0; i < espQtyOLD; i++) {
+        document.getElementById("ESP#"+i).innerHTML = JSON.stringify("Empty", "Empty", 2);
+      }
+      espQtyOLD = espQty;
+      if (espQty > 0){
+        for (let i = 0; i < espQty; i++) {
+          document.getElementById("ESP#"+i).innerHTML = JSON.stringify(data['Items'][i]['MacAddress'], "Empty", 2);
+        }
+      }
+    }
+  }
+  );
 }
+
 
 function clearContent() {
 
