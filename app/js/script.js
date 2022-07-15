@@ -110,7 +110,7 @@ function scanning(PIList, ESPList, dynamClient){
       //document.getElementById("textarea").innerHTML = JSON.stringify(data, "Empty", 2);
       var espQty = parseInt(JSON.stringify(data['Count'], "0", 2));
       for (let i = 0; i < espQtyOLD; i++) {
-        document.getElementById("ESP#"+i).innerHTML = JSON.stringify("Empty", "Empty", 2);
+        document.getElementById("ESP#"+i).innerHTML = "Empty";
       }
       espQtyOLD = espQty;
       if (espQty > 0){
