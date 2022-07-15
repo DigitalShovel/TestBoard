@@ -21,7 +21,7 @@ function WebSocketTest() {
 
     ws.onclose = function () {
       // websocket is closed.
-      alert("Connection is closed...");
+      //alert("Connection is closed...");
     };
   } else {
     // The browser doesn't support WebSocket
@@ -88,5 +88,9 @@ function readItem() {
     }
   }
   );
+}
+
+function clearContent() {
+
 }
 //////////////////////////////////////////////////////////
