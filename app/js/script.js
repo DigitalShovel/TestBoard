@@ -91,7 +91,7 @@ function scanning(PIList, ESPList, dynamClient){
       //document.getElementById("textarea").innerHTML = JSON.stringify(data, "Empty", 2);
       var piQuantity = parseInt(JSON.stringify(data['Count'], "0", 2));
       for (let i = 0; i < piQtyOLD; i++) {
-        document.getElementById("PI#"+i).innerHTML = JSON.stringify("Empty".replace('"', ''), "Empty", 2);
+        document.getElementById("PI#"+i).innerHTML = "Empty";
       }
       piQtyOLD = piQuantity;
       if (piQuantity > 0){
