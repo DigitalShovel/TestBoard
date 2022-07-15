@@ -78,7 +78,7 @@ function readItem() {
     if (err) {
       document.getElementById("textarea").innerHTML = "Unable to read item: " + "\n" + JSON.stringify(err, undefined, 2);
     } else {
-      document.getElementById("textarea").innerHTML = JSON.stringify(data['Items'], undefined, 2);
+      document.getElementById("textarea").innerHTML = JSON.stringify(data['Items']['MacAddress'], undefined, 2);
     }
   }
   );
