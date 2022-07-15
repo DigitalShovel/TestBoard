@@ -66,6 +66,7 @@ function auth() {
 /////////////////////////////////////////////////////////
 
 ///////////// Scan Database in DynamoDB /////////////////
+let piQtyOLD = 0;
 function readItem() {
   var docClient = new AWS.DynamoDB.DocumentClient();
 
@@ -80,6 +81,10 @@ function readItem() {
     } else {
       document.getElementById("textarea").innerHTML = JSON.stringify(data, "Empty", 2);
       var piQuantity = parseInt(JSON.stringify(data['Count'], "0", 2));
+      for (let i = 0; i < piQtyOLD; i++) {
+        document.getElementById("PI#"+i).innerHTML = JSON.stringify("Empty", "Empty", 2);
+      }
+      piQtyOLD = piQuantity;
       if (piQuantity > 0){
         for (let i = 0; i < piQuantity; i++) {
           document.getElementById("PI#"+i).innerHTML = JSON.stringify(data['Items'][i]['MacAddress'], "Empty", 2);
