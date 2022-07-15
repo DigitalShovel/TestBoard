@@ -78,11 +78,13 @@ function readItem() {
     if (err) {
       document.getElementById("textarea").innerHTML = "Unable to read item: " + "\n" + JSON.stringify(err, undefined, 2);
     } else {
-      document.getElementById("textarea").innerHTML = JSON.stringify(data['Count'], "Empty", 2);
-      if (parseInt(JSON.stringify(data['Count'], "Empty", 2)) > 0){
-        console.log("At Least 1 PI");
+      document.getElementById("textarea").innerHTML = JSON.stringify(data, "Empty", 2);
+      var piQuantity = parseInt(JSON.stringify(data['Count'], "0", 2));
+      if (piQuantity > 0){
+        for (let i = 0; i < piQuantity; i++) {
+          document.getElementById("PI#"+i).innerHTML = JSON.stringify(data['Items'][i]['MacAddress'], "Empty", 2);
+        }
       }
-      document.getElementById("PI#0").innerHTML = JSON.stringify(data['Items'][0]['MacAddress'], "Content goes here", 2);
     }
   }
   );
