@@ -109,8 +109,9 @@ function scanning(PIList, ESPList, dynamClient){
   dynamClient.scan(PIList, function(err, data) {
     if (err) {
       //document.getElementById("textarea").innerHTML = "Unable to read item: " + "\n" + JSON.stringify(err, undefined, 2);
-      alert("No credentials.");
-    } else {
+      alert("No credentials. Try login again.");
+    } 
+    else {
       //document.getElementById("textarea").innerHTML = JSON.stringify(data, "Empty", 2);
       var piQuantity = parseInt(JSON.stringify(data['Count'], "0", 2));
       for (let i = 0; i < piQtyOLD; i++) {
