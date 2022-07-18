@@ -35,7 +35,12 @@ function mapStationWebSocket() {
     var ws = new WebSocket("wss://a1tgev9uyh.execute-api.us-east-1.amazonaws.com/production");
     ws.onopen = function () {
       // Web Socket is connected, send data using send()
-      ws.send("Start Mapping");
+      ws.send('{"action": "startMap","message": "Start Map Station"}');
+    };
+
+    ws.onmessage = function (evt) {
+      var received_msg = evt.data;
+      alert(received_msg);
     };
   } else {
     // The browser doesn't support WebSocket
