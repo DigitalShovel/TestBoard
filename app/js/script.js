@@ -10,7 +10,7 @@ function WebSocketTest() {
     ws.onopen = function () {
       // Web Socket is connected, send data using send()
       ws.send('{"action": "sendMessage","message":' + inputData + "}");
-      console.log(inputData);
+      //console.log(inputData);
       // alert("Message is sent...");
     };
 
@@ -22,6 +22,22 @@ function WebSocketTest() {
     ws.onclose = function () {
       // websocket is closed.
       //alert("Connection is closed...");
+    };
+  } else {
+    // The browser doesn't support WebSocket
+    alert("WebSocket NOT supported by your Browser!");
+  }
+}
+
+function mapStationWebSocket() {
+  if ("WebSocket" in window) {
+    // alert("WebSocket is supported by your Browser!");
+
+    // Let us open a web socket
+    var ws = new WebSocket("wss://a1tgev9uyh.execute-api.us-east-1.amazonaws.com/production");
+    ws.onopen = function () {
+      // Web Socket is connected, send data using send()
+      ws.send("Start Mapping");
     };
   } else {
     // The browser doesn't support WebSocket
@@ -65,7 +81,7 @@ function auth() {
 }
 /////////////////////////////////////////////////////////
 
-///////////// Scan Database in DynamoDB /////////////////
+///////////// Set DB table to be scanned /////////////////
 let piQtyOLD = 0;
 let espQtyOLD = 0;
 function readItem() {
@@ -81,9 +97,12 @@ function readItem() {
   };
   scanning(item1, item2, docClient);
 }
+/////////////////////////////////////////////////////////
 
+///////////////////  Scan Database in DynamoDB //////////////////////
 function scanning(PIList, ESPList, dynamClient){
-  ///////////////////  Build PI List ////////////////////
+
+  ///////////////////  Build PI List //////////////////////
   dynamClient.scan(PIList, function(err, data) {
     if (err) {
       //document.getElementById("textarea").innerHTML = "Unable to read item: " + "\n" + JSON.stringify(err, undefined, 2);
@@ -103,6 +122,7 @@ function scanning(PIList, ESPList, dynamClient){
     } 
   }
   );
+
   ///////////////////  Build ESP List ////////////////////
   dynamClient.scan(ESPList, function(err, data) {
     if (err) {
