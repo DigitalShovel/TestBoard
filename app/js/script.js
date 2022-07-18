@@ -31,8 +31,6 @@ function WebSocketTest() {
 
 function mapStationWebSocket() {
   if ("WebSocket" in window) {
-    // alert("WebSocket is supported by your Browser!");
-
     // Let us open a web socket
     var ws = new WebSocket("wss://a1tgev9uyh.execute-api.us-east-1.amazonaws.com/production");
     ws.onopen = function () {
