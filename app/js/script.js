@@ -86,7 +86,8 @@ function scanning(PIList, ESPList, dynamClient){
   ///////////////////  Build PI List ////////////////////
   dynamClient.scan(PIList, function(err, data) {
     if (err) {
-      document.getElementById("textarea").innerHTML = "Unable to read item: " + "\n" + JSON.stringify(err, undefined, 2);
+      //document.getElementById("textarea").innerHTML = "Unable to read item: " + "\n" + JSON.stringify(err, undefined, 2);
+      alert("No credentials.");
     } else {
       //document.getElementById("textarea").innerHTML = JSON.stringify(data, "Empty", 2);
       var piQuantity = parseInt(JSON.stringify(data['Count'], "0", 2));
@@ -99,7 +100,7 @@ function scanning(PIList, ESPList, dynamClient){
           document.getElementById("PI#"+i).innerHTML = JSON.stringify(data['Items'][i]['MacAddress'], "Empty", 2);
         }
       }
-    }
+    } 
   }
   );
   ///////////////////  Build ESP List ////////////////////
@@ -121,10 +122,5 @@ function scanning(PIList, ESPList, dynamClient){
     }
   }
   );
-}
-
-
-function clearContent() {
-
 }
 //////////////////////////////////////////////////////////
