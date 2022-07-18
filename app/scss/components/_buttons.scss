@@ -6,9 +6,10 @@
 .btn {
   cursor: pointer;
   border-radius: 100vh;
-  padding: 7px 15px;
-  letter-spacing: -0.1px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
   font-weight: 500;
+  letter-spacing: -0.1px;
   max-width: max-content;
 
   &:hover {
@@ -65,34 +66,36 @@
     background-color: var(--primary-color);
     color: var(--blue-100);
 
-    .btn__chevron path {
-      stroke: var(--blue-100);
+    &:hover {
+      background-color: var(--blue-500);
+    }
+
+    &:active {
+      background-color: var(--blue-400);
     }
   }
 
   &--secondary {
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--blue-100);
+    background-color: transparent;
+    color: white;
 
-    .btn__chevron path {
-      stroke: var(--primary-color);
+    &:hover {
+      background-color: var(--blue-800);
+    }
+
+    &:active {
+      background-color: var(--blue-700);
     }
   }
 
   &--tertiary {
     color: var(--blue-900);
-
-    .btn__chevron path {
-      stroke: var(--blue-900);
-    }
   }
 
   &--white {
     background-color: var(--blue-100);
     color: var(--primary-color);
-
-    .btn__chevron path {
-      stroke: var(--primary-color);
-    }
   }
 
   &--form {

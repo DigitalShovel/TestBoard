@@ -16,91 +16,57 @@
 
 <body onload="checkLogin()">
 
+  <div class="flex jc-sb gap--sm mbot--lg">
+    <h1 class="text--white">Welcome to Digital Shovel Board Testing</h1>
+    <a class="btn btn--primary as-end"
+      href="https://testboard.auth.us-east-1.amazoncognito.com/login?client_id=73p6ql33opui1okr4hf9f60o8i&response_type=token&scope=aws.cognito.signin.user.admin+email+openid+profile&redirect_uri=https://ds-testboard.netlify.app/">Login
+      <svg class="btn__chevron" width="13" height="12" viewBox="0 0 13 12" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.49 6L7.5 6" stroke="var(--blue-100)" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" />
+        <path d="M2.5 1L7.95455 6L2.5 11" stroke="var(--blue-100)" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg></a>
+  </div>
+
   <div class="flex jc-sb">
     <div class="flex gap--md">
-      <a class="btn btn--primary" target="_blank"
-        href="https://crht5bcup6.execute-api.us-east-1.amazonaws.com/default/ConfigStation">Map Station</a>
-      <button class="btn btn--secondary flex ai-c gap--sm" target="_blank" href="#">
+      <button class="btn btn--secondary flex ai-c gap--sm"
+        href="https://crht5bcup6.execute-api.us-east-1.amazonaws.com/default/ConfigStation">
+        <img class="icon--sm" src="images/icons/mapping.svg" alt="Station Mapping Icon">
+        Map Station
+      </button>
+      <button onclick="readItem()" class="btn btn--secondary flex ai-c gap--sm">
         <img class="icon--sm" src="images/icons/refresh.svg" alt="Refresh Icon">
         Refresh
       </button>
-      <input class="btn btn--secondary" type="button" value="Read Item" onclick="readItem()">
     </div>
-    <a class="btn btn--primary as-end" href="https://testboard.auth.us-east-1.amazoncognito.com/login?client_id=73p6ql33opui1okr4hf9f60o8i&response_type=token&scope=aws.cognito.signin.user.admin+email+openid+profile&redirect_uri=https://ds-testboard.netlify.app/">Login</a>
-  </div> 
-
-  <textarea id="textarea" class="mtop--md" readonly></textarea>
+  </div>
 
   <div class="flex gap--md mtop--md">
-    <div class="table__container">
-      <table class="table table__1-col">
-        <tbody class="table__body">
-          <tr class="table__row table__row--add-border">
-            <th class="table__heading">PI List (MAC Address)</th>
-          </tr>
-          <tr class="table__row">
-            <td id="PI#0">
-              Empty
-            </td>
-          </tr>
-          <tr class="table__row">
-            <td id="PI#1">
-              Empty
-            </td>
-          </tr>
-          <tr class="table__row">
-            <td id="PI#2">
-              Empty
-            </td>
-          </tr>
-          <tr class="table__row">
-            <td id="PI#3">
-              Empty
-            </td>
-          </tr>
-          <tr class="table__row">
-            <td id="PI#4">
-              Empty
-            </td>
-          </tr>
-        </tbody>
-      </table>
+
+    <div class="list list-pi list__1-col">
+      <p class="list__heading">Pi List (MAC Address)</p>
+      <div class="list__content">
+        <p class="list__item" id="PI#0">Empty</p>
+        <p class="list__item" id="PI#1">Empty</p>
+        <p class="list__item" id="PI#2">Empty</p>
+        <p class="list__item" id="PI#3">Empty</p>
+        <p class="list__item" id="PI#4">Empty</p>
+      </div>
     </div>
 
-    <div class="table__container">
-      <table class="table table__1-col">
-        <tbody class="table__body">
-          <tr class="table__row table__row--add-border">
-            <th class="table__heading">ESP List (MAC Address)</th>
-          </tr>
-          <tr class="table__row">
-            <td id="ESP#0">
-              Empty
-            </td>
-          </tr>
-          <tr class="table__row">
-            <td id="ESP#1">
-              Empty
-            </td>
-          </tr>
-          <tr class="table__row">
-            <td id="ESP#2">
-              Empty
-            </td>
-          </tr>
-          <tr class="table__row">
-            <td id="ESP#3">
-              Empty
-            </td>
-          </tr>
-          <tr class="table__row">
-            <td id="ESP#4">
-              Empty
-            </td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="list list-esp list__1-col">
+      <p class="list__heading">ESP List (MAC Address)</p>
+      <div class="list__content">
+        <p class="list__item" id="ESP#0">Empty</p>
+        <p class="list__item" id="ESP#1">Empty</p>
+        <p class="list__item" id="ESP#2">Empty</p>
+        <p class="list__item" id="ESP#3">Empty</p>
+        <p class="list__item" id="ESP#4">Empty</p>
+      </div>
     </div>
+
   </div>
 
   <div class="flex gap--md mtop--md">
@@ -149,7 +115,14 @@
       <label class="fieldset__label" for="inputData">Value</label>
       <input class="fieldset__text" type="number" id="inputData" placeholder="Enter value">
     </div>
-    <button class="btn btn--primary" onclick="WebSocketTest();">Run Test</button>
+    <button class="btn btn--primary" onclick="WebSocketTest();">Run Test
+      <svg class="btn__chevron" width="13" height="12" viewBox="0 0 13 12" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.49 6L7.5 6" stroke="var(--blue-100)" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" />
+        <path d="M2.5 1L7.95455 6L2.5 11" stroke="var(--blue-100)" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg></button>
   </div>
 </body>
 

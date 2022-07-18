@@ -1,0 +1,33 @@
+.list {
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+
+  &__1-col {
+  }
+  &__2-col {
+  }
+  &__pi {
+  }
+  &__esp {
+  }
+  &__heading {
+    font-weight: 700;
+    background-color: var(--blue-150);
+    padding: 1rem 2rem;
+  }
+
+  &__content {
+    max-height: 200px;
+    overflow-y: scroll;
+  }
+
+  &__item {
+    font-size: 0.8rem;
+    padding: 1rem 2rem;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--blue-150);
+    }
+  }
+}
