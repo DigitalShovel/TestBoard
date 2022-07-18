@@ -29,7 +29,6 @@ table {
 .table {
   box-shadow: var(--shadow-sm);
   border-radius: 5px;
-  min-width: 400px;
 
   &__1-col {
     th:first-child {
@@ -73,13 +72,8 @@ table {
   }
 
   &__container {
-    @media (max-width: 1200px) {
-      position: relative;
-      overflow-x: auto;
-      overflow-y: hidden;
-      width: 100%;
-      margin: 0 auto 0 0;
-    }
+    background-color: white;
+    border-radius: 10px;
   }
 
   &__row {
@@ -91,7 +85,9 @@ table {
   }
 
   &__heading {
-    font-size: 0.9rem;
+    // font-size: 0.9rem;
+    background-color: var(--blue-150);
+
   }
 
   &__subheading {
