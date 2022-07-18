@@ -32,7 +32,7 @@ function WebSocketTest() {
 function mapStationWebSocket() {
   if ("WebSocket" in window) {
     // Let us open a web socket
-    var ws = new WebSocket("wss://a1tgev9uyh.execute-api.us-east-1.amazonaws.com/production");
+    var ws = new WebSocket("wss://ekht0lzvqb.execute-api.us-east-1.amazonaws.com/production");
     ws.onopen = function () {
       // Web Socket is connected, send data using send()
       ws.send('{"action": "startMap","message": "Start Map Station"}');
