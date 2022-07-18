@@ -109,7 +109,7 @@ function scanning(PIList, ESPList, dynamClient){
   dynamClient.scan(PIList, function(err, data) {
     if (err) {
       //document.getElementById("textarea").innerHTML = "Unable to read item: " + "\n" + JSON.stringify(err, undefined, 2);
-      alert("No credentials. Try login again.");
+      //alert("No credentials. Try login again.");
       location.replace("https://testboard.auth.us-east-1.amazoncognito.com/login?client_id=73p6ql33opui1okr4hf9f60o8i&response_type=token&scope=aws.cognito.signin.user.admin+email+openid+profile&redirect_uri=https://ds-testboard.netlify.app/")
     } 
     else {
