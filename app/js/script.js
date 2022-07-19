@@ -96,7 +96,14 @@ function readCT() {
     }
   };
   var result = docClient.query(ctItem);
-  console.log('Result Values: ', JSON.stringify(result));
+  console.log('Result Values: ', function(err, data) {
+    if (err) {
+      alert(JSON.stringify(err, undefined, 2));
+    }
+    else {
+      console.log(JSON.stringify(data, undefined, 2))
+    }
+  });
 }
 
 ///////////// Set DB table to be scanned /////////////////
