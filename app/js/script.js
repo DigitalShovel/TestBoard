@@ -100,7 +100,7 @@ function readCT() {
       alert(JSON.stringify(err, undefined, 2));
     }
     else {
-      console.log(JSON.stringify(data, undefined, 2))
+      console.log(JSON.stringify(data['Items']['Time'], undefined, 2))
     }
   });
 }
