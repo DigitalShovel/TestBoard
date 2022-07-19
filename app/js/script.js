@@ -84,6 +84,20 @@ function auth() {
 }
 /////////////////////////////////////////////////////////
 
+///////////// Read CT Values from DB ////////////////////
+function readCT(channel, ctnum) {
+  var docClient = new AWS.DynamoDB.DocumentClient();
+  var ctItem = {
+    TableName: "IoT_Result",
+    KeyConditionExpression: 'Station = :station',
+    ExpressionAttributeValues: {
+      ':station': '1'
+    }
+  };
+  var result = await docClient.query(ctItem).promise();
+  console.log('Result Values: ', JSON.stringify(result));
+}
+
 ///////////// Set DB table to be scanned /////////////////
 function readItem() {
   var docClient = new AWS.DynamoDB.DocumentClient();
@@ -92,6 +106,7 @@ function readItem() {
     TableName: "IoT_Testing_Unit_RaspPI",
     ProjectionExpression: "MacAddress"
   };
+
   var item2 = {
     TableName: "IoT_Testing_Unit_ESP32",
     ProjectionExpression: "MacAddress"

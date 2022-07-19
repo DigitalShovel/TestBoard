@@ -1,7 +1,9 @@
 //////////// Setup ////////////////
 const data = {
   labels: ['January', 'Febuary', 'March', 'May', 'June'],
+  autoPadding: true,
   datasets: [{
+    yAxisID: 'Voltage',
     label: 'CT Measurements',
     data: [65, 59, 80, 81, 56, 55, 40],
     fill: false,
