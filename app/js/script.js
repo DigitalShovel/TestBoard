@@ -85,7 +85,7 @@ function auth() {
 /////////////////////////////////////////////////////////
 
 ///////////// Read CT Values from DB ////////////////////
-function readCT() {
+async function readCT() {
   var docClient = new AWS.DynamoDB.DocumentClient();
   var ctItem = {
     TableName: "IoT_Result",
