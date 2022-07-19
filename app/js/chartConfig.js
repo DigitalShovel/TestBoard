@@ -1,5 +1,3 @@
-import {timeResult} from './script.js';
-
 //////////// Setup ////////////////
 const data = {
   labels: [timeResult],
