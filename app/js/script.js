@@ -95,8 +95,7 @@ function readCT() {
       ':station': '1'
     }
   };
-  var result = docClient.query(ctItem);
-  console.log('Result Values: ', function(err, data) {
+  docClient.query(ctItem, function(err, data) {
     if (err) {
       alert(JSON.stringify(err, undefined, 2));
     }
