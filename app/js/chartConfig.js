@@ -1,11 +1,11 @@
 //////////// Setup ////////////////
 const data = {
-  labels: [timeResult],
+  labels: ['January', 'Febuary'],
   autoPadding: true,
   datasets: [{
     yAxisID: 'Voltage',
     label: 'CT Measurements',
-    data: [65],
+    data: [65, 35],
     fill: false,
     borderColor: 'rgb(75, 192, 192)',
     tension: 0.1

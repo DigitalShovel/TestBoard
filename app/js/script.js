@@ -103,6 +103,8 @@ function readCT() {
     else {
       console.log(JSON.stringify(data['Items'][0]['Time'], undefined, 2));
       timeResult = JSON.stringify(data['Items'][0]['Time']);
+      myChart.data.datasets[0].data[2] = timeResult;
+      myChart.update('active');
     }
   });
 }
