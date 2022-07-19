@@ -85,8 +85,9 @@ function auth() {
 /////////////////////////////////////////////////////////
 
 ///////////// Read CT Values from DB ////////////////////
-async function readCT() {
+function readCT() {
   var docClient = new AWS.DynamoDB.DocumentClient();
+
   var ctItem = {
     TableName: "IoT_Result",
     KeyConditionExpression: 'Station = :station',
@@ -94,7 +95,7 @@ async function readCT() {
       ':station': '1'
     }
   };
-  var result = await docClient.query(ctItem).promise();
+  var result = docClient.query(ctItem);
   console.log('Result Values: ', JSON.stringify(result));
 }
 
