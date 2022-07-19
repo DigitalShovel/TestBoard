@@ -92,7 +92,7 @@ function readCT() {
     TableName: "IoT_Result",
     KeyConditionExpression: 'Station = :station',
     ExpressionAttributeValues: {
-      ':station': '1'
+      ':station': 1
     }
   };
   docClient.query(ctItem, function(err, data) {
