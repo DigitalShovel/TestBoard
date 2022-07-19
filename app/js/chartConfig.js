@@ -1,7 +1,4 @@
 //////////// Setup ////////////////
-const ctx = document.getElementById('myChart').getContext('2d');
-const myChart = new Chart(ctx, config);
-
 const data = {
   labels: ['January', 'Febuary', 'March', 'May', 'June'],
   datasets: [{
@@ -16,5 +13,8 @@ const data = {
 const config = {
     type: 'line',
     data: data,
-  };
+};
+
+const ctx = document.getElementById('myChart').getContext('2d');
+const myChart = new Chart(ctx, config);
 
