@@ -85,6 +85,7 @@ function auth() {
 /////////////////////////////////////////////////////////
 
 ///////////// Read CT Values from DB ////////////////////
+let timeResult;
 function readCT() {
   var docClient = new AWS.DynamoDB.DocumentClient();
 
@@ -103,7 +104,9 @@ function readCT() {
       console.log(JSON.stringify(data['Items'][0]['Time'], undefined, 2))
     }
   });
+  timeResult = JSON.stringify(data['Items'][0]['Time']);
 }
+export { timeResult };    // Sends the Time Result to chartConfig.js
 
 ///////////// Set DB table to be scanned /////////////////
 function readItem() {

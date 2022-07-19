@@ -1,11 +1,13 @@
+import {timeResult} from './script.js';
+
 //////////// Setup ////////////////
 const data = {
-  labels: ['January', 'Febuary', 'March', 'May', 'June'],
+  labels: [timeResult],
   autoPadding: true,
   datasets: [{
     yAxisID: 'Voltage',
     label: 'CT Measurements',
-    data: [65, 59, 80, 81, 56, 55, 40],
+    data: [65],
     fill: false,
     borderColor: 'rgb(75, 192, 192)',
     tension: 0.1
