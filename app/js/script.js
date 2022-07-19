@@ -101,10 +101,10 @@ function readCT() {
       alert(JSON.stringify(err, undefined, 2));
     }
     else {
-      console.log(JSON.stringify(data['Items'][0]['Time'], undefined, 2))
+      console.log(JSON.stringify(data['Items'][0]['Time'], undefined, 2));
+      timeResult = JSON.stringify(data['Items'][0]['Time']);
     }
   });
-  timeResult = JSON.stringify(data['Items'][0]['Time']);
 }
 
 ///////////// Set DB table to be scanned /////////////////
