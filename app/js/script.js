@@ -85,8 +85,6 @@ function auth() {
 /////////////////////////////////////////////////////////
 
 ///////////// Set DB table to be scanned /////////////////
-let piQtyOLD = 0;
-let espQtyOLD = 0;
 function readItem() {
   var docClient = new AWS.DynamoDB.DocumentClient();
 
@@ -103,6 +101,8 @@ function readItem() {
 /////////////////////////////////////////////////////////
 
 ///////////////////  Scan Database in DynamoDB //////////////////////
+let piQtyOLD = 0;
+let espQtyOLD = 0;
 function scanning(PIList, ESPList, dynamClient){
 
   ///////////////////  Build PI List //////////////////////
