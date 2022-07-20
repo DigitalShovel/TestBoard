@@ -115,7 +115,7 @@ function readCT() {
 
 ///////////////// Collect data from DB //////////////////
 function extractData(data, attribute, channel, ctnum) {
-  return JSON.stringify(data[attribute][channel-1][String('CT'+ctnum)]);
+  return data[attribute][channel-1][String('CT'+ctnum)];
 }
 
 ///////////////// Add Data to Chart ////////////////////
