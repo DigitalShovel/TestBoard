@@ -105,7 +105,7 @@ function readCT() {
         var timeResult = JSON.stringify(data['Items'][i]['Time']);
         var valueCT = extractData(data['Items'][i], 'CTPI', 1, 1);
         console.log(valueCT);
-        console.log(typeof valueCT);
+        console.log(+valueCT);
         addDataChart(myChart, timeResult.substring(9,18), valueCT);
       }
     }
