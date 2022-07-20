@@ -1,6 +1,6 @@
 //////////// Setup ////////////////
 const data = {
-  labels: ['January', 'Febuary'],
+  labels: timestamps,
   autoPadding: true,
   datasets: [{
     yAxisID: 'Voltage',
@@ -15,6 +15,16 @@ const data = {
 const config = {
     type: 'line',
     data: data,
+    options: {
+        scales: {
+            xAxes: {
+                type: 'time',
+                time: {
+                    parser: 'HH:mm:ss'
+                }
+            }
+        }
+    }
 };
 
 const ctx = document.getElementById('myChart').getContext('2d');
