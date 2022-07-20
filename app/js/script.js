@@ -103,7 +103,7 @@ function readCT() {
       //console.log(JSON.stringify(data['Items'][0]['Time'], undefined, 2));
       for (let i=0; i < data['Count']; i++) {
         var timeResult = JSON.stringify(data['Items'][i]['Time']);
-        var valueCT = extractData(data['Items'][i], 'CTPI', 1, 1);
+        var valueCT = Number(extractData(data['Items'][i], 'CTPI', 1, 1));
         console.log(valueCT);
         addDataChart(myChart, timeResult.substring(9,18), valueCT);
       }
