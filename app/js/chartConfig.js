@@ -3,17 +3,17 @@ const data = {
   labels: [],
   autoPadding: true,
   datasets: [{
-    yAxisID: 'Voltage',
     label: 'CT Measurements',
     data: [],
     fill: false,
     borderColor: 'rgb(75, 192, 192)',
     tension: 0.1
   }, {
-  label: 'PI Measurements',
-  fill: false,
-  borderColor: 'rgb(75, 50, 192)',
-  tension: 0.1
+    label: 'PI Measurements',
+    data: [],
+    fill: false,
+    borderColor: 'rgb(75, 50, 192)',
+    tension: 0.1
 }]
 };
 
