@@ -103,7 +103,8 @@ function readCT() {
     else {
       console.log(JSON.stringify(data['Items'][0]['Time'], undefined, 2));
       timeResult = JSON.stringify(data['Items'][0]['Time']);
-      addDataChart(myChart, timeResult, 20);
+      console.log(timeResult.format("hh:mm:ss"));
+      //addDataChart(myChart, timeResult, 20);
     }
   });
 }
