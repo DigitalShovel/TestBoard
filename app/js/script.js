@@ -101,10 +101,9 @@ function readCT() {
       alert(JSON.stringify(err, undefined, 2));
     }
     else {
-      console.log(JSON.stringify(data['Items'][0]['Time'], undefined, 2));
+      //console.log(JSON.stringify(data['Items'][0]['Time'], undefined, 2));
       timeResult = JSON.stringify(data['Items'][0]['Time']);
-      console.log(timeResult.substring(9,18));
-      //addDataChart(myChart, timeResult, 20);
+      addDataChart(myChart, timeResult.substring(9,18), 20);
     }
   });
 }
