@@ -3,7 +3,7 @@ const data = {
   labels: [],
   autoPadding: true,
   datasets: [{
-    label: 'CT Measurements',
+    label: 'ESP Measurements',
     data: [],
     fill: false,
     borderColor: 'rgb(75, 192, 192)',

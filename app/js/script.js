@@ -105,8 +105,10 @@ function readCT() {
         var timeResult = JSON.stringify(data['Items'][i]['Time']);
         var valueCT = extractData(data['Items'][i], 'CTPI', 1, 1);
         var valueESP = extractData(data['Items'][i], 'CTESP', 1, 1);
-        addDataChart(myChart, timeResult.substring(9,18), valueCT);
-        addDataChart(myChart, timeResult.substring(9,18), valueESP);
+        console.log("PI: "+valueCT);
+        console.log("ESP: "+valueESP);
+        addDataChart(myChart, timeResult.substring(9,18), valueCT, 0);
+        addDataChart(myChart, timeResult.substring(9,18), valueESP, 1);
       }
     }
   });
@@ -119,12 +121,12 @@ function extractData(data, attribute, channel, ctnum) {
 }
 
 ///////////////// Add Data to Chart ////////////////////
-function addDataChart(chart, label, data) {
+function addDataChart(chart, label, data, pos) {
   chart.data.labels.push(label);
   /*chart.data.datasets[0].forEach((dataset) => {
     dataset.data.push(data);
   });*/
-  chart.data.datasets[0].data = data;
+  chart.data.datasets[pos].data = data;
   chart.update('active');
 }
 
