@@ -121,9 +121,10 @@ function extractData(data, attribute, channel, ctnum) {
 ///////////////// Add Data to Chart ////////////////////
 function addDataChart(chart, label, data) {
   chart.data.labels.push(label);
-  chart.data.datasets[0].forEach((dataset) => {
+  /*chart.data.datasets[0].forEach((dataset) => {
     dataset.data.push(data);
-  });
+  });*/
+  chart.data.datasets[0].data = data;
   chart.update('active');
 }
 
