@@ -85,7 +85,6 @@ function auth() {
 /////////////////////////////////////////////////////////
 
 ///////////// Read CT Values from DB ////////////////////
-let timeResult;
 function readCT() {
   var docClient = new AWS.DynamoDB.DocumentClient();
 
@@ -102,11 +101,11 @@ function readCT() {
     }
     else {
       //console.log(JSON.stringify(data['Items'][0]['Time'], undefined, 2));
-      timeResult = JSON.stringify(data['Items'][0]['Time']);
-      var valueCT = extractData(data['Items'][0], 'CTPI', 1, 1);
-      console.log("CT Value (CH1 - CT1): "+valueCT);
-      console.log(data['Count']);
-      addDataChart(myChart, timeResult.substring(9,18), 20);
+      for (let i=0; i < data['Count']; i++) {
+        var timeResult = JSON.stringify(data['Items'][i]['Time']);
+        var valueCT = extractData(data['Items'][i], 'CTPI', 1, 1);
+        addDataChart(myChart, timeResult.substring(9,18), valueCT);
+      }
     }
   });
 }
