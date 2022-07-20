@@ -103,11 +103,18 @@ function readCT() {
     else {
       //console.log(JSON.stringify(data['Items'][0]['Time'], undefined, 2));
       timeResult = JSON.stringify(data['Items'][0]['Time']);
+      var valueCT = extractData(data['Items'][0], 'CTPI', 1, 1);
+      console.log("CT Value (CH1 - CT1): "+valueCT);
       addDataChart(myChart, timeResult.substring(9,18), 20);
     }
   });
 }
 //////////////////////////////////////////////////////////
+
+///////////////// Collect data from DB //////////////////
+function extractData(data, attribute, channel, ctnum) {
+  return JSON.stringify(data[attribute][channel-1][String('CT'+ctnum)]);
+}
 
 ///////////////// Add Data to Chart ////////////////////
 function addDataChart(chart, label, data) {
