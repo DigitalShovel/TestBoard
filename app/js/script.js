@@ -123,8 +123,8 @@ function addDataChart(chart, label, data1, data2) {
   /*chart.data.datasets[0].forEach((dataset) => {
     dataset.data.push(data);
   });*/
-  chart.data.datasets[0].data = data1;
-  chart.data.datasets[1].data = data2;
+  chart.data.datasets[0].data.push(data1);
+  chart.data.datasets[1].data.push(data2);
   chart.update('active');
 }
 
