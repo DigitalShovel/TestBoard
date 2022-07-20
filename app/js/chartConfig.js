@@ -11,7 +11,6 @@ const data = {
     tension: 0.1
   }, {
   label: 'PI Measurements',
-  data: [],
   fill: false,
   borderColor: 'rgb(75, 50, 192)',
   tension: 0.1
