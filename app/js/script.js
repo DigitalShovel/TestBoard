@@ -47,25 +47,6 @@ function mapStationWebSocket() {
     alert("WebSocket NOT supported by your Browser!");
   }
 }
-
-function updateResultWebSocket() {
-  if ("WebSocket" in window) {
-    // Let us open a web socket
-    var ws = new WebSocket("wss://7euhvvmbfb.execute-api.us-east-1.amazonaws.com/production");
-    ws.onopen = function () {
-      // Web Socket is connected, send data using send()
-      // ws.send('{"action": "updateResult","message": "Start Map Station"}');
-    };
-
-    ws.onmessage = function (evt) {
-      var received_msg = evt.data;
-      console.log(received_msg);
-    };
-  } else {
-    // The browser doesn't support WebSocket
-    alert("WebSocket NOT supported by your Browser!");
-  }
-}
 //////////////////////
 
 ////////////// Check for Login Token //////////////////
@@ -86,7 +67,7 @@ function checkLogin() {
       console.log("User Signed In!");
       auth();
   }
-  updateResultWebSocket();
+  readCT();
 }
 ////////////////////////////////////////////////////////
 
