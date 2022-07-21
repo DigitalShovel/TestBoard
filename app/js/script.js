@@ -15,7 +15,7 @@ function WebSocketTest() {
 
     ws.onmessage = function (evt) {
       var received_msg = evt.data;
-      // alert("Message is received...");
+      alert(received_msg);
     };
 
     ws.onclose = function () {
