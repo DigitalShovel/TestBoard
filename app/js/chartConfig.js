@@ -23,5 +23,7 @@ const config = {
 };
 
 const ctx = document.getElementById('myChart').getContext('2d');
+
+/// Creating different chart objects ///
 const myChart = new Chart(ctx, config);
 /////////////////////////////////////

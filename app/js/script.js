@@ -103,7 +103,6 @@ function readCT() {
       alert(JSON.stringify(err, undefined, 2));
     }
     else {
-      //console.log(JSON.stringify(data['Items'][0]['Time'], undefined, 2));
       for (let i=0; i < data['Count']; i++) {
         var timeResult = JSON.stringify(data['Items'][i]['Time']);
         var valueCT = extractData(data['Items'][i], 'CTPI', 1, 1);
