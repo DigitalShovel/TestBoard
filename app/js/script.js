@@ -67,7 +67,6 @@ function checkLogin() {
       console.log("User Signed In!");
       auth();
   }
-  readCT();
 }
 ////////////////////////////////////////////////////////
 
@@ -83,6 +82,8 @@ function auth() {
             "cognito-idp.us-east-1.amazonaws.com/us-east-1_vUE45CGKG": idToken
           }
         });
+
+  readCT();
 }
 /////////////////////////////////////////////////////////
 
