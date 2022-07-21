@@ -52,8 +52,8 @@ const config = {
     }
 };
 
-const ctx = document.getElementById('myChart').getContext('2d');
+const chart1 = document.getElementById('myChart').getContext('2d');
 
 /// Creating different chart objects ///
-const myChart = new Chart(ctx, config);
+const myChart = new Chart(chart1, config);
 /////////////////////////////////////
