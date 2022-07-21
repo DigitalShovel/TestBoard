@@ -20,6 +20,36 @@ const data = {
 const config = {
     type: 'line',
     data: data,
+    options: {
+        scales: {
+            x: {
+                title: {
+                    display: true,
+                    text: 'Time',
+                    color: '#911',
+                    font: {
+                        family: 'Comic Sans MS',
+                        size: 20,
+                        weight: 'bold',
+                        lineHeight: 1.2,
+                    }
+                }
+            },
+            y: {
+                title: {
+                    display: true,
+                    text: 'Voltage',
+                    color: '#911',
+                    font: {
+                        family: 'Comic Sans MS',
+                        size: 20,
+                        weight: 'bold',
+                        lineHeight: 1.2,
+                    }
+                }
+            }
+        }
+    }
 };
 
 const ctx = document.getElementById('myChart').getContext('2d');
