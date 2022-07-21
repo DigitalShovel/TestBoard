@@ -72,9 +72,9 @@ function checkLogin() {
 ////////////////////////////////////////////////////////
 
 //////////////// Update Charts every 20 seconds //////////
-const interval = setInterval(function() {
+const inverval_timer = setInterval(function() { 
   readCT();
-}, 20000);
+}, 5000);
 
 ///////////////////// Authorize ////////////////////////
 function auth() {
@@ -88,7 +88,9 @@ function auth() {
             "cognito-idp.us-east-1.amazonaws.com/us-east-1_vUE45CGKG": idToken
           }
         });
-  clearInterval(interval);    
+  const inverval_timer = setInterval(function() { 
+    readCT();
+  }, 5000);   
   //readCT();
 }
 /////////////////////////////////////////////////////////
