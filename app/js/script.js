@@ -71,6 +71,12 @@ function checkLogin() {
 }
 ////////////////////////////////////////////////////////
 
+//////////////// Update Charts every 20 seconds //////////
+function updateCharts(){
+  readCT();
+  setTimeout(updateCharts, 5000);
+}
+
 ///////////////////// Authorize ////////////////////////
 function auth() {
   AWS.config.update({
@@ -83,8 +89,8 @@ function auth() {
             "cognito-idp.us-east-1.amazonaws.com/us-east-1_vUE45CGKG": idToken
           }
         });
-
-  readCT();
+  updateCharts();      
+  //readCT();
 }
 /////////////////////////////////////////////////////////
 
