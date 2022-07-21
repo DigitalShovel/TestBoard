@@ -59,7 +59,7 @@ function updateResultWebSocket() {
 
     ws.onmessage = function (evt) {
       var received_msg = evt.data;
-      alert(received_msg);
+      console.log(received_msg);
     };
   } else {
     // The browser doesn't support WebSocket
