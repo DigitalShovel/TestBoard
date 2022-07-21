@@ -26,6 +26,7 @@ function WebSocketTest() {
     // The browser doesn't support WebSocket
     alert("WebSocket NOT supported by your Browser!");
   }
+  myChart.destroy();
 }
 //////////////////
 

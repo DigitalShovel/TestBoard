@@ -29,7 +29,7 @@ const config = {
                     color: '#911',
                     font: {
                         family: 'sans-serif',
-                        size: 20,
+                        size: 12,
                         weight: 'bold',
                         lineHeight: 1.2,
                     }
@@ -42,7 +42,7 @@ const config = {
                     color: '#911',
                     font: {
                         family: 'sans-serif',
-                        size: 20,
+                        size: 12,
                         weight: 'bold',
                         lineHeight: 1.2,
                     }
