@@ -28,7 +28,7 @@ const config = {
                     text: 'Time',
                     color: '#911',
                     font: {
-                        family: 'Comic Sans MS',
+                        family: 'Inter',
                         size: 20,
                         weight: 'bold',
                         lineHeight: 1.2,
@@ -41,7 +41,7 @@ const config = {
                     text: 'Voltage',
                     color: '#911',
                     font: {
-                        family: 'Comic Sans MS',
+                        family: 'Inter',
                         size: 20,
                         weight: 'bold',
                         lineHeight: 1.2,
