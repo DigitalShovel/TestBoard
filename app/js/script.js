@@ -86,6 +86,7 @@ function checkLogin() {
       console.log("User Signed In!");
       auth();
   }
+  updateResultWebSocket();
 }
 ////////////////////////////////////////////////////////
 
