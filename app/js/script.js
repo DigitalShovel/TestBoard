@@ -71,11 +71,6 @@ function checkLogin() {
 }
 ////////////////////////////////////////////////////////
 
-//////////////// Update Charts every 20 seconds //////////
-const inverval_timer = setInterval(function() { 
-  readCT();
-}, 5000);
-
 ///////////////////// Authorize ////////////////////////
 function auth() {
   AWS.config.update({
