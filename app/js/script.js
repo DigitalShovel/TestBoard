@@ -74,7 +74,7 @@ function checkLogin() {
 //////////////// Update Charts every 20 seconds //////////
 const interval = setInterval(function() {
   readCT();
-}, 5000);
+}, 20000);
 
 ///////////////////// Authorize ////////////////////////
 function auth() {
