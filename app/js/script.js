@@ -84,7 +84,6 @@ function auth() {
           }
         }); 
   const inverval_timer = setInterval(function() { 
-    removeData(myChart);
     readCT();
   }, 5000);  
   //readCT();
@@ -135,10 +134,16 @@ function addDataChart(chart, label, data1, data2) {
 }
 
 function removeData(chart) {
-  chart.data.labels.pop();
-  chart.data.datasets.forEach((dataset) => {
-    dataset.data.pop();
-  });
+
+  let total = chart.data.labels.length;
+
+  while (total >= 0) {
+      //chart.data.labels.pop();
+      chart.data.datasets[0].data.pop();
+      chart.data.datasets[1].data.pop();
+      total--;
+  }
+
   chart.update();
 }
 
