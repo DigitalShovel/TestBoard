@@ -107,7 +107,7 @@ function readCT(chartOBJ) {
     KeyConditionExpression: 'Station = :station and #Time > :lastTime',
     ExpressionAttributeValues: {
       ':station': 1,
-      ':lastTime': 0
+      ':lastTime': '22/07/22 11:14:28 AM'
     },
     ExpressionAttributeNames: {
       "#Time": "Time"
