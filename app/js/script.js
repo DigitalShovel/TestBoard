@@ -102,14 +102,14 @@ function readCT(chartOBJ) {
 
   var ctItem = {
     TableName: "IoT_Result",
-    KeyConditionExpression: 'Station = :station',
+    KeyConditionExpression: 'Station = :station and #Time = :Time',
     ExpressionAttributeValues: {
       ':station': 1,
-      //':lastTime': chartOBJ.dateLabel
+      ':lastTime': chartOBJ.dateLabel
     },
-    /*ExpressionAttributeNames: {
+    ExpressionAttributeNames: {
       "#Time": "Time"
-    }*/
+    }
   };
   docClient.query(ctItem, function(err, data) {
     if (err) {
@@ -117,6 +117,9 @@ function readCT(chartOBJ) {
     }
     else {
       for (let i=0; i < data['Count']; i++) {
+        if (data['Items'][i]['Time'] > chartOBJ.dateLabel){
+          chartOBJ.dateLabel = data['Items'][i]['Time'];
+        }
         var timeResult = JSON.stringify(data['Items'][i]['Time']);
         var valueCT = extractData(data['Items'][i], 'CTPI', 1, 1);
         var valueESP = extractData(data['Items'][i], 'CTESP', 1, 1);
