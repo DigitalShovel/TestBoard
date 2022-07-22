@@ -83,11 +83,11 @@ function auth() {
             "cognito-idp.us-east-1.amazonaws.com/us-east-1_vUE45CGKG": idToken
           }
         }); 
-  const inverval_timer = setInterval(function() { 
+  /*const inverval_timer = setInterval(function() { 
     removeData(myChart);
     readCT();
-  }, 5000);  
-  //readCT();
+  }, 5000);  */
+  readCT();
 }
 /////////////////////////////////////////////////////////
 
