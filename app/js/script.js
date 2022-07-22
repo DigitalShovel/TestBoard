@@ -104,7 +104,8 @@ function readCT(chartOBJ) {
 
   var ctItem = {
     TableName: "IoT_Result",
-    KeyConditionExpression: '#Station = :station AND #Time > :lastTime',
+    KeyConditionExpression: 'Station = :station',
+    FilterExpression: 'Time > :lastTime',
     ExpressionAttributeValues: {
       ':station': 1,
       ':lastTime': 0
