@@ -132,7 +132,7 @@ function addDataChart(chart, label, data1, data2) {
   });*/
   chart.data.datasets[0].data.push(data1);
   chart.data.datasets[1].data.push(data2);
-  chart.update();
+  chart.update("none");
 }
 
 function removeData(chart) {
@@ -145,7 +145,7 @@ function removeData(chart) {
       chart.data.datasets[1].data.pop();
       total--;
   }
-  chart.update();
+  chart.update("none");
 }
 
 ///////////// Set DB table to be scanned /////////////////
