@@ -1,3 +1,10 @@
+//////////// Create Objects for Chart //////////////
+const lastLabel = {
+  dateLabel: 0
+}
+const chartCH1C1 = Object.create(lastLabel);
+////////////////////////////////////////////////////
+
 //////////////////// Websockets ///////////////////////
 function WebSocketTest() {
   let inputData = document.getElementById("inputData").value;
@@ -86,20 +93,21 @@ function auth() {
   readCT();
   const inverval_timer = setInterval(function() { 
     removeData(myChart);
-    readCT();
+    readCT(chartCH1C1);
   }, 20000);
 }
 /////////////////////////////////////////////////////////
 
 ///////////// Read CT Values from DB ////////////////////
-function readCT() {
+function readCT(chartOBJ) {
   var docClient = new AWS.DynamoDB.DocumentClient();
 
   var ctItem = {
     TableName: "IoT_Result",
-    KeyConditionExpression: 'Station = :station',
+    KeyConditionExpression: 'Station = :station AND Time > :lastTime',
     ExpressionAttributeValues: {
-      ':station': 1
+      ':station': 1,
+      ':lastTime': chartOBJ.dateLabel
     }
   };
   docClient.query(ctItem, function(err, data) {
@@ -107,7 +115,6 @@ function readCT() {
       alert(JSON.stringify(err, undefined, 2));
     }
     else {
-      //removeData(myChart);
       for (let i=0; i < data['Count']; i++) {
         var timeResult = JSON.stringify(data['Items'][i]['Time']);
         var valueCT = extractData(data['Items'][i], 'CTPI', 1, 1);
@@ -118,6 +125,8 @@ function readCT() {
   });
 }
 //////////////////////////////////////////////////////////
+
+////////////// Check Last Label Value ////////////////////
 
 ///////////////// Collect data from DB //////////////////
 function extractData(data, attribute, channel, ctnum) {
@@ -132,7 +141,7 @@ function addDataChart(chart, label, data1, data2) {
   });*/
   chart.data.datasets[0].data.push(data1);
   chart.data.datasets[1].data.push(data2);
-  chart.update("none");
+  chart.update("active");
 }
 
 function removeData(chart) {
