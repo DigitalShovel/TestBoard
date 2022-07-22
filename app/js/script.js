@@ -83,11 +83,11 @@ function auth() {
             "cognito-idp.us-east-1.amazonaws.com/us-east-1_vUE45CGKG": idToken
           }
         }); 
+  readCT();
   const inverval_timer = setInterval(function() { 
     removeData(myChart);
     readCT();
-  }, 5000);
-  //readCT();
+  }, 20000);
 }
 /////////////////////////////////////////////////////////
 
@@ -132,7 +132,7 @@ function addDataChart(chart, label, data1, data2) {
   });*/
   chart.data.datasets[0].data.push(data1);
   chart.data.datasets[1].data.push(data2);
-  chart.update('active');
+  chart.update();
 }
 
 function removeData(chart) {
