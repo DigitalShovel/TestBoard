@@ -84,7 +84,6 @@ function auth() {
           }
         }); 
   const inverval_timer = setInterval(function() { 
-    removeData(myChart);
     readCT();
   }, 5000);
   //readCT();
@@ -107,6 +106,7 @@ function readCT() {
       alert(JSON.stringify(err, undefined, 2));
     }
     else {
+      removeData(myChart);
       for (let i=0; i < data['Count']; i++) {
         var timeResult = JSON.stringify(data['Items'][i]['Time']);
         var valueCT = extractData(data['Items'][i], 'CTPI', 1, 1);
@@ -125,12 +125,12 @@ function extractData(data, attribute, channel, ctnum) {
 
 ///////////////// Add & Remove Data to Chart ////////////////////
 function addDataChart(chart, label, data1, data2) {
-  chart.data.labels = label;
+  chart.data.labels.push(label);
   /*chart.data.datasets[0].forEach((dataset) => {
     dataset.data.push(data);
   });*/
-  chart.data.datasets[0].data = data1;
-  chart.data.datasets[1].data = data2;
+  chart.data.datasets[0].data.push(data1);
+  chart.data.datasets[1].data.push(data2);
   chart.update('active');
 }
 
@@ -144,7 +144,6 @@ function removeData(chart) {
       chart.data.datasets[1].data.pop();
       total--;
   }
-
   chart.update();
 }
 
