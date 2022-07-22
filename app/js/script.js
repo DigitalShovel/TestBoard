@@ -91,10 +91,10 @@ function auth() {
           }
         }); 
   readCT(chartCH1C1);
-  const inverval_timer = setInterval(function() { 
+  /*const inverval_timer = setInterval(function() { 
     removeData(myChart);
     readCT(chartCH1C1);
-  }, 20000);
+  }, 20000);*/
 }
 /////////////////////////////////////////////////////////
 
