@@ -84,6 +84,7 @@ function auth() {
           }
         }); 
   const inverval_timer = setInterval(function() { 
+    removeData(myChart);
     readCT();
   }, 5000);  
   //readCT();
