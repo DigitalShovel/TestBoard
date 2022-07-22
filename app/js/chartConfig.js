@@ -21,6 +21,8 @@ const config = {
     type: 'line',
     data: data,
     options: {
+        responsive: true,
+        maintainAspectRatio: false,
         scales: {
             x: {
                 title: {
@@ -52,6 +54,7 @@ const config = {
     }
 };
 
+var xAxisLabelMinWidth = 10;
 const chart1 = document.getElementById('myChart').getContext('2d');
 
 /// Creating different chart objects ///
