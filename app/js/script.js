@@ -3,6 +3,7 @@ const lastLabel = {
   dateLabel: 0
 }
 const chartCH1C1 = Object.create(lastLabel);
+console.log(chartCH1C1.dateLabel);
 ////////////////////////////////////////////////////
 
 //////////////////// Websockets ///////////////////////
