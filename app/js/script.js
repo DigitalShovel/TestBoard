@@ -93,7 +93,7 @@ function auth() {
   const inverval_timer = setInterval(function() { 
     removeData(myChart);
     readCT(chartCH1C1);
-  }, 20000);
+  }, 5000);
 }
 /////////////////////////////////////////////////////////
 
