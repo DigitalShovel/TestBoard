@@ -91,10 +91,10 @@ function auth() {
           }
         }); 
   readCT(chartCH1C1);
-  /*const inverval_timer = setInterval(function() { 
+  const inverval_timer = setInterval(function() { 
     removeData(myChart);
     readCT(chartCH1C1);
-  }, 20000);*/
+  }, 20000);
 }
 /////////////////////////////////////////////////////////
 
@@ -119,6 +119,9 @@ function readCT(chartOBJ) {
     }
     else {
       for (let i=0; i < data['Count']; i++) {
+        if (data['Items'][i]['Time'] > chartOBJ.dateLabel){
+          chartOBJ.dateLabel = data['Items'][i]['Time'];
+        }
         var timeResult = JSON.stringify(data['Items'][i]['Time']);
         var valueCT = extractData(data['Items'][i], 'CTPI', 1, 1);
         var valueESP = extractData(data['Items'][i], 'CTESP', 1, 1);
