@@ -26,7 +26,7 @@ function WebSocketTest() {
     // The browser doesn't support WebSocket
     alert("WebSocket NOT supported by your Browser!");
   }
-  myChart.destroy();
+  //myChart.destroy();
 }
 //////////////////
 
@@ -82,10 +82,11 @@ function auth() {
           Logins: {
             "cognito-idp.us-east-1.amazonaws.com/us-east-1_vUE45CGKG": idToken
           }
-        });
+        }); 
   const inverval_timer = setInterval(function() { 
+    myChart.reset();
     readCT();
-  }, 5000);   
+  }, 5000);  
   //readCT();
 }
 /////////////////////////////////////////////////////////
