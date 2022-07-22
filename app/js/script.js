@@ -139,7 +139,7 @@ function removeData(chart) {
   let total = chart.data.labels.length;
 
   while (total >= 0) {
-      //chart.data.labels.pop();
+      chart.data.labels.pop();
       chart.data.datasets[0].data.pop();
       chart.data.datasets[1].data.pop();
       total--;
