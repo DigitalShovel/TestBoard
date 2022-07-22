@@ -105,11 +105,11 @@ function readCT(chartOBJ) {
     KeyConditionExpression: 'Station = :station',
     ExpressionAttributeValues: {
       ':station': 1,
-      ':lastTime': chartOBJ.dateLabel
+      //':lastTime': chartOBJ.dateLabel
     },
-    ExpressionAttributeNames: {
+    /*ExpressionAttributeNames: {
       "#Time": "Time"
-    }
+    }*/
   };
   docClient.query(ctItem, function(err, data) {
     if (err) {
