@@ -33,7 +33,6 @@ function WebSocketTest() {
     // The browser doesn't support WebSocket
     alert("WebSocket NOT supported by your Browser!");
   }
-  removeData(myChart);
 }
 //////////////////
 
@@ -90,10 +89,10 @@ function auth() {
             "cognito-idp.us-east-1.amazonaws.com/us-east-1_vUE45CGKG": idToken
           }
         }); 
-  const inverval_timer = setInterval(function() { 
+  /*const inverval_timer = setInterval(function() { 
     removeData(myChart);
     readCT(chartCH1C1);
-  }, 5000);
+  }, 5000);*/
 }
 /////////////////////////////////////////////////////////
 
@@ -118,9 +117,6 @@ function readCT(chartOBJ) {
     }
     else {
       for (let i=0; i < data['Count']; i++) {
-        if (data['Items'][i]['Time'] > chartOBJ.dateLabel){
-          chartOBJ.dateLabel = data['Items'][i]['Time'];
-        }
         var timeResult = JSON.stringify(data['Items'][i]['Time']);
         var valueCT = extractData(data['Items'][i], 'CTPI', 1, 1);
         var valueESP = extractData(data['Items'][i], 'CTESP', 1, 1);
