@@ -3,7 +3,6 @@ const lastLabel = {
   dateLabel: 0
 }
 const chartCH1C1 = Object.create(lastLabel);
-console.log(chartCH1C1.dateLabel);
 ////////////////////////////////////////////////////
 
 //////////////////// Websockets ///////////////////////
@@ -108,7 +107,7 @@ function readCT(chartOBJ) {
     KeyConditionExpression: 'Station = :station AND Time > :lastTime',
     ExpressionAttributeValues: {
       ':station': 1,
-      ':lastTime': chartOBJ.dateLabel
+      ':lastTime': 0
     }
   };
   docClient.query(ctItem, function(err, data) {
