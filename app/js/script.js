@@ -90,7 +90,7 @@ function auth() {
             "cognito-idp.us-east-1.amazonaws.com/us-east-1_vUE45CGKG": idToken
           }
         }); 
-  readCT();
+  readCT(chartCH1C1);
   const inverval_timer = setInterval(function() { 
     removeData(myChart);
     readCT(chartCH1C1);
