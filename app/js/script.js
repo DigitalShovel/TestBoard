@@ -1,6 +1,6 @@
 //////////// Create Objects for Chart //////////////
 const lastLabel = {
-  dateLabel: 0
+  dateLabel: "22/07/22 11:14:28 AM"
 }
 const chartCH1C1 = Object.create(lastLabel);
 ////////////////////////////////////////////////////
@@ -107,7 +107,7 @@ function readCT(chartOBJ) {
     KeyConditionExpression: 'Station = :station and #Time > :lastTime',
     ExpressionAttributeValues: {
       ':station': 1,
-      ':lastTime': '22/07/22 11:14:28 AM'
+      ':lastTime': chartOBJ.dateLabel
     },
     ExpressionAttributeNames: {
       "#Time": "Time"
