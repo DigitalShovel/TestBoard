@@ -195,6 +195,7 @@ function scanning(PIList, ESPList, dynamClient){
     else {
       //document.getElementById("textarea").innerHTML = JSON.stringify(data, "Empty", 2);
       var piQuantity = parseInt(JSON.stringify(data['Count'], "0", 2));
+      console.log("Total of Stations: "+piQuantity);
       for (let i = 0; i < piQtyOLD; i++) {
         document.getElementById("PI#"+i).innerHTML = "Empty";
       }
