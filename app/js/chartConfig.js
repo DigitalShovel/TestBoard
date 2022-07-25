@@ -55,6 +55,7 @@ const config = {
 };
 
 var xAxisLabelMinWidth = 10;
+
 const chart1 = document.getElementById('myChart').getContext('2d');
 let listOfCharts = [];
 listOfCharts.push([new Chart(chart1, config)]);
