@@ -1,12 +1,15 @@
+const urlAccess = "https://testboard.auth.us-east-1.amazoncognito.com/login?client_id=73p6ql33opui1okr4hf9f60o8i&response_type=token&scope=aws.cognito.signin.user.admin+email+openid+profile&redirect_uri=https://ds-testboard.netlify.app/";
+
 //////////////////// Websockets ///////////////////////
 function WebSocketTest() {
   let inputData = document.getElementById("inputData").value;
 
   if ("WebSocket" in window) {
-    // alert("WebSocket is supported by your Browser!");
-
     // Let us open a web socket
     var ws = new WebSocket("wss://42jjhgjbdc.execute-api.us-east-1.amazonaws.com/production");
+    if (!registeredUser) {
+      location.replace(urlAccess);
+    }
 
     ws.onopen = function () {
       // Web Socket is connected, send data using send()
@@ -34,6 +37,10 @@ function mapStationWebSocket() {
   if ("WebSocket" in window) {
     // Let us open a web socket
     var ws = new WebSocket("wss://ekht0lzvqb.execute-api.us-east-1.amazonaws.com/production");
+    if (!registeredUser) {
+      location.replace(urlAccess);
+    }
+
     ws.onopen = function () {
       // Web Socket is connected, send data using send()
       ws.send('{"action": "startMap","message": "Start Map Station"}');
@@ -83,7 +90,7 @@ function auth() {
             "cognito-idp.us-east-1.amazonaws.com/us-east-1_vUE45CGKG": idToken
           }
         }); 
-  loadOnLogin();
+  loadOnLogin();      /// Load all the function needed, including creating objects
   /////////////// Refresh chart every 5 seconds /////////////
   const inverval_timer = setInterval(function() { 
     readCT(listOfDateLabel[0][0]);
@@ -92,9 +99,11 @@ function auth() {
 /////////////////////////////////////////////////////////
 
 /////// Functions to run if login is Authorized /////////
+let registeredUser = false;
 function loadOnLogin() {
   readCT(listOfDateLabel[0][0]);
   readItem();
+  registeredUser = true;
 }
 /////////////////////////////////////////////////////////
 
@@ -190,7 +199,7 @@ function scanning(PIList, ESPList, dynamClient){
     if (err) {
       //document.getElementById("textarea").innerHTML = "Unable to read item: " + "\n" + JSON.stringify(err, undefined, 2);
       //alert("No credentials. Try login again.");
-      location.replace("https://testboard.auth.us-east-1.amazoncognito.com/login?client_id=73p6ql33opui1okr4hf9f60o8i&response_type=token&scope=aws.cognito.signin.user.admin+email+openid+profile&redirect_uri=https://ds-testboard.netlify.app/")
+      location.replace(urlAccess);
     } 
     else {
       var piQuantity = parseInt(JSON.stringify(data['Count'], "0", 2));
