@@ -1,10 +1,3 @@
-//////////// Create Objects for Chart //////////////
-/*const lastLabel = {
-  dateLabel: "22/07/22 11:14:28"
-}
-const chartCH1C1 = Object.create(lastLabel);*/
-////////////////////////////////////////////////////
-
 //////////////////// Websockets ///////////////////////
 function WebSocketTest() {
   let inputData = document.getElementById("inputData").value;
@@ -44,7 +37,6 @@ function mapStationWebSocket() {
     ws.onopen = function () {
       // Web Socket is connected, send data using send()
       ws.send('{"action": "startMap","message": "Start Map Station"}');
-      console.log(listOfDateLabel[0][0].dateLabel);
     };
 
     ws.onmessage = function (evt) {
@@ -91,6 +83,7 @@ function auth() {
             "cognito-idp.us-east-1.amazonaws.com/us-east-1_vUE45CGKG": idToken
           }
         }); 
+  readCT(listOfDateLabel[0][0]);
   /////////////// Refresh chart every 5 seconds /////////////
   const inverval_timer = setInterval(function() { 
     readCT(listOfDateLabel[0][0]);
