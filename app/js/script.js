@@ -77,7 +77,6 @@ function checkLogin() {
   }
   else {
     console.log("User not allowed!");
-    location.replace(urlAccess);
   }
 }
 ////////////////////////////////////////////////////////
