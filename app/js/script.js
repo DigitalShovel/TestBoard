@@ -112,7 +112,6 @@ function readCT(labelOBJ) {
       alert(JSON.stringify(err, undefined, 2));
     }
     else {
-      console.log("Total Tests: "+data['Items'][0]['TestNumber']+" of "+data['Items'][0]['TotalTest']);
       for (let i=0; i < data['Count']; i++) {
         if (data['Items'][i]['Time'] > labelOBJ.dateLabel){
           labelOBJ.dateLabel = data['Items'][i]['Time'];
