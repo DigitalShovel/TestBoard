@@ -64,7 +64,7 @@ function checkLogin() {
   var url_string_temp = url_string.replace('#', '?');
   if (url_string.indexOf('#') !== -1){
     location.replace(url_string_temp);
-  }
+  } else {}
   var url = new URL(url_string);
   idToken = url.searchParams.get("id_token");
   AWS.config.update({
@@ -74,6 +74,8 @@ function checkLogin() {
   if (idToken != null) {
       console.log("User Signed In!");
       auth();
+  } else {
+    location.replace(urlAccess);
   }
 }
 ////////////////////////////////////////////////////////
