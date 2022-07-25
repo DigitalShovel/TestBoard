@@ -63,6 +63,7 @@ var xAxisLabelMinWidth = 10;
 function fitChart(){
     //var chartCanvas = document.getElementById('myChart');
     var maxWidth = chart1.parentElement.parentElement.clientWidth;
+    console.log(maxWidth);
     var width = Math.max(myChart.data.labels.length * xAxisLabelMinWidth, maxWidth);
 
     chartCanvas.parentElement.style.width = width +'px';
