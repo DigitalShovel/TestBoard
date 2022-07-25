@@ -66,6 +66,6 @@ const lastLabel = {
 
 //const myChart = new Chart(chart1, config);
 let listOfDateLabel = [];
-listOfDateLabel.push([Object.create(lastLabel)]);
+listOfDateLabel.push([Object.create(lastLabel), 1]);
 /////////////////////////////////////
 //const chartCH1C1 = Object.create(lastLabel);
