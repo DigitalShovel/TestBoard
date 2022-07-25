@@ -18,7 +18,7 @@ function WebSocketTest() {
     ws.onopen = function () {
       // Web Socket is connected, send data using send()
       ws.send('{"action": "sendMessage","message":' + inputData + "}");
-      removeData(myChart);
+      removeData(listOfCharts[0][0]);
     };
 
     ws.onmessage = function (evt) {
@@ -44,7 +44,7 @@ function mapStationWebSocket() {
     ws.onopen = function () {
       // Web Socket is connected, send data using send()
       ws.send('{"action": "startMap","message": "Start Map Station"}');
-      console.log(listOfCharts[0][1].dateLabel);
+      console.log(listOfDateLabel[0][0].dateLabel);
     };
 
     ws.onmessage = function (evt) {
@@ -93,13 +93,13 @@ function auth() {
         }); 
   /////////////// Refresh chart every 5 seconds /////////////
   const inverval_timer = setInterval(function() { 
-    readCT(listOfCharts[0][1]);
+    readCT(listOfDateLabel[0][0]);
   }, 5000);
 }
 /////////////////////////////////////////////////////////
 
 ///////////// Read CT Values from DB ////////////////////
-function readCT(chartOBJ) {
+function readCT(labelOBJ) {
   var docClient = new AWS.DynamoDB.DocumentClient();
 
   var ctItem = {
@@ -107,7 +107,7 @@ function readCT(chartOBJ) {
     KeyConditionExpression: 'Station = :station and #Time > :lastTime',
     ExpressionAttributeValues: {
       ':station': 1,
-      ':lastTime': chartOBJ.dateLabel
+      ':lastTime': labelOBJ.dateLabel
     },
     ExpressionAttributeNames: {
       "#Time": "Time"
@@ -119,13 +119,13 @@ function readCT(chartOBJ) {
     }
     else {
       for (let i=0; i < data['Count']; i++) {
-        if (data['Items'][i]['Time'] > chartOBJ.dateLabel){
-          chartOBJ.dateLabel = data['Items'][i]['Time'];
+        if (data['Items'][i]['Time'] > labelOBJ.dateLabel){
+          labelOBJ.dateLabel = data['Items'][i]['Time'];
         }
         var timeResult = JSON.stringify(data['Items'][i]['Time']);
         var valueCT = extractData(data['Items'][i], 'CTPI', 1, 1);
         var valueESP = extractData(data['Items'][i], 'CTESP', 1, 1);
-        addDataChart(myChart, timeResult.substring(9,18), valueCT, valueESP);
+        addDataChart(listOfCharts[0][0], timeResult.substring(9,18), valueCT, valueESP);
       }
     }
   });
