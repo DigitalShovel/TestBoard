@@ -64,7 +64,7 @@ const lastLabel = {
     dateLabel: "22/07/22 11:14:28"
   }
 
-const myChart = new Chart(chart1, config);
+//const myChart = new Chart(chart1, config);
 let listOfDateLabel = [];
 listOfDateLabel.push([Object.create(lastLabel)]);
 /////////////////////////////////////
