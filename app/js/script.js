@@ -13,8 +13,10 @@ function WebSocketTest() {
 
     ws.onopen = function () {
       // Web Socket is connected, send data using send()
-      ws.send('{"action": "sendMessage","message":' + inputData + "}");
-      removeData(listOfCharts[0][0]);
+      if (registeredUser) {
+        ws.send('{"action": "sendMessage","message":' + inputData + "}");
+        removeData(listOfCharts[0][0]);
+      }
     };
 
     ws.onmessage = function (evt) {
@@ -43,7 +45,9 @@ function mapStationWebSocket() {
 
     ws.onopen = function () {
       // Web Socket is connected, send data using send()
-      ws.send('{"action": "startMap","message": "Start Map Station"}');
+      if (registeredUser) {
+        ws.send('{"action": "startMap","message": "Start Map Station"}');
+      }
     };
 
     ws.onmessage = function (evt) {
