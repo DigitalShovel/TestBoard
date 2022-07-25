@@ -48,8 +48,8 @@ const moveChart = {
         }
     let drawCircleLeft = new CircleChevron();
     drawCircleLeft.draw(ctx, left, 1, 10);
-    /*let drawCircleRight = new CircleChevron();
-    drawCircleRight.draw(ctx, 1, 1, 10);*/
+    let drawCircleRight = new CircleChevron();
+    drawCircleRight.draw(ctx, right, 1, 10);
     }
 }
 
