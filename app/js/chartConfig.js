@@ -17,6 +17,23 @@ const data = {
 }]
 };
 
+const moveChart = {
+    id: 'moveChart',
+    afterDraw(chart, args, pluginOptions) {
+        const { ctx, chartArea: {left, right, top, bottom, width, height} } = chart;
+        const angle = Math.PI / 180;
+
+        ctx.beginPath();
+        ctx.lineWidth = 3;
+        ctx.strokeStyle = 'rgba(102, 102, 102, 0.5)';
+        ctx.fillStyle = 'white';
+        ctx.arc(left, height/2 + top, 15, angle * 0, angle * 360, false),
+        ctx.stroke();
+        ctx.fill();
+        ctx.closePath();
+    }
+}
+
 const config = {
     type: 'line',
     data: data,
@@ -53,7 +70,8 @@ const config = {
                 }
             }
         }
-    }
+    },
+    plugins: [moveChart]
 };
 ///////// Attach the chart variable to the Canvas //////////
 const chart1 = document.getElementById('myChart').getContext('2d');
