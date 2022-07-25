@@ -22,7 +22,7 @@ const config = {
     data: data,
     options: {
         responsive: true,
-        maintainAspectRatio: false,
+        maintainAspectRatio: true,
         scales: {
             x: {
                 title: {
