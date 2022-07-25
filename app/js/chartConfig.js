@@ -21,26 +21,35 @@ const moveChart = {
     id: 'moveChart',
     afterDraw(chart, args, pluginOptions) {
         const { ctx, chartArea: {left, right, top, bottom, width, height} } = chart;
-        const angle = Math.PI / 180;
+        
+        class CircleChevron {
+            //constructor(x1,y1) {}
+            draw(ctx, x1, y1, pixel) {
+                const angle = Math.PI / 180;
+                ctx.beginPath();
+                ctx.lineWidth = 3;
+                ctx.strokeStyle = 'rgba(102, 102, 102, 0.5)';
+                ctx.fillStyle = 'white';
+                ctx.arc(x1, height/2 + top, 15, angle * 0, angle * 360, false),
+                ctx.stroke();
+                ctx.fill();
+                ctx.closePath();
 
-        ctx.beginPath();
-        ctx.lineWidth = 3;
-        ctx.strokeStyle = 'rgba(102, 102, 102, 0.5)';
-        ctx.fillStyle = 'white';
-        ctx.arc(left, height/2 + top, 15, angle * 0, angle * 360, false),
-        ctx.stroke();
-        ctx.fill();
-        ctx.closePath();
-
-        // Chevron Arrow Left //
-        ctx.beginPath();
-        ctx.lineWidth = 3;
-        ctx.strokeStyle = 'rgba(255, 26, 104, 1)';
-        ctx.moveTo(left+5, height/2 + top-7.5);
-        ctx.lineTo(left-5, height/2 + top);
-        ctx.lineTo(left+5, height/2 + top+7.5);
-        ctx.stroke();
-        ctx.closePath();
+                // Chevron Arrow Left //
+                ctx.beginPath();
+                ctx.lineWidth = 3;
+                ctx.strokeStyle = 'rgba(255, 26, 104, 1)';
+                ctx.moveTo(x1+5, height/2 + top-7.5);
+                ctx.lineTo(x1-5, height/2 + top);
+                ctx.lineTo(x1+5, height/2 + top+7.5);
+                ctx.stroke();
+                ctx.closePath();
+            }
+        }
+    let drawCircleLeft = new CircleChevron();
+    drawCircleLeft.draw(ctx, left, 1, 10);
+    /*let drawCircleRight = new CircleChevron();
+    drawCircleRight.draw(ctx, 1, 1, 10);*/
     }
 }
 
