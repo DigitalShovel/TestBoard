@@ -56,17 +56,19 @@ const config = {
 
 var xAxisLabelMinWidth = 10;
 
+///////// Attach the chart variable to the Canvas //////////
 const chart1 = document.getElementById('myChart').getContext('2d');
+////////////////////////////////////////////////////////////
+
+///////////////// Build array of charts ///////////////////
 let listOfCharts = [];
 listOfCharts.push([new Chart(chart1, config)]);
+//////////////////////////////////////////////////////////
 
-/// Creating different chart objects & dateLabel ///
+///////// Build array of dateLabels reference //////////
 const lastLabel = {
     dateLabel: "22/07/22 11:14:28"
   }
-
-//const myChart = new Chart(chart1, config);
 let listOfDateLabel = [];
-listOfDateLabel.push([Object.create(lastLabel), 1]);
+listOfDateLabel.push([Object.create(lastLabel)]);
 /////////////////////////////////////
-//const chartCH1C1 = Object.create(lastLabel);
