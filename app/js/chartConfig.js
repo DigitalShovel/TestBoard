@@ -57,6 +57,11 @@ const config = {
     type: 'line',
     data: data,
     options: {
+        layout: {
+            padding: {
+                right: 18
+            }
+        },
         responsive: true,
         maintainAspectRatio: true,
         scales: {
