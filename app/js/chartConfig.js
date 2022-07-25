@@ -31,6 +31,16 @@ const moveChart = {
         ctx.stroke();
         ctx.fill();
         ctx.closePath();
+
+        // Chevron Arrow Left //
+        ctx.beginPath();
+        ctx.lineWidth = 3;
+        ctx.strokeStyle = 'rgba(255, 26, 104, 1)';
+        ctx.moveTo(left+5, height/2 + top-7.5);
+        ctx.lineTo(left-5, height/2 + top);
+        ctx.lineTo(left+5, height/2 + top+7.5);
+        ctx.stroke();
+        ctx.closePath();
     }
 }
 
