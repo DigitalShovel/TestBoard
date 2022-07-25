@@ -26,7 +26,7 @@ const config = {
         scales: {
             x: {
                 min: 0,
-                max: 6,
+                max: 12,
                 title: {
                     display: true,
                     text: 'Time',
