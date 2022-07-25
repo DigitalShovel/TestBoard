@@ -83,12 +83,18 @@ function auth() {
             "cognito-idp.us-east-1.amazonaws.com/us-east-1_vUE45CGKG": idToken
           }
         }); 
-  readCT(listOfDateLabel[0][0]);
-  readItem();
+  loadOnLogin();
   /////////////// Refresh chart every 5 seconds /////////////
   const inverval_timer = setInterval(function() { 
     readCT(listOfDateLabel[0][0]);
   }, 5000);
+}
+/////////////////////////////////////////////////////////
+
+/////// Functions to run if login is Authorized /////////
+function loadOnLogin() {
+  readCT(listOfDateLabel[0][0]);
+  readItem();
 }
 /////////////////////////////////////////////////////////
 
