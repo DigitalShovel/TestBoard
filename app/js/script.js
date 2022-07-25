@@ -75,9 +75,6 @@ function checkLogin() {
       console.log("User Signed In!");
       auth();
   }
-  else {
-    readItem();
-  }
 }
 ////////////////////////////////////////////////////////
 
