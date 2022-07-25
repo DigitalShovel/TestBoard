@@ -21,16 +21,12 @@ const config = {
     type: 'line',
     data: data,
     options: {
-        plugins: {
-            title: {
-                display: true,
-                text: 'Station 1 - Channel 1 - CT 1'
-            }
-        },
         responsive: true,
         maintainAspectRatio: true,
         scales: {
             x: {
+                min: 0,
+                max: 6,
                 title: {
                     display: true,
                     text: 'Time',
