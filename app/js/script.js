@@ -7,14 +7,15 @@ function WebSocketTest() {
   if ("WebSocket" in window) {
     // Let us open a web socket
     var ws = new WebSocket("wss://42jjhgjbdc.execute-api.us-east-1.amazonaws.com/production");
-    if (!registeredUser) {
-      location.replace(urlAccess);
-    }
 
     ws.onopen = function () {
       // Web Socket is connected, send data using send()
-      ws.send('{"action": "sendMessage","message":' + inputData + "}");
-      removeData(listOfCharts[0][0]);
+      if (!registeredUser) {
+        location.replace(urlAccess);
+      } else {
+        ws.send('{"action": "sendMessage","message":' + inputData + "}");
+        removeData(listOfCharts[0][0]);
+      }
     };
 
     ws.onmessage = function (evt) {
@@ -37,13 +38,14 @@ function mapStationWebSocket() {
   if ("WebSocket" in window) {
     // Let us open a web socket
     var ws = new WebSocket("wss://ekht0lzvqb.execute-api.us-east-1.amazonaws.com/production");
-    if (!registeredUser) {
-      location.replace(urlAccess);
-    }
 
     ws.onopen = function () {
       // Web Socket is connected, send data using send()
-      ws.send('{"action": "startMap","message": "Start Map Station"}');
+      if (!registeredUser) {
+        location.replace(urlAccess);
+      } else {
+        ws.send('{"action": "startMap","message": "Start Map Station"}');
+      }
     };
 
     ws.onmessage = function (evt) {
@@ -64,7 +66,7 @@ function checkLogin() {
   var url_string_temp = url_string.replace('#', '?');
   if (url_string.indexOf('#') !== -1){
     location.replace(url_string_temp);
-  } else {}
+  }
   var url = new URL(url_string);
   idToken = url.searchParams.get("id_token");
   AWS.config.update({
@@ -74,8 +76,6 @@ function checkLogin() {
   if (idToken != null) {
       console.log("User Signed In!");
       auth();
-  } else {
-    location.replace(urlAccess);
   }
 }
 ////////////////////////////////////////////////////////

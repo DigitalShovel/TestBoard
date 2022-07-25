@@ -60,6 +60,11 @@ var xAxisLabelMinWidth = 10;
 const chart1 = document.getElementById('myChart').getContext('2d');
 ////////////////////////////////////////////////////////////
 
+//////////////////// Array of List /////////////////////////////
+////                     CH1                       CH2      ////
+////    [CT1, CT2, CT3, CT4, CT5, CT6, CT7, CT8], [...]     ////
+////////////////////////////////////////////////////////////////
+
 ///////////////// Build array of charts ///////////////////
 let listOfCharts = [];
 listOfCharts.push([new Chart(chart1, config)]);
