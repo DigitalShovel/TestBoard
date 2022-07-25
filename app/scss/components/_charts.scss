@@ -2,3 +2,14 @@
   width: 400px;
   padding: 1rem;
 }
+
+.chartWrapper {
+  position: relative;
+  overflow: auto;
+  width: 100%; //400px
+}
+
+.chartAreaWrapper {
+  position: relative;
+  height: 300px;
+}
