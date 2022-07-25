@@ -84,6 +84,7 @@ function auth() {
           }
         }); 
   readCT(listOfDateLabel[0][0]);
+  readItem();
   /////////////// Refresh chart every 5 seconds /////////////
   const inverval_timer = setInterval(function() { 
     readCT(listOfDateLabel[0][0]);
@@ -111,6 +112,7 @@ function readCT(labelOBJ) {
       alert(JSON.stringify(err, undefined, 2));
     }
     else {
+      console.log("Total Tests: "+data['Items'][0]['TestNumber']+" of "+data['Items'][0]['TotalTest']);
       for (let i=0; i < data['Count']; i++) {
         if (data['Items'][i]['Time'] > labelOBJ.dateLabel){
           labelOBJ.dateLabel = data['Items'][i]['Time'];
@@ -186,7 +188,6 @@ function scanning(PIList, ESPList, dynamClient){
       location.replace("https://testboard.auth.us-east-1.amazoncognito.com/login?client_id=73p6ql33opui1okr4hf9f60o8i&response_type=token&scope=aws.cognito.signin.user.admin+email+openid+profile&redirect_uri=https://ds-testboard.netlify.app/")
     } 
     else {
-      //document.getElementById("textarea").innerHTML = JSON.stringify(data, "Empty", 2);
       var piQuantity = parseInt(JSON.stringify(data['Count'], "0", 2));
       console.log("Total of Stations: "+piQuantity);
       for (let i = 0; i < piQtyOLD; i++) {
