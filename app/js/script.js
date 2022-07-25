@@ -13,10 +13,8 @@ function WebSocketTest() {
 
     ws.onopen = function () {
       // Web Socket is connected, send data using send()
-      if (registeredUser) {
-        ws.send('{"action": "sendMessage","message":' + inputData + "}");
-        removeData(listOfCharts[0][0]);
-      }
+      ws.send('{"action": "sendMessage","message":' + inputData + "}");
+      removeData(listOfCharts[0][0]);
     };
 
     ws.onmessage = function (evt) {
@@ -45,9 +43,7 @@ function mapStationWebSocket() {
 
     ws.onopen = function () {
       // Web Socket is connected, send data using send()
-      if (registeredUser) {
-        ws.send('{"action": "startMap","message": "Start Map Station"}');
-      }
+      ws.send('{"action": "startMap","message": "Start Map Station"}');
     };
 
     ws.onmessage = function (evt) {
@@ -78,6 +74,9 @@ function checkLogin() {
   if (idToken != null) {
       console.log("User Signed In!");
       auth();
+  }
+  else {
+    location.replace(urlAccess);
   }
 }
 ////////////////////////////////////////////////////////
@@ -201,8 +200,6 @@ function scanning(PIList, ESPList, dynamClient){
   ///////////////////  Build PI List //////////////////////
   dynamClient.scan(PIList, function(err, data) {
     if (err) {
-      //document.getElementById("textarea").innerHTML = "Unable to read item: " + "\n" + JSON.stringify(err, undefined, 2);
-      //alert("No credentials. Try login again.");
       location.replace(urlAccess);
     } 
     else {
