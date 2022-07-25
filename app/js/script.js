@@ -93,7 +93,7 @@ function auth() {
         }); 
   /////////////// Refresh chart every 5 seconds /////////////
   const inverval_timer = setInterval(function() { 
-    readCT(chartCH1C1);
+    readCT(listOfCharts[0][1]);
   }, 5000);
 }
 /////////////////////////////////////////////////////////
