@@ -44,6 +44,7 @@ function mapStationWebSocket() {
     ws.onopen = function () {
       // Web Socket is connected, send data using send()
       ws.send('{"action": "startMap","message": "Start Map Station"}');
+      console.log(listOfCharts[0][1].dateLabel);
     };
 
     ws.onmessage = function (evt) {
@@ -90,8 +91,8 @@ function auth() {
             "cognito-idp.us-east-1.amazonaws.com/us-east-1_vUE45CGKG": idToken
           }
         }); 
+  /////////////// Refresh chart every 5 seconds /////////////
   const inverval_timer = setInterval(function() { 
-    //removeData(myChart);
     readCT(chartCH1C1);
   }, 5000);
 }

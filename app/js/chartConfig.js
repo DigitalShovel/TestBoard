@@ -59,4 +59,6 @@ const chart1 = document.getElementById('myChart').getContext('2d');
 
 /// Creating different chart objects ///
 const myChart = new Chart(chart1, config);
+let listOfCharts = [];
+listOfCharts.push([myChart, chartCH1C1]);
 /////////////////////////////////////
