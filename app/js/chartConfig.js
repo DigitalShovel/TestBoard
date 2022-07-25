@@ -58,7 +58,11 @@ var xAxisLabelMinWidth = 10;
 const chart1 = document.getElementById('myChart').getContext('2d');
 
 /// Creating different chart objects ///
+const lastLabel = {
+    dateLabel: "22/07/22 11:14:28"
+  }
 const myChart = new Chart(chart1, config);
 let listOfCharts = [];
-listOfCharts.push([myChart, chartCH1C1]);
+listOfCharts.push([myChart, Object.create(lastLabel)]);
 /////////////////////////////////////
+//const chartCH1C1 = Object.create(lastLabel);

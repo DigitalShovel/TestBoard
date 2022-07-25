@@ -1,8 +1,8 @@
 //////////// Create Objects for Chart //////////////
-const lastLabel = {
+/*const lastLabel = {
   dateLabel: "22/07/22 11:14:28"
 }
-const chartCH1C1 = Object.create(lastLabel);
+const chartCH1C1 = Object.create(lastLabel);*/
 ////////////////////////////////////////////////////
 
 //////////////////// Websockets ///////////////////////
