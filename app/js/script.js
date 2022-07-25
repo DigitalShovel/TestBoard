@@ -96,6 +96,7 @@ function auth() {
   /////////////// Refresh chart every 5 seconds /////////////
   const inverval_timer = setInterval(function() { 
     readCT(listOfDateLabel[0][0]);
+    fitChart();
   }, 5000);
 }
 /////////////////////////////////////////////////////////
