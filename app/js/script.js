@@ -75,7 +75,7 @@ function checkLogin() {
       console.log("User Signed In!");
       auth();
   }
-  else {
+  else if (idToken == null && !registeredUser) {
     console.log("User not allowed!");
   }
 }
