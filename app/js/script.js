@@ -77,6 +77,7 @@ function checkLogin() {
   }
   else if (idToken == null && !registeredUser) {
     console.log("User not allowed!");
+    location.replace(urlAccess);
   }
 }
 ////////////////////////////////////////////////////////
