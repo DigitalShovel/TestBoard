@@ -124,7 +124,7 @@ const config = {
         scales: {
             x: {
                 min: 0,
-                max: 28,
+                max: 24,
                 title: {
                     display: false,
                     text: 'Time',
