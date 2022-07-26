@@ -15,6 +15,7 @@ const scrollbarColor = 'lightgrey';
 const movableScrollbarColor = 'black';
 
 //////////// Setup ////////////////
+const maxDataPerChart = 24;
 const data = {
   labels: [],
   autoPadding: true,
@@ -99,7 +100,7 @@ const moveChart = {
     ctx.closePath();
     /////////// Draw the movable scroll bar //////////////
     let startingPoint = left+15 + (width/chart.data.datasets[0].data.length)*(chart.options.scales.x.min);
-    const barWidth = ((width - 30) / data.datasets[0].data.length)*;
+    const barWidth = ((width - 30) / data.datasets[0].data.length)*maxDataPerChart;
     ctx.beginPath();
     ctx.fillStyle = movableScrollbarColor;
     ctx.rect(startingPoint, bottom+bpix, barWidth, 15);
@@ -110,7 +111,6 @@ const moveChart = {
 /////////////////////////////////////////////////////////////////
 
 ///////////// Default config of charts ////////////////////
-const maxDataPerChart = 24;
 const config = {
     type: 'line',
     data: data,
