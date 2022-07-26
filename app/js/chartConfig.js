@@ -164,7 +164,6 @@ const config = {
 //////////// Function to scroll the chart //////////////
 function moveScroll(movingChart) {
     const { ctx, canvas, chartArea: {left, right, top, bottom, width, height} } = movingChart;
-    const numberOfData = movingChart.options.scales.x.max;
 
     canvas.addEventListener('click', (event) => {
         const rect = canvas.getBoundingClientRect();
@@ -207,7 +206,6 @@ listOfDateLabel.push([Object.create(lastLabel)]);
 
 ////////////// Function for the scroll wheel ////////////////
 function scrollWheel(wheel, chart) {
-    const moveData = chart.options.scales.x.max;
     if (wheel.deltaY > 0) {
         chart.options.scales.x.min = chart.options.scales.x.min + maxDataPerChart-1;
         chart.options.scales.x.max = chart.options.scales.x.max + maxDataPerChart-1;
