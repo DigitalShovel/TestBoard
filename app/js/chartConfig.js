@@ -2,8 +2,6 @@
 const chart1 = document.getElementById('myChart').getContext('2d');
 ////////////////////////////////////////////////////////////
 
-const numberOfData = 7;
-
 //////////// Setup ////////////////
 const data = {
   labels: [],
@@ -120,6 +118,7 @@ const config = {
 //////////// Function to scroll the chart //////////////
 function moveScroll(movingChart) {
     const { ctx, canvas, chartArea: {left, right, top, bottom, width, height} } = movingChart;
+    const numberOfData = movingChart.options.scales.x.max + 1;
 
     canvas.addEventListener('click', (event) => {
         const rect = canvas.getBoundingClientRect();
