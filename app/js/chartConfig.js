@@ -184,7 +184,7 @@ function moveScroll(movingChart) {
             movingChart.options.scales.x.min = movingChart.options.scales.x.min + maxDataPerChart-1;
             movingChart.options.scales.x.max = movingChart.options.scales.x.max + maxDataPerChart-1;
             if (movingChart.options.scales.x.max >= data.datasets[0].data.length) {
-                movingChart.options.scales.x.min = data.datasets[0].data.length - maxDataPerChart;
+                movingChart.options.scales.x.min = data.datasets[0].data.length - maxDataPerChart+1;
                 movingChart.options.scales.x.max = data.datasets[0].data.length;
             }
         }
