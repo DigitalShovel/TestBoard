@@ -207,6 +207,7 @@ listOfDateLabel.push([Object.create(lastLabel)]);
 
 ////////////// Function for the scroll wheel ////////////////
 function scrollWheel(wheel, movingChart) {
+    const numberOfData = movingChart.options.scales.x.max;
     if (wheel.deltaY > 0) {
         movingChart.options.scales.x.min = movingChart.options.scales.x.min + numberOfData;
         movingChart.options.scales.x.max = movingChart.options.scales.x.max + numberOfData;
