@@ -206,9 +206,22 @@ listOfDateLabel.push([Object.create(lastLabel)]);
 /////////////////////////////////////
 
 ////////////// Function for the scroll wheel ////////////////
-function scrollWheel(wheel, chart) {
+function scrollWheel(wheel, movingChart) {
     if (wheel.deltaY > 0) {
-        console.log(wheel);
+        movingChart.options.scales.x.min = movingChart.options.scales.x.min + numberOfData;
+        movingChart.options.scales.x.max = movingChart.options.scales.x.max + numberOfData;
+        if (movingChart.options.scales.x.max >= data.datasets[0].data.length) {
+            movingChart.options.scales.x.min = data.datasets[0].data.length - numberOfData;
+            movingChart.options.scales.x.max = data.datasets[0].data.length;
+        }
+    }
+    if (wheel.deltaY < 0) {
+        movingChart.options.scales.x.min = movingChart.options.scales.x.min - numberOfData;
+        movingChart.options.scales.x.max = movingChart.options.scales.x.max - numberOfData;
+        if (movingChart.options.scales.x.min <= 0) {
+            movingChart.options.scales.x.min = 0;
+            movingChart.options.scales.x.max = numberOfData;
+        }
     }
 }
 
