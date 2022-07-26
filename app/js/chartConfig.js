@@ -107,6 +107,7 @@ const config = {
                     text: 'Time',
                     color: '#911',
                     offsetY: 25,
+                    offsetX: 25,
                     font: {
                         family: 'sans-serif',
                         size: 16,
