@@ -2,6 +2,8 @@
 const chart1 = document.getElementById('myChart').getContext('2d');
 ////////////////////////////////////////////////////////////
 
+const numberOfData = 7;
+
 //////////// Setup ////////////////
 const data = {
   labels: [],
@@ -125,8 +127,12 @@ function moveScroll(movingChart) {
         const y = event.clientY - rect.top;
 
         if (x >= right-15 && x < right+15 && y >= height/2 + top-15 && y < height/2 + top+15) {
-            movingChart.options.scales.x.min = movingChart.options.scales.x.min + 7;
-            movingChart.options.scales.x.max = movingChart.options.scales.x.max + 7;
+            movingChart.options.scales.x.min = movingChart.options.scales.x.min + numberOfData;
+            movingChart.options.scales.x.max = movingChart.options.scales.x.max + numberOfData;
+            if (movingChart.options.scales.x.max >= data.datasets[0].data.length) {
+                movingChart.options.scales.x.min = data.datasets[0].data.length-numberOfData;
+                movingChart.options.scales.x.max = data.datasets[0].data.length;
+            }
             movingChart.update('active');
         }
     });
