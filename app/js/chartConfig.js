@@ -15,7 +15,7 @@ const scrollbarColor = 'lightgrey';
 const movableScrollbarColor = 'black';
 
 //////////// Setup ////////////////
-const maxDataPerChart = 24;
+const maxDataPerChart = 25;
 const data = {
   labels: [],
   autoPadding: true,
@@ -128,7 +128,7 @@ const config = {
         scales: {
             x: {
                 min: 0,
-                max: maxDataPerChart,
+                max: maxDataPerChart-1,
                 title: {
                     display: false,
                     text: 'Time',
