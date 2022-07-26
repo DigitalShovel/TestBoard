@@ -100,7 +100,6 @@ const moveChart = {
     /////////// Draw the movable scroll bar //////////////
     let startingPoint = left+15 + (width/chart.data.datasets[0].data.length)*(chart.options.scales.x.min);
     const barWidth = ((width-30)/chart.data.datasets[0].data.length)*(chart.options.scales.x.max);
-    console.log(chart.data.datasets[0].data.length);
     ctx.beginPath();
     ctx.fillStyle = movableScrollbarColor;
     ctx.rect(startingPoint, bottom+bpix, barWidth, 15);
