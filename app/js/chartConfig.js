@@ -172,7 +172,7 @@ function moveScroll(movingChart) {
             movingChart.options.scales.x.max = movingChart.options.scales.x.max - numberOfData;
             if (movingChart.options.scales.x.min <= 0) {
                 movingChart.options.scales.x.min = 0;
-                movingChart.options.scales.x.max = numberOfData;
+                movingChart.options.scales.x.max = numberOfData-1;
             }
         }
 
