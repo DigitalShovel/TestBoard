@@ -111,7 +111,6 @@ const config = {
     plugins: [moveChart]
 };
 
-const chart1 = document.getElementById('myChart').getContext('2d');
 //////////// Function to scroll the chart //////////////
 function moveScroll(movingChart) {
     const { ctx, canvas, chartArea: {left, right, top, bottom, width, height} } = movingChart;
@@ -130,7 +129,8 @@ function moveScroll(movingChart) {
 }
 
 ///////// Attach the chart variable to the Canvas //////////
-chart1.ctx.onclick = moveScroll(chart1);
+const chart1 = document.getElementById('myChart').getContext('2d');
+chart1.ctx.onclick = moveScroll(listOfCharts[0][0]);
 ////////////////////////////////////////////////////////////
 
 //////////////////// Array of List /////////////////////////////
