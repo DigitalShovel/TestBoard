@@ -100,7 +100,7 @@ const moveChart = {
     const barWidth = (width-30)/chart.data.datasets[0].data.length;
     ctx.beginPath();
     ctx.fillStyle = 'black';
-    ctx.rect(left+15, bottom+30, width/4, 15);
+    ctx.rect(left+15, bottom+bpix, width/4, 15);
     ctx.fill();
     ctx.closePath();
     }
