@@ -130,7 +130,6 @@ function moveScroll(movingChart) {
 
 ///////// Attach the chart variable to the Canvas //////////
 const chart1 = document.getElementById('myChart').getContext('2d');
-chart1.ctx.onclick = moveScroll(listOfCharts[0][0]);
 ////////////////////////////////////////////////////////////
 
 //////////////////// Array of List /////////////////////////////
@@ -150,3 +149,5 @@ const lastLabel = {
 let listOfDateLabel = [];
 listOfDateLabel.push([Object.create(lastLabel)]);
 /////////////////////////////////////
+
+chart1.ctx.onclick = moveScroll(listOfCharts[0][0]);
