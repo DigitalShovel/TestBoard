@@ -172,8 +172,8 @@ function moveScroll(movingChart) {
         const y = event.clientY - rect.top;
 
         if (x >= left-30 && x < left+30 && y >= height/2 + top-30 && y < height/2 + top+30) {
-            movingChart.options.scales.x.min = movingChart.options.scales.x.min - maxDataPerChart;
-            movingChart.options.scales.x.max = movingChart.options.scales.x.max - maxDataPerChart;
+            movingChart.options.scales.x.min = movingChart.options.scales.x.min - maxDataPerChart+1;
+            movingChart.options.scales.x.max = movingChart.options.scales.x.max - maxDataPerChart+1;
             if (movingChart.options.scales.x.min <= 0) {
                 movingChart.options.scales.x.min = 0;
                 movingChart.options.scales.x.max = maxDataPerChart;
