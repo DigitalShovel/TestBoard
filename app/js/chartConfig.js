@@ -128,7 +128,7 @@ const config = {
         scales: {
             x: {
                 min: 0,
-                max: maxDataPerChart-1,
+                max: maxDataPerChart,
                 title: {
                     display: false,
                     text: 'Time',
