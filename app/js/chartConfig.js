@@ -160,7 +160,7 @@ const config = {
 //////////// Function to scroll the chart //////////////
 function moveScroll(movingChart) {
     const { ctx, canvas, chartArea: {left, right, top, bottom, width, height} } = movingChart;
-    const numberOfData = movingChart.options.scales.x.max+1;
+    const numberOfData = movingChart.options.scales.x.max;
 
     canvas.addEventListener('click', (event) => {
         const rect = canvas.getBoundingClientRect();
@@ -177,7 +177,7 @@ function moveScroll(movingChart) {
         }
 
         if (x >= right-30 && x < right+30 && y >= height/2 + top-30 && y < height/2 + top+30) {
-            movingChart.options.scales.x.min = movingChart.options.scales.x.min + numberOfData-1;
+            movingChart.options.scales.x.min = movingChart.options.scales.x.min + numberOfData+1;
             movingChart.options.scales.x.max = movingChart.options.scales.x.max + numberOfData-1;
             if (movingChart.options.scales.x.max >= data.datasets[0].data.length) {
                 movingChart.options.scales.x.min = data.datasets[0].data.length - numberOfData;
