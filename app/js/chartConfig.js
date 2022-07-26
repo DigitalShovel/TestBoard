@@ -99,7 +99,7 @@ const moveChart = {
     ctx.closePath();
     /////////// Draw the movable scroll bar //////////////
     let startingPoint = left+15 + (width/chart.data.datasets[0].data.length)*(chart.options.scales.x.min);
-    const barWidth = (width - 30) / data.datasets[0].data.length;
+    const barWidth = ((width - 30) / data.datasets[0].data.length)*;
     ctx.beginPath();
     ctx.fillStyle = movableScrollbarColor;
     ctx.rect(startingPoint, bottom+bpix, barWidth, 15);
@@ -110,6 +110,7 @@ const moveChart = {
 /////////////////////////////////////////////////////////////////
 
 ///////////// Default config of charts ////////////////////
+const maxDataPerChart = 24;
 const config = {
     type: 'line',
     data: data,
@@ -123,7 +124,7 @@ const config = {
         scales: {
             x: {
                 min: 0,
-                max: 23,    // Has to be multiple of 12 minus 1
+                max: maxDataPerChart-1,
                 title: {
                     display: false,
                     text: 'Time',
