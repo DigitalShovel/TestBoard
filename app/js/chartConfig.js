@@ -1,3 +1,7 @@
+///////// Attach the chart variable to the Canvas //////////
+const chart1 = document.getElementById('myChart').getContext('2d');
+////////////////////////////////////////////////////////////
+
 //////////// Setup ////////////////
 const data = {
   labels: [],
@@ -127,10 +131,6 @@ function moveScroll(movingChart) {
         }
     });
 }
-
-///////// Attach the chart variable to the Canvas //////////
-const chart1 = document.getElementById('myChart').getContext('2d');
-////////////////////////////////////////////////////////////
 
 //////////////////// Array of List /////////////////////////////
 ////                     CH1                       CH2      ////
