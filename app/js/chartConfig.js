@@ -176,7 +176,7 @@ function moveScroll(movingChart) {
             movingChart.options.scales.x.max = movingChart.options.scales.x.max - maxDataPerChart+1;
             if (movingChart.options.scales.x.min <= 0) {
                 movingChart.options.scales.x.min = 0;
-                movingChart.options.scales.x.max = maxDataPerChart;
+                movingChart.options.scales.x.max = maxDataPerChart-1;
             }
         }
 
