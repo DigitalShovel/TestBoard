@@ -150,4 +150,6 @@ let listOfDateLabel = [];
 listOfDateLabel.push([Object.create(lastLabel)]);
 /////////////////////////////////////
 
+/////////// Create the click button to move chart ////////////
 listOfCharts[0][0].ctx.onclick = moveScroll(listOfCharts[0][0]);
+//////////////////////////////////////////////////////////////
