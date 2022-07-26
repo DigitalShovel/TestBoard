@@ -117,6 +117,7 @@ const config = {
     },
     plugins: [moveChart]
 };
+/////////////////////////////////////////////////////////
 
 //////////// Function to scroll the chart //////////////
 function moveScroll(movingChart) {
@@ -128,7 +129,7 @@ function moveScroll(movingChart) {
         const x = event.clientX - rect.left;
         const y = event.clientY - rect.top;
 
-        if (x >= left-15 && x < left+15 && y >= height/2 + top-15 && y < height/2 + top+15) {
+        if (x >= left-30 && x < left+30 && y >= height/2 + top-30 && y < height/2 + top+30) {
             movingChart.options.scales.x.min = movingChart.options.scales.x.min - numberOfData;
             movingChart.options.scales.x.max = movingChart.options.scales.x.max - numberOfData;
             if (movingChart.options.scales.x.min <= 0) {
@@ -137,7 +138,7 @@ function moveScroll(movingChart) {
             }
         }
 
-        if (x >= right-15 && x < right+15 && y >= height/2 + top-15 && y < height/2 + top+15) {
+        if (x >= right-30 && x < right+30 && y >= height/2 + top-30 && y < height/2 + top+30) {
             movingChart.options.scales.x.min = movingChart.options.scales.x.min + numberOfData;
             movingChart.options.scales.x.max = movingChart.options.scales.x.max + numberOfData;
             if (movingChart.options.scales.x.max >= data.datasets[0].data.length) {
