@@ -7,6 +7,9 @@
 const chart1 = document.getElementById('myChart').getContext('2d');
 ////////////////////////////////////////////////////////////
 
+///////// Color variables ////////
+const arrowColor = 'rgba(255, 26, 104, 1)';
+
 //////////// Setup ////////////////
 const data = {
   labels: [],
@@ -62,7 +65,7 @@ const moveChart = {
                 // Chevron Arrow Left //
                 ctx.beginPath();
                 ctx.lineWidth = 3;
-                ctx.strokeStyle = 'rgba(255, 26, 104, 1)';
+                ctx.strokeStyle = arrowColor;
                 ctx.moveTo(x1+pixel, height/2 + top-7.5);
                 ctx.lineTo(x1-pixel, height/2 + top);
                 ctx.lineTo(x1+pixel, height/2 + top+7.5);
@@ -80,7 +83,14 @@ const moveChart = {
     const bpix = chart.options.layout.padding.bottom+25;
     ctx.beginPath();
     ctx.fillStyle = 'lightgrey';
-    ctx.rect(left, bottom+bpix, width, 15);
+    ctx.rect(left+15, bottom+bpix, width-30, 15);
+    ctx.fill();
+    ctx.closePath();
+    /////////// Draw a arrow for scroll bar /////////////
+    ctx.beginPath();
+    ctx.fillStyle = arrowColor;
+    ctx.rect(left, bottom+bpix, 15, 15);
+    ctx.rect(right-15, bottom+bpix, 15, 15);
     ctx.fill();
     ctx.closePath();
     }
