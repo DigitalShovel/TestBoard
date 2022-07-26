@@ -11,6 +11,8 @@ const chart1 = document.getElementById('myChart').getContext('2d');
 const arrowColor = 'rgba(255, 26, 104, 1)';
 const labelTextColor = '#911';
 const labelTextFont = 'sans-serif';
+const scrollbarColor = 'lightgrey';
+const movableScrollbarColor = 'black';
 
 //////////// Setup ////////////////
 const data = {
@@ -84,7 +86,7 @@ const moveChart = {
     /////////// Draw a scroll bar /////////////
     const bpix = chart.options.layout.padding.bottom+25;
     ctx.beginPath();
-    ctx.fillStyle = 'lightgrey';
+    ctx.fillStyle = scrollbarColor;
     ctx.rect(left+15, bottom+bpix, width-30, 15);
     ctx.fill();
     ctx.closePath();
@@ -96,11 +98,12 @@ const moveChart = {
     ctx.fill();
     ctx.closePath();
     /////////// Draw the movable scroll bar //////////////
-    //let startingPoint = 
+    let startingPoint = left+15 + (width/chart.data.datasets[0].data.length)*(chart.options.scales.x.min);
     const barWidth = ((width-30)/chart.data.datasets[0].data.length)*(chart.options.scales.x.max);
+
     ctx.beginPath();
-    ctx.fillStyle = 'black';
-    ctx.rect(left+15, bottom+bpix, width/4, 15);
+    ctx.fillStyle = movableScrollbarColor;
+    ctx.rect(startingPoint, bottom+bpix, width/4, 15);
     ctx.fill();
     ctx.closePath();
     }
