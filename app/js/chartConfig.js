@@ -172,19 +172,19 @@ function moveScroll(movingChart) {
         const y = event.clientY - rect.top;
 
         if (x >= left-30 && x < left+30 && y >= height/2 + top-30 && y < height/2 + top+30) {
-            movingChart.options.scales.x.min = movingChart.options.scales.x.min - numberOfData;
-            movingChart.options.scales.x.max = movingChart.options.scales.x.max - numberOfData;
+            movingChart.options.scales.x.min = movingChart.options.scales.x.min - maxDataPerChart;
+            movingChart.options.scales.x.max = movingChart.options.scales.x.max - maxDataPerChart;
             if (movingChart.options.scales.x.min <= 0) {
                 movingChart.options.scales.x.min = 0;
-                movingChart.options.scales.x.max = numberOfData;
+                movingChart.options.scales.x.max = maxDataPerChart;
             }
         }
 
         if (x >= right-30 && x < right+30 && y >= height/2 + top-30 && y < height/2 + top+30) {
-            movingChart.options.scales.x.min = movingChart.options.scales.x.min + numberOfData;
-            movingChart.options.scales.x.max = movingChart.options.scales.x.max + numberOfData;
+            movingChart.options.scales.x.min = movingChart.options.scales.x.min + maxDataPerChart;
+            movingChart.options.scales.x.max = movingChart.options.scales.x.max + maxDataPerChart;
             if (movingChart.options.scales.x.max >= data.datasets[0].data.length) {
-                movingChart.options.scales.x.min = data.datasets[0].data.length - numberOfData;
+                movingChart.options.scales.x.min = data.datasets[0].data.length - maxDataPerChart;
                 movingChart.options.scales.x.max = data.datasets[0].data.length;
             }
         }
@@ -209,19 +209,19 @@ listOfDateLabel.push([Object.create(lastLabel)]);
 function scrollWheel(wheel, chart) {
     const moveData = chart.options.scales.x.max;
     if (wheel.deltaY > 0) {
-        chart.options.scales.x.min = chart.options.scales.x.min + moveData;
-        chart.options.scales.x.max = chart.options.scales.x.max + moveData;
+        chart.options.scales.x.min = chart.options.scales.x.min + maxDataPerChart;
+        chart.options.scales.x.max = chart.options.scales.x.max + maxDataPerChart;
         if (chart.options.scales.x.max >= data.datasets[0].data.length) {
-            chart.options.scales.x.min = data.datasets[0].data.length - moveData;
+            chart.options.scales.x.min = data.datasets[0].data.length - maxDataPerChart;
             chart.options.scales.x.max = data.datasets[0].data.length;
         }
     }
     if (wheel.deltaY < 0) {
-        chart.options.scales.x.min = chart.options.scales.x.min - moveData;
-        chart.options.scales.x.max = chart.options.scales.x.max - moveData;
+        chart.options.scales.x.min = chart.options.scales.x.min - maxDataPerChart;
+        chart.options.scales.x.max = chart.options.scales.x.max - maxDataPerChart;
         if (chart.options.scales.x.min <= 0) {
             chart.options.scales.x.min = 0;
-            chart.options.scales.x.max = moveData;
+            chart.options.scales.x.max = maxDataPerChart;
         }
     }
     chart.update();
