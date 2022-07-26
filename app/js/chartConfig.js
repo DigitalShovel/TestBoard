@@ -124,7 +124,7 @@ const config = {
         scales: {
             x: {
                 min: 0,
-                max: 24,    // Has to be multiple of 12
+                max: 23,    // Has to be multiple of 12
                 title: {
                     display: false,
                     text: 'Time',
