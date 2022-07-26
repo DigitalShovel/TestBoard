@@ -21,6 +21,7 @@ const data = {
 }]
 };
 
+///////////// Move chart button design ///////////////////
 const moveChart = {
     id: 'moveChart',
     afterEvent(chart, args) {
@@ -71,7 +72,9 @@ const moveChart = {
     drawCircleRight.draw(ctx, right, -5);
     }
 }
+/////////////////////////////////////////////////////////////////
 
+///////////// Default config of charts ////////////////////
 const config = {
     type: 'line',
     data: data,
