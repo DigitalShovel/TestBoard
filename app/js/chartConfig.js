@@ -15,7 +15,7 @@ const scrollbarColor = 'lightgrey';
 const movableScrollbarColor = 'black';
 
 //////////// Setup ////////////////
-let maxDataPerChart = 25; // Number of data plus one
+let maxDataPerChart = 13; // Number of data plus one
 const data = {
   labels: [],
   autoPadding: true,

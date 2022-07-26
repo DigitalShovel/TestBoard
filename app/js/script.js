@@ -132,7 +132,6 @@ function readCT(labelOBJ) {
       for (let i=0; i < data['Count']; i++) {
         if (data['Items'][i]['Time'] > labelOBJ.dateLabel){
           labelOBJ.dateLabel = data['Items'][i]['Time'];
-          maxDataPerChart = 13;
         }
         var timeResult = JSON.stringify(data['Items'][i]['Time']);
         var valueCT = extractData(data['Items'][i], 'CTPI', 1, 1);
