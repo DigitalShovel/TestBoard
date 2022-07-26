@@ -77,7 +77,7 @@ const moveChart = {
     let drawCircleRight = new CircleChevron();
     drawCircleRight.draw(ctx, right, -5);
     /////////// Draw a scroll bar /////////////
-    const bpix = chart.options.layout.padding.bottom;
+    const bpix = chart.options.layout.padding.bottom+15;
     ctx.beginPath();
     ctx.fillStyle = 'lightgrey';
     ctx.rect(left, bottom+bpix, width, 15);
