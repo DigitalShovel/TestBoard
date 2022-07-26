@@ -7,8 +7,10 @@
 const chart1 = document.getElementById('myChart').getContext('2d');
 ////////////////////////////////////////////////////////////
 
-///////// Color variables ////////
+///////// Color & Font variables ////////
 const arrowColor = 'rgba(255, 26, 104, 1)';
+const labelTextColor = '#911';
+const labelTextFont = 'sans-serif';
 
 //////////// Setup ////////////////
 const data = {
@@ -113,12 +115,12 @@ const config = {
                 min: 0,
                 max: 30,
                 title: {
-                    display: true,
+                    display: false,
                     text: 'Time',
-                    color: '#911',
+                    color: labelTextColor,
                     position: 'bottom',
                     font: {
-                        family: 'sans-serif',
+                        family: labelTextFont,
                         size: 16,
                         weight: 'bold',
                         lineHeight: 1.2,
@@ -129,9 +131,9 @@ const config = {
                 title: {
                     display: true,
                     text: 'Voltage',
-                    color: '#911',
+                    color: labelTextColor,
                     font: {
-                        family: 'sans-serif',
+                        family: labelTextFont,
                         size: 16,
                         weight: 'bold',
                         lineHeight: 1.2,
