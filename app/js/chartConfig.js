@@ -1,3 +1,8 @@
+//////////////////// Array of List /////////////////////////////
+////                     CH1                       ...      ////
+////    [CT1, CT2, CT3, CT4, CT5, CT6, CT7, CT8], [...]     ////
+////////////////////////////////////////////////////////////////
+
 ///////// Attach the chart variable to the Canvas //////////
 const chart1 = document.getElementById('myChart').getContext('2d');
 ////////////////////////////////////////////////////////////
@@ -43,7 +48,6 @@ const moveChart = {
         const { ctx, chartArea: {left, right, top, bottom, width, height} } = chart;
         
         class CircleChevron {
-            //constructor(x1,y1) {}
             draw(ctx, x1, pixel) {
                 const angle = Math.PI / 180;
                 ctx.beginPath();
@@ -66,10 +70,19 @@ const moveChart = {
                 ctx.closePath();
             }
         }
+    ///////// Draw arrow pointing left /////////////
     let drawCircleLeft = new CircleChevron();
     drawCircleLeft.draw(ctx, left, 5);
+    ///////// Draw arrow pointing right ////////////
     let drawCircleRight = new CircleChevron();
     drawCircleRight.draw(ctx, right, -5);
+    /////////// Draw a scroll bar /////////////
+    const bpix = chart.options.layout.padding.bottom;
+    ctx.beginPath();
+    ctx.fillStyle = 'lightgrey';
+    ctx.rect(left, bottom+bpix, width, 15);
+    ctx.fill();
+    ctx.closePath();
     }
 }
 /////////////////////////////////////////////////////////////////
@@ -81,7 +94,8 @@ const config = {
     options: {
         layout: {
             padding: {
-                right: 18
+                right: 18,
+                bottom: 30
             }
         },
         scales: {
@@ -149,11 +163,6 @@ function moveScroll(movingChart) {
         movingChart.update('active');
     });
 }
-
-//////////////////// Array of List /////////////////////////////
-////                     CH1                       CH2      ////
-////    [CT1, CT2, CT3, CT4, CT5, CT6, CT7, CT8], [...]     ////
-////////////////////////////////////////////////////////////////
 
 ///////////////// Build array of charts ///////////////////
 let listOfCharts = [];
