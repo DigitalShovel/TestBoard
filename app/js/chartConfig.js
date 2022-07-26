@@ -206,25 +206,25 @@ listOfDateLabel.push([Object.create(lastLabel)]);
 /////////////////////////////////////
 
 ////////////// Function for the scroll wheel ////////////////
-function scrollWheel(wheel, movingChart) {
-    const numberOfData = movingChart.options.scales.x.max;
+function scrollWheel(wheel, chart) {
+    const moveData = chart.options.scales.x.max;
     if (wheel.deltaY > 0) {
-        movingChart.options.scales.x.min = movingChart.options.scales.x.min + numberOfData;
-        movingChart.options.scales.x.max = movingChart.options.scales.x.max + numberOfData;
-        if (movingChart.options.scales.x.max >= data.datasets[0].data.length) {
-            movingChart.options.scales.x.min = data.datasets[0].data.length - numberOfData;
-            movingChart.options.scales.x.max = data.datasets[0].data.length;
+        chart.options.scales.x.min = chart.options.scales.x.min + moveData;
+        chart.options.scales.x.max = chart.options.scales.x.max + moveData;
+        if (chart.options.scales.x.max >= data.datasets[0].data.length) {
+            chart.options.scales.x.min = data.datasets[0].data.length - moveData;
+            chart.options.scales.x.max = data.datasets[0].data.length;
         }
     }
     if (wheel.deltaY < 0) {
-        movingChart.options.scales.x.min = movingChart.options.scales.x.min - numberOfData;
-        movingChart.options.scales.x.max = movingChart.options.scales.x.max - numberOfData;
-        if (movingChart.options.scales.x.min <= 0) {
-            movingChart.options.scales.x.min = 0;
-            movingChart.options.scales.x.max = numberOfData;
+        chart.options.scales.x.min = chart.options.scales.x.min - moveData;
+        chart.options.scales.x.max = chart.options.scales.x.max - moveData;
+        if (chart.options.scales.x.min <= 0) {
+            chart.options.scales.x.min = 0;
+            chart.options.scales.x.max = moveData;
         }
     }
-    movingChart.update('active');
+    chart.update('active');
 }
 
 /////////// Create the click button to move chart ////////////
