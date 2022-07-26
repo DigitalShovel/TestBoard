@@ -205,6 +205,16 @@ let listOfDateLabel = [];
 listOfDateLabel.push([Object.create(lastLabel)]);
 /////////////////////////////////////
 
+////////////// Function for the scroll wheel ////////////////
+function scrollWheel(wheel, chart) {
+    if (wheel.deltaY > 0) {
+        console.log(wheel);
+    }
+}
+
 /////////// Create the click button to move chart ////////////
 listOfCharts[0][0].ctx.onclick = moveScroll(listOfCharts[0][0]);
+listOfCharts[0][0].canvas.addEventListener('wheel', (e) => {
+    scrollWheel(e, listOfCharts[0][0]);
+});
 //////////////////////////////////////////////////////////////
