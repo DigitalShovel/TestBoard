@@ -77,8 +77,6 @@ const config = {
                 right: 18
             }
         },
-        responsive: true,
-        maintainAspectRatio: true,
         scales: {
             x: {
                 min: 0,
@@ -117,6 +115,7 @@ const chart1 = document.getElementById('myChart').getContext('2d');
 //////////// Function to scroll the chart //////////////
 function moveScroll(movingChart) {
     const { ctx, canvas, chartArea: {left, right, top, bottom, width, height} } = movingChart;
+
     canvas.addEventListener('click', (event) => {
         const rect = canvas.getBoundingClientRect();
         const x = event.clientX - rect.left;
@@ -127,7 +126,7 @@ function moveScroll(movingChart) {
             movingChart.options.scales.x.max = movingChart.options.scales.x.max + 7;
             movingChart.update('active');
         }
-    })
+    });
 }
 
 ///////// Attach the chart variable to the Canvas //////////
