@@ -185,7 +185,7 @@ function moveScroll(movingChart) {
             movingChart.options.scales.x.max = movingChart.options.scales.x.max + numberOfData;
             if (movingChart.options.scales.x.max >= data.datasets[0].data.length) {
                 movingChart.options.scales.x.min = data.datasets[0].data.length - numberOfData;
-                movingChart.options.scales.x.max = data.datasets[0].data.length+1;
+                movingChart.options.scales.x.max = data.datasets[0].data.length;
             }
         }
         movingChart.update('active');
