@@ -103,7 +103,7 @@ function auth() {
 /////// Functions to run if login is Authorized /////////
 let registeredUser = false;
 function loadOnLogin() {
-  console.log(listOfDateLabel[0][0]);
+  console.log(listOfDateLabel[0]);
   readCT(listOfDateLabel[0][0]);
   readItem();
   registeredUser = true;
