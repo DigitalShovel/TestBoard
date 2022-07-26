@@ -19,6 +19,21 @@ const data = {
 
 const moveChart = {
     id: 'moveChart',
+    afterEvent(chart, args) {
+        const { ctx, canvas, chartArea: {left, right, top, bottom, width, height} } = chart;
+        canvas.addEventListener('mousemove', (event) => {
+            const x = args.event.x;
+            const y = args.event.y;
+
+            if (x >= left-15 && x < left+15 && y >= height/2 + top-15 && y < height/2 + top+15) {
+                canvas.style.cursor = 'pointer';
+            } else if (x >= right-15 && x < right+15 && y >= height/2 + top-15 && y < height/2 + top+15) {
+                canvas.style.cursor = 'pointer';
+            } else {
+                canvas.style.cursor = 'default';
+            }
+        })
+    },
     afterDraw(chart, args, pluginOptions) {
         const { ctx, chartArea: {left, right, top, bottom, width, height} } = chart;
         
@@ -97,8 +112,26 @@ const config = {
     },
     plugins: [moveChart]
 };
+
+//////////// Function to scroll the chart //////////////
+function moveScroll(movingChart) {
+    const { ctx, canvas, chartArea: {left, right, top, bottom, width, height} } = movingChart;
+    canvas.addEventListener('click', (event) => {
+        const rect = canvas.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+
+        if (x >= right-15 && x < right+15 && y >= height/2 + top-15 && y < height/2 + top+15) {
+            movingChart.options.scales.x.min = movingChart.options.scales.x.min + 7;
+            movingChart.options.scales.x.max = movingChart.options.scales.x.max + 7;
+            movingChart.update('active');
+        }
+    })
+}
+
 ///////// Attach the chart variable to the Canvas //////////
 const chart1 = document.getElementById('myChart').getContext('2d');
+chart1.ctx.onclick = moveScroll(chart1);
 ////////////////////////////////////////////////////////////
 
 //////////////////// Array of List /////////////////////////////
