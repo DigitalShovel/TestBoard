@@ -103,7 +103,7 @@ const moveChart = {
     console.log(barWidth);
     ctx.beginPath();
     ctx.fillStyle = movableScrollbarColor;
-    ctx.rect(startingPoint, bottom+bpix, barWidth, 15);
+    ctx.rect(startingPoint, bottom+bpix, width/4, 15);
     ctx.fill();
     ctx.closePath();
     }
