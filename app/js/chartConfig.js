@@ -95,6 +95,14 @@ const moveChart = {
     ctx.rect(right-15, bottom+bpix, 15, 15);
     ctx.fill();
     ctx.closePath();
+    /////////// Draw the movable scroll bar //////////////
+    //let startingPoint = 
+    const barWidth = (width-30)/chart.data.datasets[0].data.length;
+    ctx.beginPath();
+    ctx.fillStyle = 'black';
+    ctx.rect(left+15, bottom+30, barWidth, 15);
+    ctx.fill();
+    ctx.closePath();
     }
 }
 /////////////////////////////////////////////////////////////////
