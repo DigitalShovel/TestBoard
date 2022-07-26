@@ -224,7 +224,7 @@ function scrollWheel(wheel, chart) {
             chart.options.scales.x.max = moveData;
         }
     }
-    chart.update('active');
+    chart.update();
 }
 
 /////////// Create the click button to move chart ////////////
