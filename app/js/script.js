@@ -160,7 +160,6 @@ function addDataChart(chart, label, data1, data2) {
     maxDataPerChart = chart.data.datasets[0].data.length+1;
   } else {
     maxDataPerChart = 73;
-    scrollWheel(300, chart);
   }
   chart.options.scales.x.max = maxDataPerChart-1;
   chart.update("active");
