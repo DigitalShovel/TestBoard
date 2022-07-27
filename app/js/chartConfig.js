@@ -13,6 +13,7 @@ const labelTextColor = '#911';
 const labelTextFont = 'sans-serif';
 const scrollbarColor = 'lightgrey';
 const movableScrollbarColor = 'black';
+const movableScrollbarEdge = 'rgba(191, 191, 191, 1)';
 
 //////////// Setup ////////////////
 //let maxDataPerChart = 13; // Number of data plus one
@@ -93,7 +94,7 @@ const moveChart = {
     ctx.closePath();
     /////////// Draw a arrow for scroll bar /////////////
     ctx.beginPath();
-    ctx.fillStyle = arrowColor;
+    ctx.fillStyle = movableScrollbarEdge;
     ctx.rect(left, bottom+bpix, 15, 15);
     ctx.rect(right-15, bottom+bpix, 15, 15);
     ctx.fill();
