@@ -12,7 +12,7 @@ const arrowColor = 'rgba(255, 26, 104, 1)';
 const labelTextColor = '#911';
 const labelTextFont = 'sans-serif';
 const scrollbarColor = 'lightgrey';
-const movableScrollbarColor = 'black';
+const movableScrollbarColor = 'rgba(140, 140, 140, 1)';
 const movableScrollbarEdge = 'rgba(191, 191, 191, 1)';
 
 //////////// Setup ////////////////
