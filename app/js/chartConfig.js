@@ -4,7 +4,11 @@
 ////////////////////////////////////////////////////////////////
 
 ///////// Attach the chart variable to the Canvas //////////
-const chart1 = document.getElementById('myChart').getContext('2d');
+var canvas = document.getElementById('myChart');
+canvas.width = 400;
+canvas.height = 400;
+const dpi = window.devicePixelRatio;
+var chart1 = canvas.getContext('2d').scale(dpi, dpi);
 ////////////////////////////////////////////////////////////
 
 ///////// Color & Font variables ////////
