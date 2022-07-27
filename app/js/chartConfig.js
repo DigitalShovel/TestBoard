@@ -104,8 +104,6 @@ const moveChart = {
     if (data.datasets[0].data.length <= 12) {
         barWidth = width - 30;
     }
-    console.log("Starting Point: "+startingPoint);
-    console.log("Bar Width: "+barWidth);
     const totalWidth = startingPoint + barWidth;
     if (totalWidth > width) {
         startingPoint = right-15-barWidth;
