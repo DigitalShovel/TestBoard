@@ -160,12 +160,7 @@ function addDataChart(chart, label, data1, data2) {
     maxDataPerChart = chart.data.datasets[0].data.length+1;
   } else {
     maxDataPerChart = 73;
-    chart.options.scales.x.min = chart.options.scales.x.min + maxDataPerChart-1;
-    chart.options.scales.x.max = chart.options.scales.x.max + maxDataPerChart-1;
-    if (chart.options.scales.x.max >= data.datasets[0].data.length) {
-      chart.options.scales.x.min = data.datasets[0].data.length - maxDataPerChart+1;
-      chart.options.scales.x.max = data.datasets[0].data.length;
-    }
+    scrollWheel(1, chart);
   }
   chart.options.scales.x.max = maxDataPerChart-1;
   chart.update("active");
