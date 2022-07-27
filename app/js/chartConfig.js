@@ -16,7 +16,6 @@ const movableScrollbarColor = 'rgba(140, 140, 140, 1)';
 const movableScrollbarEdge = 'rgba(191, 191, 191, 1)';
 
 //////////// Setup ////////////////
-//let maxDataPerChart = 13; // Number of data plus one
 const data = {
   labels: [],
   autoPadding: true,

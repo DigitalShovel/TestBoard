@@ -102,7 +102,8 @@ function loadOnLogin() {
 /////////////////////////////////////////////////////////
 
 ///////////// Read CT Values from DB ////////////////////
-let maxDataPerChart = 73; // Number of data plus one
+const dataPerPlot = 91;
+let maxDataPerChart = dataPerPlot; // Number of data plus one
 function readCT(labelOBJ) {
   var docClient = new AWS.DynamoDB.DocumentClient();
 
@@ -148,10 +149,10 @@ function addDataChart(chart, label, data1, data2) {
   chart.data.labels.push(label);
   chart.data.datasets[0].data.push(data1);
   chart.data.datasets[1].data.push(data2);
-  if (chart.data.datasets[0].data.length < 72) {
+  if (chart.data.datasets[0].data.length < (dataPerPlot-1)) {
     maxDataPerChart = chart.data.datasets[0].data.length+1;
   } else {
-    maxDataPerChart = 73;
+    maxDataPerChart = dataPerPlot;
   }
   chart.options.scales.x.max = maxDataPerChart-1;
   chart.update("active");
