@@ -101,7 +101,8 @@ const moveChart = {
     /////////// Draw the movable scroll bar //////////////
     let startingPoint = left+15 + (width/chart.data.datasets[0].data.length)*(chart.options.scales.x.min);
     const barWidth = ((width - 30) / data.datasets[0].data.length)*maxDataPerChart;
-    console.log(startingPoint);
+    console.log("Starting Point: "+startingPoint);
+    console.log("Bar Width: "+barWidth);
     const totalWidth = startingPoint + barWidth;
     if (totalWidth > width) {
         startingPoint = right-15-barWidth;
