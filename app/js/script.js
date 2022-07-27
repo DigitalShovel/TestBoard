@@ -154,11 +154,9 @@ function extractData(data, attribute, channel, ctnum) {
 ///////////////// Add & Remove Data to Chart ////////////////////
 function addDataChart(chart, label, data1, data2) {
   chart.data.labels.push(label);
-  /*chart.data.datasets[0].forEach((dataset) => {
-    dataset.data.push(data);
-  });*/
   chart.data.datasets[0].data.push(data1);
   chart.data.datasets[1].data.push(data2);
+  console.log("Data: "+chart.data.datasets[0].data.length);
   if (chart.data.datasets[0].data.length <= 72) {
     maxDataPerChart = chart.data.datasets[0].data.length+1;
   } else {
