@@ -102,7 +102,7 @@ const moveChart = {
     let startingPoint = left+15 + (width/chart.data.datasets[0].data.length)*(chart.options.scales.x.min);
     var barWidth = ((width - 30) / data.datasets[0].data.length)*maxDataPerChart;
     if (data.datasets[0].data.length <= 12) {
-        barWidth = ((width - 30) / 12)*maxDataPerChart;
+        barWidth = width - 30;
     }
     console.log("Starting Point: "+startingPoint);
     console.log("Bar Width: "+barWidth);
