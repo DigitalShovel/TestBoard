@@ -110,6 +110,7 @@ function loadOnLogin() {
 /////////////////////////////////////////////////////////
 
 ///////////// Read CT Values from DB ////////////////////
+let maxDataPerChart = 13; // Number of data plus one
 function readCT(labelOBJ) {
   var docClient = new AWS.DynamoDB.DocumentClient();
 
