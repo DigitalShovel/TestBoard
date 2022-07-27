@@ -158,6 +158,11 @@ function addDataChart(chart, label, data1, data2) {
   });*/
   chart.data.datasets[0].data.push(data1);
   chart.data.datasets[1].data.push(data2);
+  if (chart.data.datasets[0].data.length <= 72) {
+    maxDataPerChart = chart.data.datasets[0].data.length+1;
+  } else {
+    maxDataPerChart = 73;
+  }
   chart.update("active");
 }
 
