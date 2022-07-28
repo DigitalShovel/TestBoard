@@ -124,8 +124,9 @@ const config = {
     options: {
         layout: {
             padding: {
-                right: 18,
-                bottom: 30
+                right: 30,
+                bottom: 30,
+                top: 30
             }
         },
         scales: {
