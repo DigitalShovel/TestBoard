@@ -126,7 +126,8 @@ const config = {
             padding: {
                 right: 30,
                 bottom: 30,
-                top: 30
+                top: 30,
+                left: 30
             }
         },
         scales: {
