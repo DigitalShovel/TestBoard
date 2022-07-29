@@ -16,6 +16,9 @@ function WebSocketTest() {
 
     ws.onmessage = function (evt) {
       var received_msg = evt.data;
+      if (received_msg == "Testbench Started!") {
+        removeData(listOfCharts[0][0]);
+      }
       alert(received_msg);
       ws.close();
     };
