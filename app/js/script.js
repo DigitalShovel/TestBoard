@@ -82,7 +82,7 @@ function checkLogin() {
 ///////////////////// Authorize ////////////////////////
 function auth() {
   AWS.config.update({
-    region: "us-east-1",
+    region: "ca-central-1",
   });
 
   AWS.config.credentials = new AWS.CognitoIdentityCredentials({
