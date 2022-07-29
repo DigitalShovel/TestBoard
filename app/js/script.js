@@ -44,6 +44,7 @@ function mapStationWebSocket() {
     ws.onmessage = function (evt) {
       var received_msg = evt.data;
       alert(received_msg);
+      ws.close();
     };
   } else {
     // The browser doesn't support WebSocket
