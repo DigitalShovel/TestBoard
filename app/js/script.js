@@ -11,7 +11,7 @@ function WebSocketTest() {
     ws.onopen = function () {
       // Web Socket is connected, send data using send()
       ws.send('{"action": "sendMessage","message":' + inputData + "}");
-      //removeData(listOfCharts[0][0]);
+      removeData(listOfCharts[0][0]);
     };
 
     ws.onmessage = function (evt) {
