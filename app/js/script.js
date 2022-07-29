@@ -1,4 +1,4 @@
-const urlAccess = "https://testboard.auth.us-east-1.amazoncognito.com/login?client_id=73p6ql33opui1okr4hf9f60o8i&response_type=token&scope=aws.cognito.signin.user.admin+email+openid+profile&redirect_uri=https://ds-testboard.netlify.app/";
+const urlAccess = "https://testbench.auth.ca-central-1.amazoncognito.com/login?client_id=55ffriv2knsvpt7n1p49m6gghb&response_type=token&scope=aws.cognito.signin.user.admin+email+openid+profile&redirect_uri=https://ds-testboard.netlify.app/";
 
 //////////////////// Websockets ///////////////////////
 function WebSocketTest() {
@@ -6,7 +6,8 @@ function WebSocketTest() {
 
   if ("WebSocket" in window) {
     // Let us open a web socket
-    var ws = new WebSocket("wss://42jjhgjbdc.execute-api.us-east-1.amazonaws.com/production");
+    //var ws = new WebSocket("wss://42jjhgjbdc.execute-api.us-east-1.amazonaws.com/production");
+    var ws = new WebSocket("wss://z2l1vycpfh.execute-api.ca-central-1.amazonaws.com/production");
 
     ws.onopen = function () {
       // Web Socket is connected, send data using send()
@@ -37,7 +38,8 @@ function WebSocketTest() {
 function mapStationWebSocket() {
   if ("WebSocket" in window) {
     // Let us open a web socket
-    var ws = new WebSocket("wss://ekht0lzvqb.execute-api.us-east-1.amazonaws.com/production");
+    //var ws = new WebSocket("wss://ekht0lzvqb.execute-api.us-east-1.amazonaws.com/production");
+    var ws = new WebSocket("wss://iobkrt68o2.execute-api.ca-central-1.amazonaws.com/production");
 
     ws.onopen = function () {
       // Web Socket is connected, send data using send()
@@ -67,8 +69,8 @@ function checkLogin() {
   var url = new URL(url_string);
   idToken = url.searchParams.get("id_token");
   AWS.config.update({
-    region: "us-east-1",
-    accessKeyId: '73p6ql33opui1okr4hf9f60o8i'
+    region: "ca-central-1",
+    accessKeyId: '55ffriv2knsvpt7n1p49m6gghb'
   });
   if (idToken != null) {
       console.log("User Signed In!");
@@ -84,9 +86,9 @@ function auth() {
   });
 
   AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-          IdentityPoolId : 'us-east-1:d6b1278c-6298-4582-9074-51139238607e',
+          IdentityPoolId : 'ca-central-1:db946744-dec5-45cc-b4aa-269e2b6cb9e4',
           Logins: {
-            "cognito-idp.us-east-1.amazonaws.com/us-east-1_vUE45CGKG": idToken
+            "cognito-idp.ca-central-1.amazonaws.com/ca-central-1_Lf5pWzdj2": idToken
           }
         }); 
   loadOnLogin();      /// Load all the function needed, including creating objects
