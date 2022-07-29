@@ -17,7 +17,7 @@ function WebSocketTest() {
     ws.onmessage = function (evt) {
       var received_msg = evt.data;
       console.log(JSON.stringify(received_msg));
-      if (received_msg == "Testbench Started!") {
+      if (received_msg == "\"Testbench Started!\"") {
         console.log("TestStart");
         removeData(listOfCharts[0][0]);
       }
