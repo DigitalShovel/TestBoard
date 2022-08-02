@@ -55,7 +55,7 @@ const moveChart = {
     afterDraw(chart, args, pluginOptions) {
         const { ctx, chartArea: {left, right, top, bottom, width, height} } = chart;
         
-        /*class CircleChevron {
+        class CircleChevron {
             draw(ctx, x1, pixel) {
                 const angle = Math.PI / 180;
                 ctx.beginPath();
@@ -83,7 +83,7 @@ const moveChart = {
     drawCircleLeft.draw(ctx, left, 5);
     ///////// Draw arrow pointing right ////////////
     let drawCircleRight = new CircleChevron();
-    drawCircleRight.draw(ctx, right, -5);*/
+    drawCircleRight.draw(ctx, right, -5);
     /////////// Draw a scroll bar /////////////
     const bpix = chart.options.layout.padding.bottom+25;
     ctx.beginPath();
