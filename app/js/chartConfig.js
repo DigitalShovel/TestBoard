@@ -203,7 +203,7 @@ listOfCharts.push([new Chart(chart1, config)]);
 
 ///////// Build array of dateLabels reference //////////
 const lastLabel = {
-    dateLabel: "22/07/22 11:14:28"
+    dateLabel: "02/08/22 11:36:09"
   }
 let listOfDateLabel = [];
 listOfDateLabel.push([Object.create(lastLabel)]);
