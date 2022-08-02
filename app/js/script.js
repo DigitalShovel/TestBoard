@@ -103,7 +103,6 @@ function auth() {
 let registeredUser = false;
 function loadOnLogin() {
   readCT(listOfDateLabel[0][0]);
-  console.log("Date: ",listOfDateLabel[0][0]);
   readItem();
   registeredUser = true;
 }
@@ -131,7 +130,6 @@ function readCT(labelOBJ) {
       alert(JSON.stringify(err, undefined, 2));
     }
     else {
-      console.log('Data: ', data);
       for (let i=0; i < data['Count']; i++) {
         if (data['Items'][i]['Time'] > labelOBJ.dateLabel){
           labelOBJ.dateLabel = data['Items'][i]['Time'];
