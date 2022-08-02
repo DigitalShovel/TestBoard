@@ -16,7 +16,7 @@ html {
 
 body {
   margin: 0;
-  padding: 2rem;
+  padding: 0;
   font-family: Inter, Roboto, sans-serif;
   line-height: 1.4;
   overflow-x: hidden;
@@ -41,6 +41,7 @@ a,
 button,
 input,
 textarea {
+  font-family: Inter;
   color: var(--primary-color);
   text-decoration: none;
   border: 0;

@@ -18,32 +18,137 @@
 
 <body onload="checkLogin()">
 
-  <div class="flex jc-sb gap--sm mbot--lg">
-    <h1 class="text--white">Welcome to Digital Shovel Board Testing</h1>
-    <a class="btn btn--primary as-end"
-      href="https://testbench.auth.ca-central-1.amazoncognito.com/login?client_id=55ffriv2knsvpt7n1p49m6gghb&response_type=token&scope=aws.cognito.signin.user.admin+email+openid+profile&redirect_uri=https://ds-testboard.netlify.app/">Login
-      <svg class="btn__chevron" width="13" height="12" viewBox="0 0 13 12" fill="none"
-        xmlns="http://www.w3.org/2000/svg">
-        <path d="M7.49 6L7.5 6" stroke="var(--blue-100)" stroke-width="2" stroke-linecap="round"
-          stroke-linejoin="round" />
-        <path d="M2.5 1L7.95455 6L2.5 11" stroke="var(--blue-100)" stroke-width="2" stroke-linecap="round"
-          stroke-linejoin="round" />
-      </svg></a>
+  <div class="topbar">
+    <ul class="flex jc-sb ai-c gap--sm">
+      <li class="topbar__logo">
+        <img src="images/ds_logo_full_blue-white_new.svg" alt="Digital Shovel Logo">
+      </li>
+      <li>
+        <h1 class="topbar__heading text--white">Digital Shovel AWS Board Testing</h1>
+      </li>
+      <li>
+        <a class="btn btn--primary as-end"
+          href="https://testbench.auth.ca-central-1.amazoncognito.com/login?client_id=55ffriv2knsvpt7n1p49m6gghb&response_type=token&scope=aws.cognito.signin.user.admin+email+openid+profile&redirect_uri=https://ds-testboard.netlify.app/">Login
+          <svg class="btn__chevron" width="13" height="12" viewBox="0 0 13 12" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.49 6L7.5 6" stroke="var(--blue-100)" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path d="M2.5 1L7.95455 6L2.5 11" stroke="var(--blue-100)" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+      </li>
+    </ul>
   </div>
 
-  <div class="flex jc-sb">
-    <div class="flex gap--md">
-      <button class="btn btn--secondary flex ai-c gap--sm"
-        onclick="mapStationWebSocket();">
-        <img class="icon--sm" src="images/icons/mapping.svg" alt="Station Mapping Icon">
-        Map Station
-      </button>
-      <button onclick="readItem()" class="btn btn--secondary flex ai-c gap--sm">
-        <img class="icon--sm" src="images/icons/refresh.svg" alt="Refresh Icon">
-        Refresh
-      </button>
-    </div>
-  </div>
+  <nav class="actionbar">
+    <ul class="flex ai-c gap--md">
+      <li>
+        <button class="btn btn--tertiary btn--has-icon flex ai-c gap--sm" onclick="mapStationWebSocket();">
+          <svg class="actionbar__icon actionbar__icon--map" width="22" height="22" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#a)">
+              <rect width="22" height="22" rx="3" fill="#2B3F55" />
+              <rect x="4" y="4" width="14" height="7" rx="1" fill="#4D7299" />
+              <path d="M11 11v2m0 2v-2m-5 2v-2h5m0 0h5v2" stroke="#88A5C3" stroke-linejoin="round" />
+              <rect x="4" y="15" width="4" height="3" rx=".5" fill="#4D7299" />
+              <rect x="9" y="15" width="4" height="3" rx=".5" fill="#4D7299" />
+              <rect x="14" y="15" width="4" height="3" rx=".5" fill="#4D7299" />
+            </g>
+            <defs>
+              <filter id="a" x="0" y="0" width="22" height="22" filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                <feOffset dy="1" />
+                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                <feColorMatrix values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.05 0" />
+                <feBlend in2="shape" result="effect1_innerShadow_82_2" />
+              </filter>
+            </defs>
+          </svg>
+          <span>Map Station</span>
+        </button>
+      </li>
+      <li>
+        <button onclick="readItem()" class="btn btn--tertiary btn--has-icon flex ai-c gap--sm">
+          <svg class="actionbar__icon actionbar__icon--refresh" width="22" height="22" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#a)">
+              <rect width="22" height="22" rx="3" fill="#2B3F55" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M7.393 10.495C7.65 8.461 9.24 7 11.023 7c.866 0 1.668.333 2.307.908a1 1 0 0 0 1.338-1.487C13.691 5.541 12.42 5 11.024 5c-3.008 0-5.36 2.464-5.639 5.471l-.388-.5a.555.555 0 0 0-.37-.228.54.54 0 0 0-.418.116.56.56 0 0 0-.207.388.572.572 0 0 0 .132.42l1.586 2.018a.782.782 0 0 0 .613.31.793.793 0 0 0 .616-.299l1.781-2.051a.565.565 0 0 0-.048-.772.536.536 0 0 0-.367-.127.541.541 0 0 0-.444.206l-.478.543Z"
+                fill="#4D7299" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M14.663 11.514c-.21 2.01-1.799 3.489-3.618 3.489a3.465 3.465 0 0 1-2.369-.949 1 1 0 0 0-1.36 1.466 5.465 5.465 0 0 0 3.729 1.483c3.02 0 5.402-2.465 5.624-5.48l.34.428a.547.547 0 1 0 .857-.679L16.29 9.306a.774.774 0 0 0-1.223-.01l-1.628 1.998a.543.543 0 0 0 .048.751.54.54 0 0 0 .365.124.547.547 0 0 0 .442-.2l.37-.455Z"
+                fill="#88A5C3" />
+            </g>
+            <defs>
+              <filter id="a" x="0" y="0" width="22" height="22" filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                <feOffset dy="1" />
+                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                <feColorMatrix values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.05 0" />
+                <feBlend in2="shape" result="effect1_innerShadow_82_10" />
+              </filter>
+            </defs>
+          </svg>
+          <span>Refresh</span>
+        </button>
+      </li>
+      <li class="flex ai-c gap--sm">
+        <input class="input__text" type="text" name="test-value" id="test-value" placeholder="Enter amount of tests">
+        <button class="btn btn--tertiary btn--has-icon" type="submit">
+          <svg class="actionbar__icon actionbar__icon--play" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_i_43_61)">
+              <rect width="22" height="22" rx="3" fill="#2B3F55" />
+              <path
+                d="M15.2253 10.5642C15.5651 10.7554 15.5651 11.2446 15.2253 11.4358L8.74513 15.0809C8.41183 15.2683 8 15.0275 8 14.6451L8 7.35492C8 6.97251 8.41183 6.73165 8.74513 6.91914L15.2253 10.5642Z"
+                fill="#4D7299" />
+            </g>
+            <defs>
+              <filter id="filter0_i_43_61" x="0" y="0" width="22" height="22" filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha" />
+                <feOffset dy="1" />
+                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.05 0" />
+                <feBlend mode="normal" in2="shape" result="effect1_innerShadow_43_61" />
+              </filter>
+            </defs>
+          </svg>
+        </button>
+        <button class="btn btn--tertiary btn--has-icon" type="reset">
+          <svg class="actionbar__icon actionbar__icon--stop" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_i_43_64)">
+              <rect width="22" height="22" rx="3" fill="#2B3F55" />
+              <rect x="16" y="5.5" width="10" height="10" rx="1" transform="rotate(90 16 5.5)" fill="#4D7299" />
+            </g>
+            <defs>
+              <filter id="filter0_i_43_64" x="0" y="0" width="22" height="22" filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha" />
+                <feOffset dy="1" />
+                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.05 0" />
+                <feBlend mode="normal" in2="shape" result="effect1_innerShadow_43_64" />
+              </filter>
+            </defs>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </nav>
 
   <div class="flex gap--md mtop--md">
 
@@ -70,7 +175,7 @@
     </div>
 
     <div class="list list-esp list__1-col">
-            <canvas class="chart" id="myChart" width="400" height="400"></canvas>
+      <canvas class="chart" id="myChart" width="400" height="400"></canvas>
     </div>
   </div>
 

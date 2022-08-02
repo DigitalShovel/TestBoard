@@ -1,0 +1,68 @@
+.actionbar {
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--blue-800);
+
+  li:nth-child(3) {
+    border-left: 1px solid var(--blue-800);
+  }
+
+  span {
+    color: var(--cool-gray-400);
+  }
+
+  li:hover {
+    .actionbar__icon--map {
+      rect {
+        fill: var(--primary-color);
+      }
+      
+      rect:nth-child(1) {
+        fill: var(--blue-700);
+      }
+
+      path {
+        stroke: var(--blue-100);
+      }
+    }
+    
+    .actionbar__icon--refresh {
+      rect {
+        fill: var(--blue-700);
+      }
+
+      path:nth-child(2) {
+        fill: var(--primary-color);
+      }
+
+      path:last-child {
+        fill: var(--blue-100);
+      }
+    }
+
+    span {
+      color: var(--blue-100);
+    }
+  }
+
+  .btn:hover {
+    .actionbar__icon--play {
+      rect {
+        fill: var(--success-700);
+      }
+
+      path {
+        fill: var(--success-500);
+      }
+    }
+
+    .actionbar__icon--stop {
+      rect:nth-child(1) {
+        fill: var(--danger-700);
+      }
+
+      rect:nth-child(2) {
+        fill: var(--danger-500);
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.topbar {
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--blue-800);
+  &__logo {
+    height: 50px;
+  }
+
+  &__heading {
+    color: var(--cool-gray-500);
+    font-size: 1rem;
+    font-weight: 700;
+  }
+}
