@@ -131,8 +131,8 @@ function readCT(labelOBJ) {
       console.log('Error!');
     }
     else {
-      console.log('Passed!');
       for (let i=0; i < data['Count']; i++) {
+        console.log(i);
         if (data['Items'][i]['Time'] > labelOBJ.dateLabel){
           labelOBJ.dateLabel = data['Items'][i]['Time'];
         }
