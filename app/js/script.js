@@ -103,6 +103,7 @@ function auth() {
 let registeredUser = false;
 function loadOnLogin() {
   readCT(listOfDateLabel[0][0]);
+  console.log("Date: ",listOfDateLabel[0][0]);
   readItem();
   registeredUser = true;
 }
@@ -128,10 +129,9 @@ function readCT(labelOBJ) {
   docClient.query(ctItem, function(err, data) {
     if (err) {
       alert(JSON.stringify(err, undefined, 2));
-      console.log('Error!');
     }
     else {
-      console.log('Data Count: ', data['Count']);
+      console.log('Data: ', data);
       for (let i=0; i < data['Count']; i++) {
         if (data['Items'][i]['Time'] > labelOBJ.dateLabel){
           labelOBJ.dateLabel = data['Items'][i]['Time'];
