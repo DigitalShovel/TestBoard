@@ -104,6 +104,7 @@ let registeredUser = false;
 function loadOnLogin() {
   readCT(listOfDateLabel[0][0]);
   readItem();
+  console.log('Test!');
   registeredUser = true;
 }
 /////////////////////////////////////////////////////////
@@ -134,7 +135,6 @@ function readCT(labelOBJ) {
         if (data['Items'][i]['Time'] > labelOBJ.dateLabel){
           labelOBJ.dateLabel = data['Items'][i]['Time'];
         }
-        console.log(data['Items'][i]['Time']);
         var timeResult = JSON.stringify(data['Items'][i]['Time']);
         var valueCT = extractData(data['Items'][i], 'CTPI', 1, 1);
         var valueESP = extractData(data['Items'][i], 'CTESP', 1, 1);
