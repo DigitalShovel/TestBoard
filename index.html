@@ -102,7 +102,7 @@
       </li>
       <li class="flex ai-c gap--sm">
         <input class="input__text" type="text" name="test-value" id="test-value" placeholder="Enter amount of tests">
-        <button onclick="WebSocketTest();" class="btn btn--tertiary btn--has-icon" type="submit">
+        <button  onclick="WebSocketTest();" class="btn btn--tertiary btn--has-icon">
           <svg class="actionbar__icon actionbar__icon--play" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g filter="url(#filter0_i_43_61)">
               <rect width="22" height="22" rx="3" fill="#2B3F55" />
@@ -217,6 +217,22 @@
         </tbody>
       </table>
     </div>
+  </div>
+
+
+  <div class="container__input flex flex-col gap--md mtop--md">
+    <div class="fieldset flex flex-col">
+      <label class="fieldset__label" for="inputData">Value</label>
+      <input class="fieldset__text" type="number" id="inputData" placeholder="Enter value">
+    </div>
+    <button class="btn btn--primary">Run Test
+      <svg class="btn__chevron" width="13" height="12" viewBox="0 0 13 12" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.49 6L7.5 6" stroke="var(--blue-100)" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" />
+        <path d="M2.5 1L7.95455 6L2.5 11" stroke="var(--blue-100)" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg></button>
   </div>
 </body>
 
