@@ -9,11 +9,11 @@ var chart1 = document.getElementById('myChart').getContext('2d');
 
 ///////// Color & Font variables ////////
 const arrowColor = 'rgba(255, 26, 104, 1)';
-const labelTextColor = '#911';
+const labelTextColor = 'hsla(213, 75%, 54%, 1)';
 const labelTextFont = 'sans-serif';
 const scrollbarColor = 'lightgrey';
-const movableScrollbarColor = 'rgba(140, 140, 140, 1)';
-const movableScrollbarEdge = 'rgba(191, 191, 191, 1)';
+const movableScrollbarColor = 'hsla(213, 100%, 90%, 1)';
+const movableScrollbarEdge = 'hsla(213, 100%, 97%, 1)';
 
 //////////// Setup ////////////////
 const data = {
@@ -23,13 +23,13 @@ const data = {
     label: 'PI Measurements',
     data: [],
     fill: false,
-    borderColor: 'rgb(75, 192, 192)',
+    borderColor: 'hsla(213, 78%, 16%, 1)',
     tension: 0.4
   }, {
     label: 'ESP Measurements',
     data: [],
     fill: false,
-    borderColor: 'rgb(75, 50, 192)',
+    borderColor: 'hsla(213, 75%, 54%, 1)',
     tension: 0.1
 }]
 };
