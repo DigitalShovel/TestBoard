@@ -5,14 +5,17 @@ let popup = document.querySelector(".popup");
 let popupHide = document.querySelector(".popup__hide");
 
 let listOfViewGraph = [];
+let listOfViewGraphClose = [];
 let listOfViewGraphID = [['G1-1', 'C1-1'], ['G1-2', 'C1-2']];
 
+
 for (var i=0; i<2; i++){
-  listOfViewGraph.pushArray(document.getElementById(listOfViewGraphID[i][0]), document.getElementById(listOfViewGraphID[i][1]));
-  listOfViewGraph[i][0].addEventListener("click", () => {
+  listOfViewGraph.push(document.getElementById(listOfViewGraphID[i][0]));
+  listOfViewGraphClose.push(document.getElementById(listOfViewGraphID[i][1]));
+  listOfViewGraph[i].addEventListener("click", () => {
     popup.classList.toggle("popup__show");
   });
-  listOfViewGraph[i][1].addEventListener("click", () => {
+  listOfViewGraphClose[i].addEventListener("click", () => {
     popup.classList.toggle("popup__show");
   });
 }
