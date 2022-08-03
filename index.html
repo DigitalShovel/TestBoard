@@ -9,6 +9,7 @@
   <title>Digital Shovel - AWS Board Testing</title>
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
   <script defer src="app/js/script.js"></script>
+  <script defer src="app/js/popup.js"></script>
   <script defer src="app/js/progress-circle.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script defer src="app/js/chartConfig.js"></script>
@@ -153,7 +154,8 @@
           </button>
         </li>
         <li class="flex ai-c gap--sm">
-          <input class="progression-input input__text" value="0" type="number" step="5" min="0" max="100" placeholder="progress">
+          <input class="progression-input input__text" value="0" type="number" step="5" min="0" max="100"
+            placeholder="progress">
         </li>
       </ul>
     </nav>
@@ -192,8 +194,7 @@
               <th class="table__heading">Station #1</th>
               <th class="table__heading table__progress">
                 <svg width="32" height="32">
-                  <circle stroke="var(--primary-color)" stroke-width="4"
-                    fill="transparent" r="14" cx="16" cy="16" />
+                  <circle stroke="var(--primary-color)" stroke-width="4" fill="transparent" r="14" cx="16" cy="16" />
                 </svg>
               </th>
             </tr>
@@ -202,7 +203,20 @@
                 Channel #1
               </td>
               <td>
-                View Graphs
+                <button class="btn btn--unstyled popup__btn-show">View Graphs</button>
+                <div class="popup">
+                  <div class="popup__grid">
+                    <div class="popup__grid-item">CT1</div>
+                    <div class="popup__grid-item">CT2</div>
+                    <div class="popup__grid-item">CT3</div>
+                    <div class="popup__grid-item">CT4</div>
+                    <div class="popup__grid-item">CT5</div>
+                    <div class="popup__grid-item">CT6</div>
+                    <div class="popup__grid-item">CT7</div>
+                    <div class="popup__grid-item">CT8</div>
+                  </div>
+                  <button class="popup__btn-hide btn btn--primary">Close</button>
+                </div>
               </td>
             </tr>
             <tr class="table__row">
@@ -210,7 +224,20 @@
                 Channel #2
               </td>
               <td>
-                View Graphs
+                <button class="btn btn--unstyled popup__btn-show">View Graphs</button>
+                <div class="popup">
+                  <div class="popup__grid">
+                    <div class="popup__grid-item">CT1</div>
+                    <div class="popup__grid-item">CT2</div>
+                    <div class="popup__grid-item">CT3</div>
+                    <div class="popup__grid-item">CT4</div>
+                    <div class="popup__grid-item">CT5</div>
+                    <div class="popup__grid-item">CT6</div>
+                    <div class="popup__grid-item">CT7</div>
+                    <div class="popup__grid-item">CT8</div>
+                  </div>
+                  <button class="popup__btn-hide btn btn--primary">Close</button>
+                </div>
               </td>
             </tr>
             <tr class="table__row">
@@ -218,7 +245,7 @@
                 Channel #3
               </td>
               <td>
-                View Graphs
+                <button class="btn btn--unstyled">View Graphs</button>
               </td>
             </tr>
             <tr class="table__row">
@@ -226,7 +253,7 @@
                 Channel #4
               </td>
               <td>
-                View Graphs
+                <button class="btn btn--unstyled">View Graphs</button>
               </td>
             </tr>
             <tr class="table__row">
@@ -234,7 +261,7 @@
                 Channel #5
               </td>
               <td>
-                View Graphs
+                <button class="btn btn--unstyled">View Graphs</button>
               </td>
             </tr>
             <tr class="table__row">
@@ -242,7 +269,7 @@
                 Channel #6
               </td>
               <td>
-                View Graphs
+                <button class="btn btn--unstyled">View Graphs</button>
               </td>
             </tr>
           </tbody>
@@ -256,8 +283,7 @@
               <th class="table__heading">Station #2</th>
               <th class="table__heading table__progress">
                 <svg width="32" height="32">
-                  <circle stroke="var(--primary-color)" stroke-width="4"
-                    fill="transparent" r="14" cx="16" cy="16" />
+                  <circle stroke="var(--primary-color)" stroke-width="4" fill="transparent" r="14" cx="16" cy="16" />
                 </svg>
               </th>
             </tr>
@@ -266,7 +292,7 @@
                 Channel #1
               </td>
               <td>
-                View Graphs
+                <button class="btn btn--unstyled">View Graphs</button>
               </td>
             </tr>
             <tr class="table__row">
@@ -274,7 +300,7 @@
                 Channel #2
               </td>
               <td>
-                View Graphs
+                <button class="btn btn--unstyled">View Graphs</button>
               </td>
             </tr>
             <tr class="table__row">
@@ -282,7 +308,7 @@
                 Channel #3
               </td>
               <td>
-                View Graphs
+                <button class="btn btn--unstyled">View Graphs</button>
               </td>
             </tr>
             <tr class="table__row">
@@ -290,7 +316,7 @@
                 Channel #4
               </td>
               <td>
-                View Graphs
+                <button class="btn btn--unstyled">View Graphs</button>
               </td>
             </tr>
             <tr class="table__row">
@@ -298,7 +324,7 @@
                 Channel #5
               </td>
               <td>
-                View Graphs
+                <button class="btn btn--unstyled">View Graphs</button>
               </td>
             </tr>
             <tr class="table__row">
@@ -306,7 +332,7 @@
                 Channel #6
               </td>
               <td>
-                View Graphs
+                <button class="btn btn--unstyled">View Graphs</button>
               </td>
             </tr>
           </tbody>

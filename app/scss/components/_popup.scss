@@ -1,0 +1,61 @@
+.popup {
+  position: relative;
+  display: none;
+  position: fixed;
+  background-color: transparent;
+  padding: 2rem;
+  z-index: 20;
+
+  &__show {
+    display: block;
+  }
+
+  &__hide {
+    display: none;
+  }
+
+  &__grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    &-item {
+      background-color: #fff;
+      width: 300px;
+      height: 300px;
+    }
+  }
+
+  &__btn-hide {
+    position: fixed;
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.popup:after {
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -2;
+}
+
+.popup:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: transparent;
+  z-index: -1;
+}
