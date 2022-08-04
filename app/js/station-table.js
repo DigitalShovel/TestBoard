@@ -6,8 +6,8 @@ var numberOfStations = 4;
 }*/
 addStationTables(3);
 function addStationTables(quantity) {
-    for(var i=1; i<(quantity+1); i++){
-        $('#table_container_body').append(`
+  for (var i = 1; i < quantity + 1; i++) {
+    $("#table_container_body").append(`
         <div class="table__container">
                 <table class="table table__2-col">
                 <tbody class="table__body">
@@ -35,6 +35,16 @@ function addStationTables(quantity) {
                             <div class="popup__grid-item">CT6</div>
                             <div class="popup__grid-item">CT7</div>
                             <div class="popup__grid-item">CT8</div>
+                        </div>
+                        <div class="popup__relay flex gap--sm">
+                            <div class="popup__relay-light popup__relay-light--disabled popup__relay-1"></div>
+                            <div class="popup__relay-light popup__relay-1"></div>
+                            <div class="popup__relay-light popup__relay-1"></div>
+                            <div class="popup__relay-light popup__relay-1"></div>
+                            <div class="popup__relay-light popup__relay-1"></div>
+                            <div class="popup__relay-light popup__relay-1"></div>
+                            <div class="popup__relay-light popup__relay-1"></div>
+                            <div class="popup__relay-light popup__relay-1"></div>
                         </div>
                         <button id="C1-1" class="popup__btn-hide btn btn--primary">Close</button>
                         </div>
@@ -97,9 +107,9 @@ function addStationTables(quantity) {
                 </table>
             </div>
         `);
-    }
+  }
 }
 
-function removeStationTables(){
-    $('#table_container_body').empty();
+function removeStationTables() {
+  $("#table_container_body").empty();
 }
