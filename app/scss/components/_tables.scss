@@ -75,6 +75,7 @@ table {
   &__progress {
     display: flex;
     justify-content: center;
+    align-items: center;
 
     circle {
       transition: 0.35s stroke-dashoffset;
@@ -84,6 +85,7 @@ table {
 
     &-number {
       font-size: 0.8rem;
+      padding-right: 0.5rem;
     }
   }
 
