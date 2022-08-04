@@ -14,7 +14,7 @@ function addStationTables(quantity) {
                     <th class="table__heading">Station #${i}</th>
                     <th class="table__heading table__progress">
                         <svg width="32" height="32">
-                        <circle stroke="var(--primary-color)" stroke-width="4" fill="transparent" r="14" cx="16" cy="16" />
+                        <circle id="PC${i}" stroke="var(--primary-color)" stroke-width="4" fill="transparent" r="14" cx="16" cy="16" />
                         <text x="7" y="20" class="table__progress-number">60</text>
                         </svg>
                     </th>
