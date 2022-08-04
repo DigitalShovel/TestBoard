@@ -74,7 +74,7 @@ table {
 
   &__progress {
     display: flex;
-    justify-content: end;
+    justify-content: center;
 
     circle {
       transition: 0.35s stroke-dashoffset;
