@@ -51,7 +51,7 @@
       height: 10px;
       border-radius: 3px;
       background-color: var(--success-700);
-      box-shadow: 0 0 3px var(--success-500);
+      box-shadow: 0 0 3px 1px var(--success-500);
 
       &--disabled {
         background-color: var(--warm-gray-500);
