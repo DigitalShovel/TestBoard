@@ -1,7 +1,9 @@
 .sidebar {
   position: fixed;
   width: 300px;
+  height: calc(100vh - 138px);
   min-width: 300px;
   max-width: 300px;
   padding: 2rem;
+  border-right: 1px solid var(--blue-800);
 }

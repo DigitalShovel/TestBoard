@@ -1,4 +1,15 @@
 .main {
-  margin-left: calc(300px - 2rem);
-  padding: 2rem;
+  position: relative;
+  margin-left: 300px;
+  padding: 2rem;  
+
+  &::before {
+    content: "";
+    height: calc(100vh - 138px);
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    background-image: url(/images/ds-network-pattern-3-alpha@2x.png);
+    opacity: 0.03;
+  }
 }
