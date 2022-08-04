@@ -18,6 +18,7 @@
 
   <!-- Scripts -->
   <script defer src="app/js/script.js"></script>
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script defer src="app/js/popup.js"></script>
   <script defer src="app/js/progress-circle.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -25,6 +26,7 @@
   <script defer src="https://sdk.amazonaws.com/js/aws-sdk-2.7.16.min.js"></script>
   <script defer src="app/js/aws.cognito-sdk.min.js"></script>
   <script defer src="app/js/amazon-cognito-identity.min.js"></script>
+  <script defer src="app/js/station-table.js"></script>
 
   <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -121,7 +123,7 @@
         </li>
         <li class="flex ai-c gap--sm">
           <input class="input__text" type="text" name="input-data" id="inputData" placeholder="Enter amount of tests">
-          <button onclick="WebSocketTest();" class="btn btn--tertiary btn--has-icon">
+          <button onclick="addStationTables(20)" class="btn btn--tertiary btn--has-icon">
             <svg class="actionbar__icon actionbar__icon--play" width="22" height="22" viewBox="0 0 22 22" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <g filter="url(#filter0_i_43_61)">
@@ -145,7 +147,7 @@
               </defs>
             </svg>
           </button>
-          <button class="btn btn--tertiary btn--has-icon" type="reset">
+          <button onclick="removeStationTables()" class="btn btn--tertiary btn--has-icon" type="reset">
             <svg class="actionbar__icon actionbar__icon--stop" width="22" height="22" viewBox="0 0 22 22" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <g filter="url(#filter0_i_43_64)">
@@ -197,169 +199,8 @@
 
   <main class="main">
 
-    <div class="flex gap--md">
-      <div class="table__container">
-        <table class="table table__2-col">
-          <tbody class="table__body">
-            <tr class="table__row table__row--add-border">
-              <th class="table__heading">Station #1</th>
-              <th class="table__heading table__progress">
-                <svg width="32" height="32">
-                  <circle stroke="var(--primary-color)" stroke-width="4" fill="transparent" r="14" cx="16" cy="16" />
-                </svg>
-              </th>
-            </tr>
-            <tr class="table__row">
-              <td>
-                Channel #1
-              </td>
-              <td>
-                <button id="G1-1" class="btn btn--unstyled popup__btn-show">View Graphs</button>
-                <div class="popup">
-                  <div class="popup__grid">
-                    <div class="popup__grid-item">CT1</div>
-                    <div class="popup__grid-item">CT2</div>
-                    <div class="popup__grid-item">CT3</div>
-                    <div class="popup__grid-item">CT4</div>
-                    <div class="popup__grid-item">CT5</div>
-                    <div class="popup__grid-item">CT6</div>
-                    <div class="popup__grid-item">CT7</div>
-                    <div class="popup__grid-item">CT8</div>
-                  </div>
-                  <div class="popup__relay flex gap--sm">
-                    <div class="popup__relay-light popup__relay-light--disabled popup__relay-1"></div>
-                    <div class="popup__relay-light popup__relay-1"></div>
-                    <div class="popup__relay-light popup__relay-1"></div>
-                    <div class="popup__relay-light popup__relay-1"></div>
-                    <div class="popup__relay-light popup__relay-1"></div>
-                    <div class="popup__relay-light popup__relay-1"></div>
-                    <div class="popup__relay-light popup__relay-1"></div>
-                    <div class="popup__relay-light popup__relay-1"></div>
-                  </div>
-                  <button id="C1-1" class="popup__btn-hide btn btn--primary">Close</button>
-                </div>
-              </td>
-            </tr>
-            <tr class="table__row">
-              <td>
-                Channel #2
-              </td>
-              <td>
-                <button id="G1-2" class="btn btn--unstyled popup__btn-show">View Graphs</button>
-                <div class="popup">
-                  <div class="popup__grid">
-                    <div class="popup__grid-item">CT9</div>
-                    <div class="popup__grid-item">CT10</div>
-                    <div class="popup__grid-item">CT11</div>
-                    <div class="popup__grid-item">CT12</div>
-                    <div class="popup__grid-item">CT13</div>
-                    <div class="popup__grid-item">CT14</div>
-                    <div class="popup__grid-item">CT15</div>
-                    <div class="popup__grid-item">CT16</div>
-                  </div>
-                  <button id="C1-2" class="popup__btn-hide btn btn--primary">Close</button>
-                </div>
-              </td>
-            </tr>
-            <tr class="table__row">
-              <td>
-                Channel #3
-              </td>
-              <td>
-                <button class="btn btn--unstyled">View Graphs</button>
-              </td>
-            </tr>
-            <tr class="table__row">
-              <td>
-                Channel #4
-              </td>
-              <td>
-                <button class="btn btn--unstyled">View Graphs</button>
-              </td>
-            </tr>
-            <tr class="table__row">
-              <td>
-                Channel #5
-              </td>
-              <td>
-                <button class="btn btn--unstyled">View Graphs</button>
-              </td>
-            </tr>
-            <tr class="table__row">
-              <td>
-                Channel #6
-              </td>
-              <td>
-                <button class="btn btn--unstyled">View Graphs</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="table__container">
-        <table class="table table__2-col">
-          <tbody class="table__body">
-            <tr class="table__row table__row--add-border">
-              <th class="table__heading">Station #2</th>
-              <th class="table__heading table__progress">
-                <svg width="32" height="32">
-                  <circle stroke="var(--primary-color)" stroke-width="4" fill="transparent" r="14" cx="16" cy="16" />
-                </svg>
-              </th>
-            </tr>
-            <tr class="table__row">
-              <td>
-                Channel #1
-              </td>
-              <td>
-                <button class="btn btn--unstyled">View Graphs</button>
-              </td>
-            </tr>
-            <tr class="table__row">
-              <td>
-                Channel #2
-              </td>
-              <td>
-                <button class="btn btn--unstyled">View Graphs</button>
-              </td>
-            </tr>
-            <tr class="table__row">
-              <td>
-                Channel #3
-              </td>
-              <td>
-                <button class="btn btn--unstyled">View Graphs</button>
-              </td>
-            </tr>
-            <tr class="table__row">
-              <td>
-                Channel #4
-              </td>
-              <td>
-                <button class="btn btn--unstyled">View Graphs</button>
-              </td>
-            </tr>
-            <tr class="table__row">
-              <td>
-                Channel #5
-              </td>
-              <td>
-                <button class="btn btn--unstyled">View Graphs</button>
-              </td>
-            </tr>
-            <tr class="table__row">
-              <td>
-                Channel #6
-              </td>
-              <td>
-                <button class="btn btn--unstyled">View Graphs</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
+    <div id="table_container_body" class="flex gap--md">
+      <!-- This is where the dynamically stations is added -->
       <div class="list">
         <canvas class="chart" id="myChart" width="400" height="400"></canvas>
       </div>
