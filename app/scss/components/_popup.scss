@@ -4,7 +4,7 @@
   position: fixed;
   background-color: transparent;
   padding: 2rem;
-  z-index: 20;
+  z-index: 9999;
 
   &__show {
     display: block;
