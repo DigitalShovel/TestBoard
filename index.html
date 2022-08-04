@@ -20,13 +20,13 @@
   <script defer src="app/js/script.js"></script>
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script defer src="app/js/popup.js"></script>
-  <script defer src="app/js/progress-circle.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script defer src="app/js/chartConfig.js"></script>
   <script defer src="https://sdk.amazonaws.com/js/aws-sdk-2.7.16.min.js"></script>
   <script defer src="app/js/aws.cognito-sdk.min.js"></script>
   <script defer src="app/js/amazon-cognito-identity.min.js"></script>
   <script defer src="app/js/station-table.js"></script>
+  <script defer src="app/js/progress-circle.js"></script>
 
   <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -127,7 +127,7 @@
         </li>
         <li class="flex ai-c gap--sm">
           <input class="input__text" type="text" name="input-data" id="inputData" placeholder="Enter amount of tests">
-          <button onclick="addStationTables(1)" class="btn btn--tertiary btn--has-icon">
+          <button onclick="addStationTables(20)" class="btn btn--tertiary btn--has-icon">
             <svg class="actionbar__icon actionbar__icon--play" width="22" height="22" viewBox="0 0 22 22" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <g filter="url(#filter0_i_43_61)">
@@ -205,9 +205,6 @@
 
     <div id="table_container_body" class="grid grid__5-col gap--lg">
       <!-- This is where the dynamically stations is added -->
-      <div class="list">
-        <canvas class="chart" id="myChart" width="400" height="400"></canvas>
-      </div>
     </div>
 
   </main>

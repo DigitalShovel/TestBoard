@@ -24,10 +24,12 @@ function addStationTables(quantity) {
                         Channel #1
                     </td>
                     <td>
-                        <button id="T${i}G1" onclick="showPopup("T${i}P1")" class="btn btn--unstyled popup__btn-show">View Graphs</button>
+                        <button id="T${i}G1" onclick="showPopup('T${i}P1')" class="btn btn--unstyled popup__btn-show">View Graphs</button>
                         <div id="T${i}P1" class="popup">
                             <div class="popup__grid">
-                                <div id="T${i}G1C1" class="popup__grid-item">CT1</div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G1C1" class="chart" width="400" height="400"></canvas>
+                                </div>
                                 <div id="T${i}G1C2" class="popup__grid-item">CT2</div>
                                 <div id="T${i}G1C3" class="popup__grid-item">CT3</div>
                                 <div id="T${i}G1C4" class="popup__grid-item">CT4</div>
@@ -46,7 +48,7 @@ function addStationTables(quantity) {
                                 <div id="T${i}G1R7" class="popup__relay-light popup__relay-1"></div>
                                 <div id="T${i}G1R8" class="popup__relay-light popup__relay-1"></div>
                             </div>
-                            <button id="T${i}B1" onclick="showPopup()" class="popup__btn-hide btn btn--primary">Close</button>
+                            <button id="T${i}B1" onclick="showPopup('T${i}P1')" class="popup__btn-hide btn btn--primary">Close</button>
                         </div>
                     </td>
                     </tr>
@@ -55,8 +57,8 @@ function addStationTables(quantity) {
                         Channel #2
                     </td>
                     <td>
-                        <button id="T${i}G2" class="btn btn--unstyled popup__btn-show">View Graphs</button>
-                        <div class="popup">
+                        <button id="T${i}G2" onclick="showPopup('T${i}P2')" class="btn btn--unstyled popup__btn-show">View Graphs</button>
+                        <div id="T${i}P2" class="popup">
                             <div class="popup__grid">
                                 <div id="T${i}G2C1" class="popup__grid-item">CT1</div>
                                 <div id="T${i}G2C2" class="popup__grid-item">CT2</div>
@@ -77,7 +79,7 @@ function addStationTables(quantity) {
                                 <div id="T${i}G2R7" class="popup__relay-light popup__relay-1"></div>
                                 <div id="T${i}G2R8" class="popup__relay-light popup__relay-1"></div>
                             </div>
-                            <button id="T${i}B2" class="popup__btn-hide btn btn--primary">Close</button>
+                            <button id="T${i}B2" onclick="showPopup('T${i}P2')" class="popup__btn-hide btn btn--primary">Close</button>
                         </div>
                     </td>
                     </tr>
@@ -86,8 +88,8 @@ function addStationTables(quantity) {
                         Channel #3
                     </td>
                     <td>
-                        <button id="T${i}G3" class="btn btn--unstyled popup__btn-show">View Graphs</button>
-                        <div class="popup">
+                        <button id="T${i}G3" onclick="showPopup('T${i}P3')" class="btn btn--unstyled popup__btn-show">View Graphs</button>
+                        <div id="T${i}P3" class="popup">
                             <div class="popup__grid">
                                 <div id="T${i}G3C1" class="popup__grid-item">CT1</div>
                                 <div id="T${i}G3C2" class="popup__grid-item">CT2</div>
@@ -108,7 +110,7 @@ function addStationTables(quantity) {
                                 <div id="T${i}G3R7" class="popup__relay-light popup__relay-1"></div>
                                 <div id="T${i}G3R8" class="popup__relay-light popup__relay-1"></div>
                             </div>
-                            <button id="T${i}B3" class="popup__btn-hide btn btn--primary">Close</button>
+                            <button id="T${i}B3" onclick="showPopup('T${i}P3')" class="popup__btn-hide btn btn--primary">Close</button>
                         </div>
                     </td>
                     </tr>
@@ -117,8 +119,8 @@ function addStationTables(quantity) {
                         Channel #4
                     </td>
                     <td>
-                        <button id="T${i}G4" class="btn btn--unstyled popup__btn-show">View Graphs</button>
-                        <div class="popup">
+                        <button id="T${i}G4" onclick="showPopup('T${i}P4')" class="btn btn--unstyled popup__btn-show">View Graphs</button>
+                        <div id="T${i}P4" class="popup">
                             <div class="popup__grid">
                                 <div id="T${i}G4C1" class="popup__grid-item">CT1</div>
                                 <div id="T${i}G4C2" class="popup__grid-item">CT2</div>
@@ -139,7 +141,7 @@ function addStationTables(quantity) {
                                 <div id="T${i}G4R7" class="popup__relay-light popup__relay-1"></div>
                                 <div id="T${i}G4R8" class="popup__relay-light popup__relay-1"></div>
                             </div>
-                            <button id="T${i}B4" class="popup__btn-hide btn btn--primary">Close</button>
+                            <button id="T${i}B4" onclick="showPopup('T${i}P4')" class="popup__btn-hide btn btn--primary">Close</button>
                         </div>
                     </td>
                     </tr>
@@ -148,8 +150,8 @@ function addStationTables(quantity) {
                         Channel #5
                     </td>
                     <td>
-                        <button id="T${i}G5" class="btn btn--unstyled popup__btn-show">View Graphs</button>
-                        <div class="popup">
+                        <button id="T${i}G5" onclick="showPopup('T${i}P5')" class="btn btn--unstyled popup__btn-show">View Graphs</button>
+                        <div id="T${i}P5" class="popup">
                             <div class="popup__grid">
                                 <div id="T${i}G5C1" class="popup__grid-item">CT1</div>
                                 <div id="T${i}G5C2" class="popup__grid-item">CT2</div>
@@ -170,7 +172,7 @@ function addStationTables(quantity) {
                                 <div id="T${i}G5R7" class="popup__relay-light popup__relay-1"></div>
                                 <div id="T${i}G5R8" class="popup__relay-light popup__relay-1"></div>
                             </div>
-                            <button id="T${i}B5" class="popup__btn-hide btn btn--primary">Close</button>
+                            <button id="T${i}B5" onclick="showPopup('T${i}P5')" class="popup__btn-hide btn btn--primary">Close</button>
                         </div>
                     </td>
                     </tr>
@@ -179,8 +181,8 @@ function addStationTables(quantity) {
                         Channel #6
                     </td>
                     <td>
-                        <button id="T${i}G6" class="btn btn--unstyled popup__btn-show">View Graphs</button>
-                        <div class="popup">
+                        <button id="T${i}G6" onclick="showPopup('T${i}P6')" class="btn btn--unstyled popup__btn-show">View Graphs</button>
+                        <div id="T${i}P6" class="popup">
                             <div class="popup__grid">
                                 <div id="T${i}G6C1" class="popup__grid-item">CT1</div>
                                 <div id="T${i}G6C2" class="popup__grid-item">CT2</div>
@@ -201,7 +203,7 @@ function addStationTables(quantity) {
                                 <div id="T${i}G6R7" class="popup__relay-light popup__relay-1"></div>
                                 <div id="T${i}G6R8" class="popup__relay-light popup__relay-1"></div>
                             </div>
-                            <button id="T${i}B6" class="popup__btn-hide btn btn--primary">Close</button>
+                            <button id="T${i}B6" onclick="showPopup('T${i}P6')" class="popup__btn-hide btn btn--primary">Close</button>
                         </div>
                     </td>
                     </tr>
@@ -210,6 +212,8 @@ function addStationTables(quantity) {
             </div>
         `);
   }
+  updateProgressCircle();
+  createCharts();
 }
 
 function removeStationTables() {

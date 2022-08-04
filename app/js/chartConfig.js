@@ -3,10 +3,6 @@
 ////    [CT1, CT2, CT3, CT4, CT5, CT6, CT7, CT8], [...]     ////
 ////////////////////////////////////////////////////////////////
 
-///////// Attach the chart variable to the Canvas //////////
-var chart1 = document.getElementById('myChart').getContext('2d');
-////////////////////////////////////////////////////////////
-
 ///////// Color & Font variables ////////
 const arrowColor = 'rgba(255, 26, 104, 1)';
 const labelTextColor = 'hsla(213, 75%, 54%, 1)';
@@ -198,7 +194,16 @@ function moveScroll(movingChart) {
 
 ///////////////// Build array of charts ///////////////////
 let listOfCharts = [];
-listOfCharts.push([new Chart(chart1, config)]);
+///////// Attach the chart variable to the Canvas //////////
+function createCharts(){
+    var chart1 = document.getElementById('T1G1C1').getContext('2d');
+    listOfCharts.push([new Chart(chart1, config)]);
+
+    listOfCharts[0][0].ctx.onclick = moveScroll(listOfCharts[0][0]);
+    listOfCharts[0][0].canvas.addEventListener('wheel', (e) => {
+    scrollWheel(e, listOfCharts[0][0]);
+});
+}
 //////////////////////////////////////////////////////////
 
 ///////// Build array of dateLabels reference //////////
@@ -229,10 +234,3 @@ function scrollWheel(wheel, chart) {
     }
     chart.update();
 }
-
-/////////// Create the click button to move chart ////////////
-listOfCharts[0][0].ctx.onclick = moveScroll(listOfCharts[0][0]);
-listOfCharts[0][0].canvas.addEventListener('wheel', (e) => {
-    scrollWheel(e, listOfCharts[0][0]);
-});
-//////////////////////////////////////////////////////////////
