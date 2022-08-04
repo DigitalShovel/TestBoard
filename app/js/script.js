@@ -126,7 +126,7 @@ function readCT(labelOBJ) {
       alert(JSON.stringify(err, undefined, 2));
     }
     else {
-      console.log("Scanning...");
+      console.log(data['Items'][0]['Time']);
       for (let i=0; i < data['Count']; i++) {
         if (data['Items'][i]['Time'] > labelOBJ.dateLabel){
           setProgress(data['Items'][i]['TestNumber'],data['Items'][i]['TotalTest']);
