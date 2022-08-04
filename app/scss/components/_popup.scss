@@ -77,7 +77,7 @@
         left: 50%;
         width: 25px;
         height: 2px;
-        background-color: var(--success-900);
+        background-color: hsla(0, 0%, 0%, 0.3);
         transform: translateX(-50%);
         filter: blur(1px);
       }
