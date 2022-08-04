@@ -5,7 +5,7 @@ table {
   th {
     padding: 1rem 1.5rem;
     color: var(--blue-900);
-    text-align: left;
+    text-align: center;
   }
 
   th {
@@ -80,6 +80,10 @@ table {
       transition: 0.35s stroke-dashoffset;
       transform: rotate(-90deg);
       transform-origin: 50% 50%;
+    }
+
+    &-number {
+      font-size: 0.8rem;
     }
   }
 
