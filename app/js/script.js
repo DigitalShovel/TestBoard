@@ -128,7 +128,7 @@ function readCT(labelOBJ) {
     else {
       for (let i=0; i < data['Count']; i++) {
         if (data['Items'][i]['Time'] > labelOBJ.dateLabel){
-          setProgress(data['Items'][i]['TestNumber'],data['Items'][i]['TotalTest']);
+          setProgress("PC"+data['Items'][i]['Station'], data['Items'][i]['TestNumber'],data['Items'][i]['TotalTest']);
           labelOBJ.dateLabel = data['Items'][i]['Time'];
         }
         var timeResult = JSON.stringify(data['Items'][i]['Time']);
