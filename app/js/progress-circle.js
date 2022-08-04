@@ -9,6 +9,7 @@ function updateProgressCircle(){
 }
 
 function setProgress(testNumber, testTotal) {
+  let circle = document.getElementById('PC1')
   const offset = circumference - (testNumber/testTotal) * circumference;
   circle.style.strokeDashoffset = offset;
 }
