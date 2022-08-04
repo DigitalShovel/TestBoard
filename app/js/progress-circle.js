@@ -8,5 +8,5 @@ function updateProgressCircle(id){
 
 function setProgress(id, testNumber, testTotal) {
   const offset = circumference - (testNumber/testTotal) * circumference;
-  id.style.strokeDashoffset = offset;
+  document.getElementById(id).style.strokeDashoffset = offset;
 }
