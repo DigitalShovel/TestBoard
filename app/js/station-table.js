@@ -4,7 +4,7 @@ var numberOfStations = 4;
 /*for (var i=0; i < numberOfStations; i++){
 
 }*/
-addStationTables(3);
+addStationTables(25);
 function addStationTables(quantity) {
   for (var i = 1; i < quantity + 1; i++) {
     $("#table_container_body").append(`

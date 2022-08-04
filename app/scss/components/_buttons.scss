@@ -9,6 +9,11 @@
   padding: 0.5rem 1rem;
   max-width: max-content;
 
+  @media (max-width: 600px) {
+    padding: 0.3rem 0.5rem 0.3rem 0.75rem;
+    font-size: 0.8rem;
+  }
+
   &:hover {
     .btn__chevron {
       path {
@@ -30,6 +35,10 @@
     stroke-width: 2;
     stroke-linecap: round;
     stroke-linejoin: round;
+
+    @media (max-width: 600px) {
+      transform: translateY(2px);
+    }
   }
 
   &__navbar {
