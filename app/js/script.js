@@ -92,6 +92,10 @@ function auth() {
           }
         }); 
   loadOnLogin();      /// Load all the function needed, including creating objects
+  /////////////// Refresh chart every 5 seconds /////////////
+  var inverval_timer = setInterval(function () {
+    readCT(listOfDateLabel[0][0]);
+  }, 5000);
 }
 /////////////////////////////////////////////////////////
 
@@ -99,6 +103,7 @@ function auth() {
 let registeredUser = false;
 function loadOnLogin() {
   readItem();
+  readCT(listOfDateLabel[0][0]);
   registeredUser = true;
 }
 /////////////////////////////////////////////////////////
