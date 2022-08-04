@@ -1,20 +1,21 @@
 
 let popup = document.querySelector(".popup");
 
+function createPopup(quantity){
+  for (var i=1; i<(quantity+1); i++){
+    var arrayViewGraph = [];
+    var arrayCloseButton = [];
+    for (var k=1; k<7; k++){
+      arrayViewGraph.push(document.getElementById("T"+i+"G"+k));
+      arrayCloseButton.push(document.getElementById("T"+i+"B"+k));
 
-let listOfViewGraph = [];
-let listOfViewGraphClose = [];
-let listOfViewGraphID = [['G1-1', 'C1-1'], ['G1-2', 'C1-2']];
+      document.getElementById("T"+i+"G"+k).addEventListener("click", () => {
+        document.getElementById("T"+i+"G"+k).classList.toggle("popup__show");
+      });
 
-function createPopup(){
-  for (var i=0; i<2; i++){
-    listOfViewGraph.push(document.getElementById(listOfViewGraphID[i][0]));
-    listOfViewGraphClose.push(document.getElementById(listOfViewGraphID[i][1]));
-    listOfViewGraph[i].addEventListener("click", () => {
-      popup.classList.toggle("popup__show");
-    });
-    listOfViewGraphClose[i].addEventListener("click", () => {
-      popup.classList.toggle("popup__show");
-    });
+      arrayCloseButton[k-1].addEventListener("click", () => {
+        popup.classList.toggle("popup__show");
+      });
+    }
   }
 }
