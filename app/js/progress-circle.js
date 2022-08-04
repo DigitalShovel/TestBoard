@@ -1,9 +1,8 @@
 const radius = 14; //circle.r.baseVal.value;
 let circumference = radius * 2 * Math.PI;
+let circle = document.querySelector('circle');
 
 function updateProgressCircle(){
-  var circle = document.querySelector('circle');
-
   circle.style.strokeDasharray = `${circumference} ${circumference}`;
   circle.style.strokeDashoffset = `${circumference}`;
 }
