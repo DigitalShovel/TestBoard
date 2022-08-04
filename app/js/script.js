@@ -92,17 +92,12 @@ function auth() {
           }
         }); 
   loadOnLogin();      /// Load all the function needed, including creating objects
-  /////////////// Refresh chart every 5 seconds /////////////
-  const inverval_timer = setInterval(function() { 
-    readCT(listOfDateLabel[0][0]);
-  }, 5000);
 }
 /////////////////////////////////////////////////////////
 
 /////// Functions to run if login is Authorized /////////
 let registeredUser = false;
 function loadOnLogin() {
-  readCT(listOfDateLabel[0][0]);
   readItem();
   registeredUser = true;
 }
@@ -111,6 +106,7 @@ function loadOnLogin() {
 ///////////// Read CT Values from DB ////////////////////
 const dataPerPlot = 91;
 let maxDataPerChart = dataPerPlot; // Number of data plus one
+
 function readCT(labelOBJ) {
   var docClient = new AWS.DynamoDB.DocumentClient();
 
