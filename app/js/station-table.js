@@ -4,6 +4,7 @@ var numberOfStations = 4;
 /*for (var i=0; i < numberOfStations; i++){
 
 }*/
+addStationTables(1);
 function addStationTables(quantity) {
   for (var i = 1; i < quantity + 1; i++) {
     $("#table_container_body").append(`
@@ -15,7 +16,7 @@ function addStationTables(quantity) {
                     <th class="table__heading table__progress">
                         <svg width="32" height="32">
                         <circle id="PC${i}" stroke="var(--primary-color)" stroke-width="4" fill="transparent" r="${radius}" cx="16" cy="16" />
-                            <text id="PCT${i}" x="7" y="20" class="table__progress-number">0%</text>
+                            <text id="PCT${i}" x="25" y="20" class="table__progress-number">0%</text>
                         </svg>
                     </th>
                     </tr>
