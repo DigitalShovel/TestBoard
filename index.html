@@ -41,10 +41,14 @@
     <div class="topbar">
       <ul class="flex jc-sb ai-c gap--sm">
         <li class="topbar__logo">
-          <img src="images/logo_white-text.svg" alt="Digital Shovel Logo">
+          <picture>
+            <source media="(min-width: 601px)" srcset="images/logo_white-text.svg">
+            <source media="(max-width: 600px)" srcset="images/logo_symbol_colored.png">
+            <img src="images/logo_gray-text.svg" alt="Digital Shovel Logo">
+          </picture>
         </li>
         <li>
-          <h1 class="topbar__heading text--white">Digital Shovel AWS Board Testing</h1>
+          <h1 class="topbar__heading text--white"><span>Digital Shovel</span><span>AWS Board Testing</span></h1>
         </li>
         <li>
           <a class="btn btn--primary as-end"
@@ -61,7 +65,7 @@
       </ul>
     </div>
     <nav class="actionbar">
-      <ul class="flex ai-c gap--md">
+      <ul class="flex flex-wrap ai-c gap--md">
         <li>
           <button class="btn btn--tertiary btn--has-icon flex ai-c gap--sm" onclick="mapStationWebSocket();">
             <svg class="actionbar__icon actionbar__icon--map" width="22" height="22" fill="none"
@@ -174,7 +178,7 @@
     </nav>
   </header>
 
-  <aside class="sidebar flex flex-col gap--md">
+  <aside class="sidebar gap--md">
     <div class="list list-pi list__1-col">
       <p class="list__heading">Pi List</p>
       <div class="list__content">
@@ -199,7 +203,7 @@
 
   <main class="main">
 
-    <div id="table_container_body" class="flex gap--md">
+    <div id="table_container_body" class="grid grid__5-col gap--lg">
       <!-- This is where the dynamically stations is added -->
       <div class="list">
         <canvas class="chart" id="myChart" width="400" height="400"></canvas>

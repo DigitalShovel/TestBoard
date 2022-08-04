@@ -1,6 +1,6 @@
 .main {
   position: relative;
-  margin-left: 300px;
+  margin-left: 250px;
   padding: 2rem;  
 
   &::before {
@@ -11,5 +11,10 @@
     width: 100%;
     background-image: url(/images/ds-network-pattern-3-alpha@2x.png);
     opacity: 0.03;
+  }
+
+  @media (max-width: 600px) {
+    margin-left: 0;
+    margin-top: 250px;
   }
 }
