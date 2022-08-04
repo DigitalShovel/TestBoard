@@ -1,7 +1,7 @@
 
 function updateProgressCircle(){
   var circle = document.querySelector('circle');
-  var radius = circle.r.baseVal.value;
+  var radius = 14; //circle.r.baseVal.value;
   var circumference = radius * 2 * Math.PI;
 
   circle.style.strokeDasharray = `${circumference} ${circumference}`;
