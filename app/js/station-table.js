@@ -24,8 +24,8 @@ function addStationTables(quantity) {
                         Channel #1
                     </td>
                     <td>
-                        <button id="T${i}G1" class="btn btn--unstyled popup__btn-show">View Graphs</button>
-                        <div class="popup">
+                        <button id="T${i}G1" onclick="showPopup("T${i}P1")" class="btn btn--unstyled popup__btn-show">View Graphs</button>
+                        <div id="T${i}P1" class="popup">
                             <div class="popup__grid">
                                 <div id="T${i}G1C1" class="popup__grid-item">CT1</div>
                                 <div id="T${i}G1C2" class="popup__grid-item">CT2</div>
@@ -37,16 +37,16 @@ function addStationTables(quantity) {
                                 <div id="T${i}G1C8" class="popup__grid-item">CT8</div>
                             </div>
                             <div class="popup__relay flex gap--sm">
-                                <div id="T${i}G1R1 class="popup__relay-light popup__relay-light--disabled popup__relay-1"></div>
-                                <div id="T${i}G1R2 class="popup__relay-light popup__relay-1"></div>
-                                <div id="T${i}G1R3 class="popup__relay-light popup__relay-1"></div>
-                                <div id="T${i}G1R4 class="popup__relay-light popup__relay-1"></div>
-                                <div id="T${i}G1R5 class="popup__relay-light popup__relay-1"></div>
-                                <div id="T${i}G1R6 class="popup__relay-light popup__relay-1"></div>
-                                <div id="T${i}G1R7 class="popup__relay-light popup__relay-1"></div>
-                                <div id="T${i}G1R8 class="popup__relay-light popup__relay-1"></div>
+                                <div id="T${i}G1R1" class="popup__relay-light popup__relay-light--disabled popup__relay-1"></div>
+                                <div id="T${i}G1R2" class="popup__relay-light popup__relay-1"></div>
+                                <div id="T${i}G1R3" class="popup__relay-light popup__relay-1"></div>
+                                <div id="T${i}G1R4" class="popup__relay-light popup__relay-1"></div>
+                                <div id="T${i}G1R5" class="popup__relay-light popup__relay-1"></div>
+                                <div id="T${i}G1R6" class="popup__relay-light popup__relay-1"></div>
+                                <div id="T${i}G1R7" class="popup__relay-light popup__relay-1"></div>
+                                <div id="T${i}G1R8" class="popup__relay-light popup__relay-1"></div>
                             </div>
-                            <button id="T${i}B1" class="popup__btn-hide btn btn--primary">Close</button>
+                            <button id="T${i}B1" onclick="showPopup()" class="popup__btn-hide btn btn--primary">Close</button>
                         </div>
                     </td>
                     </tr>
@@ -57,27 +57,27 @@ function addStationTables(quantity) {
                     <td>
                         <button id="T${i}G2" class="btn btn--unstyled popup__btn-show">View Graphs</button>
                         <div class="popup">
-                        <div class="popup__grid">
-                            <div id="T${i}G2C1" class="popup__grid-item">CT1</div>
-                            <div id="T${i}G2C2" class="popup__grid-item">CT2</div>
-                            <div id="T${i}G2C3" class="popup__grid-item">CT3</div>
-                            <div id="T${i}G2C4" class="popup__grid-item">CT4</div>
-                            <div id="T${i}G2C5" class="popup__grid-item">CT5</div>
-                            <div id="T${i}G2C6" class="popup__grid-item">CT6</div>
-                            <div id="T${i}G2C7" class="popup__grid-item">CT7</div>
-                            <div id="T${i}G2C8" class="popup__grid-item">CT8</div>
-                        </div>
-                        <div class="popup__relay flex gap--sm">
-                            <div id="T${i}G2R1 class="popup__relay-light popup__relay-light--disabled popup__relay-1"></div>
-                            <div id="T${i}G2R2 class="popup__relay-light popup__relay-1"></div>
-                            <div id="T${i}G2R3 class="popup__relay-light popup__relay-1"></div>
-                            <div id="T${i}G2R4 class="popup__relay-light popup__relay-1"></div>
-                            <div id="T${i}G2R5 class="popup__relay-light popup__relay-1"></div>
-                            <div id="T${i}G2R6 class="popup__relay-light popup__relay-1"></div>
-                            <div id="T${i}G2R7 class="popup__relay-light popup__relay-1"></div>
-                            <div id="T${i}G2R8 class="popup__relay-light popup__relay-1"></div>
-                        </div>
-                        <button id="T${i}B2" class="popup__btn-hide btn btn--primary">Close</button>
+                            <div class="popup__grid">
+                                <div id="T${i}G2C1" class="popup__grid-item">CT1</div>
+                                <div id="T${i}G2C2" class="popup__grid-item">CT2</div>
+                                <div id="T${i}G2C3" class="popup__grid-item">CT3</div>
+                                <div id="T${i}G2C4" class="popup__grid-item">CT4</div>
+                                <div id="T${i}G2C5" class="popup__grid-item">CT5</div>
+                                <div id="T${i}G2C6" class="popup__grid-item">CT6</div>
+                                <div id="T${i}G2C7" class="popup__grid-item">CT7</div>
+                                <div id="T${i}G2C8" class="popup__grid-item">CT8</div>
+                            </div>
+                            <div class="popup__relay flex gap--sm">
+                                <div id="T${i}G2R1" class="popup__relay-light popup__relay-light--disabled popup__relay-1"></div>
+                                <div id="T${i}G2R2" class="popup__relay-light popup__relay-1"></div>
+                                <div id="T${i}G2R3" class="popup__relay-light popup__relay-1"></div>
+                                <div id="T${i}G2R4" class="popup__relay-light popup__relay-1"></div>
+                                <div id="T${i}G2R5" class="popup__relay-light popup__relay-1"></div>
+                                <div id="T${i}G2R6" class="popup__relay-light popup__relay-1"></div>
+                                <div id="T${i}G2R7" class="popup__relay-light popup__relay-1"></div>
+                                <div id="T${i}G2R8" class="popup__relay-light popup__relay-1"></div>
+                            </div>
+                            <button id="T${i}B2" class="popup__btn-hide btn btn--primary">Close</button>
                         </div>
                     </td>
                     </tr>
@@ -88,27 +88,27 @@ function addStationTables(quantity) {
                     <td>
                         <button id="T${i}G3" class="btn btn--unstyled popup__btn-show">View Graphs</button>
                         <div class="popup">
-                        <div class="popup__grid">
-                            <div id="T${i}G3C1" class="popup__grid-item">CT1</div>
-                            <div id="T${i}G3C2" class="popup__grid-item">CT2</div>
-                            <div id="T${i}G3C3" class="popup__grid-item">CT3</div>
-                            <div id="T${i}G3C4" class="popup__grid-item">CT4</div>
-                            <div id="T${i}G3C5" class="popup__grid-item">CT5</div>
-                            <div id="T${i}G3C6" class="popup__grid-item">CT6</div>
-                            <div id="T${i}G3C7" class="popup__grid-item">CT7</div>
-                            <div id="T${i}G3C8" class="popup__grid-item">CT8</div>
-                        </div>
-                        <div class="popup__relay flex gap--sm">
-                            <div id="T${i}G3R1 class="popup__relay-light popup__relay-light--disabled popup__relay-1"></div>
-                            <div id="T${i}G3R2 class="popup__relay-light popup__relay-1"></div>
-                            <div id="T${i}G3R3 class="popup__relay-light popup__relay-1"></div>
-                            <div id="T${i}G3R4 class="popup__relay-light popup__relay-1"></div>
-                            <div id="T${i}G3R5 class="popup__relay-light popup__relay-1"></div>
-                            <div id="T${i}G3R6 class="popup__relay-light popup__relay-1"></div>
-                            <div id="T${i}G3R7 class="popup__relay-light popup__relay-1"></div>
-                            <div id="T${i}G3R8 class="popup__relay-light popup__relay-1"></div>
-                        </div>
-                        <button id="T${i}B3" class="popup__btn-hide btn btn--primary">Close</button>
+                            <div class="popup__grid">
+                                <div id="T${i}G3C1" class="popup__grid-item">CT1</div>
+                                <div id="T${i}G3C2" class="popup__grid-item">CT2</div>
+                                <div id="T${i}G3C3" class="popup__grid-item">CT3</div>
+                                <div id="T${i}G3C4" class="popup__grid-item">CT4</div>
+                                <div id="T${i}G3C5" class="popup__grid-item">CT5</div>
+                                <div id="T${i}G3C6" class="popup__grid-item">CT6</div>
+                                <div id="T${i}G3C7" class="popup__grid-item">CT7</div>
+                                <div id="T${i}G3C8" class="popup__grid-item">CT8</div>
+                            </div>
+                            <div class="popup__relay flex gap--sm">
+                                <div id="T${i}G3R1" class="popup__relay-light popup__relay-light--disabled popup__relay-1"></div>
+                                <div id="T${i}G3R2" class="popup__relay-light popup__relay-1"></div>
+                                <div id="T${i}G3R3" class="popup__relay-light popup__relay-1"></div>
+                                <div id="T${i}G3R4" class="popup__relay-light popup__relay-1"></div>
+                                <div id="T${i}G3R5" class="popup__relay-light popup__relay-1"></div>
+                                <div id="T${i}G3R6" class="popup__relay-light popup__relay-1"></div>
+                                <div id="T${i}G3R7" class="popup__relay-light popup__relay-1"></div>
+                                <div id="T${i}G3R8" class="popup__relay-light popup__relay-1"></div>
+                            </div>
+                            <button id="T${i}B3" class="popup__btn-hide btn btn--primary">Close</button>
                         </div>
                     </td>
                     </tr>
@@ -119,27 +119,27 @@ function addStationTables(quantity) {
                     <td>
                         <button id="T${i}G4" class="btn btn--unstyled popup__btn-show">View Graphs</button>
                         <div class="popup">
-                        <div class="popup__grid">
-                            <div id="T${i}G4C1" class="popup__grid-item">CT1</div>
-                            <div id="T${i}G4C2" class="popup__grid-item">CT2</div>
-                            <div id="T${i}G4C3" class="popup__grid-item">CT3</div>
-                            <div id="T${i}G4C4" class="popup__grid-item">CT4</div>
-                            <div id="T${i}G4C5" class="popup__grid-item">CT5</div>
-                            <div id="T${i}G4C6" class="popup__grid-item">CT6</div>
-                            <div id="T${i}G4C7" class="popup__grid-item">CT7</div>
-                            <div id="T${i}G4C8" class="popup__grid-item">CT8</div>
-                        </div>
-                        <div class="popup__relay flex gap--sm">
-                            <div id="T${i}G4R1 class="popup__relay-light popup__relay-light--disabled popup__relay-1"></div>
-                            <div id="T${i}G4R2 class="popup__relay-light popup__relay-1"></div>
-                            <div id="T${i}G4R3 class="popup__relay-light popup__relay-1"></div>
-                            <div id="T${i}G4R4 class="popup__relay-light popup__relay-1"></div>
-                            <div id="T${i}G4R5 class="popup__relay-light popup__relay-1"></div>
-                            <div id="T${i}G4R6 class="popup__relay-light popup__relay-1"></div>
-                            <div id="T${i}G4R7 class="popup__relay-light popup__relay-1"></div>
-                            <div id="T${i}G4R8 class="popup__relay-light popup__relay-1"></div>
-                        </div>
-                        <button id="T${i}B4" class="popup__btn-hide btn btn--primary">Close</button>
+                            <div class="popup__grid">
+                                <div id="T${i}G4C1" class="popup__grid-item">CT1</div>
+                                <div id="T${i}G4C2" class="popup__grid-item">CT2</div>
+                                <div id="T${i}G4C3" class="popup__grid-item">CT3</div>
+                                <div id="T${i}G4C4" class="popup__grid-item">CT4</div>
+                                <div id="T${i}G4C5" class="popup__grid-item">CT5</div>
+                                <div id="T${i}G4C6" class="popup__grid-item">CT6</div>
+                                <div id="T${i}G4C7" class="popup__grid-item">CT7</div>
+                                <div id="T${i}G4C8" class="popup__grid-item">CT8</div>
+                            </div>
+                            <div class="popup__relay flex gap--sm">
+                                <div id="T${i}G4R1" class="popup__relay-light popup__relay-light--disabled popup__relay-1"></div>
+                                <div id="T${i}G4R2" class="popup__relay-light popup__relay-1"></div>
+                                <div id="T${i}G4R3" class="popup__relay-light popup__relay-1"></div>
+                                <div id="T${i}G4R4" class="popup__relay-light popup__relay-1"></div>
+                                <div id="T${i}G4R5" class="popup__relay-light popup__relay-1"></div>
+                                <div id="T${i}G4R6" class="popup__relay-light popup__relay-1"></div>
+                                <div id="T${i}G4R7" class="popup__relay-light popup__relay-1"></div>
+                                <div id="T${i}G4R8" class="popup__relay-light popup__relay-1"></div>
+                            </div>
+                            <button id="T${i}B4" class="popup__btn-hide btn btn--primary">Close</button>
                         </div>
                     </td>
                     </tr>
@@ -150,27 +150,27 @@ function addStationTables(quantity) {
                     <td>
                         <button id="T${i}G5" class="btn btn--unstyled popup__btn-show">View Graphs</button>
                         <div class="popup">
-                        <div class="popup__grid">
-                            <div id="T${i}G5C1" class="popup__grid-item">CT1</div>
-                            <div id="T${i}G5C2" class="popup__grid-item">CT2</div>
-                            <div id="T${i}G5C3" class="popup__grid-item">CT3</div>
-                            <div id="T${i}G5C4" class="popup__grid-item">CT4</div>
-                            <div id="T${i}G5C5" class="popup__grid-item">CT5</div>
-                            <div id="T${i}G5C6" class="popup__grid-item">CT6</div>
-                            <div id="T${i}G5C7" class="popup__grid-item">CT7</div>
-                            <div id="T${i}G5C8" class="popup__grid-item">CT8</div>
-                        </div>
-                        <div class="popup__relay flex gap--sm">
-                            <div id="T${i}G5R1 class="popup__relay-light popup__relay-light--disabled popup__relay-1"></div>
-                            <div id="T${i}G5R2 class="popup__relay-light popup__relay-1"></div>
-                            <div id="T${i}G5R3 class="popup__relay-light popup__relay-1"></div>
-                            <div id="T${i}G5R4 class="popup__relay-light popup__relay-1"></div>
-                            <div id="T${i}G5R5 class="popup__relay-light popup__relay-1"></div>
-                            <div id="T${i}G5R6 class="popup__relay-light popup__relay-1"></div>
-                            <div id="T${i}G5R7 class="popup__relay-light popup__relay-1"></div>
-                            <div id="T${i}G5R8 class="popup__relay-light popup__relay-1"></div>
-                        </div>
-                        <button id="T${i}B5" class="popup__btn-hide btn btn--primary">Close</button>
+                            <div class="popup__grid">
+                                <div id="T${i}G5C1" class="popup__grid-item">CT1</div>
+                                <div id="T${i}G5C2" class="popup__grid-item">CT2</div>
+                                <div id="T${i}G5C3" class="popup__grid-item">CT3</div>
+                                <div id="T${i}G5C4" class="popup__grid-item">CT4</div>
+                                <div id="T${i}G5C5" class="popup__grid-item">CT5</div>
+                                <div id="T${i}G5C6" class="popup__grid-item">CT6</div>
+                                <div id="T${i}G5C7" class="popup__grid-item">CT7</div>
+                                <div id="T${i}G5C8" class="popup__grid-item">CT8</div>
+                            </div>
+                            <div class="popup__relay flex gap--sm">
+                                <div id="T${i}G5R1" class="popup__relay-light popup__relay-light--disabled popup__relay-1"></div>
+                                <div id="T${i}G5R2" class="popup__relay-light popup__relay-1"></div>
+                                <div id="T${i}G5R3" class="popup__relay-light popup__relay-1"></div>
+                                <div id="T${i}G5R4" class="popup__relay-light popup__relay-1"></div>
+                                <div id="T${i}G5R5" class="popup__relay-light popup__relay-1"></div>
+                                <div id="T${i}G5R6" class="popup__relay-light popup__relay-1"></div>
+                                <div id="T${i}G5R7" class="popup__relay-light popup__relay-1"></div>
+                                <div id="T${i}G5R8" class="popup__relay-light popup__relay-1"></div>
+                            </div>
+                            <button id="T${i}B5" class="popup__btn-hide btn btn--primary">Close</button>
                         </div>
                     </td>
                     </tr>
@@ -181,27 +181,27 @@ function addStationTables(quantity) {
                     <td>
                         <button id="T${i}G6" class="btn btn--unstyled popup__btn-show">View Graphs</button>
                         <div class="popup">
-                        <div class="popup__grid">
-                            <div id="T${i}G6C1" class="popup__grid-item">CT1</div>
-                            <div id="T${i}G6C2" class="popup__grid-item">CT2</div>
-                            <div id="T${i}G6C3" class="popup__grid-item">CT3</div>
-                            <div id="T${i}G6C4" class="popup__grid-item">CT4</div>
-                            <div id="T${i}G6C5" class="popup__grid-item">CT5</div>
-                            <div id="T${i}G6C6" class="popup__grid-item">CT6</div>
-                            <div id="T${i}G6C7" class="popup__grid-item">CT7</div>
-                            <div id="T${i}G6C8" class="popup__grid-item">CT8</div>
-                        </div>
-                        <div class="popup__relay flex gap--sm">
-                            <div id="T${i}G6R1 class="popup__relay-light popup__relay-light--disabled popup__relay-1"></div>
-                            <div id="T${i}G6R2 class="popup__relay-light popup__relay-1"></div>
-                            <div id="T${i}G6R3 class="popup__relay-light popup__relay-1"></div>
-                            <div id="T${i}G6R4 class="popup__relay-light popup__relay-1"></div>
-                            <div id="T${i}G6R5 class="popup__relay-light popup__relay-1"></div>
-                            <div id="T${i}G6R6 class="popup__relay-light popup__relay-1"></div>
-                            <div id="T${i}G6R7 class="popup__relay-light popup__relay-1"></div>
-                            <div id="T${i}G6R8 class="popup__relay-light popup__relay-1"></div>
-                        </div>
-                        <button id="T${i}B6" class="popup__btn-hide btn btn--primary">Close</button>
+                            <div class="popup__grid">
+                                <div id="T${i}G6C1" class="popup__grid-item">CT1</div>
+                                <div id="T${i}G6C2" class="popup__grid-item">CT2</div>
+                                <div id="T${i}G6C3" class="popup__grid-item">CT3</div>
+                                <div id="T${i}G6C4" class="popup__grid-item">CT4</div>
+                                <div id="T${i}G6C5" class="popup__grid-item">CT5</div>
+                                <div id="T${i}G6C6" class="popup__grid-item">CT6</div>
+                                <div id="T${i}G6C7" class="popup__grid-item">CT7</div>
+                                <div id="T${i}G6C8" class="popup__grid-item">CT8</div>
+                            </div>
+                            <div class="popup__relay flex gap--sm">
+                                <div id="T${i}G6R1" class="popup__relay-light popup__relay-light--disabled popup__relay-1"></div>
+                                <div id="T${i}G6R2" class="popup__relay-light popup__relay-1"></div>
+                                <div id="T${i}G6R3" class="popup__relay-light popup__relay-1"></div>
+                                <div id="T${i}G6R4" class="popup__relay-light popup__relay-1"></div>
+                                <div id="T${i}G6R5" class="popup__relay-light popup__relay-1"></div>
+                                <div id="T${i}G6R6" class="popup__relay-light popup__relay-1"></div>
+                                <div id="T${i}G6R7" class="popup__relay-light popup__relay-1"></div>
+                                <div id="T${i}G6R8" class="popup__relay-light popup__relay-1"></div>
+                            </div>
+                            <button id="T${i}B6" class="popup__btn-hide btn btn--primary">Close</button>
                         </div>
                     </td>
                     </tr>
@@ -210,9 +210,13 @@ function addStationTables(quantity) {
             </div>
         `);
   }
-  createPopup(quantity);
 }
 
 function removeStationTables() {
   $("#table_container_body").empty();
 }
+
+function showPopup(graphID){
+    var popupGrid = document.getElementById(graphID);
+    popupGrid.classList.toggle("popup__show");
+  }
