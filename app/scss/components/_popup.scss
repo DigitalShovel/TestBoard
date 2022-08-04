@@ -69,6 +69,18 @@
         transform: translateX(-50%);
         filter: blur(1px);
       }
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 1px;
+        left: 50%;
+        width: 25px;
+        height: 2px;
+        background-color: var(--success-900);
+        transform: translateX(-50%);
+        filter: blur(1px);
+      }
     }
 
   }
