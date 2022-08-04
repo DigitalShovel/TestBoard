@@ -13,9 +13,9 @@ function addStationTables(quantity) {
                     <tr class="table__row table__row--add-border">
                     <th class="table__heading">Station #${i}</th>
                     <th class="table__heading table__progress">
+                        <span id="PCT${i}" x="25" y="20" class="table__progress-number">0%</span>
                         <svg width="32" height="32">
                         <circle id="PC${i}" stroke="var(--primary-color)" stroke-width="4" fill="transparent" r="${radius}" cx="16" cy="16" />
-                            <text id="PCT${i}" x="25" y="20" class="table__progress-number">0%</text>
                         </svg>
                     </th>
                     </tr>
@@ -211,7 +211,7 @@ function addStationTables(quantity) {
                 </table>
             </div>
         `);
-        updateProgressCircle("PC"+i);
+    updateProgressCircle("PC" + i);
   }
   createCharts();
 }
@@ -222,18 +222,17 @@ function removeStationTables() {
 
 let graphFlag = false;
 
-function showPopup(graphID){
-    var popupGrid = document.getElementById(graphID);
-    popupGrid.classList.toggle("popup__show");
+function showPopup(graphID) {
+  var popupGrid = document.getElementById(graphID);
+  popupGrid.classList.toggle("popup__show");
 
-    if (!graphFlag){
-        graphFlag = true;
-        /////////////// Refresh chart every 5 seconds /////////////
-        var inverval_timer = setInterval(function() { 
-            readCT(listOfDateLabel[0][0]);
-        }, 5000);
-    }
-    else {
-        clearInterval(inverval_timer);
-    }
+  if (!graphFlag) {
+    graphFlag = true;
+    /////////////// Refresh chart every 5 seconds /////////////
+    var inverval_timer = setInterval(function () {
+      readCT(listOfDateLabel[0][0]);
+    }, 5000);
+  } else {
+    clearInterval(inverval_timer);
+  }
 }
