@@ -92,17 +92,12 @@ function auth() {
           }
         }); 
   loadOnLogin();      /// Load all the function needed, including creating objects
-  /////////////// Refresh chart every 5 seconds /////////////
-  const inverval_timer = setInterval(function() { 
-    readCT(listOfDateLabel[0][0]);
-  }, 5000);
 }
 /////////////////////////////////////////////////////////
 
 /////// Functions to run if login is Authorized /////////
 let registeredUser = false;
 function loadOnLogin() {
-  readCT(listOfDateLabel[0][0]);
   readItem();
   registeredUser = true;
 }
@@ -111,6 +106,7 @@ function loadOnLogin() {
 ///////////// Read CT Values from DB ////////////////////
 const dataPerPlot = 91;
 let maxDataPerChart = dataPerPlot; // Number of data plus one
+
 function readCT(labelOBJ) {
   var docClient = new AWS.DynamoDB.DocumentClient();
 
@@ -130,6 +126,7 @@ function readCT(labelOBJ) {
       alert(JSON.stringify(err, undefined, 2));
     }
     else {
+      console.log("Scanning...");
       for (let i=0; i < data['Count']; i++) {
         if (data['Items'][i]['Time'] > labelOBJ.dateLabel){
           setProgress(data['Items'][i]['TestNumber'],data['Items'][i]['TotalTest']);
@@ -208,7 +205,7 @@ function scanning(PIList, ESPList, dynamClient){
     } 
     else {
       var piQuantity = parseInt(JSON.stringify(data['Count'], "0", 2));
-      console.log("Total of Stations: "+piQuantity);
+      addStationTables(piQuantity);
       for (let i = 0; i < piQtyOLD; i++) {
         document.getElementById("PI#"+i).innerHTML = "Empty";
       }

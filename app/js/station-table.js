@@ -220,7 +220,20 @@ function removeStationTables() {
   $("#table_container_body").empty();
 }
 
+let graphFlag = false;
+
 function showPopup(graphID){
     var popupGrid = document.getElementById(graphID);
     popupGrid.classList.toggle("popup__show");
-  }
+
+    if (!graphFlag){
+        graphFlag = true;
+        /////////////// Refresh chart every 5 seconds /////////////
+        var inverval_timer = setInterval(function() { 
+            readCT(listOfDateLabel[0][0]);
+        }, 5000);
+    }
+    else {
+        clearInterval(inverval_timer);
+    }
+}
