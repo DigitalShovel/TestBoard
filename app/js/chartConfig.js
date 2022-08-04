@@ -198,7 +198,6 @@ let listOfCharts = [];
 function createCharts(){
     var chart1 = document.getElementById('T1G1C1').getContext('2d');
     listOfCharts.push([new Chart(chart1, config)]);
-    console.log("LIST: ",listOfCharts[0][0]);
 
     listOfCharts[0][0].ctx.onclick = moveScroll(listOfCharts[0][0]);
     listOfCharts[0][0].canvas.addEventListener('wheel', (e) => {
