@@ -183,7 +183,6 @@ function removeData(chart) {
 }
 
 ///////////// Set DB table to be scanned /////////////////
-var piQuantity;
 function readItem() {
   var docClient = new AWS.DynamoDB.DocumentClient();
 
@@ -200,7 +199,6 @@ function readItem() {
   removeStationTables(piQuantity);
   console.log("PI Quantity: ",piQuantity);
   chartARRAY = addStationTables(piQuantity);
-  console.log("AAA: ", chartARRAY); 
 }
 /////////////////////////////////////////////////////////
 
