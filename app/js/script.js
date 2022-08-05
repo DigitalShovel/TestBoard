@@ -197,8 +197,6 @@ function readItem() {
   };
   scanning(item1, item2, docClient);
   removeStationTables();
-  console.log("PI Quantity: ",piQuantity);
-  chartARRAY = addStationTables(piQuantity);
 }
 /////////////////////////////////////////////////////////
 
@@ -219,6 +217,8 @@ function scanning(PIList, ESPList, dynamClient){
       }
       piQtyOLD = piQuantity;
       if (piQuantity > 0){
+        console.log("PI Quantity: ",piQuantity);
+        chartARRAY = addStationTables(piQuantity);
         for (let i = 0; i < piQuantity; i++) {
           document.getElementById("PI#"+i).innerHTML = JSON.stringify(data['Items'][i]['MacAddress'], "Empty", 2);
         }
