@@ -114,6 +114,9 @@ let maxDataPerChart = dataPerPlot; // Number of data plus one
 
 function readCT(ArrayOfChart) {
   var docClient = new AWS.DynamoDB.DocumentClient();
+  console.log("Array:", ArrayOfChart);
+  console.log("Time Ref:", ArrayOfChart[1].timeREF);
+  console.log("Station:", ArrayOfChart[1].station);
 
   var ctItem = {
     TableName: "IoT_Result",
@@ -126,8 +129,6 @@ function readCT(ArrayOfChart) {
       "#Time": "Time"
     }
   };
-  console.log("Time Ref:", ArrayOfChart[1].timeREF);
-  console.log("Station:", ArrayOfChart[1].station);
   docClient.query(ctItem, function(err, data) {
     if (err) {
       alert(JSON.stringify(err, undefined, 2));
