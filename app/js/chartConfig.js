@@ -237,8 +237,8 @@ function scrollWheel(wheel, chart) {
 
 ///////////////// Creating Class for the graphs /////////////////
 class GraphsStation {
-    testNUM = 2
-    totalTEST = 5
+    testNUM = 0
+    totalTEST = 0
     timeREF = "00/00/00 00:00:00"
     constructor(progressBAR,  progressTEXT, chartCH1) {
             this.progressBAR = progressBAR;

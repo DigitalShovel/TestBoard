@@ -1,5 +1,5 @@
 
-let chartARRAY = {};
+let chartARRAY = [];
 
 function addStationTables(quantity) {
   for (var i = 1; i < quantity + 1; i++) {
@@ -209,16 +209,9 @@ function addStationTables(quantity) {
             </div>
         `);
     updateProgressCircle("PC" + i);
+    objectAA.push(new GraphsStation("PC"+i, "PCT"+i, "T1G1C1"));
   }
   createCharts();
-  var objectAA = [];
-  objectAA.push(new GraphsStation("PC1", "PCT1", "T1G1C1"));
-  console.log("testNUM: ",objectAA[0].testNUM);
-  console.log("totalTEST: ",objectAA[0].totalTEST);
-  objectAA[0].totalTEST = 7;
-  console.log("new totalTEST: ",objectAA[0].totalTEST);
-  console.log("timeREF: ",objectAA[0].timeREF);
-  console.log("Percentage: ",objectAA[0].progressPercentage());
 }
 
 function removeStationTables() {
