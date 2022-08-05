@@ -248,6 +248,5 @@ function scanning(PIList, ESPList, dynamClient){
     }
   }
   );
-  return cArray;
 }
 //////////////////////////////////////////////////////////
