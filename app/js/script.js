@@ -99,11 +99,11 @@ function auth() {
 let registeredUser = false;
 function loadOnLogin() {
   readItem();
-  readCT(chartARRAY);
+  readCT();
   registeredUser = true;
   /////////////// Refresh chart every 5 seconds /////////////
   var inverval_timer = setInterval(function () {
-    readCT(chartARRAY);
+    readCT();
   }, 5000);
 }
 /////////////////////////////////////////////////////////
@@ -112,11 +112,10 @@ function loadOnLogin() {
 const dataPerPlot = 91;
 let maxDataPerChart = dataPerPlot; // Number of data plus one
 
-function readCT(ArrayOfChart) {
+function readCT() {
   var docClient = new AWS.DynamoDB.DocumentClient();
-  console.log("Array:", ArrayOfChart);
-  console.log("Time Ref:", ArrayOfChart[1].timeREF);
-  console.log("Station:", ArrayOfChart[1].station);
+  console.log("Time Ref:", chartARRAY[1].timeREF);
+  console.log("Station:", chartARRAY[1].station);
 
   var ctItem = {
     TableName: "IoT_Result",
