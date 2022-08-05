@@ -183,6 +183,7 @@ function removeData(chart) {
 }
 
 ///////////// Set DB table to be scanned /////////////////
+var piQuantity;
 function readItem() {
   var docClient = new AWS.DynamoDB.DocumentClient();
 
@@ -206,7 +207,6 @@ function readItem() {
 ///////////////////  Scan Database in DynamoDB //////////////////////
 let piQtyOLD = 0;
 let espQtyOLD = 0;
-let piQuantity;
 
 function scanning(PIList, ESPList, dynamClient){
   ///////////////////  Build PI List //////////////////////
