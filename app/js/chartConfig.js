@@ -11,6 +11,10 @@ const scrollbarColor = 'lightgrey';
 const movableScrollbarColor = 'hsla(213, 100%, 90%, 1)';
 const movableScrollbarEdge = 'hsla(213, 100%, 97%, 1)';
 
+//////// Chart Dimensions ///////
+let chartWidth = 400;
+let chartHeight = 400;
+
 //////////// Setup ////////////////
 const data = {
   labels: [],
