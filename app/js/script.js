@@ -119,7 +119,7 @@ function readCT(ArrayOfChart) {
     TableName: "IoT_Result",
     KeyConditionExpression: 'Station = :station and #Time > :lastTime',
     ExpressionAttributeValues: {
-      ':station': ArrayOfChart[1].station,
+      ':station': 1,
       ':lastTime': ArrayOfChart[1].timeREF
     },
     ExpressionAttributeNames: {
