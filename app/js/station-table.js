@@ -214,7 +214,7 @@ function addStationTables(quantity) {
     chartARRAY.push(new GraphsStation(i));
     chartARRAY[i].createChart();
   }
-  createCharts();
+  //createCharts();
 }
 
 function removeStationTables() {

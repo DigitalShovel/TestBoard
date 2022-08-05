@@ -240,7 +240,8 @@ class GraphsStation {
     testNUM = 0
     totalTEST = 0
     timeREF = "00/00/00 00:00:00"
-    channelARRAY = [0]
+    channelARRAY = [[0]]
+    CTARRAY = [0]
     constructor(station) {
             this.station = station;
     }
@@ -248,11 +249,15 @@ class GraphsStation {
         return Math.round((this.testNUM/this.totalTEST)*100);
     }
     createChart() {
-        var chartN2 = document.getElementById('T'+this.station+'G1C2').getContext('2d');
-        this.channelARRAY.push(new Chart(chartN2, config))
-        this.channelARRAY[1].ctx.onclick = moveScroll(this.channelARRAY[1]);
-        this.channelARRAY[1].canvas.addEventListener('wheel', (e) => {
-            scrollWheel(e, this.channelARRAY[1]);
-            });
+        for (var k=1; k <= 6; k++) {
+            for (var i=1; i <= 8; i++) {
+                this.CTARRAY.push(new Chart(document.getElementById('T'+this.station+'G'+k+'C'+i).getContext('2d'), config))
+                this.CTARRAY[i].ctx.onclick = moveScroll(this.CTARRAY[i]);
+                this.CTARRAY[i].canvas.addEventListener('wheel', (e) => {
+                    scrollWheel(e, this.CTARRAY[i]);
+                    });
+            }
+            this.channelARRAY.push(this.CTARRAY)
+        }
     }
 }
