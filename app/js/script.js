@@ -195,7 +195,11 @@ function readItem() {
     TableName: "IoT_Testing_Unit_ESP32",
     ProjectionExpression: "MacAddress"
   };
-  cArray = scanning(item1, item2, docClient);
+  scanning(item1, item2, docClient);
+  /////// Add stations ////////
+  removeStationTables();
+  cArray = addStationTables(piQuantity);
+  /////////////////////////////
   console.log("TTT: ", cArray);
 }
 /////////////////////////////////////////////////////////
@@ -205,7 +209,6 @@ let piQtyOLD = 0;
 let espQtyOLD = 0;
 
 function scanning(PIList, ESPList, dynamClient){
-  var cArray;
   ///////////////////  Build PI List //////////////////////
   dynamClient.scan(PIList, function(err, data) {
     if (err) {
@@ -218,10 +221,6 @@ function scanning(PIList, ESPList, dynamClient){
       }
       piQtyOLD = piQuantity;
       if (piQuantity > 0){
-        /////// Add stations ////////
-        removeStationTables();
-        cArray = addStationTables(piQuantity);
-        /////////////////////////////
         for (let i = 0; i < piQuantity; i++) {
           document.getElementById("PI#"+i).innerHTML = JSON.stringify(data['Items'][i]['MacAddress'], "Empty", 2);
         }
