@@ -1,5 +1,4 @@
 
-let chartARRAY = [0];
 
 function addStationTables(quantity) {
   for (var i = 1; i < quantity + 1; i++) {
