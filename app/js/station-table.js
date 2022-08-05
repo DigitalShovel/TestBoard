@@ -30,12 +30,24 @@ function addStationTables(quantity) {
                                 <div class="popup__grid-item">
                                     <canvas id="T${i}G1C2" class="chart" width="400" height="400"></canvas>
                                 </div>
-                                <div id="T${i}G1C3" class="popup__grid-item">CT3</div>
-                                <div id="T${i}G1C4" class="popup__grid-item">CT4</div>
-                                <div id="T${i}G1C5" class="popup__grid-item">CT5</div>
-                                <div id="T${i}G1C6" class="popup__grid-item">CT6</div>
-                                <div id="T${i}G1C7" class="popup__grid-item">CT7</div>
-                                <div id="T${i}G1C8" class="popup__grid-item">CT8</div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G1C3" class="chart" width="400" height="400"></canvas>
+                                </div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G1C4" class="chart" width="400" height="400"></canvas>
+                                </div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G1C5" class="chart" width="400" height="400"></canvas>
+                                </div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G1C6" class="chart" width="400" height="400"></canvas>
+                                </div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G1C7" class="chart" width="400" height="400"></canvas>
+                                </div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G1C8" class="chart" width="400" height="400"></canvas>
+                                </div>
                             </div>
                             <div class="popup__relay flex gap--sm">
                                 <div id="T${i}G1R1" class="popup__relay-light popup__relay-light--disabled popup__relay-1"></div>
@@ -212,7 +224,7 @@ function addStationTables(quantity) {
         `);
     updateProgressCircle("PC" + i);
     chartARRAY.push(new GraphsStation(i));
-    //chartARRAY[i].createChart();
+    chartARRAY[i].createChart();
   }
   createCharts();
 }
