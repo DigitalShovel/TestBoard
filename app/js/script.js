@@ -195,8 +195,8 @@ function readItem() {
     TableName: "IoT_Testing_Unit_ESP32",
     ProjectionExpression: "MacAddress"
   };
-  scanning(item1, item2, docClient);
-  console.log("AAA: ", chartARRAY[1]); 
+  chartARRAY = scanning(item1, item2, docClient);
+  console.log("AAA: ", chartARRAY); 
 }
 /////////////////////////////////////////////////////////
 
@@ -210,6 +210,7 @@ function scanning(PIList, ESPList, dynamClient){
   dynamClient.scan(PIList, function(err, data) {
     if (err) {
       location.replace(urlAccess);
+      return 0;
     } 
     else {
       piQuantity = parseInt(JSON.stringify(data['Count'], "0", 2));
@@ -222,8 +223,6 @@ function scanning(PIList, ESPList, dynamClient){
           document.getElementById("PI#"+i).innerHTML = JSON.stringify(data['Items'][i]['MacAddress'], "Empty", 2);
         }
       }
-      removeStationTables();
-      chartARRAY = addStationTables(piQuantity);
     } 
   }
   );
@@ -231,9 +230,10 @@ function scanning(PIList, ESPList, dynamClient){
   ///////////////////  Build ESP List ////////////////////
   dynamClient.scan(ESPList, function(err, data) {
     if (err) {
-      document.getElementById("textarea").innerHTML = "Unable to read item: " + "\n" + JSON.stringify(err, undefined, 2);
-    } else {
-      //document.getElementById("textarea").innerHTML = JSON.stringify(data, "Empty", 2);
+      location.replace(urlAccess);
+      return 0;
+    } 
+    else {
       var espQty = parseInt(JSON.stringify(data['Count'], "0", 2));
       for (let i = 0; i < espQtyOLD; i++) {
         document.getElementById("ESP#"+i).innerHTML = "Empty";
@@ -247,5 +247,7 @@ function scanning(PIList, ESPList, dynamClient){
     }
   }
   );
+  removeStationTables();
+  return addStationTables(piQuantity);
 }
 //////////////////////////////////////////////////////////
