@@ -99,7 +99,8 @@ function auth() {
 /////// Functions to run if login is Authorized /////////
 let registeredUser = false;
 function loadOnLogin() {
-  readItem();
+  chartARRAY = readItem();
+  console.log("Station:", chartARRAY[1].station);
   readCT();
   registeredUser = true;
   /////////////// Refresh chart every 5 seconds /////////////
@@ -115,7 +116,6 @@ let maxDataPerChart = dataPerPlot; // Number of data plus one
 
 function readCT() {
   var docClient = new AWS.DynamoDB.DocumentClient();
-  console.log("Station:", chartARRAY[1].station);
 
   var ctItem = {
     TableName: "IoT_Result",
@@ -195,7 +195,7 @@ function readItem() {
     TableName: "IoT_Testing_Unit_ESP32",
     ProjectionExpression: "MacAddress"
   };
-  chartARRAY = scanning(item1, item2, docClient);
+  return scanning(item1, item2, docClient);
 }
 /////////////////////////////////////////////////////////
 
