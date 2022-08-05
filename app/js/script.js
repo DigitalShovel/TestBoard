@@ -95,6 +95,8 @@ function auth() {
 }
 /////////////////////////////////////////////////////////
 
+console.log("TTT: ", chartARRAY[1].timeREF);
+
 /////// Functions to run if login is Authorized /////////
 let registeredUser = false;
 function loadOnLogin() {
