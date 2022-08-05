@@ -197,7 +197,7 @@ function readItem() {
   };
   scanning(item1, item2, docClient);
   removeStationTables(piQuantity);
-  console.log()
+  console.log("PI Quantity: ",piQuantity);
   chartARRAY = addStationTables(piQuantity);
   console.log("AAA: ", chartARRAY); 
 }
