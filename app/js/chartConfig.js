@@ -250,9 +250,9 @@ class GraphsStation {
     createChart() {
         var chartN2 = document.getElementById('T'+this.station+'G1C2').getContext('2d');
         this.channelARRAY.push(new Chart(chartN2, config))
-        channelARRAY[1].ctx.onclick = moveScroll(channelARRAY[1]);
-        channelARRAY[1].canvas.addEventListener('wheel', (e) => {
-            scrollWheel(e, channelARRAY[1]);
+        this.channelARRAY[1].ctx.onclick = moveScroll(this.channelARRAY[1]);
+        this.channelARRAY[1].canvas.addEventListener('wheel', (e) => {
+            scrollWheel(e, this.channelARRAY[1]);
             });
     }
 }
