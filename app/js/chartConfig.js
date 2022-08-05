@@ -244,5 +244,8 @@ class GraphsStation {
             this.progressBAR = progressBAR;
             this.progressTEXT = progressTEXT;
             this.chartCH1 = chartCH1;
-        }
+    }
+    progressPercentage() {
+        return Math.round((testNUM/totalTEST)*100);
+    }
 }

@@ -217,6 +217,7 @@ function addStationTables(quantity) {
   STA1.totalTEST = 7;
   console.log("new totalTEST: ",STA1.totalTEST);
   console.log("timeREF: ",STA1.timeREF);
+  console.log("Percentage: ",STA1.progressBAR());
 }
 
 function removeStationTables() {
