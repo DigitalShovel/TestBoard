@@ -254,7 +254,7 @@ class GraphsStation {
     }
     createChart() {
         for (var k=1; k <= 6; k++) {
-            CTARRAY = [0];
+            this.CTARRAY = [0];
             for (var i=1; i <= 8; i++) {
                 this.CTARRAY.push(new Chart(document.getElementById('T'+this.station+'G'+k+'C'+i).getContext('2d'), config))
                 this.CTARRAY[i].ctx.onclick = moveScroll(this.CTARRAY[i]);
