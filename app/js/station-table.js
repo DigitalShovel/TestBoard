@@ -210,11 +210,10 @@ function addStationTables(quantity) {
         `);
     updateProgressCircle("PC" + i);
     chartARRAY.push(new GraphsStation(String("PC"+i), String("PCT"+i), "T1G1C1"));
+    console.log(chartARRAY[0].timeREF);
   }
   createCharts();
 }
-
-console.log(chartARRAY[0]);
 
 function removeStationTables() {
   $("#table_container_body").empty();
