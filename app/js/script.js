@@ -99,7 +99,9 @@ function auth() {
 /////// Functions to run if login is Authorized /////////
 let registeredUser = false;
 function loadOnLogin() {
+  console.log("AAA: ",chartARRAY);
   readItem();
+  console.log("TTT: ",chartARRAY);
   readCT();
   registeredUser = true;
   /////////////// Refresh chart every 5 seconds /////////////
@@ -115,7 +117,6 @@ let maxDataPerChart = dataPerPlot; // Number of data plus one
 
 function readCT() {
   var docClient = new AWS.DynamoDB.DocumentClient();
-  console.log("TTT: ",chartARRAY);
   console.log("Station:", chartARRAY[1].station);
 
   var ctItem = {
