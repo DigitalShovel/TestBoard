@@ -196,7 +196,7 @@ function readItem() {
     ProjectionExpression: "MacAddress"
   };
   scanning(item1, item2, docClient);
-  removeStationTables(piQuantity);
+  removeStationTables();
   console.log("PI Quantity: ",piQuantity);
   chartARRAY = addStationTables(piQuantity);
 }
