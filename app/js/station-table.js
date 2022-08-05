@@ -212,7 +212,7 @@ function addStationTables(quantity) {
         `);
     updateProgressCircle("PC" + i);
     chartARRAY.push(new GraphsStation(i));
-    chartARRAY.createChart();
+    chartARRAY[i].createChart();
   }
   createCharts();
 }
