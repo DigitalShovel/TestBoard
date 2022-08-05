@@ -1,5 +1,5 @@
 const urlAccess = "https://testbench.auth.ca-central-1.amazoncognito.com/login?client_id=55ffriv2knsvpt7n1p49m6gghb&response_type=token&scope=aws.cognito.signin.user.admin+email+openid+profile&redirect_uri=https://ds-testboard.netlify.app/";
-let chartARRAY = [];
+let chartARRAY;
 
 //////////////////// Websockets ///////////////////////
 function WebSocketTest() {
@@ -99,9 +99,7 @@ function auth() {
 /////// Functions to run if login is Authorized /////////
 let registeredUser = false;
 function loadOnLogin() {
-  console.log("AAA: ",chartARRAY);
   readItem();
-  console.log("TTT: ",chartARRAY);
   readCT();
   registeredUser = true;
   /////////////// Refresh chart every 5 seconds /////////////
@@ -197,7 +195,7 @@ function readItem() {
     TableName: "IoT_Testing_Unit_ESP32",
     ProjectionExpression: "MacAddress"
   };
-  scanning(item1, item2, docClient);
+  chartARRAY = scanning(item1, item2, docClient);
 }
 /////////////////////////////////////////////////////////
 
@@ -210,11 +208,11 @@ function scanning(PIList, ESPList, dynamClient){
   dynamClient.scan(PIList, function(err, data) {
     if (err) {
       location.replace(urlAccess);
+      return 0;
     } 
     else {
       removeStationTables();
       var piQuantity = parseInt(JSON.stringify(data['Count'], "0", 2));
-      chartARRAY = addStationTables(piQuantity);
       for (let i = 0; i < piQtyOLD; i++) {
         document.getElementById("PI#"+i).innerHTML = "Empty";
       }
@@ -224,6 +222,7 @@ function scanning(PIList, ESPList, dynamClient){
           document.getElementById("PI#"+i).innerHTML = JSON.stringify(data['Items'][i]['MacAddress'], "Empty", 2);
         }
       }
+      return addStationTables(piQuantity);
     } 
   }
   );
