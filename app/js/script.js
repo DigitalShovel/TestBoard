@@ -116,7 +116,6 @@ let maxDataPerChart = dataPerPlot; // Number of data plus one
 
 function readCT() {
   var docClient = new AWS.DynamoDB.DocumentClient();
-  console.log("TTT: ",chartARRAY);
 
   var ctItem = {
     TableName: "IoT_Result",
@@ -205,15 +204,14 @@ let piQtyOLD = 0;
 let espQtyOLD = 0;
 
 function scanning(PIList, ESPList, dynamClient){
-
+  let piQuantity;
   ///////////////////  Build PI List //////////////////////
   dynamClient.scan(PIList, function(err, data) {
     if (err) {
       location.replace(urlAccess);
     } 
     else {
-      removeStationTables();
-      var piQuantity = parseInt(JSON.stringify(data['Count'], "0", 2));
+      piQuantity = parseInt(JSON.stringify(data['Count'], "0", 2));
       for (let i = 0; i < piQtyOLD; i++) {
         document.getElementById("PI#"+i).innerHTML = "Empty";
       }
@@ -223,7 +221,9 @@ function scanning(PIList, ESPList, dynamClient){
           document.getElementById("PI#"+i).innerHTML = JSON.stringify(data['Items'][i]['MacAddress'], "Empty", 2);
         }
       }
+      removeStationTables();
       chartARRAY = addStationTables(piQuantity);
+      console.log("TTT: ", chartARRAY[1]);
     } 
   }
   );
