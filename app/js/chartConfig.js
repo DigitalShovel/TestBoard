@@ -240,12 +240,19 @@ class GraphsStation {
     testNUM = 0
     totalTEST = 0
     timeREF = "00/00/00 00:00:00"
-    constructor(progressBAR,  progressTEXT, chartCH1) {
-            this.progressBAR = progressBAR;
-            this.progressTEXT = progressTEXT;
-            this.chartCH1 = chartCH1;
+    channelARRAY = [0]
+    constructor(station) {
+            this.station = station;
     }
     progressPercentage() {
         return Math.round((this.testNUM/this.totalTEST)*100);
+    }
+    createChart() {
+        var chartN2 = document.getElementById('T'+this.station+'G1C2').getContext('2d');
+        this.channelARRAY.push(new Chart(chartN2, config))
+        channelARRAY[1].ctx.onclick = moveScroll(channelARRAY[1]);
+        channelARRAY[1].canvas.addEventListener('wheel', (e) => {
+            scrollWheel(e, channelARRAY[1]);
+            });
     }
 }

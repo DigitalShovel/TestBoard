@@ -1,5 +1,5 @@
 
-let chartARRAY = [];
+let chartARRAY = [0];
 
 function addStationTables(quantity) {
   for (var i = 1; i < quantity + 1; i++) {
@@ -27,7 +27,9 @@ function addStationTables(quantity) {
                                 <div class="popup__grid-item">
                                     <canvas id="T${i}G1C1" class="chart" width="400" height="400"></canvas>
                                 </div>
-                                <div id="T${i}G1C2" class="popup__grid-item">CT2</div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G1C2" class="chart" width="400" height="400"></canvas>
+                                </div>
                                 <div id="T${i}G1C3" class="popup__grid-item">CT3</div>
                                 <div id="T${i}G1C4" class="popup__grid-item">CT4</div>
                                 <div id="T${i}G1C5" class="popup__grid-item">CT5</div>
@@ -209,16 +211,15 @@ function addStationTables(quantity) {
             </div>
         `);
     updateProgressCircle("PC" + i);
-    chartARRAY.push(new GraphsStation(String("PC"+i), String("PCT"+i), "T1G1C1"));
-    console.log(chartARRAY[0]);
+    chartARRAY.push(new GraphsStation(i));
+    chartARRAY.createChart();
   }
   createCharts();
 }
 
 function removeStationTables() {
   $("#table_container_body").empty();
-  chartARRAY = [];
-  console.log("Removed: ",chartARRAY[0]);
+  chartARRAY = [0];
 }
 
 let graphFlag = false;
