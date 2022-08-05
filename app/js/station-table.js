@@ -211,13 +211,14 @@ function addStationTables(quantity) {
     updateProgressCircle("PC" + i);
   }
   createCharts();
-  var STA1 = new GraphsStation("PC1", "PCT1", "T1G1C1");
-  console.log("testNUM: ",STA1.testNUM);
-  console.log("totalTEST: ",STA1.totalTEST);
+  var objectAA = [];
+  objectAA.append(new GraphsStation("PC1", "PCT1", "T1G1C1"));
+  console.log("testNUM: ",objectAA[0].testNUM);
+  console.log("totalTEST: ",objectAA[0].totalTEST);
   STA1.totalTEST = 7;
-  console.log("new totalTEST: ",STA1.totalTEST);
-  console.log("timeREF: ",STA1.timeREF);
-  console.log("Percentage: ",STA1.progressPercentage());
+  console.log("new totalTEST: ",objectAA[0].totalTEST);
+  console.log("timeREF: ",objectAA[0].timeREF);
+  console.log("Percentage: ",objectAA[0].progressPercentage());
 }
 
 function removeStationTables() {
