@@ -214,7 +214,7 @@ function scanning(PIList, ESPList, dynamClient){
       removeStationTables();
       var piQuantity = parseInt(JSON.stringify(data['Count'], "0", 2));
       chartARRAY = addStationTables(piQuantity);
-      console.log("TTT: ",chartARRAY);
+      console.log("TTT: ",chartARRAY[1].timeREF);
       for (let i = 0; i < piQtyOLD; i++) {
         document.getElementById("PI#"+i).innerHTML = "Empty";
       }
