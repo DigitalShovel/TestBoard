@@ -196,6 +196,7 @@ function readItem() {
     ProjectionExpression: "MacAddress"
   };
   scanning(item1, item2, docClient);
+  console.log("TTT: ", chartARRAY[1]); 
 }
 /////////////////////////////////////////////////////////
 
@@ -223,7 +224,6 @@ function scanning(PIList, ESPList, dynamClient){
       }
       removeStationTables();
       chartARRAY = addStationTables(piQuantity);
-      console.log("TTT: ", chartARRAY[1]);
     } 
   }
   );
