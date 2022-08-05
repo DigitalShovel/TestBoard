@@ -139,7 +139,7 @@ function readCT(labelOBJ) {
         var timeResult = JSON.stringify(data['Items'][i]['Time']);
         var valueCT = extractData(data['Items'][i], 'CTPI', 1, 1);
         var valueESP = extractData(data['Items'][i], 'CTESP', 1, 1);
-        addDataChart(chartARRAY[1], timeResult.substring(9,18), valueCT, valueESP);
+        addDataChart(chartARRAY[1].channelARRAY[1][1], timeResult.substring(9,18), valueCT, valueESP);
       }
     }
   });
