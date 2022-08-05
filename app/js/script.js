@@ -195,7 +195,9 @@ function readItem() {
     TableName: "IoT_Testing_Unit_ESP32",
     ProjectionExpression: "MacAddress"
   };
-  chartARRAY = scanning(item1, item2, docClient);
+  scanning(item1, item2, docClient);
+  removeStationTables();
+  chartARRAY = addStationTables(piQuantity);
   console.log("AAA: ", chartARRAY); 
 }
 /////////////////////////////////////////////////////////
@@ -203,14 +205,13 @@ function readItem() {
 ///////////////////  Scan Database in DynamoDB //////////////////////
 let piQtyOLD = 0;
 let espQtyOLD = 0;
+let piQuantity;
 
 function scanning(PIList, ESPList, dynamClient){
-  let piQuantity;
   ///////////////////  Build PI List //////////////////////
   dynamClient.scan(PIList, function(err, data) {
     if (err) {
       location.replace(urlAccess);
-      return 0;
     } 
     else {
       piQuantity = parseInt(JSON.stringify(data['Count'], "0", 2));
@@ -231,7 +232,6 @@ function scanning(PIList, ESPList, dynamClient){
   dynamClient.scan(ESPList, function(err, data) {
     if (err) {
       location.replace(urlAccess);
-      return 0;
     } 
     else {
       var espQty = parseInt(JSON.stringify(data['Count'], "0", 2));
@@ -247,7 +247,5 @@ function scanning(PIList, ESPList, dynamClient){
     }
   }
   );
-  removeStationTables();
-  return addStationTables(piQuantity);
 }
 //////////////////////////////////////////////////////////
