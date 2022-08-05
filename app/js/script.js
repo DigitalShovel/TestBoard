@@ -208,6 +208,7 @@ function scanning(PIList, ESPList, dynamClient){
       location.replace(urlAccess);
     } 
     else {
+      removeStationTables();
       var piQuantity = parseInt(JSON.stringify(data['Count'], "0", 2));
       addStationTables(piQuantity);
       for (let i = 0; i < piQtyOLD; i++) {
