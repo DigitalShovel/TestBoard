@@ -209,7 +209,7 @@ function addStationTables(quantity) {
             </div>
         `);
     updateProgressCircle("PC" + i);
-    objectAA.push(new GraphsStation(String("PC"+i), String("PCT"+i), "T1G1C1"));
+    chartARRAY.push(new GraphsStation(String("PC"+i), String("PCT"+i), "T1G1C1"));
   }
   createCharts();
 }
