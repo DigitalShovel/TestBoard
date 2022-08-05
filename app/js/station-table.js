@@ -1,9 +1,6 @@
-var numberOfStations = 4;
 
-// Adding a row inside the tbody.
-/*for (var i=0; i < numberOfStations; i++){
+let chartARRAY = {};
 
-}*/
 function addStationTables(quantity) {
   for (var i = 1; i < quantity + 1; i++) {
     $("#table_container_body").append(`
@@ -214,6 +211,12 @@ function addStationTables(quantity) {
     updateProgressCircle("PC" + i);
   }
   createCharts();
+  var STA1 = new GraphsStation("PC1", "PCT1", "T1G1C1");
+  console.log("testNUM: ",STA1.testNUM);
+  console.log("totalTEST: ",STA1.totalTEST);
+  STA1.totalTEST = 7;
+  console.log("new totalTEST: ",STA1.totalTEST);
+  console.log("timeREF: ",STA1.timeREF);
 }
 
 function removeStationTables() {
