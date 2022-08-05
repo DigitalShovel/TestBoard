@@ -121,8 +121,8 @@ function readCT() {
     TableName: "IoT_Result",
     KeyConditionExpression: 'Station = :station and #Time > :lastTime',
     ExpressionAttributeValues: {
-      ':station': 1,
-      ':lastTime': ArrayOfChart[1].timeREF
+      ':station': chartARRAY[1].station,
+      ':lastTime': chartARRAY[1].timeREF
     },
     ExpressionAttributeNames: {
       "#Time": "Time"
@@ -134,9 +134,9 @@ function readCT() {
     }
     else {
       for (let i=0; i < data['Count']; i++) {
-        if (data['Items'][i]['Time'] > ArrayOfChart[1].timeREF){
+        if (data['Items'][i]['Time'] > chartARRAY[1].timeREF){
           setProgress("PC"+data['Items'][i]['Station'], "PCT"+data['Items'][i]['Station'], data['Items'][i]['TestNumber'],data['Items'][i]['TotalTest']);
-          ArrayOfChart[1].timeREF = data['Items'][i]['Time'];
+          chartARRAY[1].timeREF = data['Items'][i]['Time'];
         }
         var timeResult = JSON.stringify(data['Items'][i]['Time']);
         var valueCT = extractData(data['Items'][i], 'CTPI', 1, 1);
@@ -223,7 +223,6 @@ function scanning(PIList, ESPList, dynamClient){
         }
       }
       chartARRAY = addStationTables(piQuantity);
-      console.log("ARRAY: ", chartARRAY);
     } 
   }
   );
