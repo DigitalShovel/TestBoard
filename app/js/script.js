@@ -115,7 +115,7 @@ let maxDataPerChart = dataPerPlot; // Number of data plus one
 
 function readCT() {
   var docClient = new AWS.DynamoDB.DocumentClient();
-  console.log("Time Ref:", chartARRAY[1].timeREF);
+  console.log("TTT: ",chartARRAY[1].timeREF);
   console.log("Station:", chartARRAY[1].station);
 
   var ctItem = {
@@ -214,7 +214,6 @@ function scanning(PIList, ESPList, dynamClient){
       removeStationTables();
       var piQuantity = parseInt(JSON.stringify(data['Count'], "0", 2));
       chartARRAY = addStationTables(piQuantity);
-      console.log("TTT: ",chartARRAY[1].timeREF);
       for (let i = 0; i < piQtyOLD; i++) {
         document.getElementById("PI#"+i).innerHTML = "Empty";
       }
