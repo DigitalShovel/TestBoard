@@ -92,10 +92,6 @@ function auth() {
           }
         }); 
   loadOnLogin();      /// Load all the function needed, including creating objects
-  /////////////// Refresh chart every 5 seconds /////////////
-  var inverval_timer = setInterval(function () {
-    readCT(listOfDateLabel[0][0]);
-  }, 5000);
 }
 /////////////////////////////////////////////////////////
 
@@ -103,8 +99,12 @@ function auth() {
 let registeredUser = false;
 function loadOnLogin() {
   readItem();
-  readCT(listOfDateLabel[0][0]);
+  readCT(chartARRAY);
   registeredUser = true;
+  /////////////// Refresh chart every 5 seconds /////////////
+  var inverval_timer = setInterval(function () {
+    readCT(chartARRAY);
+  }, 5000);
 }
 /////////////////////////////////////////////////////////
 
@@ -112,29 +112,31 @@ function loadOnLogin() {
 const dataPerPlot = 91;
 let maxDataPerChart = dataPerPlot; // Number of data plus one
 
-function readCT(labelOBJ) {
+function readCT(ArrayOfChart) {
   var docClient = new AWS.DynamoDB.DocumentClient();
 
   var ctItem = {
     TableName: "IoT_Result",
     KeyConditionExpression: 'Station = :station and #Time > :lastTime',
     ExpressionAttributeValues: {
-      ':station': 1,
-      ':lastTime': labelOBJ.dateLabel
+      ':station': ArrayOfChart[1].station,
+      ':lastTime': ArrayOfChart[1].timeREF
     },
     ExpressionAttributeNames: {
       "#Time": "Time"
     }
   };
+  console.log("Time Ref:", ArrayOfChart[1].timeREF);
+  console.log("Station:", ArrayOfChart[1].station);
   docClient.query(ctItem, function(err, data) {
     if (err) {
       alert(JSON.stringify(err, undefined, 2));
     }
     else {
       for (let i=0; i < data['Count']; i++) {
-        if (data['Items'][i]['Time'] > labelOBJ.dateLabel){
+        if (data['Items'][i]['Time'] > ArrayOfChart[1].timeREF){
           setProgress("PC"+data['Items'][i]['Station'], "PCT"+data['Items'][i]['Station'], data['Items'][i]['TestNumber'],data['Items'][i]['TotalTest']);
-          labelOBJ.dateLabel = data['Items'][i]['Time'];
+          ArrayOfChart[1].timeREF = data['Items'][i]['Time'];
         }
         var timeResult = JSON.stringify(data['Items'][i]['Time']);
         var valueCT = extractData(data['Items'][i], 'CTPI', 1, 1);
