@@ -212,7 +212,7 @@ function addStationTables(quantity) {
   }
   createCharts();
   var objectAA = [];
-  objectAA.append(new GraphsStation("PC1", "PCT1", "T1G1C1"));
+  objectAA.push(new GraphsStation("PC1", "PCT1", "T1G1C1"));
   console.log("testNUM: ",objectAA[0].testNUM);
   console.log("totalTEST: ",objectAA[0].totalTEST);
   STA1.totalTEST = 7;
