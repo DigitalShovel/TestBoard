@@ -214,6 +214,8 @@ function addStationTables(quantity) {
   createCharts();
 }
 
+console.log(chartARRAY[0].timeREF);
+
 function removeStationTables() {
   $("#table_container_body").empty();
 }
