@@ -307,6 +307,7 @@ function addStationTables(quantity) {
     chartARRAY[i].createChart();
   }
   //createCharts();
+  console.log("TTT: ", chartARRAY[1])
 }
 
 function removeStationTables() {
