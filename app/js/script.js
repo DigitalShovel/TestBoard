@@ -1,5 +1,5 @@
 const urlAccess = "https://testbench.auth.ca-central-1.amazoncognito.com/login?client_id=55ffriv2knsvpt7n1p49m6gghb&response_type=token&scope=aws.cognito.signin.user.admin+email+openid+profile&redirect_uri=https://ds-testboard.netlify.app/";
-let chartARRAY = [0];
+let chartARRAY = [];
 
 //////////////////// Websockets ///////////////////////
 function WebSocketTest() {
@@ -213,7 +213,7 @@ function scanning(PIList, ESPList, dynamClient){
     else {
       removeStationTables();
       var piQuantity = parseInt(JSON.stringify(data['Count'], "0", 2));
-      addStationTables(piQuantity);
+      chartARRAY = addStationTables(piQuantity);
       for (let i = 0; i < piQtyOLD; i++) {
         document.getElementById("PI#"+i).innerHTML = "Empty";
       }

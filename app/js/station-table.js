@@ -1,4 +1,4 @@
-
+let BuildArray = [0];
 
 function addStationTables(quantity) {
   for (var i = 1; i < quantity + 1; i++) {
@@ -302,15 +302,16 @@ function addStationTables(quantity) {
             </div>
         `);
     updateProgressCircle("PC" + i);
-    chartARRAY.push(new GraphsStation(i));
-    chartARRAY[i].createChart();
+    BuildArray.push(new GraphsStation(i));
+    BuildArray[i].createChart();
   }
   //createCharts();
+  return BuildArray;
 }
 
 function removeStationTables() {
   $("#table_container_body").empty();
-  chartARRAY = [0];
+  BuildArray = [0];
 }
 
 let graphFlag = false;
