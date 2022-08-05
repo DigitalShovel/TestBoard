@@ -77,12 +77,24 @@ function addStationTables(quantity) {
                                 <div class="popup__grid-item">
                                     <canvas id="T${i}G2C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
-                                <div id="T${i}G2C3" class="popup__grid-item">CT3</div>
-                                <div id="T${i}G2C4" class="popup__grid-item">CT4</div>
-                                <div id="T${i}G2C5" class="popup__grid-item">CT5</div>
-                                <div id="T${i}G2C6" class="popup__grid-item">CT6</div>
-                                <div id="T${i}G2C7" class="popup__grid-item">CT7</div>
-                                <div id="T${i}G2C8" class="popup__grid-item">CT8</div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G2C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                </div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G2C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                </div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G2C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                </div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G2C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                </div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G2C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                </div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G2C8" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                </div>
                             </div>
                             <div class="popup__relay flex gap--sm">
                                 <div id="T${i}G2R1" class="popup__relay-light popup__relay-light--disabled popup__relay-1"></div>
@@ -106,14 +118,30 @@ function addStationTables(quantity) {
                         <button id="T${i}G3" onclick="showPopup('T${i}P3')" class="btn btn--unstyled popup__btn-show">View Graphs</button>
                         <div id="T${i}P3" class="popup">
                             <div class="popup__grid">
-                                <div id="T${i}G3C1" class="popup__grid-item">CT1</div>
-                                <div id="T${i}G3C2" class="popup__grid-item">CT2</div>
-                                <div id="T${i}G3C3" class="popup__grid-item">CT3</div>
-                                <div id="T${i}G3C4" class="popup__grid-item">CT4</div>
-                                <div id="T${i}G3C5" class="popup__grid-item">CT5</div>
-                                <div id="T${i}G3C6" class="popup__grid-item">CT6</div>
-                                <div id="T${i}G3C7" class="popup__grid-item">CT7</div>
-                                <div id="T${i}G3C8" class="popup__grid-item">CT8</div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G3C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                </div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G3C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                </div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G3C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                </div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G3C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                </div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G3C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                </div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G3C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                </div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G3C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                </div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G3C8" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                </div>
                             </div>
                             <div class="popup__relay flex gap--sm">
                                 <div id="T${i}G3R1" class="popup__relay-light popup__relay-light--disabled popup__relay-1"></div>
@@ -137,14 +165,30 @@ function addStationTables(quantity) {
                         <button id="T${i}G4" onclick="showPopup('T${i}P4')" class="btn btn--unstyled popup__btn-show">View Graphs</button>
                         <div id="T${i}P4" class="popup">
                             <div class="popup__grid">
-                                <div id="T${i}G4C1" class="popup__grid-item">CT1</div>
-                                <div id="T${i}G4C2" class="popup__grid-item">CT2</div>
-                                <div id="T${i}G4C3" class="popup__grid-item">CT3</div>
-                                <div id="T${i}G4C4" class="popup__grid-item">CT4</div>
-                                <div id="T${i}G4C5" class="popup__grid-item">CT5</div>
-                                <div id="T${i}G4C6" class="popup__grid-item">CT6</div>
-                                <div id="T${i}G4C7" class="popup__grid-item">CT7</div>
-                                <div id="T${i}G4C8" class="popup__grid-item">CT8</div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G4C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                </div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G4C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                </div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G4C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                </div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G4C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                </div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G4C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                </div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G4C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                </div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G4C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                </div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G4C8" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                </div>
                             </div>
                             <div class="popup__relay flex gap--sm">
                                 <div id="T${i}G4R1" class="popup__relay-light popup__relay-light--disabled popup__relay-1"></div>
@@ -168,14 +212,30 @@ function addStationTables(quantity) {
                         <button id="T${i}G5" onclick="showPopup('T${i}P5')" class="btn btn--unstyled popup__btn-show">View Graphs</button>
                         <div id="T${i}P5" class="popup">
                             <div class="popup__grid">
-                                <div id="T${i}G5C1" class="popup__grid-item">CT1</div>
-                                <div id="T${i}G5C2" class="popup__grid-item">CT2</div>
-                                <div id="T${i}G5C3" class="popup__grid-item">CT3</div>
-                                <div id="T${i}G5C4" class="popup__grid-item">CT4</div>
-                                <div id="T${i}G5C5" class="popup__grid-item">CT5</div>
-                                <div id="T${i}G5C6" class="popup__grid-item">CT6</div>
-                                <div id="T${i}G5C7" class="popup__grid-item">CT7</div>
-                                <div id="T${i}G5C8" class="popup__grid-item">CT8</div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G5C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                </div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G5C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                </div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G5C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                </div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G5C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                </div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G5C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                </div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G5C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                </div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G5C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                </div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G5C8" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                </div>
                             </div>
                             <div class="popup__relay flex gap--sm">
                                 <div id="T${i}G5R1" class="popup__relay-light popup__relay-light--disabled popup__relay-1"></div>
@@ -199,14 +259,30 @@ function addStationTables(quantity) {
                         <button id="T${i}G6" onclick="showPopup('T${i}P6')" class="btn btn--unstyled popup__btn-show">View Graphs</button>
                         <div id="T${i}P6" class="popup">
                             <div class="popup__grid">
-                                <div id="T${i}G6C1" class="popup__grid-item">CT1</div>
-                                <div id="T${i}G6C2" class="popup__grid-item">CT2</div>
-                                <div id="T${i}G6C3" class="popup__grid-item">CT3</div>
-                                <div id="T${i}G6C4" class="popup__grid-item">CT4</div>
-                                <div id="T${i}G6C5" class="popup__grid-item">CT5</div>
-                                <div id="T${i}G6C6" class="popup__grid-item">CT6</div>
-                                <div id="T${i}G6C7" class="popup__grid-item">CT7</div>
-                                <div id="T${i}G6C8" class="popup__grid-item">CT8</div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G6C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                </div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G6C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                </div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G6C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                </div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G6C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                </div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G6C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                </div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G6C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                </div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G6C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                </div>
+                                <div class="popup__grid-item">
+                                    <canvas id="T${i}G6C8" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                </div>
                             </div>
                             <div class="popup__relay flex gap--sm">
                                 <div id="T${i}G6R1" class="popup__relay-light popup__relay-light--disabled popup__relay-1"></div>
