@@ -97,9 +97,10 @@ function auth() {
 
 /////// Functions to run if login is Authorized /////////
 let registeredUser = false;
-let chartARRAY = [];
+let chartARRAY;
+
 function loadOnLogin() {
-  chartARRAY.push(readItem());
+  chartARRAY = readItem();
   console.log("Station:", chartARRAY);
   readCT();
   registeredUser = true;
