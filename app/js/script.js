@@ -1,5 +1,4 @@
 const urlAccess = "https://testbench.auth.ca-central-1.amazoncognito.com/login?client_id=55ffriv2knsvpt7n1p49m6gghb&response_type=token&scope=aws.cognito.signin.user.admin+email+openid+profile&redirect_uri=https://ds-testboard.netlify.app/";
-var chartARRAY = [];
 
 //////////////////// Websockets ///////////////////////
 function WebSocketTest() {
@@ -204,6 +203,7 @@ let piQtyOLD = 0;
 let espQtyOLD = 0;
 
 function scanning(PIList, ESPList, dynamClient){
+  var cArray;
   ///////////////////  Build PI List //////////////////////
   dynamClient.scan(PIList, function(err, data) {
     if (err) {
@@ -218,7 +218,7 @@ function scanning(PIList, ESPList, dynamClient){
       if (piQuantity > 0){
         /////// Add stations ////////
         removeStationTables();
-        window.chartARRAY = addStationTables(piQuantity);
+        cArray = addStationTables(piQuantity);
         /////////////////////////////
         for (let i = 0; i < piQuantity; i++) {
           document.getElementById("PI#"+i).innerHTML = JSON.stringify(data['Items'][i]['MacAddress'], "Empty", 2);
@@ -247,5 +247,6 @@ function scanning(PIList, ESPList, dynamClient){
     }
   }
   );
+  return cArray;
 }
 //////////////////////////////////////////////////////////
