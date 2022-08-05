@@ -97,7 +97,7 @@ function auth() {
 
 /////// Functions to run if login is Authorized /////////
 let registeredUser = false;
-let chartARRAY;
+var chartARRAY;
 
 function loadOnLogin() {
   readItem();
@@ -202,8 +202,8 @@ function readItem() {
 ///////////////////  Scan Database in DynamoDB //////////////////////
 let piQtyOLD = 0;
 let espQtyOLD = 0;
+
 function scanning(PIList, ESPList, dynamClient){
-  let chartARRAY;
 
   ///////////////////  Build PI List //////////////////////
   dynamClient.scan(PIList, function(err, data) {
