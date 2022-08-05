@@ -215,7 +215,7 @@ function addStationTables(quantity) {
   objectAA.push(new GraphsStation("PC1", "PCT1", "T1G1C1"));
   console.log("testNUM: ",objectAA[0].testNUM);
   console.log("totalTEST: ",objectAA[0].totalTEST);
-  STA1.totalTEST = 7;
+  objectAA[0].totalTEST = 7;
   console.log("new totalTEST: ",objectAA[0].totalTEST);
   console.log("timeREF: ",objectAA[0].timeREF);
   console.log("Percentage: ",objectAA[0].progressPercentage());
