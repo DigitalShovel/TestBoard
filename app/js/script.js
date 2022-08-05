@@ -1,5 +1,4 @@
 const urlAccess = "https://testbench.auth.ca-central-1.amazoncognito.com/login?client_id=55ffriv2knsvpt7n1p49m6gghb&response_type=token&scope=aws.cognito.signin.user.admin+email+openid+profile&redirect_uri=https://ds-testboard.netlify.app/";
-let chartARRAY;
 
 //////////////////// Websockets ///////////////////////
 function WebSocketTest() {
@@ -98,8 +97,9 @@ function auth() {
 
 /////// Functions to run if login is Authorized /////////
 let registeredUser = false;
+let chartARRAY = [];
 function loadOnLogin() {
-  chartARRAY = readItem();
+  chartARRAY.push(readItem());
   console.log("Station:", chartARRAY[1].station);
   readCT();
   registeredUser = true;
