@@ -184,6 +184,7 @@ function removeData(chart) {
 ///////////// Set DB table to be scanned /////////////////
 function readItem() {
   var docClient = new AWS.DynamoDB.DocumentClient();
+  var cArray;
 
   var item1 = {
     TableName: "IoT_Testing_Unit_RaspPI",
@@ -194,7 +195,8 @@ function readItem() {
     TableName: "IoT_Testing_Unit_ESP32",
     ProjectionExpression: "MacAddress"
   };
-  scanning(item1, item2, docClient);
+  cArray = scanning(item1, item2, docClient);
+  console.log("TTT: ", cArray);
 }
 /////////////////////////////////////////////////////////
 
