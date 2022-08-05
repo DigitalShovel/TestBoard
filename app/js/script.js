@@ -100,8 +100,7 @@ let registeredUser = false;
 let chartARRAY;
 
 function loadOnLogin() {
-  chartARRAY = readItem();
-  console.log("Station:", chartARRAY);
+  readItem();
   readCT();
   registeredUser = true;
   /////////////// Refresh chart every 5 seconds /////////////
@@ -196,7 +195,7 @@ function readItem() {
     TableName: "IoT_Testing_Unit_ESP32",
     ProjectionExpression: "MacAddress"
   };
-  return scanning(item1, item2, docClient);
+  scanning(item1, item2, docClient);
 }
 /////////////////////////////////////////////////////////
 
@@ -204,12 +203,12 @@ function readItem() {
 let piQtyOLD = 0;
 let espQtyOLD = 0;
 function scanning(PIList, ESPList, dynamClient){
+  let chartARRAY;
 
   ///////////////////  Build PI List //////////////////////
   dynamClient.scan(PIList, function(err, data) {
     if (err) {
       location.replace(urlAccess);
-      return 0;
     } 
     else {
       removeStationTables();
@@ -223,7 +222,8 @@ function scanning(PIList, ESPList, dynamClient){
           document.getElementById("PI#"+i).innerHTML = JSON.stringify(data['Items'][i]['MacAddress'], "Empty", 2);
         }
       }
-      return addStationTables(piQuantity);
+      chartARRAY = addStationTables(piQuantity);
+      console.log("ARRAY: ", chartARRAY);
     } 
   }
   );
