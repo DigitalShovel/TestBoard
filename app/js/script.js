@@ -99,6 +99,7 @@ function auth() {
 let registeredUser = false;
 
 function loadOnLogin() {
+  console.log("TEST");
   readItem();
   //readCT();
   registeredUser = true;
