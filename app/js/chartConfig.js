@@ -260,7 +260,7 @@ class GraphsStation {
                 this.CTARRAY.push(new Chart(document.getElementById('T'+this.station+'G'+k+'C'+i).getContext('2d'), this.config))
                 this.CTARRAY[i].ctx.onclick = moveScroll(this.CTARRAY[i]);
                 this.CTARRAY[i].canvas.addEventListener('wheel', (e) => {
-                    this.scrollWheel(e, this.CTARRAY[i]);
+                    scrollWheel(e, this.CTARRAY[i]);
                     });
             }
             this.channelARRAY.push(this.CTARRAY)
