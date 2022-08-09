@@ -99,7 +99,6 @@ function auth() {
 let registeredUser = false;
 
 function loadOnLogin() {
-  removeStationTables();
   readItem();
   readCT();
   registeredUser = true;
@@ -156,8 +155,7 @@ function extractData(data, attribute, channel, ctnum) {
 }
 
 ///////////////// Add & Remove Data to Chart ////////////////////
-function addDataChart(chart1, label, data1, data2) {
-  var chart = BuildArray[2].channelARRAY[1][1];
+function addDataChart(chart, label, data1, data2) {
   chart.data.labels.push(label);
   chart.data.datasets[0].data.push(data1);
   chart.data.datasets[1].data.push(data2);
@@ -199,7 +197,6 @@ function readItem() {
   scanning(item1, item2, docClient);
   /////// Add stations ////////
   removeStationTables();
-  console.log("PI QTY: ", piQuantity);
   cArray = addStationTables(piQuantity);
   return cArray;
   /////////////////////////////
@@ -209,7 +206,7 @@ function readItem() {
 ///////////////////  Scan Database in DynamoDB //////////////////////
 let piQtyOLD = 0;
 let espQtyOLD = 0;
-let piQuantity = 1;
+let piQuantity = 0;
 
 function scanning(PIList, ESPList, dynamClient){
   ///////////////////  Build PI List //////////////////////
