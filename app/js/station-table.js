@@ -27,7 +27,7 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G1C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="popup__grid-item">
-                                    <canvas id="T${i}G1C2" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="T${i}G1C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="popup__grid-item">
                                     <canvas id="T${i}G1C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
