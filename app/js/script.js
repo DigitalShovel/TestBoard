@@ -182,9 +182,9 @@ function removeData(chart) {
 }
 
 ///////////// Set DB table to be scanned /////////////////
+var cArray;
 function readItem() {
   var docClient = new AWS.DynamoDB.DocumentClient();
-  var cArray;
 
   var item1 = {
     TableName: "IoT_Testing_Unit_RaspPI",
@@ -198,6 +198,7 @@ function readItem() {
   scanning(item1, item2, docClient);
   /////// Add stations ////////
   removeStationTables();
+  console.log("PI: ", piQuantity);
   cArray = addStationTables(piQuantity);
   /////////////////////////////
   console.log("TTT: ", cArray);
