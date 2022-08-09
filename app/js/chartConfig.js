@@ -235,7 +235,7 @@ class GraphsStation {
     ////////////// Function for the scroll wheel ////////////////
     scrollWheel(wheel, chart) {
         if (wheel.deltaY > 0) {
-            console.log("NUM: ", chart.config.options.scales.x.min);
+            console.log("NUM: ", chart);
             chart.options.scales.x.min = chart.options.scales.x.min + maxDataPerChart-1;
             chart.options.scales.x.max = chart.options.scales.x.max + maxDataPerChart-1;
             if (chart.options.scales.x.max >= chart.data.datasets[0].data.length) {
