@@ -67,27 +67,6 @@ let listOfDateLabel = [];
 listOfDateLabel.push([Object.create(lastLabel)]);
 /////////////////////////////////////
 
-////////////// Function for the scroll wheel ////////////////
-function scrollWheel(wheel, chart) {
-    if (wheel.deltaY > 0) {
-        chart.options.scales.x.min = chart.options.scales.x.min + maxDataPerChart-1;
-        chart.options.scales.x.max = chart.options.scales.x.max + maxDataPerChart-1;
-        if (chart.options.scales.x.max >= data.datasets[0].data.length) {
-            chart.options.scales.x.min = data.datasets[0].data.length - maxDataPerChart+1;
-            chart.options.scales.x.max = data.datasets[0].data.length;
-        }
-    }
-    if (wheel.deltaY < 0) {
-        chart.options.scales.x.min = chart.options.scales.x.min - maxDataPerChart+1;
-        chart.options.scales.x.max = chart.options.scales.x.max - maxDataPerChart+1;
-        if (chart.options.scales.x.min <= 0) {
-            chart.options.scales.x.min = 0;
-            chart.options.scales.x.max = maxDataPerChart-1;
-        }
-    }
-    chart.update();
-}
-
 ///////////////// Creating Class for the graphs /////////////////
 class GraphsStation {
     testNUM = 0
@@ -253,12 +232,32 @@ class GraphsStation {
     progressPercentage() {
         return Math.round((this.testNUM/this.totalTEST)*100);
     }
+    ////////////// Function for the scroll wheel ////////////////
+    scrollWheel(wheel, chart) {
+        if (wheel.deltaY > 0) {
+            chart.options.scales.x.min = chart.options.scales.x.min + maxDataPerChart-1;
+            chart.options.scales.x.max = chart.options.scales.x.max + maxDataPerChart-1;
+            if (chart.options.scales.x.max >= data.datasets[0].data.length) {
+                chart.options.scales.x.min = data.datasets[0].data.length - maxDataPerChart+1;
+                chart.options.scales.x.max = data.datasets[0].data.length;
+            }
+        }
+        if (wheel.deltaY < 0) {
+            chart.options.scales.x.min = chart.options.scales.x.min - maxDataPerChart+1;
+            chart.options.scales.x.max = chart.options.scales.x.max - maxDataPerChart+1;
+            if (chart.options.scales.x.min <= 0) {
+                chart.options.scales.x.min = 0;
+                chart.options.scales.x.max = maxDataPerChart-1;
+            }
+        }
+        chart.update();
+    }
     createChart() {
         for (var k=1; k <= 6; k++) {
             this.CTARRAY = [0];
             for (var i=1; i <= 8; i++) {
                 this.CTARRAY.push(new Chart(document.getElementById('T'+this.station+'G'+k+'C'+i).getContext('2d'), this.config))
-                this.CTARRAY[i].ctx.onclick = moveScroll(this.CTARRAY[i]);
+                //this.CTARRAY[i].ctx.onclick = moveScroll(this.CTARRAY[i]);
                 this.CTARRAY[i].canvas.addEventListener('wheel', (e) => {
                     scrollWheel(e, this.CTARRAY[i]);
                     });
