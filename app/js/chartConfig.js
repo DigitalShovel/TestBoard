@@ -265,7 +265,6 @@ class GraphsStation {
                 //console.log("DD: ", this.CTARRAY[i]);
 
                 this.CTARRAY[i].canvas.addEventListener('wheel', (e) => {
-                    //console.log("e", e)
                     scrollWheel(e);
                     });
             }
