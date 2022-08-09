@@ -201,7 +201,7 @@ class GraphsStation {
     ///////////// Default config of charts ////////////////////
     config = {
         type: 'line',
-        data: data,
+        data: this.data,
         options: {
             layout: {
                 padding: {
@@ -243,7 +243,7 @@ class GraphsStation {
                 }
             }
         },
-        plugins: [moveChart]
+        plugins: [this.moveChart]
     };
     /////////////////////////////////////////////////////////
 
