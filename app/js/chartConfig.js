@@ -198,7 +198,7 @@ var config = {
 
 ////////////// Function for the scroll wheel ////////////////
 function scrollWheel(wheelEvent) {
-    console.log("NUM: ", wheelEvent.target);
+    console.log("NUM: ", wheelEvent.target.id);
     if (wheelEvent.deltaY > 0) {
         wheelEvent.target.options.scales.x.min = wheelEvent.target.options.scales.x.min + maxDataPerChart-1;
         wheelEvent.target.options.scales.x.max = wheelEvent.target.options.scales.x.max + maxDataPerChart-1;
