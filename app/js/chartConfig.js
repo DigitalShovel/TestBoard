@@ -259,8 +259,10 @@ class GraphsStation {
             this.CTARRAY = [0];
             for (var i=1; i <= 8; i++) {
                 this.CTARRAY.push(new Chart(document.getElementById('T'+this.station+'G'+k+'C'+i).getContext('2d'), config))
-                this.CTARRAY[i].ctx.onclick = moveScroll(this.CTARRAY[i]);
+                //this.CTARRAY[i].ctx.onclick = moveScroll(this.CTARRAY[i]);
                 this.CTARRAY[i].canvas.addEventListener('wheel', (e) => {
+
+                    console.log("DD: ", this.CTARRAY[i]);
                     scrollWheel(e, this.CTARRAY[i]);
                     });
             }
