@@ -15,8 +15,6 @@ const movableScrollbarEdge = 'hsla(213, 100%, 97%, 1)';
 let chartWidth = 400;
 let chartHeight = 400;
 
-
-
 //////////// Function to scroll the chart //////////////
 function moveScroll(movingChart) {
     const { ctx, canvas, chartArea: {left, right, top, bottom, width, height} } = movingChart;
