@@ -134,7 +134,7 @@ function readCT() {
     }
     else {
       for (let i=0; i < data['Count']; i++) {
-        if (data['Items'][i]['Time'] > chartARRAY[1].timeREF){
+        if (data['Items'][i]['Time'] > BuildArray[1].timeREF){
           setProgress("PC"+data['Items'][i]['Station'], "PCT"+data['Items'][i]['Station'], data['Items'][i]['TestNumber'],data['Items'][i]['TotalTest']);
           BuildArray[1].timeREF = data['Items'][i]['Time'];
         }
