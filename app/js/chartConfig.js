@@ -199,7 +199,7 @@ var config = {
 ////////////// Function for the scroll wheel ////////////////
 function scrollWheel(wheel, chart) {
     if (wheel.deltaY > 0) {
-        console.log("NUM: ", chart);
+        console.log("NUM: ", wheel);
         chart.options.scales.x.min = chart.options.scales.x.min + maxDataPerChart-1;
         chart.options.scales.x.max = chart.options.scales.x.max + maxDataPerChart-1;
         if (chart.options.scales.x.max >= chart.data.datasets[0].data.length) {
