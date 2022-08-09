@@ -122,7 +122,7 @@ function readCT() {
     KeyConditionExpression: 'Station = :station and #Time > :lastTime',
     ExpressionAttributeValues: {
       ':station': 1,
-      ':lastTime': Array[1].timeREF
+      ':lastTime': "00/00/00 00:00:00"
     },
     ExpressionAttributeNames: {
       "#Time": "Time"
