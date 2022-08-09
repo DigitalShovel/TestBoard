@@ -307,7 +307,7 @@ function addStationTables(quantity) {
         for (var l=1; l <= 8; l++) {
             new Chart(document.getElementById('T'+i+'G'+k+'C'+l).getContext('2d'), config);
             document.getElementById('T'+i+'G'+k+'C'+l).addEventListener('wheel', (e) => {
-                scrollWheel(e, this.CTARRAY[i]);
+                scrollWheel(e, document.getElementById('T'+i+'G'+k+'C'+l));
                 });
             }
         }   
