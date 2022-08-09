@@ -197,25 +197,25 @@ var config = {
 /////////////////////////////////////////////////////////
 
 ////////////// Function for the scroll wheel ////////////////
-function scrollWheel(wheel, chart) {
-    console.log("NUM: ", chart);
-    if (wheel.deltaY > 0) {
-        chart.options.scales.x.min = chart.options.scales.x.min + maxDataPerChart-1;
-        chart.options.scales.x.max = chart.options.scales.x.max + maxDataPerChart-1;
-        if (chart.options.scales.x.max >= chart.data.datasets[0].data.length) {
-            chart.options.scales.x.min = chart.data.datasets[0].data.length - maxDataPerChart+1;
-            chart.options.scales.x.max = chart.data.datasets[0].data.length;
+function scrollWheel(wheelEvent) {
+    console.log("NUM: ", wheelEvent.target);
+    if (wheelEvent.deltaY > 0) {
+        wheelEvent.target.options.scales.x.min = wheelEvent.target.options.scales.x.min + maxDataPerChart-1;
+        wheelEvent.target.options.scales.x.max = wheelEvent.target.options.scales.x.max + maxDataPerChart-1;
+        if (wheelEvent.target.options.scales.x.max >= wheelEvent.target.data.datasets[0].data.length) {
+            wheelEvent.target.options.scales.x.min = wheelEvent.target.data.datasets[0].data.length - maxDataPerChart+1;
+            wheelEvent.target.options.scales.x.max = wheelEvent.target.data.datasets[0].data.length;
         }
     }
-    if (wheel.deltaY < 0) {
-        chart.options.scales.x.min = chart.options.scales.x.min - maxDataPerChart+1;
-        chart.options.scales.x.max = chart.options.scales.x.max - maxDataPerChart+1;
-        if (chart.options.scales.x.min <= 0) {
-            chart.options.scales.x.min = 0;
-            chart.options.scales.x.max = maxDataPerChart-1;
+    if (wheelEvent.deltaY < 0) {
+        wheelEvent.target.options.scales.x.min = wheelEvent.target.options.scales.x.min - maxDataPerChart+1;
+        wheelEvent.target.options.scales.x.max = wheelEvent.target.options.scales.x.max - maxDataPerChart+1;
+        if (wheelEvent.target.options.scales.x.min <= 0) {
+            wheelEvent.target.options.scales.x.min = 0;
+            wheelEvent.target.options.scales.x.max = maxDataPerChart-1;
         }
     }
-    chart.update();
+    wheelEvent.target.update();
 }
 
 ///////////////// Build array of charts ///////////////////
@@ -264,7 +264,7 @@ class GraphsStation {
 
                 this.CTARRAY[i].canvas.addEventListener('wheel', (e) => {
                     console.log("e", e)
-                    scrollWheel(e, this.CTARRAY[i]);
+                    scrollWheel(e);
                     });
             }
             this.channelARRAY.push(this.CTARRAY)
