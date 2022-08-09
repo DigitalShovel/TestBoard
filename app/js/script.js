@@ -116,7 +116,6 @@ let maxDataPerChart = dataPerPlot; // Number of data plus one
 
 function readCT() {
   var docClient = new AWS.DynamoDB.DocumentClient();
-  console.log("DATA: ", BuildArray[1].channelARRAY[1][1].config);
 
   var ctItem = {
     TableName: "IoT_Result",
@@ -134,7 +133,6 @@ function readCT() {
       alert(JSON.stringify(err, undefined, 2));
     }
     else {
-      //console.log("DB: ", BuildArray[1]);
       for (let i=0; i < data['Count']; i++) {
         if (data['Items'][i]['Time'] > BuildArray[1].timeREF){
           setProgress("PC"+data['Items'][i]['Station'], "PCT"+data['Items'][i]['Station'], data['Items'][i]['TestNumber'],data['Items'][i]['TotalTest']);
