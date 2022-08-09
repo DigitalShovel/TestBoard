@@ -99,12 +99,12 @@ function auth() {
 let registeredUser = false;
 
 function loadOnLogin() {
-  readItem();
-  readCT();
+  var returnedArray = readItem();
+  readCT(returnedArray);
   registeredUser = true;
   /////////////// Refresh chart every 5 seconds /////////////
   var inverval_timer = setInterval(function () {
-    readCT();
+    readCT(returnedArray);
   }, 5000);
 }
 /////////////////////////////////////////////////////////
@@ -115,16 +115,16 @@ let maxDataPerChart = dataPerPlot; // Number of data plus one
 
 var cArray;
 
-function readCT() {
+function readCT(Array) {
   var docClient = new AWS.DynamoDB.DocumentClient();
-  console.log("Reading DB: ", cArray);
+  console.log("Reading DB: ", Array);
 
   var ctItem = {
     TableName: "IoT_Result",
     KeyConditionExpression: 'Station = :station and #Time > :lastTime',
     ExpressionAttributeValues: {
       ':station': 1,
-      ':lastTime': cArray[1].timeREF
+      ':lastTime': Array[1].timeREF
     },
     ExpressionAttributeNames: {
       "#Time": "Time"
@@ -202,6 +202,7 @@ function readItem() {
   removeStationTables();
   console.log("PI: ", piQuantity);
   cArray = addStationTables(piQuantity);
+  return cArray;
   /////////////////////////////
 }
 /////////////////////////////////////////////////////////
