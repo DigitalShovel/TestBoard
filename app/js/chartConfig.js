@@ -182,30 +182,6 @@ class GraphsStation {
     channelARRAY = [[0]]
     CTARRAY = [0]
 
-    constructor(station) {
-            this.station = station;
-    }
-    progressPercentage() {
-        return Math.round((this.testNUM/this.totalTEST)*100);
-    }
-    createChart() {
-        for (var k=1; k <= 6; k++) {
-            this.CTARRAY = [0];
-            for (var i=1; i <= 8; i++) {
-                this.CTARRAY.push(new Chart(document.getElementById('T'+this.station+'G'+k+'C'+i).getContext('2d'), this.config))
-                //this.CTARRAY[i].ctx.onclick = moveScroll(this.CTARRAY[i]);
-                //console.log("DD: ", this.CTARRAY[i]);
-
-                this.CTARRAY[i].canvas.addEventListener('wheel', (e) => {
-                    scrollWheel(e);
-                    });
-            }
-            this.channelARRAY.push(this.CTARRAY)
-        }
-    }
-}
-
-class eachChart {
     //////////// Setup ////////////////
     data = {
         labels: [],
@@ -273,4 +249,26 @@ class eachChart {
     plugins: [moveChart]
     };
 /////////////////////////////////////////////////////////
+
+    constructor(station) {
+            this.station = station;
+    }
+    progressPercentage() {
+        return Math.round((this.testNUM/this.totalTEST)*100);
+    }
+    createChart() {
+        for (var k=1; k <= 6; k++) {
+            this.CTARRAY = [0];
+            for (var i=1; i <= 8; i++) {
+                this.CTARRAY.push(new Chart(document.getElementById('T'+this.station+'G'+k+'C'+i).getContext('2d'), this.config))
+                //this.CTARRAY[i].ctx.onclick = moveScroll(this.CTARRAY[i]);
+                //console.log("DD: ", this.CTARRAY[i]);
+
+                this.CTARRAY[i].canvas.addEventListener('wheel', (e) => {
+                    scrollWheel(e);
+                    });
+            }
+            this.channelARRAY.push(this.CTARRAY)
+        }
+    }
 }

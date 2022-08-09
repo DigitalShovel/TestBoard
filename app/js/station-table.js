@@ -306,7 +306,6 @@ function addStationTables(quantity) {
     BuildArray[i].createChart();
   }
   //createCharts();
-  console.log("ARRAY: ", BuildArray);
   return BuildArray;
 }
 
