@@ -100,7 +100,7 @@ let registeredUser = false;
 
 function loadOnLogin() {
   readItem();
-  readCT();
+  //readCT();
   registeredUser = true;
   /////////////// Refresh chart every 5 seconds /////////////
   var inverval_timer = setInterval(function () {
