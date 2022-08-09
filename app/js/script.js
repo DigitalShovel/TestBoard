@@ -95,13 +95,11 @@ function auth() {
 }
 /////////////////////////////////////////////////////////
 
-/////// Functions to run if login is Authorized /////////
-let registeredUser = false;
+/////// Functions to run if login is Authorized ////////
 
 function loadOnLogin() {
   readItem();
   //readCT();
-  registeredUser = true;
   /////////////// Refresh chart every 5 seconds /////////////
   var inverval_timer = setInterval(function () {
     readCT();
