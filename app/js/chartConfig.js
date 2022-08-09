@@ -235,11 +235,12 @@ class GraphsStation {
     ////////////// Function for the scroll wheel ////////////////
     scrollWheel(wheel, chart) {
         if (wheel.deltaY > 0) {
+            console.log("NUM: ", chart.options.scales.x.min);
             chart.options.scales.x.min = chart.options.scales.x.min + maxDataPerChart-1;
             chart.options.scales.x.max = chart.options.scales.x.max + maxDataPerChart-1;
-            if (chart.options.scales.x.max >= data.datasets[0].data.length) {
-                chart.options.scales.x.min = data.datasets[0].data.length - maxDataPerChart+1;
-                chart.options.scales.x.max = data.datasets[0].data.length;
+            if (chart.options.scales.x.max >= chart.data.datasets[0].data.length) {
+                chart.options.scales.x.min = chart.data.datasets[0].data.length - maxDataPerChart+1;
+                chart.options.scales.x.max = chart.data.datasets[0].data.length;
             }
         }
         if (wheel.deltaY < 0) {
