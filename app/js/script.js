@@ -156,7 +156,8 @@ function extractData(data, attribute, channel, ctnum) {
 }
 
 ///////////////// Add & Remove Data to Chart ////////////////////
-function addDataChart(chart, label, data1, data2) {
+function addDataChart(chart1, label, data1, data2) {
+  var chart = BuildArray[2].channelARRAY[1][1];
   chart.data.labels.push(label);
   chart.data.datasets[0].data.push(data1);
   chart.data.datasets[1].data.push(data2);
