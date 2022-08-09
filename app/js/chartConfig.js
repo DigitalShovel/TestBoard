@@ -45,25 +45,6 @@ function moveScroll(movingChart) {
     });
 }
 
-//////////// Setup ////////////////
-var data = {
-    labels: [],
-    autoPadding: true,
-    datasets: [{
-    label: 'PI Measurements',
-    data: [],
-    fill: false,
-    borderColor: 'hsla(213, 78%, 16%, 1)',
-    tension: 0.4
-    }, {
-    label: 'ESP Measurements',
-    data: [],
-    fill: false,
-    borderColor: 'hsla(213, 75%, 54%, 1)',
-    tension: 0.1
-}]
-};
-
 ///////////// Move chart button design ///////////////////
 var moveChart = {
     id: 'moveChart',
@@ -147,54 +128,7 @@ var moveChart = {
 }
 /////////////////////////////////////////////////////////////////
 
-///////////// Default config of charts ////////////////////
-var config = {
-    type: 'line',
-    data: data,
-    options: {
-        layout: {
-            padding: {
-                right: 30,
-                bottom: 30,
-                top: 30,
-                left: 30
-            }
-        },
-        scales: {
-            x: {
-                min: 0,
-                max: maxDataPerChart-1,
-                title: {
-                    display: false,
-                    text: 'Time',
-                    color: labelTextColor,
-                    position: 'bottom',
-                    font: {
-                        family: labelTextFont,
-                        size: 16,
-                        weight: 'bold',
-                        lineHeight: 1.2,
-                    }
-                }
-            },
-            y: {
-                title: {
-                    display: true,
-                    text: 'Voltage',
-                    color: labelTextColor,
-                    font: {
-                        family: labelTextFont,
-                        size: 16,
-                        weight: 'bold',
-                        lineHeight: 1.2,
-                    }
-                }
-            }
-        }
-    },
-    plugins: [moveChart]
-};
-/////////////////////////////////////////////////////////
+
 
 ////////////// Function for the scroll wheel ////////////////
 function scrollWheel(wheelEvent) {
@@ -248,6 +182,74 @@ class GraphsStation {
     channelARRAY = [[0]]
     CTARRAY = [0]
 
+    //////////// Setup ////////////////
+    data = {
+        labels: [],
+        autoPadding: true,
+        datasets: [{
+        label: 'PI',
+        data: [],
+        fill: false,
+        borderColor: 'hsla(213, 78%, 16%, 1)',
+        tension: 0.4
+        }, {
+        label: 'ESP',
+        data: [],
+        fill: false,
+        borderColor: 'hsla(213, 75%, 54%, 1)',
+        tension: 0.1
+        }]
+    };
+    /////////////////////////////////////
+    ///////////// Default config of charts ////////////////////
+    config = {
+    type: 'line',
+    data: this.data,
+    options: {
+        layout: {
+            padding: {
+                right: 30,
+                bottom: 30,
+                top: 30,
+                left: 30
+            }
+        },
+        scales: {
+            x: {
+                min: 0,
+                max: maxDataPerChart-1,
+                title: {
+                    display: false,
+                    text: 'Time',
+                    color: labelTextColor,
+                    position: 'bottom',
+                    font: {
+                        family: labelTextFont,
+                        size: 16,
+                        weight: 'bold',
+                        lineHeight: 1.2,
+                    }
+                }
+            },
+            y: {
+                title: {
+                    display: true,
+                    text: 'Voltage',
+                    color: labelTextColor,
+                    font: {
+                        family: labelTextFont,
+                        size: 16,
+                        weight: 'bold',
+                        lineHeight: 1.2,
+                    }
+                }
+            }
+        }
+    },
+    plugins: [moveChart]
+    };
+/////////////////////////////////////////////////////////
+
     constructor(station) {
             this.station = station;
     }
@@ -258,7 +260,7 @@ class GraphsStation {
         for (var k=1; k <= 6; k++) {
             this.CTARRAY = [0];
             for (var i=1; i <= 8; i++) {
-                this.CTARRAY.push(new Chart(document.getElementById('T'+this.station+'G'+k+'C'+i).getContext('2d'), config))
+                this.CTARRAY.push(new Chart(document.getElementById('T'+this.station+'G'+k+'C'+i).getContext('2d'), this.config))
                 //this.CTARRAY[i].ctx.onclick = moveScroll(this.CTARRAY[i]);
                 //console.log("DD: ", this.CTARRAY[i]);
 
