@@ -11,156 +11,9 @@ const scrollbarColor = 'lightgrey';
 const movableScrollbarColor = 'hsla(213, 100%, 90%, 1)';
 const movableScrollbarEdge = 'hsla(213, 100%, 97%, 1)';
 
-//////////// Setup ////////////////
-const data = {
-  labels: [],
-  autoPadding: true,
-  datasets: [{
-    label: 'PI Measurements',
-    data: [],
-    fill: false,
-    borderColor: 'hsla(213, 78%, 16%, 1)',
-    tension: 0.4
-  }, {
-    label: 'ESP Measurements',
-    data: [],
-    fill: false,
-    borderColor: 'hsla(213, 75%, 54%, 1)',
-    tension: 0.1
-}]
-};
-
-///////////// Move chart button design ///////////////////
-const moveChart = {
-    id: 'moveChart',
-    afterEvent(chart, args) {
-        const { ctx, canvas, chartArea: {left, right, top, bottom, width, height} } = chart;
-        canvas.addEventListener('mousemove', (event) => {
-            const x = args.event.x;
-            const y = args.event.y;
-
-            if (x >= left-15 && x < left+15 && y >= height/2 + top-15 && y < height/2 + top+15) {
-                canvas.style.cursor = 'pointer';
-            } else if (x >= right-15 && x < right+15 && y >= height/2 + top-15 && y < height/2 + top+15) {
-                canvas.style.cursor = 'pointer';
-            } else {
-                canvas.style.cursor = 'default';
-            }
-        })
-    },
-    afterDraw(chart, args, pluginOptions) {
-        const { ctx, chartArea: {left, right, top, bottom, width, height} } = chart;
-        
-        /*class CircleChevron {
-            draw(ctx, x1, pixel) {
-                const angle = Math.PI / 180;
-                ctx.beginPath();
-                ctx.lineWidth = 3;
-                ctx.strokeStyle = 'rgba(102, 102, 102, 0.5)';
-                ctx.fillStyle = 'white';
-                ctx.arc(x1, height/2 + top, 15, angle * 0, angle * 360, false),
-                ctx.stroke();
-                ctx.fill();
-                ctx.closePath();
-
-                // Chevron Arrow Left //
-                ctx.beginPath();
-                ctx.lineWidth = 3;
-                ctx.strokeStyle = arrowColor;
-                ctx.moveTo(x1+pixel, height/2 + top-7.5);
-                ctx.lineTo(x1-pixel, height/2 + top);
-                ctx.lineTo(x1+pixel, height/2 + top+7.5);
-                ctx.stroke();
-                ctx.closePath();
-            }
-        }
-    ///////// Draw arrow pointing left /////////////
-    let drawCircleLeft = new CircleChevron();
-    drawCircleLeft.draw(ctx, left, 5);
-    ///////// Draw arrow pointing right ////////////
-    let drawCircleRight = new CircleChevron();
-    drawCircleRight.draw(ctx, right, -5);*/
-    /////////// Draw a scroll bar /////////////
-    const bpix = chart.options.layout.padding.bottom+25;
-    ctx.beginPath();
-    ctx.fillStyle = scrollbarColor;
-    ctx.rect(left+15, bottom+bpix, width-30, 15);
-    ctx.fill();
-    ctx.closePath();
-    /////////// Draw a arrow for scroll bar /////////////
-    ctx.beginPath();
-    ctx.fillStyle = movableScrollbarEdge;
-    ctx.rect(left, bottom+bpix, 15, 15);
-    ctx.rect(right-15, bottom+bpix, 15, 15);
-    ctx.fill();
-    ctx.closePath();
-    /////////// Draw the movable scroll bar //////////////
-    let startingPoint = left+15 + (width/chart.data.datasets[0].data.length)*(chart.options.scales.x.min);
-    var barWidth = ((width - 30) / data.datasets[0].data.length)*maxDataPerChart;
-    if (data.datasets[0].data.length < 72) {
-        barWidth = width - 30;
-    }
-    const totalWidth = startingPoint + barWidth;
-    if (totalWidth > width) {
-        startingPoint = right-15-barWidth;
-    }
-    ctx.beginPath();
-    ctx.fillStyle = movableScrollbarColor;
-    ctx.rect(startingPoint, bottom+bpix, barWidth, 15);
-    ctx.fill();
-    ctx.closePath();
-    }
-}
-/////////////////////////////////////////////////////////////////
-
-///////////// Default config of charts ////////////////////
-const config = {
-    type: 'line',
-    data: data,
-    options: {
-        layout: {
-            padding: {
-                right: 30,
-                bottom: 30,
-                top: 30,
-                left: 30
-            }
-        },
-        scales: {
-            x: {
-                min: 0,
-                max: maxDataPerChart-1,
-                title: {
-                    display: false,
-                    text: 'Time',
-                    color: labelTextColor,
-                    position: 'bottom',
-                    font: {
-                        family: labelTextFont,
-                        size: 16,
-                        weight: 'bold',
-                        lineHeight: 1.2,
-                    }
-                }
-            },
-            y: {
-                title: {
-                    display: true,
-                    text: 'Voltage',
-                    color: labelTextColor,
-                    font: {
-                        family: labelTextFont,
-                        size: 16,
-                        weight: 'bold',
-                        lineHeight: 1.2,
-                    }
-                }
-            }
-        }
-    },
-    plugins: [moveChart]
-};
-/////////////////////////////////////////////////////////
+//////// Chart Dimensions ///////
+let chartWidth = 400;
+let chartHeight = 400;
 
 //////////// Function to scroll the chart //////////////
 function moveScroll(movingChart) {
@@ -233,4 +86,184 @@ function scrollWheel(wheel, chart) {
         }
     }
     chart.update();
+}
+
+///////////////// Creating Class for the graphs /////////////////
+class GraphsStation {
+    testNUM = 0
+    totalTEST = 0
+    timeREF = "00/00/00 00:00:00"
+    channelARRAY = [[0]]
+    CTARRAY = [0]
+
+    //////////// Setup ////////////////
+    data = {
+        labels: [],
+        autoPadding: true,
+        datasets: [{
+        label: 'PI Measurements',
+        data: [],
+        fill: false,
+        borderColor: 'hsla(213, 78%, 16%, 1)',
+        tension: 0.4
+        }, {
+        label: 'ESP Measurements',
+        data: [],
+        fill: false,
+        borderColor: 'hsla(213, 75%, 54%, 1)',
+        tension: 0.1
+    }]
+    };
+    
+    ///////////// Move chart button design ///////////////////
+    moveChart = {
+        id: 'moveChart',
+        afterEvent(chart, args) {
+            const { ctx, canvas, chartArea: {left, right, top, bottom, width, height} } = chart;
+            canvas.addEventListener('mousemove', (event) => {
+                const x = args.event.x;
+                const y = args.event.y;
+    
+                if (x >= left-15 && x < left+15 && y >= height/2 + top-15 && y < height/2 + top+15) {
+                    canvas.style.cursor = 'pointer';
+                } else if (x >= right-15 && x < right+15 && y >= height/2 + top-15 && y < height/2 + top+15) {
+                    canvas.style.cursor = 'pointer';
+                } else {
+                    canvas.style.cursor = 'default';
+                }
+            })
+        },
+        afterDraw(chart, args, pluginOptions) {
+            const { ctx, chartArea: {left, right, top, bottom, width, height} } = chart;
+            
+            /*class CircleChevron {
+                draw(ctx, x1, pixel) {
+                    const angle = Math.PI / 180;
+                    ctx.beginPath();
+                    ctx.lineWidth = 3;
+                    ctx.strokeStyle = 'rgba(102, 102, 102, 0.5)';
+                    ctx.fillStyle = 'white';
+                    ctx.arc(x1, height/2 + top, 15, angle * 0, angle * 360, false),
+                    ctx.stroke();
+                    ctx.fill();
+                    ctx.closePath();
+    
+                    // Chevron Arrow Left //
+                    ctx.beginPath();
+                    ctx.lineWidth = 3;
+                    ctx.strokeStyle = arrowColor;
+                    ctx.moveTo(x1+pixel, height/2 + top-7.5);
+                    ctx.lineTo(x1-pixel, height/2 + top);
+                    ctx.lineTo(x1+pixel, height/2 + top+7.5);
+                    ctx.stroke();
+                    ctx.closePath();
+                }
+            }
+        ///////// Draw arrow pointing left /////////////
+        let drawCircleLeft = new CircleChevron();
+        drawCircleLeft.draw(ctx, left, 5);
+        ///////// Draw arrow pointing right ////////////
+        let drawCircleRight = new CircleChevron();
+        drawCircleRight.draw(ctx, right, -5);*/
+        /////////// Draw a scroll bar /////////////
+        const bpix = chart.options.layout.padding.bottom+25;
+        ctx.beginPath();
+        ctx.fillStyle = scrollbarColor;
+        ctx.rect(left+15, bottom+bpix, width-30, 15);
+        ctx.fill();
+        ctx.closePath();
+        /////////// Draw a arrow for scroll bar /////////////
+        ctx.beginPath();
+        ctx.fillStyle = movableScrollbarEdge;
+        ctx.rect(left, bottom+bpix, 15, 15);
+        ctx.rect(right-15, bottom+bpix, 15, 15);
+        ctx.fill();
+        ctx.closePath();
+        /////////// Draw the movable scroll bar //////////////
+        let startingPoint = left+15 + (width/chart.data.datasets[0].data.length)*(chart.options.scales.x.min);
+        var barWidth = ((width - 30) / data.datasets[0].data.length)*maxDataPerChart;
+        if (data.datasets[0].data.length < 72) {
+            barWidth = width - 30;
+        }
+        const totalWidth = startingPoint + barWidth;
+        if (totalWidth > width) {
+            startingPoint = right-15-barWidth;
+        }
+        ctx.beginPath();
+        ctx.fillStyle = movableScrollbarColor;
+        ctx.rect(startingPoint, bottom+bpix, barWidth, 15);
+        ctx.fill();
+        ctx.closePath();
+        }
+    }
+    /////////////////////////////////////////////////////////////////
+    
+    ///////////// Default config of charts ////////////////////
+    config = {
+        type: 'line',
+        data: data,
+        options: {
+            layout: {
+                padding: {
+                    right: 30,
+                    bottom: 30,
+                    top: 30,
+                    left: 30
+                }
+            },
+            scales: {
+                x: {
+                    min: 0,
+                    max: maxDataPerChart-1,
+                    title: {
+                        display: false,
+                        text: 'Time',
+                        color: labelTextColor,
+                        position: 'bottom',
+                        font: {
+                            family: labelTextFont,
+                            size: 16,
+                            weight: 'bold',
+                            lineHeight: 1.2,
+                        }
+                    }
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Voltage',
+                        color: labelTextColor,
+                        font: {
+                            family: labelTextFont,
+                            size: 16,
+                            weight: 'bold',
+                            lineHeight: 1.2,
+                        }
+                    }
+                }
+            }
+        },
+        plugins: [moveChart]
+    };
+    /////////////////////////////////////////////////////////
+
+    constructor(station) {
+            this.station = station;
+    }
+    progressPercentage() {
+        return Math.round((this.testNUM/this.totalTEST)*100);
+    }
+    createChart() {
+        for (var k=1; k <= 6; k++) {
+            this.CTARRAY = [0];
+            for (var i=1; i <= 8; i++) {
+                this.CTARRAY.push(new Chart(document.getElementById('T'+this.station+'G'+k+'C'+i).getContext('2d'), config))
+                this.CTARRAY[i].ctx.onclick = moveScroll(this.CTARRAY[i]);
+                this.CTARRAY[i].canvas.addEventListener('wheel', (e) => {
+                    scrollWheel(e, this.CTARRAY[i]);
+                    });
+            }
+            this.channelARRAY.push(this.CTARRAY)
+        }
+    }
 }

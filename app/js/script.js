@@ -92,19 +92,20 @@ function auth() {
           }
         }); 
   loadOnLogin();      /// Load all the function needed, including creating objects
-  /////////////// Refresh chart every 5 seconds /////////////
-  var inverval_timer = setInterval(function () {
-    readCT(listOfDateLabel[0][0]);
-  }, 5000);
 }
 /////////////////////////////////////////////////////////
 
 /////// Functions to run if login is Authorized /////////
 let registeredUser = false;
+
 function loadOnLogin() {
   readItem();
-  readCT(listOfDateLabel[0][0]);
+  readCT();
   registeredUser = true;
+  /////////////// Refresh chart every 5 seconds /////////////
+  var inverval_timer = setInterval(function () {
+    readCT();
+  }, 5000);
 }
 /////////////////////////////////////////////////////////
 
@@ -112,7 +113,7 @@ function loadOnLogin() {
 const dataPerPlot = 91;
 let maxDataPerChart = dataPerPlot; // Number of data plus one
 
-function readCT(labelOBJ) {
+function readCT() {
   var docClient = new AWS.DynamoDB.DocumentClient();
 
   var ctItem = {
@@ -120,7 +121,7 @@ function readCT(labelOBJ) {
     KeyConditionExpression: 'Station = :station and #Time > :lastTime',
     ExpressionAttributeValues: {
       ':station': 1,
-      ':lastTime': labelOBJ.dateLabel
+      ':lastTime': BuildArray[1].timeREF
     },
     ExpressionAttributeNames: {
       "#Time": "Time"
@@ -131,15 +132,16 @@ function readCT(labelOBJ) {
       alert(JSON.stringify(err, undefined, 2));
     }
     else {
+      console.log("DB: ", BuildArray[1]);
       for (let i=0; i < data['Count']; i++) {
-        if (data['Items'][i]['Time'] > labelOBJ.dateLabel){
+        if (data['Items'][i]['Time'] > BuildArray[1].timeREF){
           setProgress("PC"+data['Items'][i]['Station'], "PCT"+data['Items'][i]['Station'], data['Items'][i]['TestNumber'],data['Items'][i]['TotalTest']);
-          labelOBJ.dateLabel = data['Items'][i]['Time'];
+          BuildArray[1].timeREF = data['Items'][i]['Time'];
         }
         var timeResult = JSON.stringify(data['Items'][i]['Time']);
         var valueCT = extractData(data['Items'][i], 'CTPI', 1, 1);
         var valueESP = extractData(data['Items'][i], 'CTESP', 1, 1);
-        addDataChart(listOfCharts[0][0], timeResult.substring(9,18), valueCT, valueESP);
+        addDataChart(BuildArray[1].channelARRAY[1][1], timeResult.substring(9,18), valueCT, valueESP);
       }
     }
   });
@@ -194,22 +196,27 @@ function readItem() {
     ProjectionExpression: "MacAddress"
   };
   scanning(item1, item2, docClient);
+  /////// Add stations ////////
+  removeStationTables();
+  cArray = addStationTables(piQuantity);
+  return cArray;
+  /////////////////////////////
 }
 /////////////////////////////////////////////////////////
 
 ///////////////////  Scan Database in DynamoDB //////////////////////
 let piQtyOLD = 0;
 let espQtyOLD = 0;
-function scanning(PIList, ESPList, dynamClient){
+let piQuantity = 1;
 
+function scanning(PIList, ESPList, dynamClient){
   ///////////////////  Build PI List //////////////////////
   dynamClient.scan(PIList, function(err, data) {
     if (err) {
       location.replace(urlAccess);
     } 
     else {
-      var piQuantity = parseInt(JSON.stringify(data['Count'], "0", 2));
-      addStationTables(piQuantity);
+      piQuantity = parseInt(JSON.stringify(data['Count'], "0", 2));
       for (let i = 0; i < piQtyOLD; i++) {
         document.getElementById("PI#"+i).innerHTML = "Empty";
       }
@@ -226,9 +233,9 @@ function scanning(PIList, ESPList, dynamClient){
   ///////////////////  Build ESP List ////////////////////
   dynamClient.scan(ESPList, function(err, data) {
     if (err) {
-      document.getElementById("textarea").innerHTML = "Unable to read item: " + "\n" + JSON.stringify(err, undefined, 2);
-    } else {
-      //document.getElementById("textarea").innerHTML = JSON.stringify(data, "Empty", 2);
+      location.replace(urlAccess);
+    } 
+    else {
       var espQty = parseInt(JSON.stringify(data['Count'], "0", 2));
       for (let i = 0; i < espQtyOLD; i++) {
         document.getElementById("ESP#"+i).innerHTML = "Empty";
