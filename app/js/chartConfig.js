@@ -160,8 +160,8 @@ class GraphsStation {
         ctx.closePath();
         /////////// Draw the movable scroll bar //////////////
         let startingPoint = left+15 + (width/chart.data.datasets[0].data.length)*(chart.options.scales.x.min);
-        var barWidth = ((width - 30) / data.datasets[0].data.length)*maxDataPerChart;
-        if (data.datasets[0].data.length < 72) {
+        var barWidth = ((width - 30) / chart.data.datasets[0].data.length)*maxDataPerChart;
+        if (chart.data.datasets[0].data.length < 72) {
             barWidth = width - 30;
         }
         const totalWidth = startingPoint + barWidth;
