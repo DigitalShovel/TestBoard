@@ -115,14 +115,14 @@ let maxDataPerChart = dataPerPlot; // Number of data plus one
 
 function readCT() {
   var docClient = new AWS.DynamoDB.DocumentClient();
-  console.log("Reading DB: ", BuildArray);
+  console.log("DB: ", BuildArray[1]);
 
   var ctItem = {
     TableName: "IoT_Result",
     KeyConditionExpression: 'Station = :station and #Time > :lastTime',
     ExpressionAttributeValues: {
       ':station': 1,
-      ':lastTime': "00/00/00 00:00:00"
+      ':lastTime': BuildArray[1].timeREF
     },
     ExpressionAttributeNames: {
       "#Time": "Time"
@@ -136,12 +136,12 @@ function readCT() {
       for (let i=0; i < data['Count']; i++) {
         if (data['Items'][i]['Time'] > chartARRAY[1].timeREF){
           setProgress("PC"+data['Items'][i]['Station'], "PCT"+data['Items'][i]['Station'], data['Items'][i]['TestNumber'],data['Items'][i]['TotalTest']);
-          cArray[1].timeREF = data['Items'][i]['Time'];
+          BuildArray[1].timeREF = data['Items'][i]['Time'];
         }
         var timeResult = JSON.stringify(data['Items'][i]['Time']);
         var valueCT = extractData(data['Items'][i], 'CTPI', 1, 1);
         var valueESP = extractData(data['Items'][i], 'CTESP', 1, 1);
-        addDataChart(cArray[1].channelARRAY[1][1], timeResult.substring(9,18), valueCT, valueESP);
+        addDataChart(BuildArray[1].channelARRAY[1][1], timeResult.substring(9,18), valueCT, valueESP);
       }
     }
   });
