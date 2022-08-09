@@ -198,7 +198,6 @@ function readItem() {
   scanning(item1, item2, docClient);
   /////// Add stations ////////
   removeStationTables();
-  console.log("PI: ", BuildArray);
   cArray = addStationTables(piQuantity);
   return cArray;
   /////////////////////////////
