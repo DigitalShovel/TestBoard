@@ -304,6 +304,7 @@ function addStationTables(quantity) {
     updateProgressCircle("PC" + i);
     BuildArray.push(new GraphsStation(i));
     BuildArray[i].createChart();
+    module.exports = { BuildArray };
   }
   //createCharts();
   return BuildArray;

@@ -97,15 +97,15 @@ function auth() {
 
 /////// Functions to run if login is Authorized /////////
 let registeredUser = false;
+let { BuildArray } = require('./station-table.js')
 
 function loadOnLogin() {
-  var returnedArray = readItem();
-  console.log("ARRAY", returnedArray);
-  readCT(returnedArray);
+  readItem();
+  readCT();
   registeredUser = true;
   /////////////// Refresh chart every 5 seconds /////////////
   var inverval_timer = setInterval(function () {
-    readCT(returnedArray);
+    readCT();
   }, 5000);
 }
 /////////////////////////////////////////////////////////
@@ -114,11 +114,9 @@ function loadOnLogin() {
 const dataPerPlot = 91;
 let maxDataPerChart = dataPerPlot; // Number of data plus one
 
-var cArray;
-
-function readCT(Array) {
+function readCT() {
   var docClient = new AWS.DynamoDB.DocumentClient();
-  console.log("Reading DB: ", Array);
+  console.log("Reading DB: ", BuildArray);
 
   var ctItem = {
     TableName: "IoT_Result",
