@@ -100,6 +100,7 @@ let registeredUser = false;
 
 function loadOnLogin() {
   var returnedArray = readItem();
+  console.log("ARRAY", returnedArray);
   readCT(returnedArray);
   registeredUser = true;
   /////////////// Refresh chart every 5 seconds /////////////
