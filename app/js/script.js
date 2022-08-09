@@ -117,13 +117,14 @@ var cArray;
 
 function readCT() {
   var docClient = new AWS.DynamoDB.DocumentClient();
+  console.log("Reading DB");
 
   var ctItem = {
     TableName: "IoT_Result",
     KeyConditionExpression: 'Station = :station and #Time > :lastTime',
     ExpressionAttributeValues: {
-      ':station': chartARRAY[1].station,
-      ':lastTime': chartARRAY[1].timeREF
+      ':station': cArray[1].station,
+      ':lastTime': cArray[1].timeREF
     },
     ExpressionAttributeNames: {
       "#Time": "Time"
