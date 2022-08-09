@@ -303,16 +303,7 @@ function addStationTables(quantity) {
         `);
     updateProgressCircle("PC" + i);
     BuildArray.push(new GraphsStation(i));
-    for (var k=1; k <= 6; k++) {
-        for (var l=1; l <= 8; l++) {
-            new Chart(document.getElementById('T'+i+'G'+k+'C'+l).getContext('2d'), config);
-            document.getElementById('T'+i+'G'+k+'C'+l).addEventListener('wheel', (e) => {
-                scrollWheel(e, document.getElementById('T'+i+'G'+k+'C'+l));
-                });
-            }
-        }   
-
-    //BuildArray[i].createChart();
+    BuildArray[i].createChart();
   }
   //createCharts();
   return BuildArray;
