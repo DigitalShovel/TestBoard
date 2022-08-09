@@ -99,6 +99,7 @@ function auth() {
 let registeredUser = false;
 
 function loadOnLogin() {
+  removeStationTables();
   readItem();
   readCT();
   registeredUser = true;
