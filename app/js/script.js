@@ -97,7 +97,6 @@ function auth() {
 
 /////// Functions to run if login is Authorized /////////
 let registeredUser = false;
-let { BuildArray } = require('./station-table.js')
 
 function loadOnLogin() {
   readItem();
@@ -199,7 +198,7 @@ function readItem() {
   scanning(item1, item2, docClient);
   /////// Add stations ////////
   removeStationTables();
-  console.log("PI: ", piQuantity);
+  console.log("PI: ", BuildArray);
   cArray = addStationTables(piQuantity);
   return cArray;
   /////////////////////////////
