@@ -23,7 +23,7 @@ function addStationTables(quantity) {
                         <button id="T${i}G1" onclick="showPopup('T${i}P1')" class="btn btn--unstyled popup__btn-show">View Graphs</button>
                         <div id="T${i}P1" class="popup">
                             <div class="popup__grid">
-                                <div class="popup__grid-item" style=" float: left; width: 150px; overflow:scroll; ">
+                                <div class="popup__grid-item">
                                     <canvas id="T${i}G1C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="popup__grid-item">
