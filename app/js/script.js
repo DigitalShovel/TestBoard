@@ -207,7 +207,7 @@ function readItem() {
 ///////////////////  Scan Database in DynamoDB //////////////////////
 let piQtyOLD = 0;
 let espQtyOLD = 0;
-let piQuantity = 0;
+let piQuantity = 1;
 
 function scanning(PIList, ESPList, dynamClient){
   ///////////////////  Build PI List //////////////////////
