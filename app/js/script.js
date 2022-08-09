@@ -117,13 +117,13 @@ var cArray;
 
 function readCT() {
   var docClient = new AWS.DynamoDB.DocumentClient();
-  console.log("Reading DB");
+  console.log("Reading DB: ", cArray);
 
   var ctItem = {
     TableName: "IoT_Result",
     KeyConditionExpression: 'Station = :station and #Time > :lastTime',
     ExpressionAttributeValues: {
-      ':station': cArray[1].station,
+      ':station': 1,
       ':lastTime': cArray[1].timeREF
     },
     ExpressionAttributeNames: {
@@ -135,7 +135,6 @@ function readCT() {
       alert(JSON.stringify(err, undefined, 2));
     }
     else {
-      console.log("PLOT: ", cArray[1].channelARRAY[1][1]);
       for (let i=0; i < data['Count']; i++) {
         if (data['Items'][i]['Time'] > chartARRAY[1].timeREF){
           setProgress("PC"+data['Items'][i]['Station'], "PCT"+data['Items'][i]['Station'], data['Items'][i]['TestNumber'],data['Items'][i]['TotalTest']);
