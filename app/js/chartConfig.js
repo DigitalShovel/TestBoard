@@ -257,7 +257,7 @@ class GraphsStation {
         for (var k=1; k <= 6; k++) {
             this.CTARRAY = [0];
             for (var i=1; i <= 8; i++) {
-                this.CTARRAY.push(new Chart(document.getElementById('T'+this.station+'G'+k+'C'+i).getContext('2d'), config))
+                this.CTARRAY.push(new Chart(document.getElementById('T'+this.station+'G'+k+'C'+i).getContext('2d'), this.config))
                 this.CTARRAY[i].ctx.onclick = moveScroll(this.CTARRAY[i]);
                 this.CTARRAY[i].canvas.addEventListener('wheel', (e) => {
                     scrollWheel(e, this.CTARRAY[i]);
