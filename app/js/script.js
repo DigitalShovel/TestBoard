@@ -200,19 +200,23 @@ function readItem() {
     ProjectionExpression: "MacAddress"
   };
   scanning(item1, item2, docClient);
+  /////// Add stations ////////
+  removeStationTables();
+  console.log("PI QTY: ", piQuantity);
+  addStationTables(piQuantity);
+  /////////////////////////////
 }
 
 ///////////////////  Scan Database in DynamoDB //////////////////////
 
 function scanning(PIList, ESPList, dynamClient){
   ///////////////////  Build PI List //////////////////////
-  var piQty = 0;
   dynamClient.scan(PIList, function(err, data) {
     if (err) {
       location.replace(urlAccess);
     } 
     else {
-      piQty = parseInt(JSON.stringify(data['Count'], "0", 2));
+      piQuantity = parseInt(JSON.stringify(data['Count'], "0", 2));
       for (let i = 0; i < piQtyOLD; i++) {
         document.getElementById("PI#"+i).innerHTML = "Empty";
       }
@@ -245,10 +249,5 @@ function scanning(PIList, ESPList, dynamClient){
     }
   }
   );
-  /////// Add stations ////////
-  removeStationTables();
-  console.log("PI QTY: ", piQty);
-  addStationTables(piQty);
-  /////////////////////////////
 }
 //////////////////////////////////////////////////////////
