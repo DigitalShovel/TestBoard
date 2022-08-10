@@ -199,7 +199,7 @@ function readItem() {
     TableName: "IoT_Testing_Unit_ESP32",
     ProjectionExpression: "MacAddress"
   };
-  piQuantity = scanning(item1, item2, docClient);
+  scanning(item1, item2, docClient);
   /////// Add stations ////////
   removeStationTables();
   console.log("PI QTY: ", piQuantity);
@@ -217,13 +217,13 @@ function scanning(PIList, ESPList, dynamClient){
       location.replace(urlAccess);
     } 
     else {
-      var piQty = parseInt(JSON.stringify(data['Count'], "0", 2));
+      piQuantity = parseInt(JSON.stringify(data['Count'], "0", 2));
       for (let i = 0; i < piQtyOLD; i++) {
         document.getElementById("PI#"+i).innerHTML = "Empty";
       }
-      piQtyOLD = piQty;
-      if (piQty > 0){
-        for (let i = 0; i < piQty; i++) {
+      piQtyOLD = piQuantity;
+      if (piQuantity > 0){
+        for (let i = 0; i < piQuantity; i++) {
           document.getElementById("PI#"+i).innerHTML = JSON.stringify(data['Items'][i]['MacAddress'], "Empty", 2);
         }
       }
@@ -250,6 +250,5 @@ function scanning(PIList, ESPList, dynamClient){
     }
   }
   );
-  return piQty;
 }
 //////////////////////////////////////////////////////////
