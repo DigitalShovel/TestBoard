@@ -98,7 +98,6 @@ function auth() {
 /////// Functions to run if login is Authorized ////////
 
 function loadOnLogin() {
-  debugger;
   readItem();
 }
 /////////////////////////////////////////////////////////
@@ -211,7 +210,6 @@ function readItem() {
 
 function scanning(PIList, ESPList, dynamClient){
   ///////////////////  Build PI List //////////////////////
-  debugger
   dynamClient.scan(PIList, function(err, data) {
     if (err) {
       location.replace(urlAccess);
@@ -228,7 +226,6 @@ function scanning(PIList, ESPList, dynamClient){
       }
       piQtyOLD = piQuantity;
       if (piQuantity > 0){
-        debugger
         for (let i = 0; i < piQuantity; i++) {
           document.getElementById("PI#"+i).innerHTML = JSON.stringify(data['Items'][i]['MacAddress'], "Empty", 2);
         }
