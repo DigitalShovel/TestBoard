@@ -99,7 +99,6 @@ function auth() {
 
 function loadOnLogin() {
   readItem();
-  readItem();
   /////////////// Refresh chart every 5 seconds /////////////
   var inverval_timer = setInterval(function () {
     readCT();
@@ -111,7 +110,7 @@ function loadOnLogin() {
 const dataPerPlot = 91;
 let maxDataPerChart = dataPerPlot; // Number of data plus one
 
-export function readCT() {
+function readCT() {
   var docClient = new AWS.DynamoDB.DocumentClient();
 
   var ctItem = {
@@ -188,7 +187,7 @@ let piQtyOLD = 0;
 let espQtyOLD = 0;
 var piQuantity = 0;
 
-export function readItem() {
+function readItem() {
   var docClient = new AWS.DynamoDB.DocumentClient();
 
   var item1 = {
