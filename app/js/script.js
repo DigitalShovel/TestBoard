@@ -160,7 +160,7 @@ function addDataChart(chart, label, data1, data2) {
     maxDataPerChart = dataPerPlot;
   }
   chart.options.scales.x.max = maxDataPerChart-1;
-  chart.update();
+  //chart.update();
   //chart.render();
 }
 
