@@ -185,8 +185,7 @@ table {
   }
 }
 
-.btn {
-
+.btn:hover {
   .station__icon--charts {
     rect:nth-child(1) {
       fill: var(--blue-700);
