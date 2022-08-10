@@ -213,6 +213,7 @@ function readItem() {
 
 function scanning(PIList, ESPList, dynamClient){
   ///////////////////  Build PI List //////////////////////
+  debugger
   dynamClient.scan(PIList, function(err, data) {
     if (err) {
       location.replace(urlAccess);
