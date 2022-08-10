@@ -98,6 +98,7 @@ function auth() {
 /////// Functions to run if login is Authorized ////////
 
 function loadOnLogin() {
+  debugger;
   readItem();
 }
 /////////////////////////////////////////////////////////
