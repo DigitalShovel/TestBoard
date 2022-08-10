@@ -328,12 +328,7 @@ function addStationTables(quantity) {
         );
     }
     BuildArray.push(chArray);
-
-    //BuildArray.push(new GraphsStation(i));
-    //BuildArray[i].createChart();
   }
-  //createCharts();
-  return BuildArray;
 }
 
 function removeStationTables() {

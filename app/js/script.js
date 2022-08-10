@@ -132,12 +132,16 @@ function readCT() {
       for (let i=0; i < data['Count']; i++) {
         if (data['Items'][i]['Time'] > BuildArray[1][1][1].timeREF){
           setProgress("PC"+data['Items'][i]['Station'], "PCT"+data['Items'][i]['Station'], data['Items'][i]['TestNumber'],data['Items'][i]['TotalTest']);
-          BuildArray[1][1][1].timeREF = data['Items'][i]['Time'];
+          for(var z=1; z <= 8; z++){
+            BuildArray[1][1][z].timeREF = data['Items'][i]['Time'];
+          }
         }
         var timeResult = JSON.stringify(data['Items'][i]['Time']);
-        var valueCT = extractData(data['Items'][i], 'CTPI', 1, 1);
-        var valueESP = extractData(data['Items'][i], 'CTESP', 1, 1);
-        addDataChart(BuildArray[1][1][1].chart, timeResult.substring(9,18), valueCT, valueESP);
+        for(var m=1; m <= 2; m++){
+          var valueCT = extractData(data['Items'][i], 'CTPI', 1, m);
+          var valueESP = extractData(data['Items'][i], 'CTESP', 1, m);
+          addDataChart(BuildArray[1][1][m].chart, timeResult.substring(9,18), valueCT, valueESP);
+        }
       }
     }
   });
