@@ -111,7 +111,7 @@ function loadOnLogin() {
 const dataPerPlot = 91;
 let maxDataPerChart = dataPerPlot; // Number of data plus one
 
-function readCT() {
+export function readCT() {
   var docClient = new AWS.DynamoDB.DocumentClient();
 
   var ctItem = {
@@ -188,7 +188,7 @@ let piQtyOLD = 0;
 let espQtyOLD = 0;
 var piQuantity = 0;
 
-function readItem() {
+export function readItem() {
   var docClient = new AWS.DynamoDB.DocumentClient();
 
   var item1 = {
