@@ -211,7 +211,6 @@ function scanning(PIList, ESPList, dynamClient){
       piQuantity = parseInt(JSON.stringify(data['Count'], "0", 2));
       // Add Table
       removeStationTables();
-      console.log("PI QTY: ", piQuantity);
       addStationTables(piQuantity);
 
       for (let i = 0; i < piQtyOLD; i++) {
@@ -250,6 +249,5 @@ function scanning(PIList, ESPList, dynamClient){
 //////////////////////////////////////////////////////////
 
 $( document ).ready(function() {
-  // Handler for .ready() called.
   checkLogin() 
 });
