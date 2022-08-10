@@ -161,6 +161,7 @@ function addDataChart(chart, label, data1, data2) {
   }
   chart.options.scales.x.max = maxDataPerChart-1;
   //chart.update("active");
+  chart.render();
 }
 
 function removeData(chart) {
