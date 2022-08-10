@@ -185,8 +185,14 @@ table {
   }
 }
 
+.station__icon--charts {
+  rect:nth-child(1) {
+    fill: red;
+  }
+}
+
 .station__icon:hover {
-  
+
   .station__icon--charts {
     rect:nth-child(1) {
       fill: var(--blue-700);
