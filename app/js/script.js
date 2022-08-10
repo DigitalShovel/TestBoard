@@ -118,7 +118,7 @@ function readCT() {
     KeyConditionExpression: 'Station = :station and #Time > :lastTime',
     ExpressionAttributeValues: {
       ':station': 1,
-      ':lastTime': BuildArray[1].timeREF
+      ':lastTime': BuildArray[1][1][1].timeREF
     },
     ExpressionAttributeNames: {
       "#Time": "Time"
@@ -130,9 +130,9 @@ function readCT() {
     }
     else {
       for (let i=0; i < data['Count']; i++) {
-        if (data['Items'][i]['Time'] > BuildArray[1].timeREF){
+        if (data['Items'][i]['Time'] > BuildArray[1][1][1].timeREF){
           setProgress("PC"+data['Items'][i]['Station'], "PCT"+data['Items'][i]['Station'], data['Items'][i]['TestNumber'],data['Items'][i]['TotalTest']);
-          BuildArray[1].timeREF = data['Items'][i]['Time'];
+          BuildArray[1][1][1].timeREF = data['Items'][i]['Time'];
         }
         var timeResult = JSON.stringify(data['Items'][i]['Time']);
         var valueCT = extractData(data['Items'][i], 'CTPI', 1, 1);
