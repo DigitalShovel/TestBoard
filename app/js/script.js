@@ -198,8 +198,7 @@ function readItem() {
   scanning(item1, item2, docClient);
   /////// Add stations ////////
   removeStationTables();
-  cArray = addStationTables(piQuantity);
-  return cArray;
+  addStationTables(piQuantity);
   /////////////////////////////
 }
 /////////////////////////////////////////////////////////
@@ -217,6 +216,11 @@ function scanning(PIList, ESPList, dynamClient){
     } 
     else {
       piQuantity = parseInt(JSON.stringify(data['Count'], "0", 2));
+      /////////////// Refresh chart every 5 seconds /////////////
+      var inverval_timer = setInterval(function () {
+        readCT();
+      }, 5000);
+      ///////////////////////////////////////////////////////////
       for (let i = 0; i < piQtyOLD; i++) {
         document.getElementById("PI#"+i).innerHTML = "Empty";
       }
@@ -250,6 +254,4 @@ function scanning(PIList, ESPList, dynamClient){
   }
   );
 }
-
-loadOnLogin();
 //////////////////////////////////////////////////////////
