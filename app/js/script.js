@@ -143,7 +143,7 @@ function readCT(sta) {
 }
 //////////////////////////////////////////////////////////
 
-////////////// Check Last Label Value ////////////////////
+////////////// Update all available charts ////////////////////
 
 function updateCharts(stations){
   for (var statio=1; statio <= stations; statio++){
