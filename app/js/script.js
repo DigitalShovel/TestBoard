@@ -91,7 +91,14 @@ function auth() {
             "cognito-idp.ca-central-1.amazonaws.com/ca-central-1_Lf5pWzdj2": idToken
           }
         }); 
-  //loadOnLogin();      /// Load all the function needed, including creating objects
+  loadOnLogin();      /// Load all the function needed, including creating objects
+}
+/////////////////////////////////////////////////////////
+
+/////// Functions to run if login is Authorized ////////
+
+function loadOnLogin() {
+  readItem();
 }
 /////////////////////////////////////////////////////////
 
