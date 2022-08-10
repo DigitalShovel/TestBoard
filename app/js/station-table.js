@@ -20,7 +20,28 @@ function addStationTables(quantity) {
                         Channel #1
                     </td>
                     <td>
-                        <button id="T${i}G1" onclick="showPopup('T${i}P1')" class="btn btn--unstyled popup__btn-show">View Graphs</button>
+                        <button id="T${i}G1" onclick="showPopup('T${i}P1')" class="btn btn--unstyled popup__btn-show">
+                        <svg class="station__icon station__icon--charts" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g filter="url(#filter0_i_118_644)">
+                            <rect width="22" height="22" rx="3" fill="#2B3F55"/>
+                            <rect width="1.90909" height="9.54545" rx="0.954545" transform="matrix(-1 0 0 1 16.7273 7.18182)" fill="#88A5C3"/>
+                            <rect width="1.90909" height="11.4545" rx="0.954545" transform="matrix(-1 0 0 1 13.5454 5.27274)" fill="#4D7299"/>
+                            <rect width="1.90909" height="7" rx="0.954545" transform="matrix(-1 0 0 1 10.3636 9.72726)" fill="#88A5C3"/>
+                            <rect width="1.90909" height="8.27273" rx="0.954545" transform="matrix(-1 0 0 1 7.18176 8.45456)" fill="#4D7299"/>
+                            </g>
+                            <defs>
+                            <filter id="filter0_i_118_644" x="0" y="0" width="22" height="22" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                            <feOffset dy="1"/>
+                            <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.05 0"/>
+                            <feBlend mode="normal" in2="shape" result="effect1_innerShadow_118_644"/>
+                            </filter>
+                            </defs>
+                        </svg>                        
+                        </button>
                         <div id="T${i}P1" class="popup">
                             <div class="popup__grid">
                                 <div class="popup__grid-item">
@@ -67,7 +88,28 @@ function addStationTables(quantity) {
                         Channel #2
                     </td>
                     <td>
-                        <button id="T${i}G2" onclick="showPopup('T${i}P2')" class="btn btn--unstyled popup__btn-show">View Graphs</button>
+                        <button id="T${i}G2" onclick="showPopup('T${i}P2')" class="btn btn--unstyled popup__btn-show">
+                        <svg class="station__icon station__icon--charts" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g filter="url(#filter0_i_118_644)">
+                            <rect width="22" height="22" rx="3" fill="#2B3F55"/>
+                            <rect width="1.90909" height="9.54545" rx="0.954545" transform="matrix(-1 0 0 1 16.7273 7.18182)" fill="#88A5C3"/>
+                            <rect width="1.90909" height="11.4545" rx="0.954545" transform="matrix(-1 0 0 1 13.5454 5.27274)" fill="#4D7299"/>
+                            <rect width="1.90909" height="7" rx="0.954545" transform="matrix(-1 0 0 1 10.3636 9.72726)" fill="#88A5C3"/>
+                            <rect width="1.90909" height="8.27273" rx="0.954545" transform="matrix(-1 0 0 1 7.18176 8.45456)" fill="#4D7299"/>
+                            </g>
+                            <defs>
+                            <filter id="filter0_i_118_644" x="0" y="0" width="22" height="22" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                            <feOffset dy="1"/>
+                            <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.05 0"/>
+                            <feBlend mode="normal" in2="shape" result="effect1_innerShadow_118_644"/>
+                            </filter>
+                            </defs>
+                        </svg> 
+                        </button>
                         <div id="T${i}P2" class="popup">
                             <div class="popup__grid">
                                 <div class="popup__grid-item">
@@ -114,7 +156,28 @@ function addStationTables(quantity) {
                         Channel #3
                     </td>
                     <td>
-                        <button id="T${i}G3" onclick="showPopup('T${i}P3')" class="btn btn--unstyled popup__btn-show">View Graphs</button>
+                        <button id="T${i}G3" onclick="showPopup('T${i}P3')" class="btn btn--unstyled popup__btn-show">
+                        <svg class="station__icon station__icon--charts" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g filter="url(#filter0_i_118_644)">
+                            <rect width="22" height="22" rx="3" fill="#2B3F55"/>
+                            <rect width="1.90909" height="9.54545" rx="0.954545" transform="matrix(-1 0 0 1 16.7273 7.18182)" fill="#88A5C3"/>
+                            <rect width="1.90909" height="11.4545" rx="0.954545" transform="matrix(-1 0 0 1 13.5454 5.27274)" fill="#4D7299"/>
+                            <rect width="1.90909" height="7" rx="0.954545" transform="matrix(-1 0 0 1 10.3636 9.72726)" fill="#88A5C3"/>
+                            <rect width="1.90909" height="8.27273" rx="0.954545" transform="matrix(-1 0 0 1 7.18176 8.45456)" fill="#4D7299"/>
+                            </g>
+                            <defs>
+                            <filter id="filter0_i_118_644" x="0" y="0" width="22" height="22" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                            <feOffset dy="1"/>
+                            <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.05 0"/>
+                            <feBlend mode="normal" in2="shape" result="effect1_innerShadow_118_644"/>
+                            </filter>
+                            </defs>
+                        </svg> 
+                        </button>
                         <div id="T${i}P3" class="popup">
                             <div class="popup__grid">
                                 <div class="popup__grid-item">
@@ -161,7 +224,28 @@ function addStationTables(quantity) {
                         Channel #4
                     </td>
                     <td>
-                        <button id="T${i}G4" onclick="showPopup('T${i}P4')" class="btn btn--unstyled popup__btn-show">View Graphs</button>
+                        <button id="T${i}G4" onclick="showPopup('T${i}P4')" class="btn btn--unstyled popup__btn-show">
+                        <svg class="station__icon station__icon--charts" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g filter="url(#filter0_i_118_644)">
+                            <rect width="22" height="22" rx="3" fill="#2B3F55"/>
+                            <rect width="1.90909" height="9.54545" rx="0.954545" transform="matrix(-1 0 0 1 16.7273 7.18182)" fill="#88A5C3"/>
+                            <rect width="1.90909" height="11.4545" rx="0.954545" transform="matrix(-1 0 0 1 13.5454 5.27274)" fill="#4D7299"/>
+                            <rect width="1.90909" height="7" rx="0.954545" transform="matrix(-1 0 0 1 10.3636 9.72726)" fill="#88A5C3"/>
+                            <rect width="1.90909" height="8.27273" rx="0.954545" transform="matrix(-1 0 0 1 7.18176 8.45456)" fill="#4D7299"/>
+                            </g>
+                            <defs>
+                            <filter id="filter0_i_118_644" x="0" y="0" width="22" height="22" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                            <feOffset dy="1"/>
+                            <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.05 0"/>
+                            <feBlend mode="normal" in2="shape" result="effect1_innerShadow_118_644"/>
+                            </filter>
+                            </defs>
+                        </svg> 
+                        </button>
                         <div id="T${i}P4" class="popup">
                             <div class="popup__grid">
                                 <div class="popup__grid-item">
@@ -208,7 +292,28 @@ function addStationTables(quantity) {
                         Channel #5
                     </td>
                     <td>
-                        <button id="T${i}G5" onclick="showPopup('T${i}P5')" class="btn btn--unstyled popup__btn-show">View Graphs</button>
+                        <button id="T${i}G5" onclick="showPopup('T${i}P5')" class="btn btn--unstyled popup__btn-show">
+                        <svg class="station__icon station__icon--charts" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g filter="url(#filter0_i_118_644)">
+                            <rect width="22" height="22" rx="3" fill="#2B3F55"/>
+                            <rect width="1.90909" height="9.54545" rx="0.954545" transform="matrix(-1 0 0 1 16.7273 7.18182)" fill="#88A5C3"/>
+                            <rect width="1.90909" height="11.4545" rx="0.954545" transform="matrix(-1 0 0 1 13.5454 5.27274)" fill="#4D7299"/>
+                            <rect width="1.90909" height="7" rx="0.954545" transform="matrix(-1 0 0 1 10.3636 9.72726)" fill="#88A5C3"/>
+                            <rect width="1.90909" height="8.27273" rx="0.954545" transform="matrix(-1 0 0 1 7.18176 8.45456)" fill="#4D7299"/>
+                            </g>
+                            <defs>
+                            <filter id="filter0_i_118_644" x="0" y="0" width="22" height="22" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                            <feOffset dy="1"/>
+                            <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.05 0"/>
+                            <feBlend mode="normal" in2="shape" result="effect1_innerShadow_118_644"/>
+                            </filter>
+                            </defs>
+                        </svg> 
+                        </button>
                         <div id="T${i}P5" class="popup">
                             <div class="popup__grid">
                                 <div class="popup__grid-item">
@@ -255,7 +360,28 @@ function addStationTables(quantity) {
                         Channel #6
                     </td>
                     <td>
-                        <button id="T${i}G6" onclick="showPopup('T${i}P6')" class="btn btn--unstyled popup__btn-show">View Graphs</button>
+                        <button id="T${i}G6" onclick="showPopup('T${i}P6')" class="btn btn--unstyled popup__btn-show">
+                        <svg class="station__icon station__icon--charts" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g filter="url(#filter0_i_118_644)">
+                            <rect width="22" height="22" rx="3" fill="#2B3F55"/>
+                            <rect width="1.90909" height="9.54545" rx="0.954545" transform="matrix(-1 0 0 1 16.7273 7.18182)" fill="#88A5C3"/>
+                            <rect width="1.90909" height="11.4545" rx="0.954545" transform="matrix(-1 0 0 1 13.5454 5.27274)" fill="#4D7299"/>
+                            <rect width="1.90909" height="7" rx="0.954545" transform="matrix(-1 0 0 1 10.3636 9.72726)" fill="#88A5C3"/>
+                            <rect width="1.90909" height="8.27273" rx="0.954545" transform="matrix(-1 0 0 1 7.18176 8.45456)" fill="#4D7299"/>
+                            </g>
+                            <defs>
+                            <filter id="filter0_i_118_644" x="0" y="0" width="22" height="22" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                            <feOffset dy="1"/>
+                            <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.05 0"/>
+                            <feBlend mode="normal" in2="shape" result="effect1_innerShadow_118_644"/>
+                            </filter>
+                            </defs>
+                        </svg> 
+                        </button>
                         <div id="T${i}P6" class="popup">
                             <div class="popup__grid">
                                 <div class="popup__grid-item">
