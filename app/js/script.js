@@ -206,12 +206,13 @@ function readItem() {
 
 function scanning(PIList, ESPList, dynamClient){
   ///////////////////  Build PI List //////////////////////
+  var piQty;
   dynamClient.scan(PIList, function(err, data) {
     if (err) {
       location.replace(urlAccess);
     } 
     else {
-      piQuantity = parseInt(JSON.stringify(data['Count'], "0", 2));
+      piQty = parseInt(JSON.stringify(data['Count'], "0", 2));
       for (let i = 0; i < piQtyOLD; i++) {
         document.getElementById("PI#"+i).innerHTML = "Empty";
       }
@@ -246,8 +247,8 @@ function scanning(PIList, ESPList, dynamClient){
   );
   /////// Add stations ////////
   removeStationTables();
-  console.log("PI QTY: ", piQuantity);
-  addStationTables(piQuantity);
+  console.log("PI QTY: ", piQty);
+  addStationTables(piQty);
   /////////////////////////////
 }
 //////////////////////////////////////////////////////////
