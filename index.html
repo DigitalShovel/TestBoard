@@ -210,10 +210,12 @@
   </main>
 </body>
 
-<script language="'javascript">window.onload = function afterWebPageLoad() {
-  alert('Loaded');
-  readItem();
+<script language="'javascript">
+  function afterWebPageLoad() {
+    alert('Loaded');
+    readItem();
   }
+  window.onload = function afterWebPageLoad();
 </script>
 
 
