@@ -152,28 +152,6 @@ function scrollWheel(wheelEvent) {
     chart.update();
 }
 
-///////////////// Build array of charts ///////////////////
-let listOfCharts = [];
-///////// Attach the chart variable to the Canvas //////////
-function createCharts(){
-    var chart1 = document.getElementById('T1G1C1').getContext('2d');
-    listOfCharts.push([new Chart(chart1, config)]);
-
-    listOfCharts[0][0].ctx.onclick = moveScroll(listOfCharts[0][0]);
-    listOfCharts[0][0].canvas.addEventListener('wheel', (e) => {
-    scrollWheel(e, listOfCharts[0][0]);
-});
-}
-//////////////////////////////////////////////////////////
-
-///////// Build array of dateLabels reference //////////
-const lastLabel = {
-    dateLabel: "00/00/00 00:00:00"
-  }
-let listOfDateLabel = [];
-listOfDateLabel.push([Object.create(lastLabel)]);
-/////////////////////////////////////
-
 ///////////////// Creating Class for the graphs /////////////////
 class stationCharts {
     timeREF = "00/00/00 00:00:00"
@@ -259,6 +237,7 @@ class stationCharts {
         chartGraph.canvas.addEventListener('wheel', (e) => {
             scrollWheel(e);
             });
+        //chartGraph.ctx.onclick = moveScroll(chartGraph);
         this.chart = chartGraph;
     }
 
