@@ -254,3 +254,8 @@ function scanning(PIList, ESPList, dynamClient){
   );
 }
 //////////////////////////////////////////////////////////
+
+$( document ).ready(function() {
+  // Handler for .ready() called.
+  checkLogin() 
+});
