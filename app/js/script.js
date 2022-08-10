@@ -100,41 +100,45 @@ function auth() {
 const dataPerPlot = 91;
 let maxDataPerChart = dataPerPlot; // Number of data plus one
 
-function readCT() {
-  var docClient = new AWS.DynamoDB.DocumentClient();
+function readCT(sta) {
+  if (sta != 0){
+    var docClient = new AWS.DynamoDB.DocumentClient();
 
-  var ctItem = {
-    TableName: "IoT_Result",
-    KeyConditionExpression: 'Station = :station and #Time > :lastTime',
-    ExpressionAttributeValues: {
-      ':station': 1,
-      ':lastTime': BuildArray[1][1][1].timeREF
-    },
-    ExpressionAttributeNames: {
-      "#Time": "Time"
-    }
-  };
-  docClient.query(ctItem, function(err, data) {
-    if (err) {
-      alert(JSON.stringify(err, undefined, 2));
-    }
-    else {
-      for (let i=0; i < data['Count']; i++) {
-        if (data['Items'][i]['Time'] > BuildArray[1][1][1].timeREF){
-          setProgress("PC"+data['Items'][i]['Station'], "PCT"+data['Items'][i]['Station'], data['Items'][i]['TestNumber'],data['Items'][i]['TotalTest']);
-          for(var z=1; z <= 8; z++){
-            BuildArray[1][1][z].timeREF = data['Items'][i]['Time'];
+    var ctItem = {
+      TableName: "IoT_Result",
+      KeyConditionExpression: 'Station = :station and #Time > :lastTime',
+      ExpressionAttributeValues: {
+        ':station': sta,
+        ':lastTime': BuildArray[1][1][1].timeREF
+      },
+      ExpressionAttributeNames: {
+        "#Time": "Time"
+      }
+    };
+    docClient.query(ctItem, function(err, data) {
+      if (err) {
+        alert(JSON.stringify(err, undefined, 2));
+      }
+      else {
+        for (let i=0; i < data['Count']; i++) {
+          if (data['Items'][i]['Time'] > BuildArray[sta][1][1].timeREF){
+            setProgress("PC"+data['Items'][i]['Station'], "PCT"+data['Items'][i]['Station'], data['Items'][i]['TestNumber'],data['Items'][i]['TotalTest']);
+            for(var z=1; z <= 8; z++){
+              BuildArray[sta][1][z].timeREF = data['Items'][i]['Time'];
+            }
+          }
+          var timeResult = JSON.stringify(data['Items'][i]['Time']);
+          for(var n=1; n <=6; n++){
+            for(var m=1; m <= 8; m++){
+              var valueCT = extractData(data['Items'][i], 'CTPI', n, m);
+              var valueESP = extractData(data['Items'][i], 'CTESP', n, m);
+              addDataChart(BuildArray[sta][n][m].chart, timeResult.substring(9,18), valueCT, valueESP);
+            }
           }
         }
-        var timeResult = JSON.stringify(data['Items'][i]['Time']);
-        for(var m=1; m <= 8; m++){
-          var valueCT = extractData(data['Items'][i], 'CTPI', 1, m);
-          var valueESP = extractData(data['Items'][i], 'CTESP', 1, m);
-          addDataChart(BuildArray[1][1][m].chart, timeResult.substring(9,18), valueCT, valueESP);
-        }
       }
-    }
-  });
+    });
+  }
 }
 //////////////////////////////////////////////////////////
 
@@ -190,14 +194,6 @@ function readItem() {
     ProjectionExpression: "MacAddress"
   };
   scanning(item1, item2, docClient);
-  /////// Add stations ////////
-  
-  /////////////// Refresh chart every 5 seconds /////////////
-  var inverval_timer = setInterval(function () {
-    readCT();
-  }, 5000);
-  /////////////////////////////////////////////////////////
-  /////////////////////////////
 }
 
 ///////////////////  Scan Database in DynamoDB //////////////////////
@@ -213,8 +209,12 @@ function scanning(PIList, ESPList, dynamClient){
       /////////////// Add Station Table ////////////////////
       removeStationTables();
       addStationTables(piQuantity);
-      readCT();
-      ///////////////////////////////////////////////
+      readCT(piQuantity);
+      /////////////// Refresh chart every 5 seconds /////////////
+      var inverval_timer = setInterval(function () {
+        readCT(piQuantity);
+      }, 5000);
+      /////////////////////////////////////////////////////////
       for (let i = 0; i < piQtyOLD; i++) {
         document.getElementById("PI#"+i).innerHTML = "Empty";
       }
