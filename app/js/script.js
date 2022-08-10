@@ -200,11 +200,6 @@ function readItem() {
     ProjectionExpression: "MacAddress"
   };
   scanning(item1, item2, docClient);
-  /////// Add stations ////////
-  removeStationTables();
-  console.log("PI QTY: ", piQuantity);
-  addStationTables(piQuantity);
-  /////////////////////////////
 }
 
 ///////////////////  Scan Database in DynamoDB //////////////////////
@@ -249,5 +244,10 @@ function scanning(PIList, ESPList, dynamClient){
     }
   }
   );
+  /////// Add stations ////////
+  removeStationTables();
+  console.log("PI QTY: ", piQuantity);
+  addStationTables(piQuantity);
+  /////////////////////////////
 }
 //////////////////////////////////////////////////////////
