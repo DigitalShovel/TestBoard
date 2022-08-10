@@ -303,8 +303,8 @@ function addStationTables(quantity) {
         `);
     updateProgressCircle("PC" + i);
     // Create charts for Stations #STA
+    var chArray = [0];
     for(var k=1; k <= 6; k++){
-        var chArray = [0];
         var CT1 = new stationCharts(i, k, 1);
         var CT2 = new stationCharts(i, k, 2);
         var CT3 = new stationCharts(i, k, 3);
@@ -326,8 +326,8 @@ function addStationTables(quantity) {
                 0, CT1, CT2, CT3, CT4, CT5, CT6, CT7, CT8
             ]
         );
-        BuildArray[i].push(chArray);
     }
+    BuildArray.push(chArray);
 
     //BuildArray.push(new GraphsStation(i));
     //BuildArray[i].createChart();
