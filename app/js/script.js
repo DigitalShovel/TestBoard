@@ -199,7 +199,7 @@ function readItem() {
     TableName: "IoT_Testing_Unit_ESP32",
     ProjectionExpression: "MacAddress"
   };
-  scanning(item1, item2, docClient);
+  piQuantity = scanning(item1, item2, docClient);
   /////// Add stations ////////
   removeStationTables();
   console.log("PI QTY: ", piQuantity);
@@ -250,5 +250,6 @@ function scanning(PIList, ESPList, dynamClient){
     }
   }
   );
+  return piQuantity;
 }
 //////////////////////////////////////////////////////////
