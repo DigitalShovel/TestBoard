@@ -139,10 +139,21 @@ function readCT(sta) {
       }
     });
   }
+  updateCharts(sta);
 }
 //////////////////////////////////////////////////////////
 
 ////////////// Check Last Label Value ////////////////////
+
+function updateCharts(stations){
+  for (var statio=1; statio <= stations; statio++){
+    for(var n=1; n <=6; n++){
+      for(var m=1; m <= 8; m++){
+        BuildArray[sta][n][m].chart.update();
+      }
+    }
+  }
+}
 
 ///////////////// Collect data from DB //////////////////
 function extractData(data, attribute, channel, ctnum) {
@@ -160,8 +171,6 @@ function addDataChart(chart, label, data1, data2) {
     maxDataPerChart = dataPerPlot;
   }
   chart.options.scales.x.max = maxDataPerChart-1;
-  //chart.update();
-  //chart.render();
 }
 
 function removeData(chart) {
