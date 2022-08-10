@@ -91,19 +91,7 @@ function auth() {
             "cognito-idp.ca-central-1.amazonaws.com/ca-central-1_Lf5pWzdj2": idToken
           }
         }); 
-  //loadOnLogin();      /// Load all the function needed, including creating objects
-}
-/////////////////////////////////////////////////////////
-
-/////// Functions to run if login is Authorized ////////
-
-function loadOnLogin() {
-  readItem();
-  readItem();
-  /////////////// Refresh chart every 5 seconds /////////////
-  var inverval_timer = setInterval(function () {
-    readCT();
-  }, 5000);
+  readItem();      /// Load all the function needed, including creating objects
 }
 /////////////////////////////////////////////////////////
 
@@ -111,7 +99,7 @@ function loadOnLogin() {
 const dataPerPlot = 91;
 let maxDataPerChart = dataPerPlot; // Number of data plus one
 
-export function readCT() {
+function readCT() {
   var docClient = new AWS.DynamoDB.DocumentClient();
 
   var ctItem = {
@@ -188,7 +176,7 @@ let piQtyOLD = 0;
 let espQtyOLD = 0;
 var piQuantity = 0;
 
-export function readItem() {
+function readItem() {
   var docClient = new AWS.DynamoDB.DocumentClient();
 
   var item1 = {
@@ -202,9 +190,12 @@ export function readItem() {
   };
   scanning(item1, item2, docClient);
   /////// Add stations ////////
-  removeStationTables();
-  console.log("PI QTY: ", piQuantity);
-  addStationTables(piQuantity);
+  
+  /////////////// Refresh chart every 5 seconds /////////////
+  var inverval_timer = setInterval(function () {
+    readCT();
+  }, 5000);
+  /////////////////////////////////////////////////////////
   /////////////////////////////
 }
 
@@ -218,6 +209,11 @@ function scanning(PIList, ESPList, dynamClient){
     } 
     else {
       piQuantity = parseInt(JSON.stringify(data['Count'], "0", 2));
+      // Add Table
+      removeStationTables();
+      addStationTables(piQuantity);
+      readCT();
+
       for (let i = 0; i < piQtyOLD; i++) {
         document.getElementById("PI#"+i).innerHTML = "Empty";
       }
@@ -252,3 +248,7 @@ function scanning(PIList, ESPList, dynamClient){
   );
 }
 //////////////////////////////////////////////////////////
+
+$( document ).ready(function() {
+  checkLogin() 
+});
