@@ -217,13 +217,13 @@ function scanning(PIList, ESPList, dynamClient){
       location.replace(urlAccess);
     } 
     else {
-      piQuantity = parseInt(JSON.stringify(data['Count'], "0", 2));
+      var piQty = parseInt(JSON.stringify(data['Count'], "0", 2));
       for (let i = 0; i < piQtyOLD; i++) {
         document.getElementById("PI#"+i).innerHTML = "Empty";
       }
-      piQtyOLD = piQuantity;
-      if (piQuantity > 0){
-        for (let i = 0; i < piQuantity; i++) {
+      piQtyOLD = piQty;
+      if (piQty > 0){
+        for (let i = 0; i < piQty; i++) {
           document.getElementById("PI#"+i).innerHTML = JSON.stringify(data['Items'][i]['MacAddress'], "Empty", 2);
         }
       }
@@ -250,6 +250,6 @@ function scanning(PIList, ESPList, dynamClient){
     }
   }
   );
-  return piQuantity;
+  return piQty;
 }
 //////////////////////////////////////////////////////////
