@@ -250,4 +250,6 @@ function scanning(PIList, ESPList, dynamClient){
   }
   );
 }
+
+loadOnLogin();
 //////////////////////////////////////////////////////////
