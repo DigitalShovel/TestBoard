@@ -175,12 +175,11 @@ listOfDateLabel.push([Object.create(lastLabel)]);
 /////////////////////////////////////
 
 ///////////////// Creating Class for the graphs /////////////////
-class GraphsStation {
+class stationCharts {
+    timeREF = "00/00/00 00:00:00"
     testNUM = 0
     totalTEST = 0
-    timeREF = "00/00/00 00:00:00"
-    channelARRAY = [[0]]
-    CTARRAY = [0]
+    chart = 0
 
     //////////// Setup ////////////////
     data = {
@@ -200,7 +199,7 @@ class GraphsStation {
         tension: 0.1
         }]
     };
-    /////////////////////////////////////
+
     ///////////// Default config of charts ////////////////////
     config = {
     type: 'line',
@@ -248,27 +247,22 @@ class GraphsStation {
     },
     plugins: [moveChart]
     };
-/////////////////////////////////////////////////////////
 
-    constructor(station) {
-            this.station = station;
+    constructor(station, channel, ct) {
+        this.station = station;
+        this.channel = channel;
+        this.ct = ct;
     }
+
+    createChart() {
+        var chartGraph = new Chart(document.getElementById('T'+this.station+'G'+this.channel+'C'+this.ct).getContext('2d'), this.config);
+        chartGraph.canvas.addEventListener('wheel', (e) => {
+            scrollWheel(e);
+            });
+        this.chart = chartGraph;
+    }
+
     progressPercentage() {
         return Math.round((this.testNUM/this.totalTEST)*100);
-    }
-    createChart() {
-        for (var k=1; k <= 6; k++) {
-            this.CTARRAY = [0];
-            for (var i=1; i <= 8; i++) {
-                this.CTARRAY.push(new Chart(document.getElementById('T'+this.station+'G'+k+'C'+i).getContext('2d'), this.config))
-                //this.CTARRAY[i].ctx.onclick = moveScroll(this.CTARRAY[i]);
-                //console.log("DD: ", this.CTARRAY[i]);
-
-                this.CTARRAY[i].canvas.addEventListener('wheel', (e) => {
-                    scrollWheel(e);
-                    });
-            }
-            this.channelARRAY.push(this.CTARRAY)
-        }
     }
 }

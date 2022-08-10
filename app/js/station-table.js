@@ -302,8 +302,35 @@ function addStationTables(quantity) {
             </div>
         `);
     updateProgressCircle("PC" + i);
-    BuildArray.push(new GraphsStation(i));
-    BuildArray[i].createChart();
+    // Create charts for Stations #STA
+    for(var k=1; k <= 6; k++){
+        var chArray = [0];
+        var CT1 = new stationCharts(i, k, 1);
+        var CT2 = new stationCharts(i, k, 2);
+        var CT3 = new stationCharts(i, k, 3);
+        var CT4 = new stationCharts(i, k, 4);
+        var CT5 = new stationCharts(i, k, 5);
+        var CT6 = new stationCharts(i, k, 6);
+        var CT7 = new stationCharts(i, k, 7);
+        var CT8 = new stationCharts(i, k, 8);
+        CT1.createChart();
+        CT2.createChart();
+        CT3.createChart();
+        CT4.createChart();
+        CT5.createChart();
+        CT6.createChart();
+        CT7.createChart();
+        CT8.createChart();
+        chArray.push(
+            [
+                0, CT1, CT2, CT3, CT4, CT5, CT6, CT7, CT8
+            ]
+        );
+        BuildArray[i].push(chArray);
+    }
+
+    //BuildArray.push(new GraphsStation(i));
+    //BuildArray[i].createChart();
   }
   //createCharts();
   return BuildArray;

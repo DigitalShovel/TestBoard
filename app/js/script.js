@@ -99,7 +99,6 @@ function auth() {
 
 function loadOnLogin() {
   readItem();
-  //readCT();
   /////////////// Refresh chart every 5 seconds /////////////
   var inverval_timer = setInterval(function () {
     readCT();
@@ -138,7 +137,7 @@ function readCT() {
         var timeResult = JSON.stringify(data['Items'][i]['Time']);
         var valueCT = extractData(data['Items'][i], 'CTPI', 1, 1);
         var valueESP = extractData(data['Items'][i], 'CTESP', 1, 1);
-        addDataChart(BuildArray[1].channelARRAY[1][1], timeResult.substring(9,18), valueCT, valueESP);
+        addDataChart(BuildArray[1][1][1].chart, timeResult.substring(9,18), valueCT, valueESP);
       }
     }
   });
@@ -204,7 +203,7 @@ function readItem() {
 ///////////////////  Scan Database in DynamoDB //////////////////////
 let piQtyOLD = 0;
 let espQtyOLD = 0;
-let piQuantity = 0;
+let piQuantity = 1;
 
 function scanning(PIList, ESPList, dynamClient){
   ///////////////////  Build PI List //////////////////////
