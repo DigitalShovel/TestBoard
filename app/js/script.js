@@ -120,7 +120,6 @@ function readCT(sta) {
         alert(JSON.stringify(err, undefined, 2));
       }
       else {
-        console.log("Query the data!");
         for (let i=0; i < data['Count']; i++) {
           if (data['Items'][i]['Time'] > BuildArray[sta][1][1].timeREF){
             setProgress("PC"+data['Items'][i]['Station'], "PCT"+data['Items'][i]['Station'], data['Items'][i]['TestNumber'],data['Items'][i]['TotalTest']);
@@ -130,7 +129,6 @@ function readCT(sta) {
           }
           var timeResult = JSON.stringify(data['Items'][i]['Time']);
           for(var n=1; n <=6; n++){
-            console.log("Pushed data to Chart CH: ", n);
             for(var m=1; m <= 8; m++){
               var valueCT = extractData(data['Items'][i], 'CTPI', n, m);
               var valueESP = extractData(data['Items'][i], 'CTESP', n, m);
