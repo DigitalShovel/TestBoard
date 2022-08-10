@@ -12,13 +12,14 @@ function WebSocketTest() {
     ws.onopen = function () {
       // Web Socket is connected, send data using send()
       ws.send('{"action": "sendMessage","message":' + inputData + "}");
-      //removeData(listOfCharts[0][0]);
     };
 
     ws.onmessage = function (evt) {
       var received_msg = evt.data;
       if (received_msg == "\"Testbench Started!\"") {
-        removeData(Chart.getChart('T1G1C1'));
+        /////////////// Add Station Table ////////////////////
+        removeStationTables();
+        addStationTables(piQuantity);
       }
       alert(received_msg);
       ws.close();
@@ -126,7 +127,7 @@ function readCT() {
           }
         }
         var timeResult = JSON.stringify(data['Items'][i]['Time']);
-        for(var m=1; m <= 2; m++){
+        for(var m=1; m <= 8; m++){
           var valueCT = extractData(data['Items'][i], 'CTPI', 1, m);
           var valueESP = extractData(data['Items'][i], 'CTESP', 1, m);
           addDataChart(BuildArray[1][1][m].chart, timeResult.substring(9,18), valueCT, valueESP);
@@ -209,11 +210,11 @@ function scanning(PIList, ESPList, dynamClient){
     } 
     else {
       piQuantity = parseInt(JSON.stringify(data['Count'], "0", 2));
-      // Add Table
+      /////////////// Add Station Table ////////////////////
       removeStationTables();
       addStationTables(piQuantity);
       readCT();
-
+      ///////////////////////////////////////////////
       for (let i = 0; i < piQtyOLD; i++) {
         document.getElementById("PI#"+i).innerHTML = "Empty";
       }
