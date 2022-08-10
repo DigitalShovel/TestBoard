@@ -12,6 +12,7 @@
     background-color: var(--blue-150);
     padding: 1rem 1.5rem;
     border-bottom: 1px solid var(--blue-200);
+    text-align: center;
 
     @media (max-width: 600px) {
       padding: 0.5rem 0.75rem;
@@ -26,6 +27,7 @@
   &__item {
     font-size: 0.8rem;
     padding: 1rem 1.5rem;
+    text-align: center;
 
     @media (max-width: 600px) {
       padding: 0.5rem 0.75rem;
