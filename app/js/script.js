@@ -204,6 +204,11 @@ function readItem() {
   removeStationTables();
   console.log("PI QTY: ", piQuantity);
   addStationTables(piQuantity);
+  /////////////// Refresh chart every 5 seconds /////////////
+  var inverval_timer = setInterval(function () {
+    readCT();
+  }, 5000);
+  /////////////////////////////////////////////////////////
   /////////////////////////////
 }
 
