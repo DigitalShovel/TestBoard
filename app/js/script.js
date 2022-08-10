@@ -185,7 +185,7 @@ function removeData(chart) {
 ///////////// Set DB table to be scanned /////////////////
 let piQtyOLD = 0;
 let espQtyOLD = 0;
-let piQuantity = 0;
+var piQuantity = 0;
 
 function readItem() {
   var docClient = new AWS.DynamoDB.DocumentClient();
