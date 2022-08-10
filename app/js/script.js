@@ -212,6 +212,7 @@ function scanning(PIList, ESPList, dynamClient){
       // Add Table
       removeStationTables();
       addStationTables(piQuantity);
+      readCT();
 
       for (let i = 0; i < piQtyOLD; i++) {
         document.getElementById("PI#"+i).innerHTML = "Empty";
