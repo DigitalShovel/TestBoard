@@ -225,6 +225,7 @@ function scanning(PIList, ESPList, dynamClient){
       }
       piQtyOLD = piQuantity;
       if (piQuantity > 0){
+        debugger
         for (let i = 0; i < piQuantity; i++) {
           document.getElementById("PI#"+i).innerHTML = JSON.stringify(data['Items'][i]['MacAddress'], "Empty", 2);
         }
