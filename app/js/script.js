@@ -183,7 +183,7 @@ let piQtyOLD = 0;
 let espQtyOLD = 0;
 var piQuantity = 0;
 
-async function readItem() {
+function readItem() {
   var docClient = new AWS.DynamoDB.DocumentClient();
 
   var item1 = {
@@ -195,12 +195,9 @@ async function readItem() {
     TableName: "IoT_Testing_Unit_ESP32",
     ProjectionExpression: "MacAddress"
   };
-  await scanning(item1, item2, docClient);
+  scanning(item1, item2, docClient);
   /////// Add stations ////////
-  removeStationTables();
-  console.log("PI QTY: ", piQuantity);
-  addStationTables(piQuantity);
-
+  
   /////////////// Refresh chart every 5 seconds /////////////
   var inverval_timer = setInterval(function () {
     readCT();
@@ -211,14 +208,18 @@ async function readItem() {
 
 ///////////////////  Scan Database in DynamoDB //////////////////////
 
-async function scanning(PIList, ESPList, dynamClient){
+function scanning(PIList, ESPList, dynamClient){
   ///////////////////  Build PI List //////////////////////
-  await dynamClient.scan(PIList, function(err, data) {
+  dynamClient.scan(PIList, function(err, data) {
     if (err) {
       location.replace(urlAccess);
     } 
     else {
       piQuantity = parseInt(JSON.stringify(data['Count'], "0", 2));
+      // Add Table
+      removeStationTables();
+      console.log("PI QTY: ", piQuantity);
+      addStationTables(piQuantity);
 
       for (let i = 0; i < piQtyOLD; i++) {
         document.getElementById("PI#"+i).innerHTML = "Empty";
