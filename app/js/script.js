@@ -200,6 +200,11 @@ function readItem() {
   removeStationTables();
   addStationTables(piQuantity);
   /////////////////////////////
+  /////////////// Refresh chart every 5 seconds /////////////
+  var inverval_timer = setInterval(function () {
+    readCT();
+  }, 5000);
+  ///////////////////////////////////////////////////////////
 }
 /////////////////////////////////////////////////////////
 
@@ -216,11 +221,6 @@ function scanning(PIList, ESPList, dynamClient){
     } 
     else {
       piQuantity = parseInt(JSON.stringify(data['Count'], "0", 2));
-      /////////////// Refresh chart every 5 seconds /////////////
-      var inverval_timer = setInterval(function () {
-        readCT();
-      }, 5000);
-      ///////////////////////////////////////////////////////////
       for (let i = 0; i < piQtyOLD; i++) {
         document.getElementById("PI#"+i).innerHTML = "Empty";
       }
