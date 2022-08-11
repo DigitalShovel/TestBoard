@@ -25,7 +25,7 @@ function addStationTables(quantity) {
                             <polygon fill="#2A7DE1" points="38.54 47.17 25.52 60.2 12.85 47.53 12.85 32.12 0 32.12 0 52.91 0.06 52.91 25.52 78.37 25.52 78.37 25.52 78.37 51.34 52.55 51.39 52.55 51.39 32.12 38.54 32.12 38.54 47.17" />
                         </svg>
                         </td>
-                        <td id="test-quantity-${i}" class="table__subheading flex ai-c jc-c gap--sm">
+                        <td id="test-quantity-${i}" class="table__subheading">
                         Loading...
                         </td>
                     </tr>
