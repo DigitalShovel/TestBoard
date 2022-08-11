@@ -26,7 +26,7 @@ function addStationTables(quantity) {
                         Channel #1
                     </td>
                     <td>
-                        <div class="popup__relay-light popup__relay-light--failed popup__relay-1">1</div>
+                        <div id="T${i}F1" class="popup__relay-light popup__relay-light--failed popup__relay-1"></div>
                     </td>
                     <td>
                         <button id="T${i}G1" onclick="showPopup('T${i}P1')" class="btn btn--unstyled popup__btn-show">
@@ -97,7 +97,7 @@ function addStationTables(quantity) {
                         Channel #2
                     </td>
                     <td>
-                        <div class="popup__relay-light popup__relay-1"></div>
+                        <div id="T${i}F2" class="popup__relay-light popup__relay-1"></div>
                     </td>
                     <td>
                         <button id="T${i}G2" onclick="showPopup('T${i}P2')" class="btn btn--unstyled popup__btn-show">
@@ -168,7 +168,7 @@ function addStationTables(quantity) {
                         Channel #3
                     </td>
                     <td>
-                        <div class="popup__relay-light popup__relay-1"></div>
+                        <div id="T${i}F3" class="popup__relay-light popup__relay-1"></div>
                     </td>
                     <td>
                         <button id="T${i}G3" onclick="showPopup('T${i}P3')" class="btn btn--unstyled popup__btn-show">
@@ -239,7 +239,7 @@ function addStationTables(quantity) {
                         Channel #4
                     </td>
                     <td>
-                        <div class="popup__relay-light popup__relay-1"></div>
+                        <div id="T${i}F4" class="popup__relay-light popup__relay-1"></div>
                     </td>
                     <td>
                         <button id="T${i}G4" onclick="showPopup('T${i}P4')" class="btn btn--unstyled popup__btn-show">
@@ -310,7 +310,7 @@ function addStationTables(quantity) {
                         Channel #5
                     </td>
                     <td>
-                        <div class="popup__relay-light popup__relay-1"></div>
+                        <div id="T${i}F5" class="popup__relay-light popup__relay-1"></div>
                     </td>
                     <td>
                         <button id="T${i}G5" onclick="showPopup('T${i}P5')" class="btn btn--unstyled popup__btn-show">
@@ -381,7 +381,7 @@ function addStationTables(quantity) {
                         Channel #6
                     </td>
                     <td>
-                        <div class="popup__relay-light popup__relay-1"></div>
+                        <div id="T${i}F6" class="popup__relay-light popup__relay-1"></div>
                     </td>
                     <td>
                         <button id="T${i}G6" onclick="showPopup('T${i}P6')" class="btn btn--unstyled popup__btn-show">
