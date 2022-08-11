@@ -19,7 +19,7 @@ function addStationTables(quantity) {
                     <tr class="table__row">
                         <td class="table__subheading">Test #</td>
                         <td class="table__subheading"></td>
-                        <td id="test-quantity-${i}" class="table__subheading flex ai-c gap--sm">
+                        <td id="test-quantity-${i}" class="table__subheading flex ai-c jc-c gap--sm">
                         <svg class="logo-loading" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51.39 78.37">
                             <polygon fill="#2A7DE1" points="38.54 0 12.85 0 0 0 0 25.7 12.85 25.7 12.85 12.85 38.54 12.85 38.54 25.7 51.39 25.7 51.39 0 38.54 0" />
                             <rect fill="#2A7DE1" x="19.27" y="19.27" width="12.85" height="25.7" rx="4" />
