@@ -261,6 +261,5 @@ function scanning(PIList, ESPList, dynamClient){
 //////////////////////////////////////////////////////////
 
 $( document ).ready(function() {
-  //checkLogin()
-  addStationTables(1);
+  checkLogin()
 });
