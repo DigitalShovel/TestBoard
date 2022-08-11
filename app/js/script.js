@@ -104,8 +104,7 @@ function readCT(sta) {
   if (sta != 0){
     var docClient = new AWS.DynamoDB.DocumentClient();
 
-    for(var numStations=1; numStations <= 1; numStations++){
-      console.log("Station: ", numStations)
+    for(var numStations=1; numStations <= sta; numStations++){
       var ctItem = {
         TableName: "IoT_Result",
         KeyConditionExpression: 'Station = :station and #Time > :lastTime',
@@ -123,19 +122,23 @@ function readCT(sta) {
         }
         else {
           for (let i=0; i < data['Count']; i++) {
-            if (data['Items'][i]['Time'] > BuildArray[numStations][1][1].timeREF){
-              setProgress("PC"+data['Items'][i]['Station'], "PCT"+data['Items'][i]['Station'], data['Items'][i]['TestNumber'],data['Items'][i]['TotalTest']);
-              for(var z=1; z <= 8; z++){
-                BuildArray[numStations][1][z].timeREF = data['Items'][i]['Time'];
+            try {
+              if (data['Items'][i]['Time'] > BuildArray[numStations][1][1].timeREF){
+                setProgress("PC"+data['Items'][i]['Station'], "PCT"+data['Items'][i]['Station'], data['Items'][i]['TestNumber'],data['Items'][i]['TotalTest']);
+                for(var z=1; z <= 8; z++){
+                  BuildArray[numStations][1][z].timeREF = data['Items'][i]['Time'];
+                }
               }
-            }
-            var timeResult = JSON.stringify(data['Items'][i]['Time']);
-            for(var n=1; n <=6; n++){
-              for(var m=1; m <= 8; m++){
-                var valueCT = extractData(data['Items'][i], 'CTPI', n, m);
-                var valueESP = extractData(data['Items'][i], 'CTESP', n, m);
-                addDataChart(BuildArray[numStations][n][m].chart, timeResult.substring(9,18), valueCT, valueESP);
+              var timeResult = JSON.stringify(data['Items'][i]['Time']);
+              for(var n=1; n <=6; n++){
+                for(var m=1; m <= 8; m++){
+                  var valueCT = extractData(data['Items'][i], 'CTPI', n, m);
+                  var valueESP = extractData(data['Items'][i], 'CTESP', n, m);
+                  addDataChart(BuildArray[numStations][n][m].chart, timeResult.substring(9,18), valueCT, valueESP);
+                }
               }
+            } catch (error) {
+              console.log(error);
             }
           }
         }
