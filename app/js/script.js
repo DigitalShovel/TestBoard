@@ -103,9 +103,8 @@ let maxDataPerChart = dataPerPlot; // Number of data plus one
 function readCT(sta) {
   if (sta != 0){
     var docClient = new AWS.DynamoDB.DocumentClient();
-    console.log("STA: ",sta)
 
-    for(var numStations=1; numStations <= sta; numStations++){
+    for(var numStations=1; numStations <= 1; numStations++){
       console.log("Station: ", numStations)
       var ctItem = {
         TableName: "IoT_Result",
