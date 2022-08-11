@@ -9,7 +9,12 @@ function updateProgressCircle(id){
 function setProgress(id, textid, testNumber, testTotal) {
   var percentage = Math.round((testNumber/testTotal)*100);
   const offset = circumference - (testNumber/testTotal) * circumference;
+  if (percentage > 0 && percentage < 100){
+    document.getElementById(id).style.stroke = "var(--cool-blue-600)";
+  }
+  else if (percentage == 100){
+    document.getElementById(id).style.stroke = "var(--success-600)";
+  }
   document.getElementById(id).style.strokeDashoffset = offset;
   document.getElementById(textid).innerHTML = String(percentage)+"%";
-  console.log("TEXT: ", document.getElementById(textid).innerText);
 }
