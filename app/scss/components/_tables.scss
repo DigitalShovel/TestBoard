@@ -81,6 +81,9 @@ table {
       transition: 0.35s stroke-dashoffset ease-out;
       transform: rotate(-90deg);
       transform-origin: 50% 50%;
+      stroke: var(--cool-gray-400);
+      stroke-width: 4;
+      fill: transparent;
     }
 
     &-number {
