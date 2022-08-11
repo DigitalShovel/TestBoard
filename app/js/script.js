@@ -121,6 +121,9 @@ function readCT(sta) {
         alert(JSON.stringify(err, undefined, 2));
       }
       else {
+        if (data['Count'] == 0){
+          document.getElementById('test-quantity-1').innerHTML = "Awaiting Test";
+        }
         for (let i=0; i < data['Count']; i++) {
           if (data['Items'][i]['Time'] > BuildArray[sta][1][1].timeREF){
             setProgress("PC"+data['Items'][i]['Station'], "PCT"+data['Items'][i]['Station'], data['Items'][i]['TestNumber'], data['Items'][i]['TotalTest']);
