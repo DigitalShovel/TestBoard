@@ -122,6 +122,7 @@ function readCT(sta) {
         }
         else {
           for (let i=0; i < data['Count']; i++) {
+            console.log(BuildArray)
             if (data['Items'][i]['Time'] > BuildArray[numStations][1][1].timeREF){
               setProgress("PC"+data['Items'][i]['Station'], "PCT"+data['Items'][i]['Station'], data['Items'][i]['TestNumber'],data['Items'][i]['TotalTest']);
               for(var z=1; z <= 8; z++){
