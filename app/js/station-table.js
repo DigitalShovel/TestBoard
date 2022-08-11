@@ -26,7 +26,7 @@ function addStationTables(quantity) {
                         Channel #1
                     </td>
                     <td>
-                        <div class="popup__relay-light popup__relay-light--failed popup__relay-1"></div>
+                        <div class="popup__relay-light popup__relay-light--failed popup__relay-1">1</div>
                     </td>
                     <td>
                         <button id="T${i}G1" onclick="showPopup('T${i}P1')" class="btn btn--unstyled popup__btn-show">
