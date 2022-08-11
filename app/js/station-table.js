@@ -19,7 +19,7 @@ function addStationTables(quantity) {
                     <tr class="table__row">
                         <td class="table__subheading">Test #</td>
                         <td class="table__subheading"></td>
-                        <td id="test-quantity-${i}" class="table__subheading">1 out of 1000</td>
+                        <td id="test-quantity-${i}" class="table__subheading">Loading...</td>
                     </tr>
                     <tr class="table__row">
                     <td>
