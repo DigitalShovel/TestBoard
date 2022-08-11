@@ -453,7 +453,7 @@ function addStationTables(quantity) {
                             <div class="popup__relay-light popup__relay-1"></div>
                         </td>
                         <td>
-                            <button id="T${i}G5" onclick="showPopup('T${i}P5')" class="btn btn--unstyled popup__btn-show">
+                            <button id="T${i}G7" onclick="showPopup('T${i}P7')" class="btn btn--unstyled popup__btn-show">
                             <svg class="station__icon station__icon--charts" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g filter="url(#filter0_i_118_644)">
                                 <rect width="22" height="22" rx="3" fill="#2B3F55"/>
