@@ -11,4 +11,5 @@ function setProgress(id, textid, testNumber, testTotal) {
   const offset = circumference - (testNumber/testTotal) * circumference;
   document.getElementById(id).style.strokeDashoffset = offset;
   document.getElementById(textid).innerHTML = String(percentage)+"%";
+  console.log("TEXT: ", document.getElementById(textid).value);
 }
