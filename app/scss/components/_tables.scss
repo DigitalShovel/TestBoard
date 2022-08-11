@@ -3,7 +3,7 @@ table {
 
   td,
   th {
-    padding: 1rem 1.5rem;
+    padding: 0.8rem;
     color: var(--blue-900);
     text-align: center;
   }
@@ -66,7 +66,7 @@ table {
         }
       }
 
-      td:first-child {
+      td:not(:last-child) {
         border-right: 1px solid var(--blue-200);
       }
     }
@@ -103,40 +103,13 @@ table {
   }
 
   &__heading {
+    font-size: 0.9rem;
     background-color: var(--blue-150);
   }
 
   &__subheading {
-    position: relative;
-    line-height: 1.2;
-    font-size: 0.8rem;
-    font-weight: 400;
-    background-color: white;
-    border: 1px solid var(--blue-100);
-    color: var(--cool-gray-500);
-    transition: background-color 150ms ease-in;
-    padding: 1.5rem 2rem 1.5rem calc(2rem + 22px); // specific padding only for the table subheadings that include an icon on the left
-
-    &::before {
-      content: "";
-      width: 22px;
-      height: 22px;
-      position: absolute;
-      left: 22px;
-      top: 50%;
-      transform: translateY(-50%);
-      background-image: url("../../../images/icons/icon_info.svg");
-      background-repeat: no-repeat;
-    }
-
-    &:hover {
-      background-color: var(--blue-100);
-
-      .table__tooltip {
-        opacity: 1;
-        pointer-events: all;
-      }
-    }
+    background-color: var(--blue-100);
+    border-right: none !important;
   }
 
   &__tooltip {

@@ -49,13 +49,19 @@
       position: relative;
       width: 30px;
       height: 10px;
+      margin: auto;
       border-radius: 3px;
       background-color: var(--success-700);
-      box-shadow: 0 0 3px 1px var(--success-500);
+      box-shadow: 0 0 6px 1px var(--success-500);
 
       &--disabled {
         background-color: var(--warm-gray-500);
-        box-shadow: 0 0 3px var(--warm-gray-200);
+        box-shadow: none;
+      }
+
+      &--failed {
+        background-color: var(--danger-500);
+        box-shadow: 0 0 6px var(--danger-500);
       }
 
       &::after {

@@ -92,7 +92,7 @@ function auth() {
             "cognito-idp.ca-central-1.amazonaws.com/ca-central-1_Lf5pWzdj2": idToken
           }
         }); 
-  readItem();      /// Load all the function needed, including creating objects
+  //readItem();      /// Load all the function needed, including creating objects
 }
 /////////////////////////////////////////////////////////
 
@@ -251,5 +251,6 @@ function scanning(PIList, ESPList, dynamClient){
 //////////////////////////////////////////////////////////
 
 $( document ).ready(function() {
-  checkLogin() 
+  //checkLogin()
+  addStationTables(1);
 });

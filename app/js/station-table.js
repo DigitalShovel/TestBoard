@@ -8,16 +8,25 @@ function addStationTables(quantity) {
                 <tbody class="table__body">
                     <tr class="table__row table__row--add-border">
                     <th class="table__heading">Station #${i}</th>
+                    <th class="table__heading"></th>
                     <th class="table__heading table__progress">
                         <span id="PCT${i}" x="25" y="20" class="table__progress-number">0%</span>
                         <svg width="32" height="32">
-                        <circle id="PC${i}" stroke="var(--primary-color)" stroke-width="4" fill="transparent" r="${radius}" cx="16" cy="16" />
+                        <circle id="PC${i}" stroke="var(--cool-gray-400)" stroke-width="4" fill="transparent" r="${radius}" cx="16" cy="16" />
                         </svg>
                     </th>
                     </tr>
                     <tr class="table__row">
+                        <td class="table__subheading">Test #</td>
+                        <td class="table__subheading"></td>
+                        <td id="test-quantity-${i}" class="table__subheading">1 out of 1000</td>
+                    </tr>
+                    <tr class="table__row">
                     <td>
                         Channel #1
+                    </td>
+                    <td>
+                        <div class="popup__relay-light popup__relay-light--failed popup__relay-1"></div>
                     </td>
                     <td>
                         <button id="T${i}G1" onclick="showPopup('T${i}P1')" class="btn btn--unstyled popup__btn-show">
@@ -88,6 +97,9 @@ function addStationTables(quantity) {
                         Channel #2
                     </td>
                     <td>
+                        <div class="popup__relay-light popup__relay-1"></div>
+                    </td>
+                    <td>
                         <button id="T${i}G2" onclick="showPopup('T${i}P2')" class="btn btn--unstyled popup__btn-show">
                         <svg class="station__icon station__icon--charts" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g filter="url(#filter0_i_118_644)">
@@ -154,6 +166,9 @@ function addStationTables(quantity) {
                     <tr class="table__row">
                     <td>
                         Channel #3
+                    </td>
+                    <td>
+                        <div class="popup__relay-light popup__relay-1"></div>
                     </td>
                     <td>
                         <button id="T${i}G3" onclick="showPopup('T${i}P3')" class="btn btn--unstyled popup__btn-show">
@@ -224,6 +239,9 @@ function addStationTables(quantity) {
                         Channel #4
                     </td>
                     <td>
+                        <div class="popup__relay-light popup__relay-1"></div>
+                    </td>
+                    <td>
                         <button id="T${i}G4" onclick="showPopup('T${i}P4')" class="btn btn--unstyled popup__btn-show">
                         <svg class="station__icon station__icon--charts" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g filter="url(#filter0_i_118_644)">
@@ -290,6 +308,9 @@ function addStationTables(quantity) {
                     <tr class="table__row">
                     <td>
                         Channel #5
+                    </td>
+                    <td>
+                        <div class="popup__relay-light popup__relay-1"></div>
                     </td>
                     <td>
                         <button id="T${i}G5" onclick="showPopup('T${i}P5')" class="btn btn--unstyled popup__btn-show">
@@ -360,6 +381,9 @@ function addStationTables(quantity) {
                         Channel #6
                     </td>
                     <td>
+                        <div class="popup__relay-light popup__relay-1"></div>
+                    </td>
+                    <td>
                         <button id="T${i}G6" onclick="showPopup('T${i}P6')" class="btn btn--unstyled popup__btn-show">
                         <svg class="station__icon station__icon--charts" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g filter="url(#filter0_i_118_644)">
@@ -423,6 +447,57 @@ function addStationTables(quantity) {
                         </div>
                     </td>
                     </tr>
+                    <tr>
+                        <td>Temperature</td>
+                        <td>
+                            <div class="popup__relay-light popup__relay-1"></div>
+                        </td>
+                        <td>
+                            <button id="T${i}G5" onclick="showPopup('T${i}P5')" class="btn btn--unstyled popup__btn-show">
+                            <svg class="station__icon station__icon--charts" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g filter="url(#filter0_i_118_644)">
+                                <rect width="22" height="22" rx="3" fill="#2B3F55"/>
+                                <rect width="1.90909" height="9.54545" rx="0.954545" transform="matrix(-1 0 0 1 16.7273 7.18182)" fill="#88A5C3"/>
+                                <rect width="1.90909" height="11.4545" rx="0.954545" transform="matrix(-1 0 0 1 13.5454 5.27274)" fill="#4D7299"/>
+                                <rect width="1.90909" height="7" rx="0.954545" transform="matrix(-1 0 0 1 10.3636 9.72726)" fill="#88A5C3"/>
+                                <rect width="1.90909" height="8.27273" rx="0.954545" transform="matrix(-1 0 0 1 7.18176 8.45456)" fill="#4D7299"/>
+                                </g>
+                                <defs>
+                                <filter id="filter0_i_118_644" x="0" y="0" width="22" height="22" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                <feOffset dy="1"/>
+                                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                                <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.05 0"/>
+                                <feBlend mode="normal" in2="shape" result="effect1_innerShadow_118_644"/>
+                                </filter>
+                                </defs>
+                            </svg> 
+                            </button>
+                            <div id="T${i}P7" class="popup">
+                                <div class="popup__grid">
+                                    <div class="popup__grid-item">
+                                    </div>
+                                    <div class="popup__grid-item">
+                                    </div>
+                                    <div class="popup__grid-item">
+                                    </div>
+                                    <div class="popup__grid-item">
+                                    </div>
+                                    <div class="popup__grid-item">
+                                    </div>
+                                    <div class="popup__grid-item">
+                                    </div>
+                                    <div class="popup__grid-item">
+                                    </div>
+                                    <div class="popup__grid-item">
+                                    </div>
+                                </div>
+                                <button id="T${i}B7" onclick="showPopup('T${i}P7')" class="popup__btn-hide btn btn--primary">Close</button>
+                            </div>
+                        </td>
+                    </tr>
                 </tbody>
                 </table>
             </div>
@@ -430,28 +505,24 @@ function addStationTables(quantity) {
     updateProgressCircle("PC" + i);
     // Create charts for Stations #STA
     var chArray = [0];
-    for(var k=1; k <= 6; k++){
-        var CT1 = new stationCharts(i, k, 1);
-        var CT2 = new stationCharts(i, k, 2);
-        var CT3 = new stationCharts(i, k, 3);
-        var CT4 = new stationCharts(i, k, 4);
-        var CT5 = new stationCharts(i, k, 5);
-        var CT6 = new stationCharts(i, k, 6);
-        var CT7 = new stationCharts(i, k, 7);
-        var CT8 = new stationCharts(i, k, 8);
-        CT1.createChart();
-        CT2.createChart();
-        CT3.createChart();
-        CT4.createChart();
-        CT5.createChart();
-        CT6.createChart();
-        CT7.createChart();
-        CT8.createChart();
-        chArray.push(
-            [
-                0, CT1, CT2, CT3, CT4, CT5, CT6, CT7, CT8
-            ]
-        );
+    for (var k = 1; k <= 6; k++) {
+      var CT1 = new stationCharts(i, k, 1);
+      var CT2 = new stationCharts(i, k, 2);
+      var CT3 = new stationCharts(i, k, 3);
+      var CT4 = new stationCharts(i, k, 4);
+      var CT5 = new stationCharts(i, k, 5);
+      var CT6 = new stationCharts(i, k, 6);
+      var CT7 = new stationCharts(i, k, 7);
+      var CT8 = new stationCharts(i, k, 8);
+      CT1.createChart();
+      CT2.createChart();
+      CT3.createChart();
+      CT4.createChart();
+      CT5.createChart();
+      CT6.createChart();
+      CT7.createChart();
+      CT8.createChart();
+      chArray.push([0, CT1, CT2, CT3, CT4, CT5, CT6, CT7, CT8]);
     }
     BuildArray.push(chArray);
   }
