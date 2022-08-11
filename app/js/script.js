@@ -106,6 +106,7 @@ function readCT(sta) {
     console.log("STA: ",sta)
 
     for(var numStations=1; numStations <= sta; numStations++){
+      console.log("Station: ", numStations)
       var ctItem = {
         TableName: "IoT_Result",
         KeyConditionExpression: 'Station = :station and #Time > :lastTime',
@@ -123,7 +124,6 @@ function readCT(sta) {
         }
         else {
           for (let i=0; i < data['Count']; i++) {
-            console.log("Station: ", numStations)
             if (data['Items'][i]['Time'] > BuildArray[numStations][1][1].timeREF){
               setProgress("PC"+data['Items'][i]['Station'], "PCT"+data['Items'][i]['Station'], data['Items'][i]['TestNumber'],data['Items'][i]['TotalTest']);
               for(var z=1; z <= 8; z++){
