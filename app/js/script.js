@@ -124,7 +124,8 @@ function readCT(sta) {
       if (err) {
         alert(JSON.stringify(err, undefined, 2));
       }
-      else {
+      else { 
+        console.log("Data Count: ", data['Count']);
         for (let i=0; i < data['Count']; i++) {
           if (data['Items'][i]['Time'] > BuildArray[sta][1][1].timeREF){
             setProgress("PC"+data['Items'][i]['Station'], "PCT"+data['Items'][i]['Station'], data['Items'][i]['TestNumber'], data['Items'][i]['TotalTest']);
