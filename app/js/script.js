@@ -21,10 +21,6 @@ function WebSocketTest() {
         /////////////// Add Station Table ////////////////////
         removeStationTables();
         addStationTables(piQuantity);
-        var messageHTML = document.querySelectorAll('[id^="test-quantity-"]');
-        for(var i=0; i < messageHTML.length; i++){
-          messageHTML[i].innerHTML = "Test Running";
-        }
       }
       alert(received_msg);
       ws.close();
@@ -97,7 +93,7 @@ function auth() {
             "cognito-idp.ca-central-1.amazonaws.com/ca-central-1_Lf5pWzdj2": idToken
           }
         }); 
-  // readItem();      /// Load all the function needed, including creating objects
+  readItem();      /// Load all the function needed, including creating objects
 }
 /////////////////////////////////////////////////////////
 
@@ -124,24 +120,17 @@ function readCT(sta) {
       if (err) {
         alert(JSON.stringify(err, undefined, 2));
       }
-      else { 
+      else {
         for (let i=0; i < data['Count']; i++) {
           if (data['Items'][i]['Time'] > BuildArray[sta][1][1].timeREF){
             setProgress("PC"+data['Items'][i]['Station'], "PCT"+data['Items'][i]['Station'], data['Items'][i]['TestNumber'], data['Items'][i]['TotalTest']);
-            BuildArray[sta][1][1].timeREF = data['Items'][i]['Time'];
-            document.getElementById('test-quantity-'+sta).innerHTML = data['Items'][i]['TestNumber']+" out of "+data['Items'][i]['TotalTest'];
+            document.getElementById('test-quantity-1').innerHTML = data['Items'][i]['TestNumber']+" out of "+data['Items'][i]['TotalTest'];
+            for(var z=1; z <= 8; z++){
+              BuildArray[sta][1][z].timeREF = data['Items'][i]['Time'];
+            }
           }
           var timeResult = JSON.stringify(data['Items'][i]['Time']);
           for(var n=1; n <=6; n++){
-            BuildArray[sta][n][1].success &= data['Items'][i]['Success'][n];
-            if (BuildArray[sta][n][1].success){
-              document.getElementById('T'+sta+'F'+n).classList.remove("popup__relay-light--fail", "popup__relay-light--success");
-              document.getElementById('T'+sta+'F'+n).classList.add("popup__relay-light--success");
-            }
-            else {
-              document.getElementById('T'+sta+'F'+n).classList.remove("popup__relay-light--fail", "popup__relay-light--success");
-              document.getElementById('T'+sta+'F'+n).classList.add("popup__relay-light--fail");
-            }
             for(var m=1; m <= 8; m++){
               var valueCT = extractData(data['Items'][i], 'CTPI', n, m);
               var valueESP = extractData(data['Items'][i], 'CTESP', n, m);
@@ -245,18 +234,11 @@ function scanning(PIList, ESPList, dynamClient){
       if (piQuantity > 0){
         for (let i = 0; i < piQuantity; i++) {
           document.getElementById("PI#"+i).innerHTML = JSON.stringify(data['Items'][i]['MacAddress'], "Empty", 2);
-          /////////////////// Change Message //////////////////////
-          if (data['Items'][i]['CUT']){
-            var messageHTML = document.querySelector("test-quantity-"+i);
-            messageHTML.innerHTML = "Test Running";
-          }
-          //////////////////////////////////////////////////////////
         }
       }
     } 
   }
   );
-  
 
   ///////////////////  Build ESP List ////////////////////
   dynamClient.scan(ESPList, function(err, data) {
@@ -280,8 +262,6 @@ function scanning(PIList, ESPList, dynamClient){
 }
 //////////////////////////////////////////////////////////
 
-addStationTables(1);
-
-// $( document ).ready(function() {
-//   checkLogin()
-// });
+$( document ).ready(function() {
+  checkLogin()
+});
