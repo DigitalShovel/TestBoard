@@ -21,7 +21,7 @@ function WebSocketTest() {
         /////////////// Add Station Table ////////////////////
         removeStationTables();
         addStationTables(piQuantity);
-        console.log(document.querySelectorAll("test-quantity-"));
+        console.log("Query: ",document.querySelectorAll("test-quantity-"));
       }
       alert(received_msg);
       ws.close();
