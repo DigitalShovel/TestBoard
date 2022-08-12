@@ -12,6 +12,7 @@ function addStationTables(quantity) {
                     <th class="table__heading table__progress">
                         <span id="PCT${i}" x="25" y="20" class="table__progress-number">0%</span>
                         <svg width="32" height="32">
+                        <circle r="${radius}" cx="16" cy="16" />
                         <circle id="PC${i}" r="${radius}" cx="16" cy="16" />
                         </svg>
                     </th>
