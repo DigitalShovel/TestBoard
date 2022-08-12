@@ -35,7 +35,7 @@ function addStationTables(quantity) {
                         Channel #1
                     </td>
                     <td>
-                        <div id="T${i}F1" class="popup__relay-light"></div>
+                        <div id="T${i}F1" class="indicator-light"></div>
                     </td>
                     <td>
                         <button id="T${i}G1" onclick="showPopup('T${i}P1')" class="btn btn--unstyled popup__btn-show">
@@ -87,38 +87,38 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G1C8" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                             </div>
-                            <div class="popup__relay flex gap--sm">
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G1R1" class="popup__relay-light"></div>
+                            <div class="indicator">
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 1</span>
+                                    <div id="T${i}G1R1" class="indicator-light"></div>
                                 </div>
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G1R2" class="popup__relay-light"></div>
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 2</span>
+                                    <div id="T${i}G1R2" class="indicator-light"></div>
                                 </div>
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G1R3" class="popup__relay-light"></div>
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 3</span>
+                                    <div id="T${i}G1R3" class="indicator-light"></div>
                                 </div>
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G1R4" class="popup__relay-light"></div>
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 4</span>
+                                    <div id="T${i}G1R4" class="indicator-light"></div>
                                 </div>
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G1R5" class="popup__relay-light"></div>
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 5</span>
+                                    <div id="T${i}G1R5" class="indicator-light"></div>
                                 </div>
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G1R6" class="popup__relay-light"></div>
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 6</span>
+                                    <div id="T${i}G1R6" class="indicator-light"></div>
                                 </div>
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G1R7" class="popup__relay-light"></div>
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 7</span>
+                                    <div id="T${i}G1R7" class="indicator-light"></div>
                                 </div>
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G1R8" class="popup__relay-light"></div>
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 8</span>
+                                    <div id="T${i}G1R8" class="indicator-light"></div>
                                 </div>
                             </div>
                             <button id="T${i}B1" onclick="showPopup('T${i}P1')" class="popup__btn-hide btn btn--primary">Close</button>
@@ -130,7 +130,7 @@ function addStationTables(quantity) {
                         Channel #2
                     </td>
                     <td>
-                        <div id="T${i}F2" class="popup__relay-light"></div>
+                        <div id="T${i}F2" class="indicator-light"></div>
                     </td>
                     <td>
                         <button id="T${i}G2" onclick="showPopup('T${i}P2')" class="btn btn--unstyled popup__btn-show">
@@ -182,38 +182,38 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G2C8" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                             </div>
-                            <div class="popup__relay flex gap--sm">
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G2R1" class="popup__relay-light"></div>
+                            <div class="indicator">
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 1</span>
+                                    <div id="T${i}G2R1" class="indicator-light"></div>
                                 </div>
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G2R2" class="popup__relay-light"></div>
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 2</span>
+                                    <div id="T${i}G2R2" class="indicator-light"></div>
                                 </div>
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G2R3" class="popup__relay-light"></div>
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 3</span>
+                                    <div id="T${i}G2R3" class="indicator-light"></div>
                                 </div>
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G2R4" class="popup__relay-light"></div>
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 4</span>
+                                    <div id="T${i}G2R4" class="indicator-light"></div>
                                 </div>
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G2R5" class="popup__relay-light"></div>
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 5</span>
+                                    <div id="T${i}G2R5" class="indicator-light"></div>
                                 </div>
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G2R6" class="popup__relay-light"></div>
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 6</span>
+                                    <div id="T${i}G2R6" class="indicator-light"></div>
                                 </div>
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G2R7" class="popup__relay-light"></div>
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 7</span>
+                                    <div id="T${i}G2R7" class="indicator-light"></div>
                                 </div>
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G2R8" class="popup__relay-light"></div>
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 8</span>
+                                    <div id="T${i}G2R8" class="indicator-light"></div>
                                 </div>
                             </div>
                             <button id="T${i}B2" onclick="showPopup('T${i}P2')" class="popup__btn-hide btn btn--primary">Close</button>
@@ -225,7 +225,7 @@ function addStationTables(quantity) {
                         Channel #3
                     </td>
                     <td>
-                        <div id="T${i}F3" class="popup__relay-light"></div>
+                        <div id="T${i}F3" class="indicator-light"></div>
                     </td>
                     <td>
                         <button id="T${i}G3" onclick="showPopup('T${i}P3')" class="btn btn--unstyled popup__btn-show">
@@ -277,38 +277,38 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G3C8" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                             </div>
-                            <div class="popup__relay flex gap--sm">
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G3R1" class="popup__relay-light"></div>
+                            <div class="indicator">
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 1</span>
+                                    <div id="T${i}G3R1" class="indicator-light"></div>
                                 </div>
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G3R2" class="popup__relay-light"></div>
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 2</span>
+                                    <div id="T${i}G3R2" class="indicator-light"></div>
                                 </div>
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G3R3" class="popup__relay-light"></div>
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 3</span>
+                                    <div id="T${i}G3R3" class="indicator-light"></div>
                                 </div>
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G3R4" class="popup__relay-light"></div>
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 4</span>
+                                    <div id="T${i}G3R4" class="indicator-light"></div>
                                 </div>
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G3R5" class="popup__relay-light"></div>
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 5</span>
+                                    <div id="T${i}G3R5" class="indicator-light"></div>
                                 </div>
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G3R6" class="popup__relay-light"></div>
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 6</span>
+                                    <div id="T${i}G3R6" class="indicator-light"></div>
                                 </div>
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G3R7" class="popup__relay-light"></div>
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 7</span>
+                                    <div id="T${i}G3R7" class="indicator-light"></div>
                                 </div>
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G3R8" class="popup__relay-light"></div>
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 8</span>
+                                    <div id="T${i}G3R8" class="indicator-light"></div>
                                 </div>
                             </div>
                             <button id="T${i}B3" onclick="showPopup('T${i}P3')" class="popup__btn-hide btn btn--primary">Close</button>
@@ -320,7 +320,7 @@ function addStationTables(quantity) {
                         Channel #4
                     </td>
                     <td>
-                        <div id="T${i}F4" class="popup__relay-light"></div>
+                        <div id="T${i}F4" class="indicator-light"></div>
                     </td>
                     <td>
                         <button id="T${i}G4" onclick="showPopup('T${i}P4')" class="btn btn--unstyled popup__btn-show">
@@ -372,38 +372,38 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G4C8" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                             </div>
-                            <div class="popup__relay flex gap--sm">
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G4R1" class="popup__relay-light"></div>
+                            <div class="indicator">
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 1</span>
+                                    <div id="T${i}G4R1" class="indicator-light"></div>
                                 </div>
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G4R2" class="popup__relay-light"></div>
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 1</span>
+                                    <div id="T${i}G4R2" class="indicator-light"></div>
                                 </div>
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G4R3" class="popup__relay-light"></div>
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 1</span>
+                                    <div id="T${i}G4R3" class="indicator-light"></div>
                                 </div>
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G4R4" class="popup__relay-light"></div>
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 1</span>
+                                    <div id="T${i}G4R4" class="indicator-light"></div>
                                 </div>
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G4R5" class="popup__relay-light"></div>
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 1</span>
+                                    <div id="T${i}G4R5" class="indicator-light"></div>
                                 </div>
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G4R6" class="popup__relay-light"></div>
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 1</span>
+                                    <div id="T${i}G4R6" class="indicator-light"></div>
                                 </div>
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G4R7" class="popup__relay-light"></div>
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 1</span>
+                                    <div id="T${i}G4R7" class="indicator-light"></div>
                                 </div>
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G4R8" class="popup__relay-light"></div>
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 1</span>
+                                    <div id="T${i}G4R8" class="indicator-light"></div>
                                 </div>
                             </div>
                             <button id="T${i}B4" onclick="showPopup('T${i}P4')" class="popup__btn-hide btn btn--primary">Close</button>
@@ -415,7 +415,7 @@ function addStationTables(quantity) {
                         Channel #5
                     </td>
                     <td>
-                        <div id="T${i}F5" class="popup__relay-light"></div>
+                        <div id="T${i}F5" class="indicator-light"></div>
                     </td>
                     <td>
                         <button id="T${i}G5" onclick="showPopup('T${i}P5')" class="btn btn--unstyled popup__btn-show">
@@ -467,38 +467,38 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G5C8" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                             </div>
-                            <div class="popup__relay flex gap--sm">
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G5R1" class="popup__relay-light"></div>
+                            <div class="indicator">
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 1</span>
+                                    <div id="T${i}G5R1" class="indicator-light"></div>
                                 </div>
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G5R2" class="popup__relay-light"></div>
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 1</span>
+                                    <div id="T${i}G5R2" class="indicator-light"></div>
                                 </div>
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G5R3" class="popup__relay-light"></div>
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 1</span>
+                                    <div id="T${i}G5R3" class="indicator-light"></div>
                                 </div>
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G5R4" class="popup__relay-light"></div>
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 1</span>
+                                    <div id="T${i}G5R4" class="indicator-light"></div>
                                 </div>
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G5R5" class="popup__relay-light"></div>
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 1</span>
+                                    <div id="T${i}G5R5" class="indicator-light"></div>
                                 </div>
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G5R6" class="popup__relay-light"></div>
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 1</span>
+                                    <div id="T${i}G5R6" class="indicator-light"></div>
                                 </div>
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G5R7" class="popup__relay-light"></div>
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 1</span>
+                                    <div id="T${i}G5R7" class="indicator-light"></div>
                                 </div>
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G5R8" class="popup__relay-light"></div>
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 1</span>
+                                    <div id="T${i}G5R8" class="indicator-light"></div>
                                 </div>
                             </div>
                             <button id="T${i}B5" onclick="showPopup('T${i}P5')" class="popup__btn-hide btn btn--primary">Close</button>
@@ -510,7 +510,7 @@ function addStationTables(quantity) {
                         Channel #6
                     </td>
                     <td>
-                        <div id="T${i}F6" class="popup__relay-light"></div>
+                        <div id="T${i}F6" class="indicator-light"></div>
                     </td>
                     <td>
                         <button id="T${i}G6" onclick="showPopup('T${i}P6')" class="btn btn--unstyled popup__btn-show">
@@ -562,38 +562,38 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G6C8" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                             </div>
-                            <div class="popup__relay flex gap--sm">
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G6R1" class="popup__relay-light"></div>
+                            <div class="indicator">
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 1</span>
+                                    <div id="T${i}G6R1" class="indicator-light"></div>
                                 </div>
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G6R2" class="popup__relay-light"></div>
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 1</span>
+                                    <div id="T${i}G6R2" class="indicator-light"></div>
                                 </div>
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G6R3" class="popup__relay-light"></div>
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 1</span>
+                                    <div id="T${i}G6R3" class="indicator-light"></div>
                                 </div>
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G6R4" class="popup__relay-light"></div>
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 1</span>
+                                    <div id="T${i}G6R4" class="indicator-light"></div>
                                 </div>
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G6R5" class="popup__relay-light"></div>
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 1</span>
+                                    <div id="T${i}G6R5" class="indicator-light"></div>
                                 </div>
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G6R6" class="popup__relay-light"></div>
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 1</span>
+                                    <div id="T${i}G6R6" class="indicator-light"></div>
                                 </div>
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G6R7" class="popup__relay-light"></div>
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 1</span>
+                                    <div id="T${i}G6R7" class="indicator-light"></div>
                                 </div>
-                                <div class="flex flex-col gap--sm">
-                                    <span class="popup__relay-title">Relay ${i}</span>
-                                    <div id="T${i}G6R8" class="popup__relay-light"></div>
+                                <div class="indicator-content">
+                                    <span class="indicator-title">Relay 1</span>
+                                    <div id="T${i}G6R8" class="indicator-light"></div>
                                 </div>
                             </div>
                             <button id="T${i}B6" onclick="showPopup('T${i}P6')" class="popup__btn-hide btn btn--primary">Close</button>
@@ -603,7 +603,7 @@ function addStationTables(quantity) {
                     <tr>
                         <td>Temperature</td>
                         <td>
-                            <div class="popup__relay-light"></div>
+                            <div class="indicator-light"></div>
                         </td>
                         <td>
                             <button id="T${i}G7" onclick="showPopup('T${i}P7')" class="btn btn--unstyled popup__btn-show">

@@ -1,0 +1,66 @@
+.indicator {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  width: 1248px;
+  position: fixed;
+  left: 50%;
+  top: 83.5%;
+  transform: translate(-50%, -50%);
+  background-color: var(--blue-100);
+  padding: 1rem;
+  border-radius: 5px;
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &-title {
+
+  }
+
+  &-light {
+    position: relative;
+    width: 30px;
+    height: 10px;
+    margin: auto;
+    border-radius: 3px;
+    background-color: var(--warm-gray-500);
+
+    &--success {
+      box-shadow: 0 0 6px 1px var(--success-500);
+      background-color: var(--success-700);
+    }
+
+    &--fail {
+      background-color: var(--danger-500);
+      box-shadow: 0 0 6px var(--danger-500);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 1px;
+      left: 50%;
+      width: 25px;
+      height: 2px;
+      background-color: hsl(0deg 0% 100%);
+      transform: translateX(-50%);
+      filter: blur(1px);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 1px;
+      left: 50%;
+      width: 25px;
+      height: 2px;
+      background-color: hsla(0, 0%, 0%, 0.3);
+      transform: translateX(-50%);
+      filter: blur(1px);
+    }
+  }
+}
