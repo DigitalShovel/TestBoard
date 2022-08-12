@@ -18,7 +18,7 @@ function addStationTables(quantity) {
                     </th>
                     </tr>
                     <tr class="table__row">
-                        <td class="table__subheading">Test #</td>
+                        <td class="table__subheading">Test Quantity</td>
                         <td class="table__subheading">
                         <svg id="Logo${i}" class="logo-loading" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51.39 78.37">
                             <polygon fill="#2A7DE1" points="38.54 0 12.85 0 0 0 0 25.7 12.85 25.7 12.85 12.85 38.54 12.85 38.54 25.7 51.39 25.7 51.39 0 38.54 0" />

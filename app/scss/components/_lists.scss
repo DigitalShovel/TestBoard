@@ -8,11 +8,21 @@
   }
 
   &__heading {
-    font-weight: 700;
+    padding: 0.8rem;
+    letter-spacing: -0.3px;
     background-color: var(--blue-150);
-    padding: 1rem 1.5rem;
     border-bottom: 1px solid var(--blue-200);
-    text-align: center;
+
+    h2 {
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    p {
+      text-align: right;
+      font-weight: 500;
+      font-size: 0.7rem;
+    }
 
     @media (max-width: 600px) {
       padding: 0.5rem 0.75rem;

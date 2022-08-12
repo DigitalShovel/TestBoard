@@ -109,18 +109,21 @@ table {
     position: relative;
 
     &--add-border {
-      border-bottom: 1.1px solid var(--blue-200);
+      border-bottom: 3px solid var(--blue-400) !important;
     }
   }
 
   &__heading {
+    color: var(--blue-100);
     font-size: 0.9rem;
-    background-color: var(--blue-150);
+    background-color: var(--blue-700);
   }
 
   &__subheading {
-    background-color: var(--blue-100);
+    background-color: var(--blue-150);
     border-right: none !important;
+    font-weight: 600;
+    letter-spacing: -0.1px;
   }
 
   &__tooltip {
