@@ -129,6 +129,7 @@ function readCT(sta) {
         for (let i=0; i < data['Count']; i++) {
           if (data['Items'][i]['Time'] > BuildArray[sta][1][1].timeREF){
             setProgress("PC"+data['Items'][i]['Station'], "PCT"+data['Items'][i]['Station'], data['Items'][i]['TestNumber'], data['Items'][i]['TotalTest']);
+            BuildArray[sta][1][1].timeREF = data['Items'][i]['Time'];
             document.getElementById('test-quantity-'+sta).innerHTML = data['Items'][i]['TestNumber']+" out of "+data['Items'][i]['TotalTest'];
           }
           var timeResult = JSON.stringify(data['Items'][i]['Time']);
