@@ -124,16 +124,19 @@ function readCT(sta) {
         for (let i=0; i < data['Count']; i++) {
           if (data['Items'][i]['Time'] > BuildArray[sta][1][1].timeREF){
             setProgress("PC"+data['Items'][i]['Station'], "PCT"+data['Items'][i]['Station'], data['Items'][i]['TestNumber'], data['Items'][i]['TotalTest']);
-            for(let ch=1; ch <=6; ch++){
-
-            }
             document.getElementById('test-quantity-1').innerHTML = data['Items'][i]['TestNumber']+" out of "+data['Items'][i]['TotalTest'];
-            for(var z=1; z <= 8; z++){
-              BuildArray[sta][1][z].timeREF = data['Items'][i]['Time'];
-            }
           }
           var timeResult = JSON.stringify(data['Items'][i]['Time']);
           for(var n=1; n <=6; n++){
+            BuidArray[sta][n][1].success &= data['Items'][i]['Success'][n];
+            if (BuidArray[sta][n][1].success){
+              document.getElementById('T1F1').classList.remove("popup__relay-light--failed", "popup__relay-light--success");
+              document.getElementById('T1F1').classList.add("popup__relay-light--success");
+            }
+            else {
+              document.getElementById('T1F1').classList.remove("popup__relay-light--failed", "popup__relay-light--success");
+              document.getElementById('T1F1').classList.add("popup__relay-light--failed");
+            }
             for(var m=1; m <= 8; m++){
               var valueCT = extractData(data['Items'][i], 'CTPI', n, m);
               var valueESP = extractData(data['Items'][i], 'CTESP', n, m);

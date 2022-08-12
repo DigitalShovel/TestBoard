@@ -156,6 +156,7 @@ class stationCharts {
     testNUM = 0
     totalTEST = 0
     chart = 0
+    success = true;
 
     //////////// Setup ////////////////
     data = {
