@@ -21,7 +21,10 @@ function WebSocketTest() {
         /////////////// Add Station Table ////////////////////
         removeStationTables();
         addStationTables(piQuantity);
-        console.log("Query: ",document.querySelectorAll('[id^="test-quantity-"]'));
+        var messageHTML = document.querySelectorAll('[id^="test-quantity-"]');
+        for(var i=0; i < messageHTML.length; i++){
+          messageHTML[i].innerHTML = "Test Running";
+        }
       }
       alert(received_msg);
       ws.close();
@@ -241,11 +244,18 @@ function scanning(PIList, ESPList, dynamClient){
       if (piQuantity > 0){
         for (let i = 0; i < piQuantity; i++) {
           document.getElementById("PI#"+i).innerHTML = JSON.stringify(data['Items'][i]['MacAddress'], "Empty", 2);
+          /////////////////// Change Message //////////////////////
+          if (data['Items'][i]['CUT']){
+            var messageHTML = document.querySelector("test-quantity-"+i);
+            messageHTML.innerHTML = "Test Running";
+          }
+          //////////////////////////////////////////////////////////
         }
       }
     } 
   }
   );
+  
 
   ///////////////////  Build ESP List ////////////////////
   dynamClient.scan(ESPList, function(err, data) {
