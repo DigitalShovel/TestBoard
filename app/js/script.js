@@ -128,7 +128,6 @@ function readCT(sta) {
           }
           var timeResult = JSON.stringify(data['Items'][i]['Time']);
           for(var n=1; n <=6; n++){
-            console.log("STATUS: ", BuildArray[sta][n][1].success);
             BuildArray[sta][n][1].success &= data['Items'][i]['Success'][n];
             if (BuildArray[sta][n][1].success){
               document.getElementById('T1F'+n).classList.remove("popup__relay-light--fail", "popup__relay-light--success");
