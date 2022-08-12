@@ -21,6 +21,7 @@ function WebSocketTest() {
         /////////////// Add Station Table ////////////////////
         removeStationTables();
         addStationTables(piQuantity);
+        console.log(document.querySelectorAll("test-quantity-"));
       }
       alert(received_msg);
       ws.close();
@@ -124,7 +125,7 @@ function readCT(sta) {
         for (let i=0; i < data['Count']; i++) {
           if (data['Items'][i]['Time'] > BuildArray[sta][1][1].timeREF){
             setProgress("PC"+data['Items'][i]['Station'], "PCT"+data['Items'][i]['Station'], data['Items'][i]['TestNumber'], data['Items'][i]['TotalTest']);
-            document.getElementById('test-quantity-1').innerHTML = data['Items'][i]['TestNumber']+" out of "+data['Items'][i]['TotalTest'];
+            document.getElementById('test-quantity-'+sta).innerHTML = data['Items'][i]['TestNumber']+" out of "+data['Items'][i]['TotalTest'];
           }
           var timeResult = JSON.stringify(data['Items'][i]['Time']);
           for(var n=1; n <=6; n++){
