@@ -130,12 +130,12 @@ function readCT(sta) {
           for(var n=1; n <=6; n++){
             BuildArray[sta][n][1].success &= data['Items'][i]['Success'][n];
             if (BuildArray[sta][n][1].success){
-              document.getElementById('T1F'+n).classList.remove("popup__relay-light--fail", "popup__relay-light--success");
-              document.getElementById('T1F'+n).classList.add("popup__relay-light--success");
+              document.getElementById('T'+sta+'F'+n).classList.remove("popup__relay-light--fail", "popup__relay-light--success");
+              document.getElementById('T'+sta+'F'+n).classList.add("popup__relay-light--success");
             }
             else {
-              document.getElementById('T1F'+n).classList.remove("popup__relay-light--fail", "popup__relay-light--success");
-              document.getElementById('T1F'+n).classList.add("popup__relay-light--fail");
+              document.getElementById('T'+sta+'F'+n).classList.remove("popup__relay-light--fail", "popup__relay-light--success");
+              document.getElementById('T'+sta+'F'+n).classList.add("popup__relay-light--fail");
             }
             for(var m=1; m <= 8; m++){
               var valueCT = extractData(data['Items'][i], 'CTPI', n, m);
