@@ -51,15 +51,15 @@
       height: 10px;
       margin: auto;
       border-radius: 3px;
-      background-color: var(--success-700);
-      box-shadow: 0 0 6px 1px var(--success-500);
+      background-color: var(--warm-gray-500);
 
-      &--disabled {
-        background-color: var(--warm-gray-500);
-        box-shadow: none;
+      &--success {
+        box-shadow: 0 0 6px 1px var(--success-500);
+        background-color: var(--success-700);
+
       }
 
-      &--failed {
+      &--fail {
         background-color: var(--danger-500);
         box-shadow: 0 0 6px var(--danger-500);
       }
