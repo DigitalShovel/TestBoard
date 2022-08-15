@@ -1,32 +1,47 @@
 .list {
-  background-color: white;
   border-radius: 5px;
-  overflow: hidden;
 
   @media (max-width: 600px) {
     width: 100%;
   }
 
+  &__2-col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    &--scrollable {
+      max-height: 250px;
+      overflow-y: scroll;
+      background-color: white;
+      border-radius: 0 0 5px 5px;
+    }
+  }
+
   &__heading {
     padding: 0.8rem;
-    letter-spacing: -0.3px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--blue-100);
+    background-color: var(--blue-700);
+    border-bottom: 3px solid var(--blue-400);
+
+    &:nth-child(1) {
+      border-radius: 5px 0 0 0;
+    }
+
+    &:nth-child(2) {
+      border-radius: 0 5px 0 0;
+    }
+  }
+
+  &__subheading {
     background-color: var(--blue-150);
-    border-bottom: 1px solid var(--blue-200);
-
-    h2 {
-      font-weight: 700;
-      font-size: 0.9rem;
-    }
-
-    p {
-      text-align: right;
-      font-weight: 500;
-      font-size: 0.7rem;
-    }
-
-    @media (max-width: 600px) {
-      padding: 0.5rem 0.75rem;
-    }
+    border-right: none !important;
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: var(--blue-900);
+    letter-spacing: -0.1px;
+    padding: 0.8rem;
   }
 
   &__content {
@@ -35,16 +50,17 @@
   }
 
   &__item {
+    display: flex;
+    align-items: center;
     font-size: 0.8rem;
-    padding: 1rem 1.5rem;
+    padding: 0.8rem;
     text-align: center;
+    background-color: white;
+    border-right: 1px solid var(--blue-150);
+    border-bottom: 1px solid var(--blue-150);
 
     @media (max-width: 600px) {
       padding: 0.5rem 0.75rem;
-    }
-
-    &:not(:last-child) {
-      border-bottom: 1px solid var(--blue-150);
     }
   }
 }
