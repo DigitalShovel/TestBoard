@@ -695,14 +695,7 @@ function showPopup(graphID) {
 
 function refreshPIList(station, quantity, current) {
     console.log("ST: ", station);
-    $("#PI#"+current).empty();
-    $("#PI#"+current).html(`
-    <div class="list__item">
-        <select name="stations" id="station-${current+1}">
-            <option value="station-${station}">Station ${station}</option>
-        </select>
-    </div>
-    `);
+    document.getElementById("P"+current+"Default").innerHTML = "Station "+station;
     for (var i=1; i <= quantity; i++){
         if (i == station){
             console.log("Skipped");
