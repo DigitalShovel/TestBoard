@@ -21,6 +21,11 @@ function WebSocketTest() {
         /////////////// Add Station Table ////////////////////
         removeStationTables();
         addStationTables(piQuantity);
+        /////////////////////////////////////////////////////
+        var messageHTML = document.querySelectorAll('[id^="test-quantity-"]');
+        for(var i=0; i < messageHTML.length; i++){
+          messageHTML[i].innerHTML = "Test Running";
+        }
       }
       alert(received_msg);
       ws.close();
