@@ -694,8 +694,8 @@ function showPopup(graphID) {
 }
 
 function refreshPIList(station, quantity, current) {
-    $("#PI#"+current).empty();
-    $("#PI#"+current).append(`
+    //$("#PI#"+current).empty();
+    $("#PI#"+current).html(`
     <div class="list__item">
         <select name="stations" id="station-${current+1}">
             <option value="station-${station}">Station ${station}</option>
@@ -704,6 +704,7 @@ function refreshPIList(station, quantity, current) {
     `);
     for (var i=1; i <= quantity; i++){
         if (i == station){
+            console.log("Skipped");
             continue;
         }
         $("#station-"+i).append(`
@@ -713,8 +714,8 @@ function refreshPIList(station, quantity, current) {
 }
 
 function removePIList(current){
-    $("#PI#"+current).empty();
-    $("#PI#"+current).append(`
+    //$("#PI#"+current).empty();
+    $("#PI#"+current).html(`
     <div class="list__item">
         <select name="stations" id="station-${current+1}">
             <option value="">Station</option>
