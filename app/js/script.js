@@ -110,7 +110,7 @@ function readCT(sta) {
       KeyConditionExpression: 'Station = :station and #Time > :lastTime',
       ExpressionAttributeValues: {
         ':station': sta,
-        ':lastTime': BuildArray[1][1][1].timeREF
+        ':lastTime': BuildArray[sta][1][1].timeREF
       },
       ExpressionAttributeNames: {
         "#Time": "Time"
@@ -149,9 +149,20 @@ function readCT(sta) {
           var timeResult = JSON.stringify(data['Items'][i]['Time']);
           for(var n=1; n <=6; n++){
             for(var m=1; m <= 8; m++){
-              var valueCT = extractData(data['Items'][i], 'CTPI', n, m);
-              var valueESP = extractData(data['Items'][i], 'CTESP', n, m);
-              addDataChart(BuildArray[sta][n][m].chart, timeResult.substring(9,18), valueCT, valueESP);
+              ///// Extract CT data value /////
+              var valueCTPI = extractCTData(data['Items'][i], 'CTPI', n, m);
+              var valueCTESP = extractCTData(data['Items'][i], 'CTESP', n, m);
+              addDataChart(BuildArray[sta][n][m].chart, timeResult.substring(9,18), valueCTPI, valueCTESP);
+              ////// Extract Relay data value //////
+              var valueRLYPI = extractRLYData(data['Items'][i], 'RelayPI', n, m);
+              var valueRLYESP = extractRLYData(data['Items'][i], 'RelayESP', n, m);
+              document.getElementById('T'+sta+'G'+n+'R'+m).classList.remove("indicator-light--fail", "indicator-light--success");
+              if (valueRLYPI != valueRLYESP){
+                document.getElementById('T'+sta+'G'+n+'R'+m).classList.add("indicator-light--fail");
+              }
+              else {
+                document.getElementById('T'+sta+'G'+n+'R'+m).classList.add("indicator-light--success");
+              }
             }
           }
         }
@@ -174,9 +185,14 @@ function updateCharts(stations){
   }
 }
 
-///////////////// Collect data from DB //////////////////
-function extractData(data, attribute, channel, ctnum) {
+///////////////// Collect CT data from DB //////////////////
+function extractCTData(data, attribute, channel, ctnum) {
   return data[attribute][channel-1][String('CT'+ctnum)];
+}
+
+///////////////// Collect Relay data from DB //////////////////
+function extractRLYData(data, attribute, channel, ctnum) {
+  return data[attribute][channel-1][String('RLY'+ctnum)];
 }
 
 ///////////////// Add & Remove Data to Chart ////////////////////
