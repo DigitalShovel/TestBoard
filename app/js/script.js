@@ -126,18 +126,19 @@ function readCT(sta) {
           for(var n=1; n <=6; n++){
             BuildArray[sta][n][1].success &= data['Items'][i]['Success'][n];
             if (BuildArray[sta][n][1].success){
-              document.getElementById('T1F'+n).classList.remove("popup__relay-light--fail", "popup__relay-light--success");
-              document.getElementById('T1F'+n).classList.add("popup__relay-light--success");
-              document.getElementById('T'+sta+'F'+n).classList.remove("popup__relay-light--fail", "popup__relay-light--success");
-              document.getElementById('T'+sta+'F'+n).classList.add("popup__relay-light--success");
+              document.getElementById('T1F'+n).classList.remove("indicator-light--fail", "indicator-light--success");
+              document.getElementById('T1F'+n).classList.add("indicator-light--success");
+              document.getElementById('T'+sta+'F'+n).classList.remove("indicator-light--fail", "indicator-light--success");
+              document.getElementById('T'+sta+'F'+n).classList.add("indicator-light--success");
             }
             else {
-              document.getElementById('T1F'+n).classList.remove("popup__relay-light--fail", "popup__relay-light--success");
-              document.getElementById('T1F'+n).classList.add("popup__relay-light--fail");
-              document.getElementById('T'+sta+'F'+n).classList.remove("popup__relay-light--fail", "popup__relay-light--success");
-              document.getElementById('T'+sta+'F'+n).classList.add("popup__relay-light--fail");
+              document.getElementById('T1F'+n).classList.remove("indicator-light--fail", "indicator-light--success");
+              document.getElementById('T1F'+n).classList.add("indicator-light--fail");
+              document.getElementById('T'+sta+'F'+n).classList.remove("indicator-light--fail", "indicator-light--success");
+              document.getElementById('T'+sta+'F'+n).classList.add("indicator-light--fail");
             }
           }
+          //////////////////////////////////////////////////////////////////////////////
           if (data['Items'][i]['Time'] > BuildArray[sta][1][1].timeREF){
             setProgress("PC"+data['Items'][i]['Station'], "PCT"+data['Items'][i]['Station'], data['Items'][i]['TestNumber'], data['Items'][i]['TotalTest']);
             document.getElementById('test-quantity-1').innerHTML = data['Items'][i]['TestNumber']+" out of "+data['Items'][i]['TotalTest'];
