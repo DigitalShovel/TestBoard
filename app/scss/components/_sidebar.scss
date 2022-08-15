@@ -1,11 +1,9 @@
 .sidebar {
   --sidebar-width: 350px;
   height: calc(100vh - 138px);
-
   display: flex;
   flex-direction: column;
   position: fixed;
-  overflow-y: scroll;
   width: var(--sidebar-width);
   min-width: var(--sidebar-width);
   max-width: var(--sidebar-width);

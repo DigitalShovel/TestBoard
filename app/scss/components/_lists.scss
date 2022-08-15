@@ -35,6 +35,7 @@
   }
 
   &__subheading {
+    --icon-size: 22px;
     background-color: var(--blue-150);
     border-right: none !important;
     font-weight: 600;
@@ -42,6 +43,33 @@
     color: var(--blue-900);
     letter-spacing: -0.1px;
     padding: 0.8rem;
+
+    &--tooltip {
+      position: relative;
+      padding-left: calc(var(--icon-size) + 0.3rem);
+      cursor: default;
+
+      &::before {
+        content: "";
+        width: var(--icon-size);
+        height: var(--icon-size);
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background-image: url("../../../images/icons/icon_info.svg");
+        background-repeat: no-repeat;
+      }
+
+      &:hover {
+        color: var(--primary-color);
+
+        .tooltip {
+          opacity: 1;
+          pointer-events: all;
+        }
+      }
+    }
   }
 
   &__content {
