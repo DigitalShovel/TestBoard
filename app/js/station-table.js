@@ -701,7 +701,6 @@ function refreshPIList(station, quantity, current) {
     }
     for (var i=1; i <= quantity; i++){
         if (i == station){
-            console.log("Skipped");
             continue;
         }
         $("#station-"+i).append(`
