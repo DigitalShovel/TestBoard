@@ -1,11 +1,14 @@
 .sidebar {
+  --sidebar-width: 350px;
+  height: calc(100vh - 138px);
+
   display: flex;
   flex-direction: column;
   position: fixed;
-  width: 250px;
-  height: calc(100vh - 138px);
-  min-width: 250px;
-  max-width: 250px;
+  overflow-y: scroll;
+  width: var(--sidebar-width);
+  min-width: var(--sidebar-width);
+  max-width: var(--sidebar-width);
   padding: 2rem;
   background-color: var(--blue-900);
   border-right: 1px solid var(--blue-800);

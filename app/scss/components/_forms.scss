@@ -45,6 +45,16 @@ input[type="radio"] {
   display: flex;
 }
 
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 0;
+  border: 1px solid var(--blue-200);
+  background-color: white;
+  border-radius: 5px;
+}
+
 select {
   height: 36px;
   padding-left: 7px;
