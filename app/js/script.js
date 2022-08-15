@@ -21,6 +21,11 @@ function WebSocketTest() {
         /////////////// Add Station Table ////////////////////
         removeStationTables();
         addStationTables(piQuantity);
+        /////////////////////////////////////////////////////
+        var messageHTML = document.querySelectorAll('[id^="test-quantity-"]');
+        for(var i=0; i < messageHTML.length; i++){
+          messageHTML[i].innerHTML = "Test Running";
+        }
       }
       alert(received_msg);
       ws.close();
@@ -110,7 +115,7 @@ function readCT(sta) {
       KeyConditionExpression: 'Station = :station and #Time > :lastTime',
       ExpressionAttributeValues: {
         ':station': sta,
-        ':lastTime': BuildArray[1][1][1].timeREF
+        ':lastTime': BuildArray[sta][1][1].timeREF
       },
       ExpressionAttributeNames: {
         "#Time": "Time"
@@ -141,6 +146,11 @@ function readCT(sta) {
           //////////////////////////////////////////////////////////////////////////////
           if (data['Items'][i]['Time'] > BuildArray[sta][1][1].timeREF){
             setProgress("PC"+data['Items'][i]['Station'], "PCT"+data['Items'][i]['Station'], data['Items'][i]['TestNumber'], data['Items'][i]['TotalTest']);
+            ////////////// Stop logo animation if test done //////////
+            if (data['Items'][i]['TotalTest'] == data['Items'][i]['TestNumber']) {
+              document.getElementById('Logo'+sta).classList.add("logo-loading--disable");
+            }
+            //////////////////////////////////////////////////////////
             document.getElementById('test-quantity-1').innerHTML = data['Items'][i]['TestNumber']+" out of "+data['Items'][i]['TotalTest'];
             for(var z=1; z <= 8; z++){
               BuildArray[sta][1][z].timeREF = data['Items'][i]['Time'];
@@ -149,9 +159,20 @@ function readCT(sta) {
           var timeResult = JSON.stringify(data['Items'][i]['Time']);
           for(var n=1; n <=6; n++){
             for(var m=1; m <= 8; m++){
-              var valueCT = extractData(data['Items'][i], 'CTPI', n, m);
-              var valueESP = extractData(data['Items'][i], 'CTESP', n, m);
-              addDataChart(BuildArray[sta][n][m].chart, timeResult.substring(9,18), valueCT, valueESP);
+              ///// Extract CT data value /////
+              var valueCTPI = extractCTData(data['Items'][i], 'CTPI', n, m);
+              var valueCTESP = extractCTData(data['Items'][i], 'CTESP', n, m);
+              addDataChart(BuildArray[sta][n][m].chart, timeResult.substring(9,18), valueCTPI, valueCTESP);
+              ////// Extract Relay data value //////
+              var valueRLYPI = extractRLYData(data['Items'][i], 'RelayPI', n, m);
+              var valueRLYESP = extractRLYData(data['Items'][i], 'RelayESP', n, m);
+              document.getElementById('T'+sta+'G'+n+'R'+m).classList.remove("indicator-light--fail", "indicator-light--success");
+              if (valueRLYPI != valueRLYESP){
+                document.getElementById('T'+sta+'G'+n+'R'+m).classList.add("indicator-light--fail");
+              }
+              else {
+                document.getElementById('T'+sta+'G'+n+'R'+m).classList.add("indicator-light--success");
+              }
             }
           }
         }
@@ -174,9 +195,14 @@ function updateCharts(stations){
   }
 }
 
-///////////////// Collect data from DB //////////////////
-function extractData(data, attribute, channel, ctnum) {
+///////////////// Collect CT data from DB //////////////////
+function extractCTData(data, attribute, channel, ctnum) {
   return data[attribute][channel-1][String('CT'+ctnum)];
+}
+
+///////////////// Collect Relay data from DB //////////////////
+function extractRLYData(data, attribute, channel, ctnum) {
+  return data[attribute][channel-1][String('RLY'+ctnum)];
 }
 
 ///////////////// Add & Remove Data to Chart ////////////////////
