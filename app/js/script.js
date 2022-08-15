@@ -106,10 +106,11 @@ function auth() {
 const dataPerPlot = 91;
 let maxDataPerChart = dataPerPlot; // Number of data plus one
 
-function readCT(sta) {
-  if (sta != 0){
+function readCT(numSTA) {
+  if (numSTA != 0){
     var docClient = new AWS.DynamoDB.DocumentClient();
     
+    for(var sta=1; sta < numSTA; sta++){
     var ctItem = {
       TableName: "IoT_Result",
       KeyConditionExpression: 'Station = :station and #Time > :lastTime',
@@ -179,7 +180,8 @@ function readCT(sta) {
       }
     });
   }
-  updateCharts(sta);
+  }
+  updateCharts(numSTA);
 }
 //////////////////////////////////////////////////////////
 
