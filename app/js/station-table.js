@@ -696,16 +696,16 @@ function showPopup(graphID) {
 function refreshPIList(station, quantity, current) {
     if (station != 0) {
         document.getElementById("P"+current+"Default").innerHTML = "Station "+station;
+        for (var i=1; i <= quantity; i++){
+            if (i == station){
+                continue;
+            }
+            $("#station-"+i).append(`
+            <option value="station-${i}">Station ${i}</option>
+            `);
+        }
     } else {
         document.getElementById("P"+current+"Default").innerHTML = "Station";
-    }
-    for (var i=1; i <= quantity; i++){
-        if (i == station){
-            continue;
-        }
-        $("#station-"+i).append(`
-        <option value="station-${i}">Station ${i}</option>
-        `);
     }
 }
 
