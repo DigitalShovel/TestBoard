@@ -694,6 +694,7 @@ function showPopup(graphID) {
 }
 
 function refreshPIList(station, quantity, current) {
+    console.log("ST: ", station);
     //$("#PI#"+current).empty();
     $("#PI#"+current).html(`
     <div class="list__item">
