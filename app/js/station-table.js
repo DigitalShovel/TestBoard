@@ -712,7 +712,7 @@ function removePIList(current){
     $("#PI#"+current).html(`
     <div class="list__item">
         <select name="stations" id="station-${current+1}">
-            <option value="">Station</option>
+            <option id="P${current}Default" value="">Station</option>
         </select>
     </div>
     `);
