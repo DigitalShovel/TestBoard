@@ -279,7 +279,7 @@ function scanning(PIList, ESPList, dynamClient){
       piQtyOLD = piQuantity;
       if (piQuantity > 0){
         for (let i = 0; i < piQuantity; i++) {
-          console.log("STATION: ",data['Items'][i]['Station']);
+          console.log("STATION: ",data['Items'][i]);
           document.getElementById("PI#"+i).innerHTML = JSON.stringify(data['Items'][i]['MacAddress'], "Empty", 2);
           refreshPIList(data['Items'][i]['Station'], piQuantity, i);
         }
