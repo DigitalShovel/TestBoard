@@ -697,17 +697,28 @@ function refreshPIList(station, quantity, current) {
     $("#PI#"+current).empty();
     $("#PI#"+current).append(`
     <div class="list__item">
-        <select name="stations" id="station-${station}">
-            <option value="station-${station}">Station</option>
+        <select name="stations" id="station-${current+1}">
+            <option value="station-${station}">Station ${station}</option>
         </select>
     </div>
     `);
-    for (var i=0; i < quantity; i++){
+    for (var i=1; i <= quantity; i++){
         if (i == station){
             continue;
         }
         $("#station-"+i).append(`
-        <option value="station-${station}">Station</option>
+        <option value="station-${i}">Station ${i}</option>
         `);
     }
+}
+
+function removePIList(current){
+    $("#PI#"+current).empty();
+    $("#PI#"+current).append(`
+    <div class="list__item">
+        <select name="stations" id="station-${current+1}">
+            <option value="">Station</option>
+        </select>
+    </div>
+    `);
 }
