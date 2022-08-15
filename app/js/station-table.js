@@ -695,7 +695,7 @@ function showPopup(graphID) {
 
 function refreshPIList(station, quantity, current) {
     console.log("ST: ", station);
-    //$("#PI#"+current).empty();
+    $("#PI#"+current).empty();
     $("#PI#"+current).html(`
     <div class="list__item">
         <select name="stations" id="station-${current+1}">
@@ -715,7 +715,7 @@ function refreshPIList(station, quantity, current) {
 }
 
 function removePIList(current){
-    //$("#PI#"+current).empty();
+    $("#PI#"+current).empty();
     $("#PI#"+current).html(`
     <div class="list__item">
         <select name="stations" id="station-${current+1}">
