@@ -703,7 +703,7 @@ function refreshPIList(station, quantity, current) {
         if (i == station){
             continue;
         }
-        $("#station-"+i).append(`
+        $("#station-"+(current+1)).append(`
         <option value="station-${i}">Station ${i}</option>
         `);
     }
