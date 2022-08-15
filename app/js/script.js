@@ -272,9 +272,9 @@ function scanning(PIList, ESPList, dynamClient){
         readCT(piQuantity);
       }, 5000);
       /////////////////////////////////////////////////////////
+      removePIList(piQuantity);
       for (let i = 0; i < piQtyOLD; i++) {
         document.getElementById("PI#"+(i+1)).innerHTML = "Empty";
-        removePIList(i);
       }
       piQtyOLD = piQuantity;
       if (piQuantity > 0){
