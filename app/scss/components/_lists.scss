@@ -18,14 +18,16 @@
   }
 
   &__heading {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
     padding: 0.8rem;
     padding-right: calc(0.8rem + 11px);
     font-size: 0.9rem;
     font-weight: 700;
     color: var(--blue-100);
     background-color: var(--blue-700);
-    border-bottom: 3px solid var(--blue-400);
+    border-bottom: 3px solid var(--blue-300);
 
     &:nth-child(1) {
       border-radius: 5px 0 0 0;
@@ -33,6 +35,7 @@
 
     &:nth-child(2) {
       border-radius: 0 5px 0 0;
+      font-weight: 400;
     }
   }
 
@@ -47,6 +50,7 @@
     letter-spacing: -0.1px;
     padding: 0.8rem;
     padding-right: calc(0.8rem + 11px);
+    border-bottom: 1px solid var(--blue-200);
 
     &--tooltip {
       position: relative;

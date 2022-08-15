@@ -86,7 +86,8 @@ textarea {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  border-radius: 10px;
+  background: var(--blue-100);
+  border-radius: 0 0 5px 0;
 }
 
 /* Handle */
