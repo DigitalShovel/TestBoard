@@ -150,6 +150,7 @@ function readCT(sta) {
             if (data['Items'][i]['TotalTest'] == data['Items'][i]['TestNumber']) {
               document.getElementById('Logo'+sta).classList.add("logo-loading--disable");
             }
+            //////////////////////////////////////////////////////////
             document.getElementById('test-quantity-1').innerHTML = data['Items'][i]['TestNumber']+" out of "+data['Items'][i]['TotalTest'];
             for(var z=1; z <= 8; z++){
               BuildArray[sta][1][z].timeREF = data['Items'][i]['Time'];
