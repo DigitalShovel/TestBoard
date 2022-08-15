@@ -18,7 +18,9 @@
   }
 
   &__heading {
+    text-align: center;
     padding: 0.8rem;
+    padding-right: calc(0.8rem + 11px);
     font-size: 0.9rem;
     font-weight: 700;
     color: var(--blue-100);
@@ -35,6 +37,7 @@
   }
 
   &__subheading {
+    text-align: center;
     --icon-size: 22px;
     background-color: var(--blue-150);
     border-right: none !important;
@@ -43,6 +46,7 @@
     color: var(--blue-900);
     letter-spacing: -0.1px;
     padding: 0.8rem;
+    padding-right: calc(0.8rem + 11px);
 
     &--tooltip {
       position: relative;
@@ -80,12 +84,19 @@
   &__item {
     display: flex;
     align-items: center;
+    justify-content: center;
     font-size: 0.8rem;
     padding: 0.8rem;
     text-align: center;
     background-color: white;
     border-right: 1px solid var(--blue-150);
     border-bottom: 1px solid var(--blue-150);
+
+    &-label {
+      background-color: var(--blue-150);
+      padding: 0.5rem 0.8rem 0.4rem 0.8rem;
+      border-radius: 100vh;
+    }
 
     @media (max-width: 600px) {
       padding: 0.5rem 0.75rem;
