@@ -703,15 +703,55 @@ function refreshPIList(station, quantity, current) {
         if (i == station){
             continue;
         }
-        $("#station-"+(current+1)).append(`
+        $("#station-"+current).append(`
         <option value="station-${i}">Station ${i}</option>
         `);
     }
 }
 
-function removePIList(current){
+function removePIList(quantity){
     $("#PI_LIST").empty();
-    $("#station-"+(current+1)).html(`
-    <option id="P${current}Default" value="">Station</option>
+    $("#PI_LIST").append(`
+    <div class="list__item" id="PI#1">Empty</div>
+    <div class="list__item">
+        <select name="stations" id="station-1">
+            <option id="P1Default" value="">Station</option>
+        </select>
+    </div>
+    <div class="list__item" id="PI#2">Empty</div>
+    <div class="list__item">
+        <select name="stations" id="station-2">
+        <option id="P2Default" value="">Station</option>
+        </select>
+    </div>
+    <div class="list__item" id="PI#3">Empty</div>
+    <div class="list__item">
+        <select name="stations" id="station-3">
+        <option id="P3Default" value="">Station</option>
+        </select>
+    </div>
+    <div class="list__item" id="PI#4">Empty</div>
+    <div class="list__item">
+        <select name="stations" id="station-4">
+        <option id="P4Default" value="">Station</option>
+        </select>
+    </div>
+    <div class="list__item" id="PI#5">Empty</div>
+    <div class="list__item">
+        <select name="stations" id="station-5">
+        <option id="P5Default" value="">Station</option>
+        </select>
+    </div>
     `);
+    if (quantity > 5){
+        for(var i=6; i < quantity; i++)
+        $("#PI_LIST").append(`
+        <div class="list__item" id="PI#${i}">Empty</div>
+        <div class="list__item">
+            <select name="stations" id="station-${i}">
+                <option id="P${i}Default" value="">Station</option>
+            </select>
+        </div>
+        `);
+    }
 }

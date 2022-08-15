@@ -273,14 +273,14 @@ function scanning(PIList, ESPList, dynamClient){
       }, 5000);
       /////////////////////////////////////////////////////////
       for (let i = 0; i < piQtyOLD; i++) {
-        document.getElementById("PI#"+i).innerHTML = "Empty";
+        document.getElementById("PI#"+(i+1)).innerHTML = "Empty";
         removePIList(i);
       }
       piQtyOLD = piQuantity;
       if (piQuantity > 0){
         for (let i = 0; i < piQuantity; i++) {
-          document.getElementById("PI#"+i).innerHTML = JSON.stringify(data['Items'][i]['MacAddress'], "Empty", 2);
-          refreshPIList(data['Items'][i]['Station'], piQuantity, i);
+          document.getElementById("PI#"+(i+1)).innerHTML = JSON.stringify(data['Items'][i]['MacAddress'], "Empty", 2);
+          refreshPIList(data['Items'][i]['Station'], piQuantity, (i+1));
         }
       }
     } 
