@@ -242,12 +242,12 @@ function readItem() {
 
   var item1 = {
     TableName: "IoT_Testing_Unit_RaspPI",
-    ProjectionExpression: "MacAddress"
+    //ProjectionExpression: "MacAddress"
   };
 
   var item2 = {
     TableName: "IoT_Testing_Unit_ESP32",
-    ProjectionExpression: "MacAddress"
+    //ProjectionExpression: "MacAddress"
   };
   scanning(item1, item2, docClient);
 }
