@@ -694,8 +694,11 @@ function showPopup(graphID) {
 }
 
 function refreshPIList(station, quantity, current) {
-    console.log("ST: ", station);
-    document.getElementById("P"+current+"Default").innerHTML = "Station "+station;
+    if (station != 0) {
+        document.getElementById("P"+current+"Default").innerHTML = "Station "+station;
+    } else {
+        document.getElementById("P"+current+"Default").innerHTML = "Station";
+    }
     for (var i=1; i <= quantity; i++){
         if (i == station){
             console.log("Skipped");
