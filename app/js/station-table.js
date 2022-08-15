@@ -710,6 +710,7 @@ function refreshPIList(station, quantity, current) {
 }
 
 function removePIList(current){
+    $("#PI_LIST").empty();
     $("#station-"+(current+1)).html(`
     <option id="P${current}Default" value="">Station</option>
     `);
