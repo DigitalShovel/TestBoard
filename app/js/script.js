@@ -219,7 +219,7 @@ function scanning(PIList, ESPList, dynamClient){
     } 
     else {
       piQuantity = parseInt(JSON.stringify(data['Count'], "0", 2));
-      document.getElementById("PI_Devices").innerHTML = piQuantity+" devices";
+      document.getElementById("PI_Devices").innerHTML = piQuantity+" device(s)";
       /////////////// Add Station Table ////////////////////
       removeStationTables();
       addStationTables(piQuantity);
@@ -249,7 +249,7 @@ function scanning(PIList, ESPList, dynamClient){
     } 
     else {
       espQty = parseInt(JSON.stringify(data['Count'], "0", 2));
-      document.getElementById("ESP_Devices").innerHTML = espQty+" devices";
+      document.getElementById("ESP_Devices").innerHTML = espQty+" device(s)";
       for (let i = 0; i < espQtyOLD; i++) {
         document.getElementById("ESP#"+i).innerHTML = "Empty";
       }
