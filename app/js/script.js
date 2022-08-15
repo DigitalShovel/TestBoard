@@ -274,6 +274,7 @@ function scanning(PIList, ESPList, dynamClient){
       /////////////////////////////////////////////////////////
       for (let i = 0; i < piQtyOLD; i++) {
         document.getElementById("PI#"+i).innerHTML = "Empty";
+        $("#PI#"+i).empty();
         removePIList(i);
       }
       piQtyOLD = piQuantity;
