@@ -69,10 +69,11 @@ function mapStationWebSocket() {
 
 ///////// Verify Mac Address with its Station /////////
 function checkStations(){
+  var stationDict = {}
   for(var i=0; i < piQuantity; i++){
-    console.log(document.getElementById("PI#"+(i+1)).textContent);
-    console.log(document.getElementById("station-"+(i+1)).value);
+    stationDict[document.getElementById("PI#"+(i+1)).textContent] = console.log(document.getElementById("station-"+(i+1)).value);
   }
+  console.log("DICT: ", stationDict);
 }
 
 ////////////// Check for Login Token //////////////////
