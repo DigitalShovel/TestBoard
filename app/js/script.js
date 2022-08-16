@@ -269,7 +269,9 @@ function scanning(PIList, ESPList, dynamClient){
       readCT(piQuantity);
       /////////////// Refresh chart every 5 seconds /////////////
       var inverval_timer = setInterval(function () {
-        readCT(piQuantity);
+        for(var k=1; k<=piQuantity; k++){
+        readCT(k);
+        }
       }, 5000);
       /////////////////////////////////////////////////////////
       removePIList(piQuantity);
