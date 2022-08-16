@@ -132,6 +132,7 @@ function readCT(stationsCheck) {
           for (let i=0; i < data['Count']; i++) {
             ////////////////////////  Change Failed Status Light  ////////////////////////
             for(var n=1; n <=6; n++){
+              console.log("Stations: ", sta);
               BuildArray[sta][n][1].success &= data['Items'][i]['Success'][n];
               if (BuildArray[sta][n][1].success){
                 document.getElementById('T1F'+n).classList.remove("indicator-light--fail", "indicator-light--success");
