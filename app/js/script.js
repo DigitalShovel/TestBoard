@@ -71,7 +71,7 @@ function mapStationWebSocket() {
 function checkStations(){
   var stationDict = {}
   for(var i=0; i < piQuantity; i++){
-    stationDict[document.getElementById("PI#"+(i+1)).textContent] = console.log(document.getElementById("station-"+(i+1)).value);
+    stationDict[String(document.getElementById("PI#"+(i+1)).textContent)] = console.log(document.getElementById("station-"+(i+1)).value);
   }
   console.log("DICT: ", stationDict);
 }
