@@ -293,7 +293,7 @@ function scanning(PIList, ESPList, dynamClient){
       piQtyOLD = piQuantity;
       if (piQuantity > 0){
         for (let i = 0; i < piQuantity; i++) {
-          document.getElementById("PI#"+(i+1)).innerHTML = JSON.stringify(data['Items'][i]['MacAddress'], "Empty", 2);
+          document.getElementById("PI#"+(i+1)).innerHTML = data['Items'][i]['MacAddress'];
           refreshPIList(data['Items'][i]['Station'], piQuantity, (i+1));
         }
       }
@@ -316,7 +316,7 @@ function scanning(PIList, ESPList, dynamClient){
       espQtyOLD = espQty;
       if (espQty > 0){
         for (let i = 0; i < espQty; i++) {
-          document.getElementById("ESP#"+(i+1)).innerHTML = data['Items'][i]['MacAddress'];//JSON.stringify(data['Items'][i]['MacAddress'], "Empty", 2);
+          document.getElementById("ESP#"+(i+1)).innerHTML = data['Items'][i]['MacAddress'];
           refreshESPList(data['Items'][i]['Station'], data['Items'][i]['Channel'], (i+1));
         }
       }
