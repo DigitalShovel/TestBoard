@@ -107,6 +107,7 @@ const dataPerPlot = 91;
 let maxDataPerChart = dataPerPlot; // Number of data plus one
 
 function readCT(sta) {
+  console.log("Stations: ", sta);
   if (sta != 0){
     var docClient = new AWS.DynamoDB.DocumentClient();
     
