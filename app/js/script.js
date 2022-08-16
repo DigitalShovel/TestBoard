@@ -184,6 +184,14 @@ function readCT(sta) {
 
 ////////////// Update all available charts ////////////////////
 
+function updateOneChart(station){
+  for(var n=1; n <=6; n++){
+    for(var m=1; m <= 8; m++){
+      BuildArray[station][n][m].chart.update();
+    }
+  }
+}
+
 function updateCharts(stations){
   for (var statio=1; statio <= stations; statio++){
     for(var n=1; n <=6; n++){
