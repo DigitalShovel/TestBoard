@@ -283,7 +283,7 @@ function scanning(PIList, ESPList, dynamClient){
         for(var k=1; k<=piQuantity; k++){
         readCT(k);
         }
-      }, 5000);
+      }, 10000);
       /////////////////////////////////////////////////////////
       removePIList(piQuantity);
       for (let i = 0; i < piQtyOLD; i++) {
