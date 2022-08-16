@@ -179,7 +179,6 @@ function readCT(sta) {
       }
     });
   }
-  updateCharts(sta);
 }
 //////////////////////////////////////////////////////////
 
@@ -266,12 +265,16 @@ function scanning(PIList, ESPList, dynamClient){
       /////////////// Add Station Table ////////////////////
       removeStationTables();
       addStationTables(piQuantity);
-      readCT(piQuantity);
+      for(var k=1; k<=piQuantity; k++){
+        readCT(k);
+      }
+      updateCharts(piQuantity);
       /////////////// Refresh chart every 5 seconds /////////////
       var inverval_timer = setInterval(function () {
         for(var k=1; k<=piQuantity; k++){
         readCT(k);
         }
+        updateCharts(piQuantity);
       }, 5000);
       /////////////////////////////////////////////////////////
       removePIList(piQuantity);
