@@ -150,7 +150,7 @@ function readCT(sta) {
             ////////////// Stop logo animation if test done //////////
             if (data['Items'][i]['TotalTest'] == data['Items'][i]['TestNumber']) {
               document.getElementById('Logo'+sta).classList.add("logo-loading--disable");
-              //updateOneChart(sta);
+              updateOneChart(sta);
             }
             //////////////////////////////////////////////////////////
             document.getElementById('test-quantity-1').innerHTML = data['Items'][i]['TestNumber']+" out of "+data['Items'][i]['TotalTest'];
@@ -189,7 +189,7 @@ function readCT(sta) {
 function updateOneChart(station){
   for(var n=1; n <=6; n++){
     for(var m=1; m <= 8; m++){
-      BuildArray[station][n][m].chart.update();
+      BuildArray[station][n][m].chart.update('none');
     }
   }
 }
@@ -198,7 +198,7 @@ function updateCharts(stations){
   for (var statio=1; statio <= stations; statio++){
     for(var n=1; n <=6; n++){
       for(var m=1; m <= 8; m++){
-        BuildArray[statio][n][m].chart.update();
+        BuildArray[statio][n][m].chart.update('none');
       }
     }
   }
