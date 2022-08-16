@@ -150,7 +150,7 @@ function readCT(sta) {
             ////////////// Stop logo animation if test done //////////
             if (data['Items'][i]['TotalTest'] == data['Items'][i]['TestNumber']) {
               document.getElementById('Logo'+sta).classList.add("logo-loading--disable");
-              updateOneChart(sta);
+              //updateOneChart(sta);
             }
             //////////////////////////////////////////////////////////
             document.getElementById('test-quantity-1').innerHTML = data['Items'][i]['TestNumber']+" out of "+data['Items'][i]['TotalTest'];
@@ -283,7 +283,7 @@ function scanning(PIList, ESPList, dynamClient){
         for(var k=1; k<=piQuantity; k++){
         readCT(k);
         }
-      }, 10000);
+      }, 5000);
       /////////////////////////////////////////////////////////
       removePIList(piQuantity);
       for (let i = 0; i < piQtyOLD; i++) {
