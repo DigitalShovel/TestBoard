@@ -107,81 +107,83 @@ function auth() {
 const dataPerPlot = 91;
 let maxDataPerChart = dataPerPlot; // Number of data plus one
 
-function readCT(sta) {
-  sta = 1;
-  if (sta != 0){
+function readCT(stationsCheck) {
+  if (stationsCheck != 0){
     var docClient = new AWS.DynamoDB.DocumentClient();
     
-    var ctItem = {
-      TableName: "IoT_Result",
-      KeyConditionExpression: 'Station = :station and #Time > :lastTime',
-      ExpressionAttributeValues: {
-        ':station': sta,
-        ':lastTime': BuildArray[sta][1][1].timeREF
-      },
-      ExpressionAttributeNames: {
-        "#Time": "Time"
-      }
-    };
-    docClient.query(ctItem, function(err, data) {
-      if (err) {
-        alert(JSON.stringify(err, undefined, 2));
-      }
-      else {
-        for (let i=0; i < data['Count']; i++) {
-          ////////////////////////  Change Failed Status Light  ////////////////////////
-          for(var n=1; n <=6; n++){
-            BuildArray[sta][n][1].success &= data['Items'][i]['Success'][n];
-            if (BuildArray[sta][n][1].success){
-              document.getElementById('T1F'+n).classList.remove("indicator-light--fail", "indicator-light--success");
-              document.getElementById('T1F'+n).classList.add("indicator-light--success");
-              document.getElementById('T'+sta+'F'+n).classList.remove("indicator-light--fail", "indicator-light--success");
-              document.getElementById('T'+sta+'F'+n).classList.add("indicator-light--success");
-            }
-            else {
-              document.getElementById('T1F'+n).classList.remove("indicator-light--fail", "indicator-light--success");
-              document.getElementById('T1F'+n).classList.add("indicator-light--fail");
-              document.getElementById('T'+sta+'F'+n).classList.remove("indicator-light--fail", "indicator-light--success");
-              document.getElementById('T'+sta+'F'+n).classList.add("indicator-light--fail");
-            }
-          }
-          //////////////////////////////////////////////////////////////////////////////
-          if (data['Items'][i]['Time'] > BuildArray[sta][1][1].timeREF){
-            setProgress("PC"+data['Items'][i]['Station'], "PCT"+data['Items'][i]['Station'], data['Items'][i]['TestNumber'], data['Items'][i]['TotalTest']);
-            ////////////// Stop logo animation if test done //////////
-            if (data['Items'][i]['TotalTest'] == data['Items'][i]['TestNumber']) {
-              document.getElementById('Logo'+sta).classList.add("logo-loading--disable");
-            }
-            //////////////////////////////////////////////////////////
-            document.getElementById('test-quantity-1').innerHTML = data['Items'][i]['TestNumber']+" out of "+data['Items'][i]['TotalTest'];
-            for(var z=1; z <= 8; z++){
-              BuildArray[sta][1][z].timeREF = data['Items'][i]['Time'];
-            }
-          }
-          var timeResult = JSON.stringify(data['Items'][i]['Time']);
-          for(var n=1; n <=6; n++){
-            for(var m=1; m <= 8; m++){
-              ///// Extract CT data value /////
-              var valueCTPI = extractCTData(data['Items'][i], 'CTPI', n, m);
-              var valueCTESP = extractCTData(data['Items'][i], 'CTESP', n, m);
-              addDataChart(BuildArray[sta][n][m].chart, timeResult.substring(9,18), valueCTPI, valueCTESP);
-              ////// Extract Relay data value //////
-              var valueRLYPI = extractRLYData(data['Items'][i], 'RelayPI', n, m);
-              var valueRLYESP = extractRLYData(data['Items'][i], 'RelayESP', n, m);
-              document.getElementById('T'+sta+'G'+n+'R'+m).classList.remove("indicator-light--fail", "indicator-light--success");
-              if (valueRLYPI != valueRLYESP){
-                document.getElementById('T'+sta+'G'+n+'R'+m).classList.add("indicator-light--fail");
+    for(var sta=1; sta <= stationsCheck; sta++){
+
+      var ctItem = {
+        TableName: "IoT_Result",
+        KeyConditionExpression: 'Station = :station and #Time > :lastTime',
+        ExpressionAttributeValues: {
+          ':station': sta,
+          ':lastTime': BuildArray[sta][1][1].timeREF
+        },
+        ExpressionAttributeNames: {
+          "#Time": "Time"
+        }
+      };
+      docClient.query(ctItem, function(err, data) {
+        if (err) {
+          alert(JSON.stringify(err, undefined, 2));
+        }
+        else {
+          for (let i=0; i < data['Count']; i++) {
+            ////////////////////////  Change Failed Status Light  ////////////////////////
+            for(var n=1; n <=6; n++){
+              BuildArray[sta][n][1].success &= data['Items'][i]['Success'][n];
+              if (BuildArray[sta][n][1].success){
+                document.getElementById('T1F'+n).classList.remove("indicator-light--fail", "indicator-light--success");
+                document.getElementById('T1F'+n).classList.add("indicator-light--success");
+                document.getElementById('T'+sta+'F'+n).classList.remove("indicator-light--fail", "indicator-light--success");
+                document.getElementById('T'+sta+'F'+n).classList.add("indicator-light--success");
               }
               else {
-                document.getElementById('T'+sta+'G'+n+'R'+m).classList.add("indicator-light--success");
+                document.getElementById('T1F'+n).classList.remove("indicator-light--fail", "indicator-light--success");
+                document.getElementById('T1F'+n).classList.add("indicator-light--fail");
+                document.getElementById('T'+sta+'F'+n).classList.remove("indicator-light--fail", "indicator-light--success");
+                document.getElementById('T'+sta+'F'+n).classList.add("indicator-light--fail");
+              }
+            }
+            //////////////////////////////////////////////////////////////////////////////
+            if (data['Items'][i]['Time'] > BuildArray[sta][1][1].timeREF){
+              setProgress("PC"+data['Items'][i]['Station'], "PCT"+data['Items'][i]['Station'], data['Items'][i]['TestNumber'], data['Items'][i]['TotalTest']);
+              ////////////// Stop logo animation if test done //////////
+              if (data['Items'][i]['TotalTest'] == data['Items'][i]['TestNumber']) {
+                document.getElementById('Logo'+sta).classList.add("logo-loading--disable");
+              }
+              //////////////////////////////////////////////////////////
+              document.getElementById('test-quantity-1').innerHTML = data['Items'][i]['TestNumber']+" out of "+data['Items'][i]['TotalTest'];
+              for(var z=1; z <= 8; z++){
+                BuildArray[sta][1][z].timeREF = data['Items'][i]['Time'];
+              }
+            }
+            var timeResult = JSON.stringify(data['Items'][i]['Time']);
+            for(var n=1; n <=6; n++){
+              for(var m=1; m <= 8; m++){
+                ///// Extract CT data value /////
+                var valueCTPI = extractCTData(data['Items'][i], 'CTPI', n, m);
+                var valueCTESP = extractCTData(data['Items'][i], 'CTESP', n, m);
+                addDataChart(BuildArray[sta][n][m].chart, timeResult.substring(9,18), valueCTPI, valueCTESP);
+                ////// Extract Relay data value //////
+                var valueRLYPI = extractRLYData(data['Items'][i], 'RelayPI', n, m);
+                var valueRLYESP = extractRLYData(data['Items'][i], 'RelayESP', n, m);
+                document.getElementById('T'+sta+'G'+n+'R'+m).classList.remove("indicator-light--fail", "indicator-light--success");
+                if (valueRLYPI != valueRLYESP){
+                  document.getElementById('T'+sta+'G'+n+'R'+m).classList.add("indicator-light--fail");
+                }
+                else {
+                  document.getElementById('T'+sta+'G'+n+'R'+m).classList.add("indicator-light--success");
+                }
               }
             }
           }
         }
-      }
-    });
+      });
+    }
   }
-  updateCharts(sta);
+  updateCharts(stationsCheck);
 }
 //////////////////////////////////////////////////////////
 
