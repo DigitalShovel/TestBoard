@@ -50,7 +50,8 @@ function mapStationWebSocket() {
 
     ws.onopen = function () {
       // Web Socket is connected, send data using send()
-      ws.send('{"action": "startMap","message": "Start Map Station"}');
+      //ws.send('{"action": "startMap","message": "Start Map Station"}');
+      ws.send({action: "startMap", message: "Start Map Station"});
     };
 
     ws.onmessage = function (evt) {
