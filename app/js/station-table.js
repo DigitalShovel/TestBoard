@@ -715,31 +715,31 @@ function removePIList(quantity){
     <div class="list__item" id="PI#1">Empty</div>
     <div class="list__item">
         <select name="stations" id="station-1">
-            <option id="P1Default" value="">Station</option>
+            <option id="P1Default" value="">Unassigned</option>
         </select>
     </div>
     <div class="list__item" id="PI#2">Empty</div>
     <div class="list__item">
         <select name="stations" id="station-2">
-        <option id="P2Default" value="">Station</option>
+        <option id="P2Default" value="">Unassigned</option>
         </select>
     </div>
     <div class="list__item" id="PI#3">Empty</div>
     <div class="list__item">
         <select name="stations" id="station-3">
-        <option id="P3Default" value="">Station</option>
+        <option id="P3Default" value="">Unassigned</option>
         </select>
     </div>
     <div class="list__item" id="PI#4">Empty</div>
     <div class="list__item">
         <select name="stations" id="station-4">
-        <option id="P4Default" value="">Station</option>
+        <option id="P4Default" value="">Unassigned</option>
         </select>
     </div>
     <div class="list__item" id="PI#5">Empty</div>
     <div class="list__item">
         <select name="stations" id="station-5">
-        <option id="P5Default" value="">Station</option>
+        <option id="P5Default" value="">Unassigned</option>
         </select>
     </div>
     `);
@@ -749,7 +749,7 @@ function removePIList(quantity){
         <div class="list__item" id="PI#${i}">Empty</div>
         <div class="list__item">
             <select name="stations" id="station-${i}">
-                <option id="P${i}Default" value="">Station</option>
+                <option id="P${i}Default" value="">Unassigned</option>
             </select>
         </div>
         `);
