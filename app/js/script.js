@@ -24,7 +24,7 @@ function WebSocketTest() {
         /////////////////////////////////////////////////////
         var messageHTML = document.querySelectorAll('[id^="test-quantity-"]');
         for(var i=0; i < messageHTML.length; i++){
-          messageHTML[i].innerHTML = "Test Running";
+          messageHTML[i].innerHTML = "Running";
         }
       }
       alert(received_msg);

@@ -378,31 +378,31 @@ function addStationTables(quantity) {
                                     <div id="T${i}G4R1" class="indicator-light"></div>
                                 </div>
                                 <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
+                                    <span class="indicator-title">Relay 2</span>
                                     <div id="T${i}G4R2" class="indicator-light"></div>
                                 </div>
                                 <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
+                                    <span class="indicator-title">Relay 3</span>
                                     <div id="T${i}G4R3" class="indicator-light"></div>
                                 </div>
                                 <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
+                                    <span class="indicator-title">Relay 4</span>
                                     <div id="T${i}G4R4" class="indicator-light"></div>
                                 </div>
                                 <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
+                                    <span class="indicator-title">Relay 5</span>
                                     <div id="T${i}G4R5" class="indicator-light"></div>
                                 </div>
                                 <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
+                                    <span class="indicator-title">Relay 6</span>
                                     <div id="T${i}G4R6" class="indicator-light"></div>
                                 </div>
                                 <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
+                                    <span class="indicator-title">Relay 7</span>
                                     <div id="T${i}G4R7" class="indicator-light"></div>
                                 </div>
                                 <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
+                                    <span class="indicator-title">Relay 8</span>
                                     <div id="T${i}G4R8" class="indicator-light"></div>
                                 </div>
                             </div>
@@ -473,31 +473,31 @@ function addStationTables(quantity) {
                                     <div id="T${i}G5R1" class="indicator-light"></div>
                                 </div>
                                 <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
+                                    <span class="indicator-title">Relay 2</span>
                                     <div id="T${i}G5R2" class="indicator-light"></div>
                                 </div>
                                 <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
+                                    <span class="indicator-title">Relay 3</span>
                                     <div id="T${i}G5R3" class="indicator-light"></div>
                                 </div>
                                 <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
+                                    <span class="indicator-title">Relay 4</span>
                                     <div id="T${i}G5R4" class="indicator-light"></div>
                                 </div>
                                 <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
+                                    <span class="indicator-title">Relay 5</span>
                                     <div id="T${i}G5R5" class="indicator-light"></div>
                                 </div>
                                 <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
+                                    <span class="indicator-title">Relay 6</span>
                                     <div id="T${i}G5R6" class="indicator-light"></div>
                                 </div>
                                 <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
+                                    <span class="indicator-title">Relay 7</span>
                                     <div id="T${i}G5R7" class="indicator-light"></div>
                                 </div>
                                 <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
+                                    <span class="indicator-title">Relay 8</span>
                                     <div id="T${i}G5R8" class="indicator-light"></div>
                                 </div>
                             </div>
@@ -568,31 +568,31 @@ function addStationTables(quantity) {
                                     <div id="T${i}G6R1" class="indicator-light"></div>
                                 </div>
                                 <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
+                                    <span class="indicator-title">Relay 2</span>
                                     <div id="T${i}G6R2" class="indicator-light"></div>
                                 </div>
                                 <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
+                                    <span class="indicator-title">Relay 3</span>
                                     <div id="T${i}G6R3" class="indicator-light"></div>
                                 </div>
                                 <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
+                                    <span class="indicator-title">Relay 4</span>
                                     <div id="T${i}G6R4" class="indicator-light"></div>
                                 </div>
                                 <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
+                                    <span class="indicator-title">Relay 5</span>
                                     <div id="T${i}G6R5" class="indicator-light"></div>
                                 </div>
                                 <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
+                                    <span class="indicator-title">Relay 6</span>
                                     <div id="T${i}G6R6" class="indicator-light"></div>
                                 </div>
                                 <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
+                                    <span class="indicator-title">Relay 7</span>
                                     <div id="T${i}G6R7" class="indicator-light"></div>
                                 </div>
                                 <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
+                                    <span class="indicator-title">Relay 8</span>
                                     <div id="T${i}G6R8" class="indicator-light"></div>
                                 </div>
                             </div>
