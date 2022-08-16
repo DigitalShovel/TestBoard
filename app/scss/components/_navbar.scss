@@ -2,6 +2,10 @@
   padding: 1rem 2rem;
   border-bottom: 1px solid var(--blue-800);
 
+  @media (max-width: 600px) {
+    padding: 1rem;
+  }
+
   &__logo {
     height: 50px;
   }
