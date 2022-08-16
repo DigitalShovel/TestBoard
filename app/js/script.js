@@ -146,11 +146,10 @@ function readCT(sta) {
           //////////////////////////////////////////////////////////////////////////////
           if (data['Items'][i]['Time'] > BuildArray[sta][1][1].timeREF){
             setProgress("PC"+data['Items'][i]['Station'], "PCT"+data['Items'][i]['Station'], data['Items'][i]['TestNumber'], data['Items'][i]['TotalTest']);
-            updateOneChart(sta);
             ////////////// Stop logo animation if test done //////////
             if (data['Items'][i]['TotalTest'] == data['Items'][i]['TestNumber']) {
               document.getElementById('Logo'+sta).classList.add("logo-loading--disable");
-              //updateOneChart(sta);
+              updateOneChart(sta);
             }
             //////////////////////////////////////////////////////////
             document.getElementById('test-quantity-1').innerHTML = data['Items'][i]['TestNumber']+" out of "+data['Items'][i]['TotalTest'];
