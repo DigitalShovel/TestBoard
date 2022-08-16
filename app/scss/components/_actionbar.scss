@@ -2,6 +2,10 @@
   padding: 1rem 2rem;
   border-bottom: 1px solid var(--blue-800);
 
+  @media (max-width: 600px) {
+    padding: 1rem
+  }
+
   li:nth-child(3) {
     padding-left: 1rem;
     border-left: 1px solid var(--blue-800);

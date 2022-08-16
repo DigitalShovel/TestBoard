@@ -14,6 +14,10 @@
       overflow-y: scroll;
       background-color: white;
       border-radius: 0 0 5px 5px;
+
+      @media (max-width: 600px) {
+        max-height: 150px;
+      }
     }
   }
 
@@ -28,6 +32,11 @@
     color: var(--blue-100);
     background-color: var(--blue-700);
     border-bottom: 3px solid var(--blue-300);
+
+    @media (max-width: 600px) {
+      padding: 0.5rem;
+      font-size: 0.8rem;
+    }
 
     &:nth-child(1) {
       border-radius: 5px 0 0 0;
@@ -51,6 +60,11 @@
     padding: 0.8rem;
     padding-right: calc(0.8rem + 11px);
     border-bottom: 1px solid var(--blue-200);
+
+    @media (max-width: 600px) {
+      padding: 0.5rem;
+      font-size: 0.7rem;
+    }
 
     &--tooltip {
       position: relative;
@@ -96,14 +110,9 @@
     border-right: 1px solid var(--blue-150);
     border-bottom: 1px solid var(--blue-150);
 
-    &-label {
-      background-color: var(--blue-150);
-      padding: 0.5rem 0.8rem 0.4rem 0.8rem;
-      border-radius: 100vh;
-    }
-
     @media (max-width: 600px) {
-      padding: 0.5rem 0.75rem;
+      font-size: 0.7rem;
+      padding: 0.5rem;
     }
   }
 }
