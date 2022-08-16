@@ -696,6 +696,7 @@ function showPopup(graphID) {
 function refreshPIList(station, quantity, current) {
     if (station != 0) {
         document.getElementById("P"+current+"Default").innerHTML = "Station "+station;
+        document.getElementById("P"+current+"Default").value = station;
     } else {
         document.getElementById("P"+current+"Default").innerHTML = "Station";
     }
@@ -715,7 +716,7 @@ function removePIList(quantity){
     <div class="list__item" id="PI#1">Empty</div>
     <div class="list__item">
         <select name="stations" id="station-1">
-            <option id="P1Default" value="1">Unassigned</option>
+            <option id="P1Default" value="0">Unassigned</option>
         </select>
     </div>
     <div class="list__item" id="PI#2">Empty</div>
