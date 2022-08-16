@@ -755,3 +755,42 @@ function removePIList(quantity){
         `);
     }
 }
+
+function refreshESPList(station, channel, current) {
+    document.getElementById("ESP"+current+"Detail").innerHTML = "S"+station+" - CH"+channel;
+}
+
+function removeESPList(quantity){
+    $("#ESP_LIST").empty();
+    $("#ESP_LIST").append(`
+    <div class="list__item" id="ESP#1">Empty</div>
+        <div class="list__item">
+          <p id="ESP1Detail" class="list__item-label">S0 - CH0</p>
+        </div>
+        <div class="list__item" id="ESP#2">Empty</div>
+        <div class="list__item">
+          <p id="ESP2Detail" class="list__item-label">S0 - CH0</p>
+        </div>
+        <div class="list__item" id="ESP#3">Empty</div>
+        <div class="list__item">
+          <p id="ESP3Detail" class="list__item-label">S0 - CH0</p>
+        </div>
+        <div class="list__item" id="ESP#4">Empty</div>
+        <div class="list__item">
+          <p id="ESP4Detail" class="list__item-label">S0 - CH0</p>
+        </div>
+        <div class="list__item" id="ESP#5">Empty</div>
+        <div class="list__item">
+          <p id="ESP5Detail" class="list__item-label">S0 - CH0</p>
+        </div>
+    `);
+    if (quantity > 5){
+        for(var i=6; i < quantity; i++)
+        $("#ESP_LIST").append(`
+        <div class="list__item" id="ESP#${i}">Empty</div>
+        <div class="list__item">
+          <p id="ESP${i}Detail" class="list__item-label">S0 - CH0</p>
+        </div>
+        `);
+    }
+}

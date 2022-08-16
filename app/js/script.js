@@ -295,13 +295,15 @@ function scanning(PIList, ESPList, dynamClient){
     else {
       espQty = parseInt(JSON.stringify(data['Count'], "0", 2));
       document.getElementById("ESP_Devices").innerHTML = espQty+" device(s)";
+      removeESPList(espQty);
       for (let i = 0; i < espQtyOLD; i++) {
-        document.getElementById("ESP#"+i).innerHTML = "Empty";
+        document.getElementById("ESP#"+(i+1)).innerHTML = "Empty";
       }
       espQtyOLD = espQty;
       if (espQty > 0){
         for (let i = 0; i < espQty; i++) {
-          document.getElementById("ESP#"+i).innerHTML = JSON.stringify(data['Items'][i]['MacAddress'], "Empty", 2);
+          document.getElementById("ESP#"+(i+1)).innerHTML = JSON.stringify(data['Items'][i]['MacAddress'], "Empty", 2);
+          refreshESPList(data['Items'][i]['Station'], data['Items'][i]['Channel'], (i+1));
         }
       }
     }
