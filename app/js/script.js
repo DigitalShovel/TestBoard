@@ -163,6 +163,7 @@ function readCT(sta) {
               var valueCTPI = extractCTData(data['Items'][i], 'CTPI', n, m);
               var valueCTESP = extractCTData(data['Items'][i], 'CTESP', n, m);
               addDataChart(BuildArray[sta][n][m].chart, timeResult.substring(9,18), valueCTPI, valueCTESP);
+              BuildArray[sta][n][m].chart.update();
               ////// Extract Relay data value //////
               var valueRLYPI = extractRLYData(data['Items'][i], 'RelayPI', n, m);
               var valueRLYESP = extractRLYData(data['Items'][i], 'RelayESP', n, m);
@@ -276,13 +277,13 @@ function scanning(PIList, ESPList, dynamClient){
       for(var k=1; k<=piQuantity; k++){
         readCT(k);
       }
-      updateCharts(piQuantity);
+      //updateCharts(piQuantity);
       /////////////// Refresh chart every 5 seconds /////////////
       var inverval_timer = setInterval(function () {
         for(var k=1; k<=piQuantity; k++){
         readCT(k);
         }
-        updateCharts(piQuantity);
+        //updateCharts(piQuantity);
       }, 5000);
       /////////////////////////////////////////////////////////
       removePIList(piQuantity);
