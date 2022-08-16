@@ -70,7 +70,7 @@ function mapStationWebSocket() {
 ///////// Verify Mac Address with its Station /////////
 function checkStations(){
   for(var i=0; i < piQuantity; i++){
-    console.log(document.getElementById("ESP#"+(i+1)).textContent);
+    console.log(document.getElementById("PI#"+(i+1)).textContent);
     console.log(document.getElementById("station-"+(i+1)).value);
   }
 }
