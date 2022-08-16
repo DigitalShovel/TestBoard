@@ -107,8 +107,8 @@ function auth() {
 const dataPerPlot = 91;
 let maxDataPerChart = dataPerPlot; // Number of data plus one
 
-function readCT(stationsCheck) {
-  if (stationsCheck != 0){
+function readCT(sta) {
+  if (sta != 0){
     var docClient = new AWS.DynamoDB.DocumentClient();
     var ctItem = {
       TableName: "IoT_Result",
@@ -179,7 +179,7 @@ function readCT(stationsCheck) {
       }
     });
   }
-  updateCharts(stationsCheck);
+  updateCharts(sta);
 }
 //////////////////////////////////////////////////////////
 
