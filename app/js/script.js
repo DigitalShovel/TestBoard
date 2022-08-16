@@ -316,6 +316,7 @@ function scanning(PIList, ESPList, dynamClient){
       espQtyOLD = espQty;
       if (espQty > 0){
         for (let i = 0; i < espQty; i++) {
+          console.log("Name: ", data['Items'][i]['MacAddress']);
           document.getElementById("ESP#"+(i+1)).innerHTML = JSON.stringify(data['Items'][i]['MacAddress'], "Empty", 2);
           refreshESPList(data['Items'][i]['Station'], data['Items'][i]['Channel'], (i+1));
         }
