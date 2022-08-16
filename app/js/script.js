@@ -24,7 +24,7 @@ function WebSocketTest() {
         /////////////////////////////////////////////////////
         var messageHTML = document.querySelectorAll('[id^="test-quantity-"]');
         for(var i=0; i < messageHTML.length; i++){
-          messageHTML[i].innerHTML = "Test Running";
+          messageHTML[i].innerHTML = "Running";
         }
       }
       alert(received_msg);
@@ -56,6 +56,7 @@ function mapStationWebSocket() {
     ws.onmessage = function (evt) {
       var received_msg = evt.data;
       alert(received_msg);
+      readItem();
       ws.close();
     };
   } else {
@@ -109,7 +110,6 @@ let maxDataPerChart = dataPerPlot; // Number of data plus one
 function readCT(sta) {
   if (sta != 0){
     var docClient = new AWS.DynamoDB.DocumentClient();
-    
     var ctItem = {
       TableName: "IoT_Result",
       KeyConditionExpression: 'Station = :station and #Time > :lastTime',
@@ -146,9 +146,11 @@ function readCT(sta) {
           //////////////////////////////////////////////////////////////////////////////
           if (data['Items'][i]['Time'] > BuildArray[sta][1][1].timeREF){
             setProgress("PC"+data['Items'][i]['Station'], "PCT"+data['Items'][i]['Station'], data['Items'][i]['TestNumber'], data['Items'][i]['TotalTest']);
+            //updateOneChart(sta);
             ////////////// Stop logo animation if test done //////////
             if (data['Items'][i]['TotalTest'] == data['Items'][i]['TestNumber']) {
               document.getElementById('Logo'+sta).classList.add("logo-loading--disable");
+              updateOneChart(sta);
             }
             //////////////////////////////////////////////////////////
             document.getElementById('test-quantity-1').innerHTML = data['Items'][i]['TestNumber']+" out of "+data['Items'][i]['TotalTest'];
@@ -179,17 +181,24 @@ function readCT(sta) {
       }
     });
   }
-  updateCharts(sta);
 }
 //////////////////////////////////////////////////////////
 
 ////////////// Update all available charts ////////////////////
 
+function updateOneChart(station){
+  for(var n=1; n <=6; n++){
+    for(var m=1; m <= 8; m++){
+      BuildArray[station][n][m].chart.update('none');
+    }
+  }
+}
+
 function updateCharts(stations){
   for (var statio=1; statio <= stations; statio++){
     for(var n=1; n <=6; n++){
       for(var m=1; m <= 8; m++){
-        BuildArray[statio][n][m].chart.update();
+        BuildArray[statio][n][m].chart.update('none');
       }
     }
   }
@@ -242,12 +251,12 @@ function readItem() {
 
   var item1 = {
     TableName: "IoT_Testing_Unit_RaspPI",
-    ProjectionExpression: "MacAddress"
+    //ProjectionExpression: "MacAddress"
   };
 
   var item2 = {
     TableName: "IoT_Testing_Unit_ESP32",
-    ProjectionExpression: "MacAddress"
+    //ProjectionExpression: "MacAddress"
   };
   scanning(item1, item2, docClient);
 }
@@ -266,19 +275,25 @@ function scanning(PIList, ESPList, dynamClient){
       /////////////// Add Station Table ////////////////////
       removeStationTables();
       addStationTables(piQuantity);
-      readCT(piQuantity);
+      for(var k=1; k<=piQuantity; k++){
+        readCT(k);
+      }
       /////////////// Refresh chart every 5 seconds /////////////
       var inverval_timer = setInterval(function () {
-        readCT(piQuantity);
+        for(var k=1; k<=piQuantity; k++){
+        readCT(k);
+        }
       }, 5000);
       /////////////////////////////////////////////////////////
+      removePIList(piQuantity);
       for (let i = 0; i < piQtyOLD; i++) {
-        document.getElementById("PI#"+i).innerHTML = "Empty";
+        document.getElementById("PI#"+(i+1)).innerHTML = "Empty";
       }
       piQtyOLD = piQuantity;
       if (piQuantity > 0){
         for (let i = 0; i < piQuantity; i++) {
-          document.getElementById("PI#"+i).innerHTML = JSON.stringify(data['Items'][i]['MacAddress'], "Empty", 2);
+          document.getElementById("PI#"+(i+1)).innerHTML = data['Items'][i]['MacAddress'];
+          refreshPIList(data['Items'][i]['Station'], piQuantity, (i+1));
         }
       }
     } 
@@ -293,13 +308,15 @@ function scanning(PIList, ESPList, dynamClient){
     else {
       espQty = parseInt(JSON.stringify(data['Count'], "0", 2));
       document.getElementById("ESP_Devices").innerHTML = espQty+" device(s)";
+      removeESPList(espQty);
       for (let i = 0; i < espQtyOLD; i++) {
-        document.getElementById("ESP#"+i).innerHTML = "Empty";
+        document.getElementById("ESP#"+(i+1)).innerHTML = "Empty";
       }
       espQtyOLD = espQty;
       if (espQty > 0){
         for (let i = 0; i < espQty; i++) {
-          document.getElementById("ESP#"+i).innerHTML = JSON.stringify(data['Items'][i]['MacAddress'], "Empty", 2);
+          document.getElementById("ESP#"+(i+1)).innerHTML = data['Items'][i]['MacAddress'];
+          refreshESPList(data['Items'][i]['Station'], data['Items'][i]['Channel'], (i+1));
         }
       }
     }

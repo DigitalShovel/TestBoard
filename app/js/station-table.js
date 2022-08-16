@@ -378,31 +378,31 @@ function addStationTables(quantity) {
                                     <div id="T${i}G4R1" class="indicator-light"></div>
                                 </div>
                                 <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
+                                    <span class="indicator-title">Relay 2</span>
                                     <div id="T${i}G4R2" class="indicator-light"></div>
                                 </div>
                                 <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
+                                    <span class="indicator-title">Relay 3</span>
                                     <div id="T${i}G4R3" class="indicator-light"></div>
                                 </div>
                                 <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
+                                    <span class="indicator-title">Relay 4</span>
                                     <div id="T${i}G4R4" class="indicator-light"></div>
                                 </div>
                                 <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
+                                    <span class="indicator-title">Relay 5</span>
                                     <div id="T${i}G4R5" class="indicator-light"></div>
                                 </div>
                                 <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
+                                    <span class="indicator-title">Relay 6</span>
                                     <div id="T${i}G4R6" class="indicator-light"></div>
                                 </div>
                                 <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
+                                    <span class="indicator-title">Relay 7</span>
                                     <div id="T${i}G4R7" class="indicator-light"></div>
                                 </div>
                                 <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
+                                    <span class="indicator-title">Relay 8</span>
                                     <div id="T${i}G4R8" class="indicator-light"></div>
                                 </div>
                             </div>
@@ -473,31 +473,31 @@ function addStationTables(quantity) {
                                     <div id="T${i}G5R1" class="indicator-light"></div>
                                 </div>
                                 <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
+                                    <span class="indicator-title">Relay 2</span>
                                     <div id="T${i}G5R2" class="indicator-light"></div>
                                 </div>
                                 <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
+                                    <span class="indicator-title">Relay 3</span>
                                     <div id="T${i}G5R3" class="indicator-light"></div>
                                 </div>
                                 <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
+                                    <span class="indicator-title">Relay 4</span>
                                     <div id="T${i}G5R4" class="indicator-light"></div>
                                 </div>
                                 <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
+                                    <span class="indicator-title">Relay 5</span>
                                     <div id="T${i}G5R5" class="indicator-light"></div>
                                 </div>
                                 <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
+                                    <span class="indicator-title">Relay 6</span>
                                     <div id="T${i}G5R6" class="indicator-light"></div>
                                 </div>
                                 <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
+                                    <span class="indicator-title">Relay 7</span>
                                     <div id="T${i}G5R7" class="indicator-light"></div>
                                 </div>
                                 <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
+                                    <span class="indicator-title">Relay 8</span>
                                     <div id="T${i}G5R8" class="indicator-light"></div>
                                 </div>
                             </div>
@@ -568,31 +568,31 @@ function addStationTables(quantity) {
                                     <div id="T${i}G6R1" class="indicator-light"></div>
                                 </div>
                                 <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
+                                    <span class="indicator-title">Relay 2</span>
                                     <div id="T${i}G6R2" class="indicator-light"></div>
                                 </div>
                                 <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
+                                    <span class="indicator-title">Relay 3</span>
                                     <div id="T${i}G6R3" class="indicator-light"></div>
                                 </div>
                                 <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
+                                    <span class="indicator-title">Relay 4</span>
                                     <div id="T${i}G6R4" class="indicator-light"></div>
                                 </div>
                                 <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
+                                    <span class="indicator-title">Relay 5</span>
                                     <div id="T${i}G6R5" class="indicator-light"></div>
                                 </div>
                                 <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
+                                    <span class="indicator-title">Relay 6</span>
                                     <div id="T${i}G6R6" class="indicator-light"></div>
                                 </div>
                                 <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
+                                    <span class="indicator-title">Relay 7</span>
                                     <div id="T${i}G6R7" class="indicator-light"></div>
                                 </div>
                                 <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
+                                    <span class="indicator-title">Relay 8</span>
                                     <div id="T${i}G6R8" class="indicator-light"></div>
                                 </div>
                             </div>
@@ -691,4 +691,106 @@ let graphFlag = false;
 function showPopup(graphID) {
   var popupGrid = document.getElementById(graphID);
   popupGrid.classList.toggle("popup__show");
+}
+
+function refreshPIList(station, quantity, current) {
+    if (station != 0) {
+        document.getElementById("P"+current+"Default").innerHTML = "Station "+station;
+    } else {
+        document.getElementById("P"+current+"Default").innerHTML = "Station";
+    }
+    for (var i=1; i <= quantity; i++){
+        if (i == station){
+            continue;
+        }
+        $("#station-"+current).append(`
+        <option value="station-${i}">Station ${i}</option>
+        `);
+    }
+}
+
+function removePIList(quantity){
+    $("#PI_LIST").empty();
+    $("#PI_LIST").append(`
+    <div class="list__item" id="PI#1">Empty</div>
+    <div class="list__item">
+        <select name="stations" id="station-1">
+            <option id="P1Default" value="">Station</option>
+        </select>
+    </div>
+    <div class="list__item" id="PI#2">Empty</div>
+    <div class="list__item">
+        <select name="stations" id="station-2">
+        <option id="P2Default" value="">Station</option>
+        </select>
+    </div>
+    <div class="list__item" id="PI#3">Empty</div>
+    <div class="list__item">
+        <select name="stations" id="station-3">
+        <option id="P3Default" value="">Station</option>
+        </select>
+    </div>
+    <div class="list__item" id="PI#4">Empty</div>
+    <div class="list__item">
+        <select name="stations" id="station-4">
+        <option id="P4Default" value="">Station</option>
+        </select>
+    </div>
+    <div class="list__item" id="PI#5">Empty</div>
+    <div class="list__item">
+        <select name="stations" id="station-5">
+        <option id="P5Default" value="">Station</option>
+        </select>
+    </div>
+    `);
+    if (quantity > 5){
+        for(var i=6; i < quantity; i++)
+        $("#PI_LIST").append(`
+        <div class="list__item" id="PI#${i}">Empty</div>
+        <div class="list__item">
+            <select name="stations" id="station-${i}">
+                <option id="P${i}Default" value="">Station</option>
+            </select>
+        </div>
+        `);
+    }
+}
+
+function refreshESPList(station, channel, current) {
+    document.getElementById("ESP"+current+"Detail").innerHTML = "S"+station+" - CH"+channel;
+}
+
+function removeESPList(quantity){
+    $("#ESP_LIST").empty();
+    $("#ESP_LIST").append(`
+    <div class="list__item" id="ESP#1">Empty</div>
+        <div class="list__item">
+          <p id="ESP1Detail" class="list__item-label">S0 - CH0</p>
+        </div>
+        <div class="list__item" id="ESP#2">Empty</div>
+        <div class="list__item">
+          <p id="ESP2Detail" class="list__item-label">S0 - CH0</p>
+        </div>
+        <div class="list__item" id="ESP#3">Empty</div>
+        <div class="list__item">
+          <p id="ESP3Detail" class="list__item-label">S0 - CH0</p>
+        </div>
+        <div class="list__item" id="ESP#4">Empty</div>
+        <div class="list__item">
+          <p id="ESP4Detail" class="list__item-label">S0 - CH0</p>
+        </div>
+        <div class="list__item" id="ESP#5">Empty</div>
+        <div class="list__item">
+          <p id="ESP5Detail" class="list__item-label">S0 - CH0</p>
+        </div>
+    `);
+    if (quantity > 5){
+        for(var i=6; i < quantity; i++)
+        $("#ESP_LIST").append(`
+        <div class="list__item" id="ESP#${i}">Empty</div>
+        <div class="list__item">
+          <p id="ESP${i}Detail" class="list__item-label">S0 - CH0</p>
+        </div>
+        `);
+    }
 }
