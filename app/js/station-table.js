@@ -704,7 +704,7 @@ function refreshPIList(station, quantity, current) {
             continue;
         }
         $("#station-"+current).append(`
-        <option value="station-${i}">Station ${i}</option>
+        <option id="P${current}Default${i}" value="${i}">Station ${i}</option>
         `);
     }
 }
@@ -715,31 +715,31 @@ function removePIList(quantity){
     <div class="list__item" id="PI#1">Empty</div>
     <div class="list__item">
         <select name="stations" id="station-1">
-            <option id="P1Default" value="">Unassigned</option>
+            <option id="P1Default" value="0">Unassigned</option>
         </select>
     </div>
     <div class="list__item" id="PI#2">Empty</div>
     <div class="list__item">
         <select name="stations" id="station-2">
-        <option id="P2Default" value="">Unassigned</option>
+        <option id="P2Default" value="0">Unassigned</option>
         </select>
     </div>
     <div class="list__item" id="PI#3">Empty</div>
     <div class="list__item">
         <select name="stations" id="station-3">
-        <option id="P3Default" value="">Unassigned</option>
+        <option id="P3Default" value="0">Unassigned</option>
         </select>
     </div>
     <div class="list__item" id="PI#4">Empty</div>
     <div class="list__item">
         <select name="stations" id="station-4">
-        <option id="P4Default" value="">Unassigned</option>
+        <option id="P4Default" value="0">Unassigned</option>
         </select>
     </div>
     <div class="list__item" id="PI#5">Empty</div>
     <div class="list__item">
         <select name="stations" id="station-5">
-        <option id="P5Default" value="">Unassigned</option>
+        <option id="P5Default" value="0">Unassigned</option>
         </select>
     </div>
     `);
@@ -749,7 +749,7 @@ function removePIList(quantity){
         <div class="list__item" id="PI#${i}">Empty</div>
         <div class="list__item">
             <select name="stations" id="station-${i}">
-                <option id="P${i}Default" value="">Unassigned</option>
+                <option id="P${i}Default" value="0">Unassigned</option>
             </select>
         </div>
         `);

@@ -51,6 +51,7 @@ function mapStationWebSocket() {
     ws.onopen = function () {
       // Web Socket is connected, send data using send()
       ws.send(JSON.stringify({action: "startMap", message: "Start Map Station"}));
+      checkStations();
     };
 
     ws.onmessage = function (evt) {
@@ -65,6 +66,14 @@ function mapStationWebSocket() {
   }
 }
 //////////////////////
+
+///////// Verify Mac Address with its Station /////////
+function checkStations(){
+  for(var i=0; i < piQuantity; i++){
+    console.log(document.getElementById("ESP#"+(i+1)).textContent);
+    console.log(document.getElementById("station-"+(i+1)).value);
+  }
+}
 
 ////////////// Check for Login Token //////////////////
 var idToken = null;
