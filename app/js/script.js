@@ -50,8 +50,8 @@ function mapStationWebSocket() {
 
     ws.onopen = function () {
       // Web Socket is connected, send data using send()
-      ws.send(JSON.stringify({action: "startMap", message: "Start Map Station"}));
-      checkStations();
+      var messageDict = checkStations();
+      ws.send(JSON.stringify({action: "startMap", message: messageDict}));
     };
 
     ws.onmessage = function (evt) {
@@ -73,7 +73,7 @@ function checkStations(){
   for(var i=0; i < piQuantity; i++){
     stationDict[String(document.getElementById("PI#"+(i+1)).textContent)] = document.getElementById("station-"+(i+1)).value;
   }
-  console.log("DICT: ", stationDict);
+  return stationDict;
 }
 
 ////////////// Check for Login Token //////////////////
