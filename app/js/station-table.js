@@ -698,7 +698,7 @@ function refreshPIList(station, quantity, current) {
         document.getElementById("P"+current+"Default").innerHTML = "Station "+station;
         document.getElementById("P"+current+"Default").value = station;
     } else {
-        document.getElementById("P"+current+"Default").innerHTML = "Station";
+        document.getElementById("P"+current+"Default").innerHTML = "Unassigned";
     }
     for (var i=1; i <= quantity; i++){
         if (i == station){
