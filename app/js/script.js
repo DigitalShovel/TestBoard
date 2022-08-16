@@ -112,7 +112,7 @@ function readCT(stationsCheck) {
     var docClient = new AWS.DynamoDB.DocumentClient();
     
     for(var sta=1; sta <= stationsCheck; sta++){
-
+      console.log("Stationssss: ", sta);
       var ctItem = {
         TableName: "IoT_Result",
         KeyConditionExpression: 'Station = :station and #Time > :lastTime',
@@ -132,7 +132,6 @@ function readCT(stationsCheck) {
           for (let i=0; i < data['Count']; i++) {
             ////////////////////////  Change Failed Status Light  ////////////////////////
             for(var n=1; n <=6; n++){
-              console.log("Stations: ", sta);
               BuildArray[sta][n][1].success &= data['Items'][i]['Success'][n];
               if (BuildArray[sta][n][1].success){
                 document.getElementById('T1F'+n).classList.remove("indicator-light--fail", "indicator-light--success");
