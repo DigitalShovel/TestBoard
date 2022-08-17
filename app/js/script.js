@@ -189,7 +189,7 @@ function readCT(sta) {
               }
               else {
                 CUTvalue = data1['Items'][0]['CUT']
-                console.log(data1);
+                console.log(CUTvalue);
               }
             }
             );
