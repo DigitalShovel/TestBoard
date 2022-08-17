@@ -186,7 +186,7 @@ function readCT(sta) {
             };
             newClient.query(item1, function(err1, data1){
               if (err1) {
-                alert(JSON.stringify(err, undefined, 2));
+                alert(JSON.stringify(err1, undefined, 2));
               }
               else {
                 CUTvalue = data1['Items']['CUT']
