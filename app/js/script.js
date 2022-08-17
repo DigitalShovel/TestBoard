@@ -189,7 +189,7 @@ function readCT(sta) {
               }
               else {
                 CUTvalue = data1['Items'][0]['CUT'];
-                ////////////// Stop logo animation if test done //////////
+                ////////////// Stop logo animation if stop button pressed //////////
                 if (!CUTvalue) {
                   console.log(data['Items'][i]['TestNumber']);
                   document.getElementById('Logo'+sta).classList.add("logo-loading--disable");
