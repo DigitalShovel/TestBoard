@@ -138,6 +138,7 @@ const dataPerPlot = 91;
 let maxDataPerChart = dataPerPlot; // Number of data plus one
 
 function readCT(sta) {
+  var CUTvalue = true;
   if (sta != 0){
     var docClient = new AWS.DynamoDB.DocumentClient();
     var ctItem = {
@@ -174,10 +175,30 @@ function readCT(sta) {
             }
           }
           //////////////////////////////////////////////////////////////////////////////
+          if (i == (data['Count']-1)){
+            var item1 = {
+              TableName: "IoT_Testing_Unit_RaspPI",
+              KeyConditionExpression: 'Station = :station',
+              ExpressionAttributeValues: {
+                ':station': sta,
+              }
+            };
+            docClient.query(item1, function(err1, data1){
+              if (err1) {
+                alert(JSON.stringify(err, undefined, 2));
+              }
+              else {
+                CUTvalue = data1['Items']['CUT']
+              }
+            }
+            );
+          }
+
+          //////////////////////////////////////////////////////////////////////////////
           if (data['Items'][i]['Time'] > BuildArray[sta][1][1].timeREF){
             setProgress("PC"+data['Items'][i]['Station'], "PCT"+data['Items'][i]['Station'], data['Items'][i]['TestNumber'], data['Items'][i]['TotalTest']);
             ////////////// Stop logo animation if test done //////////
-            if (data['Items'][i]['TotalTest'] == data['Items'][i]['TestNumber']) {
+            if ((data['Items'][i]['TotalTest'] == data['Items'][i]['TestNumber']) || (!CUTvalue)) {
               document.getElementById('Logo'+sta).classList.add("logo-loading--disable");
             }
             //////////////////////////////////////////////////////////
