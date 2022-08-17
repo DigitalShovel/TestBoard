@@ -176,15 +176,14 @@ function readCT(sta) {
           }
           //////////////////////////////////////////////////////////////////////////////
           if (i == (data['Count']-1)){
-            var newClient = new AWS.DynamoDB.DocumentClient();
             var item1 = {
               TableName: "IoT_Testing_Unit_RaspPI",
-              KeyConditionExpression: 'Station = :station',
+              KeyConditionExpression: 'MacAddress = :station',
               ExpressionAttributeValues: {
-                ':station': sta,
+                ':station': data['Items'][i]['MacAddress'],
               }
             };
-            newClient.query(item1, function(err1, data1){
+            docClient.query(item1, function(err1, data1){
               if (err1) {
                 alert(JSON.stringify(err1, undefined, 2));
               }
