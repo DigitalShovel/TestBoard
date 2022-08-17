@@ -188,7 +188,7 @@ function readCT(sta) {
                 alert(JSON.stringify(err1, undefined, 2));
               }
               else {
-                CUTvalue = data1['Items']['CUT']
+                CUTvalue = data1['Items'][0]['CUT']
                 console.log(data1);
               }
             }
