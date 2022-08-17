@@ -7,7 +7,6 @@ function WebSocketTest() {
 
   if ("WebSocket" in window) {
     // Let us open a web socket
-    //var ws = new WebSocket("wss://42jjhgjbdc.execute-api.us-east-1.amazonaws.com/production");
     var ws = new WebSocket("wss://z2l1vycpfh.execute-api.ca-central-1.amazonaws.com/production");
 
     ws.onopen = function () {
@@ -45,7 +44,6 @@ function WebSocketTest() {
 function mapStationWebSocket() {
   if ("WebSocket" in window) {
     // Let us open a web socket
-    //var ws = new WebSocket("wss://ekht0lzvqb.execute-api.us-east-1.amazonaws.com/production");
     var ws = new WebSocket("wss://iobkrt68o2.execute-api.ca-central-1.amazonaws.com/production");
 
     ws.onopen = function () {
@@ -58,6 +56,28 @@ function mapStationWebSocket() {
       var received_msg = evt.data;
       alert(received_msg);
       readItem();
+      ws.close();
+    };
+  } else {
+    // The browser doesn't support WebSocket
+    alert("WebSocket NOT supported by your Browser!");
+  }
+}
+//////////////////////
+
+function stopTestWebSocket() {
+  if ("WebSocket" in window) {
+    // Let us open a web socket
+    var ws = new WebSocket("wss://yd4tksbjgd.execute-api.ca-central-1.amazonaws.com/production");
+
+    ws.onopen = function () {
+      // Web Socket is connected, send data using send()
+      ws.send(JSON.stringify({action: "StopTest", message: "Stop Test!"}));
+    };
+
+    ws.onmessage = function (evt) {
+      var received_msg = evt.data;
+      alert(received_msg);
       ws.close();
     };
   } else {
