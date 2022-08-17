@@ -190,7 +190,7 @@ function readCT(sta) {
               else {
                 CUTvalue = data1['Items'][0]['CUT'];
                 ////////////// Stop logo animation if stop button pressed //////////
-                if ((!CUTvalue) && (data['Items'][i]['TestNumber'] <= data['Items'][i]['TotalTest'])) {
+                if ((!CUTvalue) && (data['Items'][i]['TestNumber'] < data['Items'][i]['TotalTest'])) {
                   document.getElementById('test-quantity-'+sta).innerHTML = "Stopped"
                   document.getElementById('Logo'+sta).classList.add("logo-loading--disable");
                 }
@@ -203,7 +203,7 @@ function readCT(sta) {
           if (data['Items'][i]['Time'] > BuildArray[sta][1][1].timeREF){
             setProgress("PC"+data['Items'][i]['Station'], "PCT"+data['Items'][i]['Station'], data['Items'][i]['TestNumber'], data['Items'][i]['TotalTest']);
             ////////////// Stop logo animation if test done //////////
-            if ((data['Items'][i]['TotalTest'] == data['Items'][i]['TestNumber']) || (!CUTvalue)) {
+            if ((data['Items'][i]['TotalTest'] == data['Items'][i]['TestNumber'])) {
               document.getElementById('Logo'+sta).classList.add("logo-loading--disable");
             }
             //////////////////////////////////////////////////////////
