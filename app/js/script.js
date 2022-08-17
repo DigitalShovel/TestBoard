@@ -190,8 +190,8 @@ function readCT(sta) {
               else {
                 CUTvalue = data1['Items'][0]['CUT'];
                 ////////////// Stop logo animation if stop button pressed //////////
-                if (!CUTvalue) {
-                  console.log(data['Items'][i]['TestNumber']);
+                if ((!CUTvalue) && (data['Items'][i]['TestNumber'] <= data['Items'][i]['TotalTest'])) {
+                  document.getElementById('test-quantity-'+sta).innerHTML = "Stopped"
                   document.getElementById('Logo'+sta).classList.add("logo-loading--disable");
                 }
               }
@@ -207,7 +207,7 @@ function readCT(sta) {
               document.getElementById('Logo'+sta).classList.add("logo-loading--disable");
             }
             //////////////////////////////////////////////////////////
-            document.getElementById('test-quantity-1').innerHTML = data['Items'][i]['TestNumber']+" out of "+data['Items'][i]['TotalTest'];
+            document.getElementById('test-quantity-'+sta).innerHTML = data['Items'][i]['TestNumber']+" out of "+data['Items'][i]['TotalTest'];
             for(var z=1; z <= 8; z++){
               BuildArray[sta][1][z].timeREF = data['Items'][i]['Time'];
             }
