@@ -189,6 +189,7 @@ function readCT(sta) {
               }
               else {
                 CUTvalue = data1['Items']['CUT']
+                console.log(CUTvalue);
               }
             }
             );
