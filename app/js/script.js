@@ -154,7 +154,8 @@ function readCT(sta) {
     };
     docClient.query(ctItem, function(err, data) {
       if (err) {
-        alert(JSON.stringify(err, undefined, 2));
+        //alert(JSON.stringify(err, undefined, 2));
+        console.log("Failed to read DB. Inform server admin.")
       }
       else {
         for (let i=0; i < data['Count']; i++) {
@@ -185,7 +186,8 @@ function readCT(sta) {
             };
             docClient.query(item1, function(err1, data1){
               if (err1) {
-                alert(JSON.stringify(err1, undefined, 2));
+                //alert(JSON.stringify(err1, undefined, 2));
+                console.log("Failed to read DB. Inform server admin.")
               }
               else {
                 CUTvalue = data1['Items'][0]['CUT'];
