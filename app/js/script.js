@@ -25,9 +25,9 @@ function WebSocketTest() {
         for(var i=0; i < messageHTML.length; i++){
           messageHTML[i].innerHTML = "Running";
         }
+        ws.close();
       }
       alert(received_msg);
-      ws.close();
     };
 
     ws.onclose = function () {
