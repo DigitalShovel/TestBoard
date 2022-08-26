@@ -167,7 +167,6 @@ class stationCharts {
   testNUM = 0;
   totalTEST = 0;
   chart = 0;
-  CTNum = 0;
   success = true;
 
   constructor(station, channel, ct) {
@@ -206,7 +205,7 @@ class stationCharts {
       plugins: {
         title: {
           display: true,
-          text: "CT - "+this.CTNum
+          text: "CT - Graph"
         }
       },
       layout: {
@@ -252,8 +251,7 @@ class stationCharts {
     plugins: [moveChart],
   };
 
-  createChart(ctvalue) {
-    this.CTNum = ctvalue;
+  createChart() {
     var chartGraph = new Chart(document.getElementById("T" + this.station + "G" + this.channel + "C" + this.ct).getContext("2d"), this.config);
     chartGraph.canvas.addEventListener("wheel", (e) => {
       scrollWheel(e);
