@@ -205,7 +205,7 @@ class stationCharts {
       plugins: {
         title: {
           display: true,
-          text: "CT - "+ct
+          text: "CT - "+this.timeREF
         }
       },
       layout: {
