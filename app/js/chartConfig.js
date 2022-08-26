@@ -212,7 +212,7 @@ class stationCharts {
         padding: {
           right: 16,
           bottom: 16,
-          top: 16,
+          top: 12,
           left: 16,
         },
       },
