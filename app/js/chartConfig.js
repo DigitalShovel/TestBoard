@@ -252,14 +252,14 @@ class stationCharts {
     plugins: [moveChart],
   };
 
-  createChart() {
+  createChart(ctvalue) {
+    this.CTNum = ctvalue;
     var chartGraph = new Chart(document.getElementById("T" + this.station + "G" + this.channel + "C" + this.ct).getContext("2d"), this.config);
     chartGraph.canvas.addEventListener("wheel", (e) => {
       scrollWheel(e);
     });
     //chartGraph.ctx.onclick = moveScroll(chartGraph);
     this.chart = chartGraph;
-    this.CTNum = this.ct;
   }
 
   progressPercentage() {

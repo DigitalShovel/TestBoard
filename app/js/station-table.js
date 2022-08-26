@@ -667,14 +667,14 @@ function addStationTables(quantity) {
       var CT6 = new stationCharts(i, k, 6);
       var CT7 = new stationCharts(i, k, 7);
       var CT8 = new stationCharts(i, k, 8);
-      CT1.createChart();
-      CT2.createChart();
-      CT3.createChart();
-      CT4.createChart();
-      CT5.createChart();
-      CT6.createChart();
-      CT7.createChart();
-      CT8.createChart();
+      CT1.createChart(1);
+      CT2.createChart(2);
+      CT3.createChart(3);
+      CT4.createChart(4);
+      CT5.createChart(5);
+      CT6.createChart(6);
+      CT7.createChart(7);
+      CT8.createChart(8);
       chArray.push([0, CT1, CT2, CT3, CT4, CT5, CT6, CT7, CT8]);
     }
     BuildArray.push(chArray);
