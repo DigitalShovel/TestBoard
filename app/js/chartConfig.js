@@ -196,6 +196,12 @@ class stationCharts {
     type: "line",
     data: this.data,
     options: {
+      plugins: {
+        title: {
+          display: true,
+          text: 'CT - '+this.ct
+        }
+      },
       layout: {
         padding: {
           right: 16,
