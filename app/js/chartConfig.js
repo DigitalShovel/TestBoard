@@ -205,7 +205,7 @@ class stationCharts {
       plugins: {
         title: {
           display: true,
-          text: 'CT - '+totalTEST
+          text: 'CT - '+this.totalTEST
         }
       },
       layout: {
