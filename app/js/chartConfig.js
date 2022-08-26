@@ -167,12 +167,14 @@ class stationCharts {
   testNUM = 0;
   totalTEST = 0;
   chart = 0;
+  ctnum = 0;
   success = true;
 
   constructor(station, channel, ct) {
     this.station = station;
     this.channel = channel;
     this.ct = ct;
+    ctnum = this.ct;
   }
 
   //////////// Setup ////////////////
@@ -205,7 +207,7 @@ class stationCharts {
       plugins: {
         title: {
           display: true,
-          text: 'CT - '+this.totalTEST
+          text: 'CT - '+this.ctnum
         }
       },
       layout: {
