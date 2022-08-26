@@ -12,8 +12,8 @@ const movableScrollbarColor = "hsla(213, 100%, 80%, 1)";
 const movableScrollbarEdge = "hsla(213, 100%, 90%, 1)";
 
 //////// Chart Dimensions ///////
-let chartWidth = 400;
-let chartHeight = 400;
+let chartWidth = 500;
+let chartHeight = 500;
 
 //////////// Function to scroll the chart //////////////
 function moveScroll(movingChart) {
@@ -211,7 +211,7 @@ class stationCharts {
       layout: {
         padding: {
           right: 16,
-          bottom: 1,
+          bottom: 16,
           top: 1,
           left: 16,
         },
