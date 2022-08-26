@@ -169,6 +169,12 @@ class stationCharts {
   chart = 0;
   success = true;
 
+  constructor(station, channel, ct) {
+    this.station = station;
+    this.channel = channel;
+    this.ct = ct;
+  }
+
   //////////// Setup ////////////////
   data = {
     labels: [],
@@ -244,12 +250,6 @@ class stationCharts {
     },
     plugins: [moveChart],
   };
-
-  constructor(station, channel, ct) {
-    this.station = station;
-    this.channel = channel;
-    this.ct = ct;
-  }
 
   createChart() {
     var chartGraph = new Chart(document.getElementById("T" + this.station + "G" + this.channel + "C" + this.ct).getContext("2d"), this.config);
