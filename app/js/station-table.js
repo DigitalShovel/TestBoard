@@ -660,6 +660,7 @@ function addStationTables(quantity) {
     var chArray = [0];
     for (var k = 1; k <= 6; k++) {
       var CT1 = new stationCharts(i, k, 1);
+      CT1.CTNum = 1;
       var CT2 = new stationCharts(i, k, 2);
       var CT3 = new stationCharts(i, k, 3);
       var CT4 = new stationCharts(i, k, 4);
