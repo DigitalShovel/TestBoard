@@ -167,6 +167,7 @@ class stationCharts {
   testNUM = 0;
   totalTEST = 0;
   chart = 0;
+  CTNum = 0;
   success = true;
 
   constructor(station, channel, ct) {
@@ -205,7 +206,7 @@ class stationCharts {
       plugins: {
         title: {
           display: true,
-          text: "CT - "+this.timeREF
+          text: "CT - "+this.CTNum
         }
       },
       layout: {
@@ -258,6 +259,7 @@ class stationCharts {
     });
     //chartGraph.ctx.onclick = moveScroll(chartGraph);
     this.chart = chartGraph;
+    this.CTNum = this.ct;
   }
 
   progressPercentage() {
