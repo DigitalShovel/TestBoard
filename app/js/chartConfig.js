@@ -211,8 +211,8 @@ class stationCharts {
       layout: {
         padding: {
           right: 16,
-          bottom: 16,
-          top: 12,
+          bottom: 1,
+          top: 1,
           left: 16,
         },
       },
