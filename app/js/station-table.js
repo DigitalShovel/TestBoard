@@ -670,12 +670,19 @@ function addStationTables(quantity) {
       CT1.createChart();
       CT1.chart.config.options.plugins.title.text = "CT - 1";
       CT2.createChart();
+      CT2.chart.config.options.plugins.title.text = "CT - 2";
       CT3.createChart();
+      CT3.chart.config.options.plugins.title.text = "CT - 3";
       CT4.createChart();
+      CT4.chart.config.options.plugins.title.text = "CT - 4";
       CT5.createChart();
+      CT5.chart.config.options.plugins.title.text = "CT - 5";
       CT6.createChart();
+      CT6.chart.config.options.plugins.title.text = "CT - 6";
       CT7.createChart();
+      CT7.chart.config.options.plugins.title.text = "CT - 7";
       CT8.createChart();
+      CT8.chart.config.options.plugins.title.text = "CT - 8";
       chArray.push([0, CT1, CT2, CT3, CT4, CT5, CT6, CT7, CT8]);
     }
     BuildArray.push(chArray);
