@@ -330,7 +330,6 @@ function scanning(PIList, ESPList, dynamClient){
     } 
     else {
       piQuantity = parseInt(JSON.stringify(data['Count'], "0", 2));
-      console.log("PI's:", piQuantity);
       document.getElementById("PI_Devices").innerHTML = piQuantity+" device(s)";
       /////////////// Add Station Table ////////////////////
       removeStationTables();
