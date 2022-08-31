@@ -7,7 +7,6 @@ function WebSocketTest() {
 
   if ("WebSocket" in window) {
     // Let us open a web socket
-    //var ws = new WebSocket("wss://42jjhgjbdc.execute-api.us-east-1.amazonaws.com/production");
     var ws = new WebSocket("wss://z2l1vycpfh.execute-api.ca-central-1.amazonaws.com/production");
 
     ws.onopen = function () {
@@ -26,9 +25,9 @@ function WebSocketTest() {
         for(var i=0; i < messageHTML.length; i++){
           messageHTML[i].innerHTML = "Running";
         }
+        ws.close();
       }
       alert(received_msg);
-      ws.close();
     };
 
     ws.onclose = function () {
@@ -45,12 +44,12 @@ function WebSocketTest() {
 function mapStationWebSocket() {
   if ("WebSocket" in window) {
     // Let us open a web socket
-    //var ws = new WebSocket("wss://ekht0lzvqb.execute-api.us-east-1.amazonaws.com/production");
     var ws = new WebSocket("wss://iobkrt68o2.execute-api.ca-central-1.amazonaws.com/production");
 
     ws.onopen = function () {
       // Web Socket is connected, send data using send()
-      ws.send('{"action": "startMap","message": "Start Map Station"}');
+      var messageDict = checkStations();
+      ws.send(JSON.stringify({action: "startMap", message: messageDict}));
     };
 
     ws.onmessage = function (evt) {
@@ -65,6 +64,37 @@ function mapStationWebSocket() {
   }
 }
 //////////////////////
+
+function stopTestWebSocket() {
+  if ("WebSocket" in window) {
+    // Let us open a web socket
+    var ws = new WebSocket("wss://yd4tksbjgd.execute-api.ca-central-1.amazonaws.com/production");
+
+    ws.onopen = function () {
+      // Web Socket is connected, send data using send()
+      ws.send(JSON.stringify({action: "StopTest", message: "Stop Test!"}));
+    };
+
+    ws.onmessage = function (evt) {
+      var received_msg = evt.data;
+      alert(received_msg);
+      ws.close();
+    };
+  } else {
+    // The browser doesn't support WebSocket
+    alert("WebSocket NOT supported by your Browser!");
+  }
+}
+//////////////////////
+
+///////// Verify Mac Address with its Station /////////
+function checkStations(){
+  var stationDict = {}
+  for(var i=0; i < piQuantity; i++){
+    stationDict[String(document.getElementById("PI#"+(i+1)).textContent)] = document.getElementById("station-"+(i+1)).value;
+  }
+  return stationDict;
+}
 
 ////////////// Check for Login Token //////////////////
 var idToken = null;
@@ -108,6 +138,7 @@ const dataPerPlot = 91;
 let maxDataPerChart = dataPerPlot; // Number of data plus one
 
 function readCT(sta) {
+  var CUTvalue = true;
   if (sta != 0){
     var docClient = new AWS.DynamoDB.DocumentClient();
     var ctItem = {
@@ -123,7 +154,8 @@ function readCT(sta) {
     };
     docClient.query(ctItem, function(err, data) {
       if (err) {
-        alert(JSON.stringify(err, undefined, 2));
+        //alert(JSON.stringify(err, undefined, 2));
+        console.log("Failed to read DB. Inform server admin.")
       }
       else {
         for (let i=0; i < data['Count']; i++) {
@@ -144,15 +176,40 @@ function readCT(sta) {
             }
           }
           //////////////////////////////////////////////////////////////////////////////
+          if (i == (data['Count']-1)){
+            var item1 = {
+              TableName: "IoT_Testing_Unit_RaspPI",
+              KeyConditionExpression: 'MacAddress = :station',
+              ExpressionAttributeValues: {
+                ':station': data['Items'][i]['MacAddress'],
+              }
+            };
+            docClient.query(item1, function(err1, data1){
+              if (err1) {
+                //alert(JSON.stringify(err1, undefined, 2));
+                console.log("Failed to read DB. Inform server admin.")
+              }
+              else {
+                CUTvalue = data1['Items'][0]['CUT'];
+                ////////////// Stop logo animation if stop button pressed //////////
+                if ((!CUTvalue) && (data['Items'][i]['TestNumber'] < data['Items'][i]['TotalTest'])) {
+                  document.getElementById('test-quantity-'+sta).innerHTML = "Stopped"
+                  document.getElementById('Logo'+sta).classList.add("logo-loading--disable");
+                }
+              }
+            }
+            );
+          }
+
+          //////////////////////////////////////////////////////////////////////////////
           if (data['Items'][i]['Time'] > BuildArray[sta][1][1].timeREF){
             setProgress("PC"+data['Items'][i]['Station'], "PCT"+data['Items'][i]['Station'], data['Items'][i]['TestNumber'], data['Items'][i]['TotalTest']);
             ////////////// Stop logo animation if test done //////////
-            if (data['Items'][i]['TotalTest'] == data['Items'][i]['TestNumber']) {
+            if ((data['Items'][i]['TotalTest'] == data['Items'][i]['TestNumber'])) {
               document.getElementById('Logo'+sta).classList.add("logo-loading--disable");
-              updateOneChart(sta);
             }
             //////////////////////////////////////////////////////////
-            document.getElementById('test-quantity-1').innerHTML = data['Items'][i]['TestNumber']+" out of "+data['Items'][i]['TotalTest'];
+            document.getElementById('test-quantity-'+sta).innerHTML = data['Items'][i]['TestNumber']+" out of "+data['Items'][i]['TotalTest'];
             for(var z=1; z <= 8; z++){
               BuildArray[sta][1][z].timeREF = data['Items'][i]['Time'];
             }
@@ -176,6 +233,9 @@ function readCT(sta) {
               }
             }
           }
+        }
+        if (data['Count'] != 0){
+          updateOneChart(sta);
         }
       }
     });

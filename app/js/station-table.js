@@ -668,13 +668,21 @@ function addStationTables(quantity) {
       var CT7 = new stationCharts(i, k, 7);
       var CT8 = new stationCharts(i, k, 8);
       CT1.createChart();
+      CT1.chart.config.options.plugins.title.text = "CT - 1";
       CT2.createChart();
+      CT2.chart.config.options.plugins.title.text = "CT - 2";
       CT3.createChart();
+      CT3.chart.config.options.plugins.title.text = "CT - 3";
       CT4.createChart();
+      CT4.chart.config.options.plugins.title.text = "CT - 4";
       CT5.createChart();
+      CT5.chart.config.options.plugins.title.text = "CT - 5";
       CT6.createChart();
+      CT6.chart.config.options.plugins.title.text = "CT - 6";
       CT7.createChart();
+      CT7.chart.config.options.plugins.title.text = "CT - 7";
       CT8.createChart();
+      CT8.chart.config.options.plugins.title.text = "CT - 8";
       chArray.push([0, CT1, CT2, CT3, CT4, CT5, CT6, CT7, CT8]);
     }
     BuildArray.push(chArray);
@@ -696,15 +704,16 @@ function showPopup(graphID) {
 function refreshPIList(station, quantity, current) {
     if (station != 0) {
         document.getElementById("P"+current+"Default").innerHTML = "Station "+station;
+        document.getElementById("P"+current+"Default").value = station;
     } else {
-        document.getElementById("P"+current+"Default").innerHTML = "Station";
+        document.getElementById("P"+current+"Default").innerHTML = "Unassigned";
     }
     for (var i=1; i <= quantity; i++){
         if (i == station){
             continue;
         }
         $("#station-"+current).append(`
-        <option value="station-${i}">Station ${i}</option>
+        <option id="P${current}Default${i}" value="${i}">Station ${i}</option>
         `);
     }
 }
@@ -715,31 +724,31 @@ function removePIList(quantity){
     <div class="list__item" id="PI#1">Empty</div>
     <div class="list__item">
         <select name="stations" id="station-1">
-            <option id="P1Default" value="">Station</option>
+            <option id="P1Default" value="0">Unassigned</option>
         </select>
     </div>
     <div class="list__item" id="PI#2">Empty</div>
     <div class="list__item">
         <select name="stations" id="station-2">
-        <option id="P2Default" value="">Station</option>
+        <option id="P2Default" value="0">Unassigned</option>
         </select>
     </div>
     <div class="list__item" id="PI#3">Empty</div>
     <div class="list__item">
         <select name="stations" id="station-3">
-        <option id="P3Default" value="">Station</option>
+        <option id="P3Default" value="0">Unassigned</option>
         </select>
     </div>
     <div class="list__item" id="PI#4">Empty</div>
     <div class="list__item">
         <select name="stations" id="station-4">
-        <option id="P4Default" value="">Station</option>
+        <option id="P4Default" value="0">Unassigned</option>
         </select>
     </div>
     <div class="list__item" id="PI#5">Empty</div>
     <div class="list__item">
         <select name="stations" id="station-5">
-        <option id="P5Default" value="">Station</option>
+        <option id="P5Default" value="0">Unassigned</option>
         </select>
     </div>
     `);
@@ -749,7 +758,7 @@ function removePIList(quantity){
         <div class="list__item" id="PI#${i}">Empty</div>
         <div class="list__item">
             <select name="stations" id="station-${i}">
-                <option id="P${i}Default" value="">Station</option>
+                <option id="P${i}Default" value="0">Unassigned</option>
             </select>
         </div>
         `);

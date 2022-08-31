@@ -169,6 +169,12 @@ class stationCharts {
   chart = 0;
   success = true;
 
+  constructor(station, channel, ct) {
+    this.station = station;
+    this.channel = channel;
+    this.ct = ct;
+  }
+
   //////////// Setup ////////////////
   data = {
     labels: [],
@@ -196,11 +202,17 @@ class stationCharts {
     type: "line",
     data: this.data,
     options: {
+      plugins: {
+        title: {
+          display: true,
+          text: "CT - Graph"
+        }
+      },
       layout: {
         padding: {
           right: 16,
-          bottom: 16,
-          top: 16,
+          bottom: 32,
+          top: 1,
           left: 16,
         },
       },
@@ -238,12 +250,6 @@ class stationCharts {
     },
     plugins: [moveChart],
   };
-
-  constructor(station, channel, ct) {
-    this.station = station;
-    this.channel = channel;
-    this.ct = ct;
-  }
 
   createChart() {
     var chartGraph = new Chart(document.getElementById("T" + this.station + "G" + this.channel + "C" + this.ct).getContext("2d"), this.config);
