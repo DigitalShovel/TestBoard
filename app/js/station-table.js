@@ -35,7 +35,7 @@ function addStationTables(quantity) {
                         Channel #1
                     </td>
                     <td>
-                        <div id="T${i}F1" class="indicator-light"></div>
+                        <div id="T${i}F1" class="indicator__light indicator__light-table"></div>
                     </td>
                     <td>
                         <button id="T${i}G1" onclick="showPopup('T${i}P1')" class="btn btn--unstyled popup__btn-show">
@@ -63,62 +63,254 @@ function addStationTables(quantity) {
                         <div id="T${i}P1" class="popup">
                             <div class="popup__grid">
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G1C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G1C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G1C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G1C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G1C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G1C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G1C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G1C8" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                             </div>
                             <div class="indicator">
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
-                                    <div id="T${i}G1R1" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G1R1" class="indicator__light"></div>
+                                        Relay 1
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 2</span>
-                                    <div id="T${i}G1R2" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G1R2" class="indicator__light"></div>
+                                        Relay 2
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 3</span>
-                                    <div id="T${i}G1R3" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G1R3" class="indicator__light"></div>
+                                        Relay 3
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 4</span>
-                                    <div id="T${i}G1R4" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G1R4" class="indicator__light"></div>
+                                        Relay 4
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 5</span>
-                                    <div id="T${i}G1R5" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G1R5" class="indicator__light"></div>
+                                        Relay 5
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 6</span>
-                                    <div id="T${i}G1R6" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G1R6" class="indicator__light"></div>
+                                        Relay 6
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 7</span>
-                                    <div id="T${i}G1R7" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G1R7" class="indicator__light"></div>
+                                        Relay 7
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 8</span>
-                                    <div id="T${i}G1R8" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G1R8" class="indicator__light"></div>
+                                        Relay 8
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <button id="T${i}B1" onclick="showPopup('T${i}P1')" class="popup__btn-hide btn btn--primary">Close</button>
@@ -130,7 +322,7 @@ function addStationTables(quantity) {
                         Channel #2
                     </td>
                     <td>
-                        <div id="T${i}F2" class="indicator-light"></div>
+                        <div id="T${i}F2" class="indicator__light indicator__light-table"></div>
                     </td>
                     <td>
                         <button id="T${i}G2" onclick="showPopup('T${i}P2')" class="btn btn--unstyled popup__btn-show">
@@ -158,62 +350,254 @@ function addStationTables(quantity) {
                         <div id="T${i}P2" class="popup">
                             <div class="popup__grid">
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G2C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G2C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G2C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G2C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G2C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G2C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G2C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G2C8" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                             </div>
                             <div class="indicator">
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
-                                    <div id="T${i}G2R1" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G2R1" class="indicator__light"></div>
+                                        Relay 1
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 2</span>
-                                    <div id="T${i}G2R2" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G2R2" class="indicator__light"></div>
+                                        Relay 2
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 3</span>
-                                    <div id="T${i}G2R3" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G2R3" class="indicator__light"></div>
+                                        Relay 3
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 4</span>
-                                    <div id="T${i}G2R4" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G2R4" class="indicator__light"></div>
+                                        Relay 4
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 5</span>
-                                    <div id="T${i}G2R5" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G2R5" class="indicator__light"></div>
+                                        Relay 5
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 6</span>
-                                    <div id="T${i}G2R6" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G2R6" class="indicator__light"></div>
+                                        Relay 6
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 7</span>
-                                    <div id="T${i}G2R7" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G2R7" class="indicator__light"></div>
+                                        Relay 7
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 8</span>
-                                    <div id="T${i}G2R8" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G2R8" class="indicator__light"></div>
+                                        Relay 8
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <button id="T${i}B2" onclick="showPopup('T${i}P2')" class="popup__btn-hide btn btn--primary">Close</button>
@@ -225,7 +609,7 @@ function addStationTables(quantity) {
                         Channel #3
                     </td>
                     <td>
-                        <div id="T${i}F3" class="indicator-light"></div>
+                        <div id="T${i}F3" class="indicator__light indicator__light-table"></div>
                     </td>
                     <td>
                         <button id="T${i}G3" onclick="showPopup('T${i}P3')" class="btn btn--unstyled popup__btn-show">
@@ -253,62 +637,254 @@ function addStationTables(quantity) {
                         <div id="T${i}P3" class="popup">
                             <div class="popup__grid">
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G3C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G3C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G3C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G3C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G3C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G3C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G3C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G3C8" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                             </div>
                             <div class="indicator">
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
-                                    <div id="T${i}G3R1" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G3R1" class="indicator__light"></div>
+                                        Relay 1
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 2</span>
-                                    <div id="T${i}G3R2" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G3R2" class="indicator__light"></div>
+                                        Relay 2
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 3</span>
-                                    <div id="T${i}G3R3" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G3R3" class="indicator__light"></div>
+                                        Relay 3
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 4</span>
-                                    <div id="T${i}G3R4" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G3R4" class="indicator__light"></div>
+                                        Relay 4
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 5</span>
-                                    <div id="T${i}G3R5" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G3R5" class="indicator__light"></div>
+                                        Relay 5
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 6</span>
-                                    <div id="T${i}G3R6" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G3R6" class="indicator__light"></div>
+                                        Relay 6
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 7</span>
-                                    <div id="T${i}G3R7" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G3R7" class="indicator__light"></div>
+                                        Relay 7
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 8</span>
-                                    <div id="T${i}G3R8" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G3R8" class="indicator__light"></div>
+                                        Relay 8
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <button id="T${i}B3" onclick="showPopup('T${i}P3')" class="popup__btn-hide btn btn--primary">Close</button>
@@ -320,7 +896,7 @@ function addStationTables(quantity) {
                         Channel #4
                     </td>
                     <td>
-                        <div id="T${i}F4" class="indicator-light"></div>
+                        <div id="T${i}F4" class="indicator__light indicator__light-table"></div>
                     </td>
                     <td>
                         <button id="T${i}G4" onclick="showPopup('T${i}P4')" class="btn btn--unstyled popup__btn-show">
@@ -348,62 +924,254 @@ function addStationTables(quantity) {
                         <div id="T${i}P4" class="popup">
                             <div class="popup__grid">
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G4C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G4C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G4C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G4C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G4C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G4C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G4C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G4C8" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                             </div>
                             <div class="indicator">
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
-                                    <div id="T${i}G4R1" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G4R1" class="indicator__light"></div>
+                                        Relay 1
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 2</span>
-                                    <div id="T${i}G4R2" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G4R2" class="indicator__light"></div>
+                                        Relay 2
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 3</span>
-                                    <div id="T${i}G4R3" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G4R3" class="indicator__light"></div>
+                                        Relay 3
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 4</span>
-                                    <div id="T${i}G4R4" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G4R4" class="indicator__light"></div>
+                                        Relay 4
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 5</span>
-                                    <div id="T${i}G4R5" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G4R5" class="indicator__light"></div>
+                                        Relay 5
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 6</span>
-                                    <div id="T${i}G4R6" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G4R6" class="indicator__light"></div>
+                                        Relay 6
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 7</span>
-                                    <div id="T${i}G4R7" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G4R7" class="indicator__light"></div>
+                                        Relay 7
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 8</span>
-                                    <div id="T${i}G4R8" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G4R8" class="indicator__light"></div>
+                                        Relay 8
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <button id="T${i}B4" onclick="showPopup('T${i}P4')" class="popup__btn-hide btn btn--primary">Close</button>
@@ -415,7 +1183,7 @@ function addStationTables(quantity) {
                         Channel #5
                     </td>
                     <td>
-                        <div id="T${i}F5" class="indicator-light"></div>
+                        <div id="T${i}F5" class="indicator__light indicator__light-table"></div>
                     </td>
                     <td>
                         <button id="T${i}G5" onclick="showPopup('T${i}P5')" class="btn btn--unstyled popup__btn-show">
@@ -443,62 +1211,254 @@ function addStationTables(quantity) {
                         <div id="T${i}P5" class="popup">
                             <div class="popup__grid">
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G5C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G5C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G5C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G5C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G5C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G5C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G5C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G5C8" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                             </div>
                             <div class="indicator">
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
-                                    <div id="T${i}G5R1" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G5R1" class="indicator__light"></div>
+                                        Relay 1
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 2</span>
-                                    <div id="T${i}G5R2" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G5R2" class="indicator__light"></div>
+                                        Relay 2
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 3</span>
-                                    <div id="T${i}G5R3" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G5R3" class="indicator__light"></div>
+                                        Relay 3
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 4</span>
-                                    <div id="T${i}G5R4" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G5R4" class="indicator__light"></div>
+                                        Relay 4
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 5</span>
-                                    <div id="T${i}G5R5" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G5R5" class="indicator__light"></div>
+                                        Relay 5
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 6</span>
-                                    <div id="T${i}G5R6" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G5R6" class="indicator__light"></div>
+                                        Relay 6
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 7</span>
-                                    <div id="T${i}G5R7" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G5R7" class="indicator__light"></div>
+                                        Relay 7
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 8</span>
-                                    <div id="T${i}G5R8" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G5R8" class="indicator__light"></div>
+                                        Relay 8
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <button id="T${i}B5" onclick="showPopup('T${i}P5')" class="popup__btn-hide btn btn--primary">Close</button>
@@ -510,7 +1470,7 @@ function addStationTables(quantity) {
                         Channel #6
                     </td>
                     <td>
-                        <div id="T${i}F6" class="indicator-light"></div>
+                        <div id="T${i}F6" class="indicator__light indicator__light-table"></div>
                     </td>
                     <td>
                         <button id="T${i}G6" onclick="showPopup('T${i}P6')" class="btn btn--unstyled popup__btn-show">
@@ -538,62 +1498,254 @@ function addStationTables(quantity) {
                         <div id="T${i}P6" class="popup">
                             <div class="popup__grid">
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G6C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G6C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G6C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G6C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G6C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G6C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G6C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="popup__grid-item">
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                     <canvas id="T${i}G6C8" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                             </div>
                             <div class="indicator">
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 1</span>
-                                    <div id="T${i}G6R1" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G6R1" class="indicator__light"></div>
+                                        Relay 1
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 2</span>
-                                    <div id="T${i}G6R2" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G6R2" class="indicator__light"></div>
+                                        Relay 2
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 3</span>
-                                    <div id="T${i}G6R3" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G6R3" class="indicator__light"></div>
+                                        Relay 3
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 4</span>
-                                    <div id="T${i}G6R4" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G6R4" class="indicator__light"></div>
+                                        Relay 4
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 5</span>
-                                    <div id="T${i}G6R5" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G6R5" class="indicator__light"></div>
+                                        Relay 5
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 6</span>
-                                    <div id="T${i}G6R6" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G6R6" class="indicator__light"></div>
+                                        Relay 6
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 7</span>
-                                    <div id="T${i}G6R7" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G6R7" class="indicator__light"></div>
+                                        Relay 7
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="indicator-content">
-                                    <span class="indicator-title">Relay 8</span>
-                                    <div id="T${i}G6R8" class="indicator-light"></div>
+                                <div class="indicator__content">
+                                    <span class="indicator__title">
+                                        <div id="T${i}G6R8" class="indicator__light"></div>
+                                        Relay 8
+                                    </span>
+                                    <div class="indicator__failed">
+                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div class="indicator__failed-text">
+                                            <h4>Failed</h4>
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <button id="T${i}B6" onclick="showPopup('T${i}P6')" class="popup__btn-hide btn btn--primary">Close</button>
@@ -603,7 +1755,7 @@ function addStationTables(quantity) {
                     <tr>
                         <td>Temperature</td>
                         <td>
-                            <div class="indicator-light"></div>
+                            <div class="indicator__light indicator__light-table"></div>
                         </td>
                         <td>
                             <button id="T${i}G7" onclick="showPopup('T${i}P7')" class="btn btn--unstyled popup__btn-show">
@@ -668,21 +1820,13 @@ function addStationTables(quantity) {
       var CT7 = new stationCharts(i, k, 7);
       var CT8 = new stationCharts(i, k, 8);
       CT1.createChart();
-      CT1.chart.config.options.plugins.title.text = "CT - 1";
       CT2.createChart();
-      CT2.chart.config.options.plugins.title.text = "CT - 2";
       CT3.createChart();
-      CT3.chart.config.options.plugins.title.text = "CT - 3";
       CT4.createChart();
-      CT4.chart.config.options.plugins.title.text = "CT - 4";
       CT5.createChart();
-      CT5.chart.config.options.plugins.title.text = "CT - 5";
       CT6.createChart();
-      CT6.chart.config.options.plugins.title.text = "CT - 6";
       CT7.createChart();
-      CT7.chart.config.options.plugins.title.text = "CT - 7";
       CT8.createChart();
-      CT8.chart.config.options.plugins.title.text = "CT - 8";
       chArray.push([0, CT1, CT2, CT3, CT4, CT5, CT6, CT7, CT8]);
     }
     BuildArray.push(chArray);
@@ -702,25 +1846,25 @@ function showPopup(graphID) {
 }
 
 function refreshPIList(station, quantity, current) {
-    if (station != 0) {
-        document.getElementById("P"+current+"Default").innerHTML = "Station "+station;
-        document.getElementById("P"+current+"Default").value = station;
-    } else {
-        document.getElementById("P"+current+"Default").innerHTML = "Unassigned";
+  if (station != 0) {
+    document.getElementById("P" + current + "Default").innerHTML = "Station " + station;
+    document.getElementById("P" + current + "Default").value = station;
+  } else {
+    document.getElementById("P" + current + "Default").innerHTML = "Unassigned";
+  }
+  for (var i = 1; i <= quantity; i++) {
+    if (i == station) {
+      continue;
     }
-    for (var i=1; i <= quantity; i++){
-        if (i == station){
-            continue;
-        }
-        $("#station-"+current).append(`
+    $("#station-" + current).append(`
         <option id="P${current}Default${i}" value="${i}">Station ${i}</option>
         `);
-    }
+  }
 }
 
-function removePIList(quantity){
-    $("#PI_LIST").empty();
-    $("#PI_LIST").append(`
+function removePIList(quantity) {
+  $("#PI_LIST").empty();
+  $("#PI_LIST").append(`
     <div class="list__item" id="PI#1">Empty</div>
     <div class="list__item">
         <select name="stations" id="station-1">
@@ -752,9 +1896,9 @@ function removePIList(quantity){
         </select>
     </div>
     `);
-    if (quantity > 5){
-        for(var i=6; i < quantity; i++)
-        $("#PI_LIST").append(`
+  if (quantity > 5) {
+    for (var i = 6; i < quantity; i++)
+      $("#PI_LIST").append(`
         <div class="list__item" id="PI#${i}">Empty</div>
         <div class="list__item">
             <select name="stations" id="station-${i}">
@@ -762,16 +1906,16 @@ function removePIList(quantity){
             </select>
         </div>
         `);
-    }
+  }
 }
 
 function refreshESPList(station, channel, current) {
-    document.getElementById("ESP"+current+"Detail").innerHTML = "S"+station+" - CH"+channel;
+  document.getElementById("ESP" + current + "Detail").innerHTML = "S" + station + " - CH" + channel;
 }
 
-function removeESPList(quantity){
-    $("#ESP_LIST").empty();
-    $("#ESP_LIST").append(`
+function removeESPList(quantity) {
+  $("#ESP_LIST").empty();
+  $("#ESP_LIST").append(`
     <div class="list__item" id="ESP#1">Empty</div>
         <div class="list__item">
           <p id="ESP1Detail" class="list__item-label">S0 - CH0</p>
@@ -793,13 +1937,13 @@ function removeESPList(quantity){
           <p id="ESP5Detail" class="list__item-label">S0 - CH0</p>
         </div>
     `);
-    if (quantity > 5){
-        for(var i=6; i < quantity; i++)
-        $("#ESP_LIST").append(`
+  if (quantity > 5) {
+    for (var i = 6; i < quantity; i++)
+      $("#ESP_LIST").append(`
         <div class="list__item" id="ESP#${i}">Empty</div>
         <div class="list__item">
           <p id="ESP${i}Detail" class="list__item-label">S0 - CH0</p>
         </div>
         `);
-    }
+  }
 }

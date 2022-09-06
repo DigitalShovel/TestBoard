@@ -2,6 +2,7 @@
   position: relative;
   display: none;
   position: fixed;
+  inset: 0;
   background-color: transparent;
   padding: 2rem;
   z-index: 9999;
@@ -17,16 +18,12 @@
   &__grid {
     display: grid;
     gap: 1rem;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    position: fixed;
-    left: 50%;
-    top: 45%;
-    transform: translate(-50%, -50%);
+    grid-template-columns: repeat(4, 1fr);
 
     &-item {
       background-color: #fff;
       width: 300px;
-      height: 300px;
+      height: 370px;
       border-radius: 5px;
     }
   }
@@ -46,6 +43,6 @@
   left: 0;
   bottom: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.8);
   z-index: -2;
 }

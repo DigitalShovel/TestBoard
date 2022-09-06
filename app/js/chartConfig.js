@@ -202,16 +202,16 @@ class stationCharts {
     type: "line",
     data: this.data,
     options: {
-      plugins: {
-        title: {
-          display: true,
-          text: "CT - Graph"
-        }
-      },
+      // plugins: {
+      //   title: {
+      //     display: true,
+      //     text: "CT - Graph"
+      //   }
+      // },
       layout: {
         padding: {
           right: 16,
-          bottom: 32,
+          bottom: 16,
           top: 1,
           left: 16,
         },
