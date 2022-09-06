@@ -206,7 +206,8 @@ class stationCharts {
         legend: {
           display: true,
           labels: {
-            color: 'rgb(255, 99, 132)'
+            color: 'rgb(255, 99, 132)',
+            position: 'left'
           }
         },
         title: {
