@@ -204,7 +204,10 @@ class stationCharts {
     options: {
       plugins: {
         legend: {
-          display: true
+          display: true,
+          labels: {
+            color: 'rgb(255, 99, 132)'
+          }
         },
         title: {
           display: true,
