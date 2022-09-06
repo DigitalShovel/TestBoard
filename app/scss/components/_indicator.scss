@@ -11,17 +11,27 @@
   padding: 1rem;
   border-radius: 5px;
 
-  &-content {
-    display: flex;
-    flex-direction: column;
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 0.5rem;
   }
 
-  &-title {
+  &__relay,
+  &__failed {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__relay {
+    grid-column: 1/4;
+  }
+
+  &__title {
 
   }
 
-  &-light {
+  &__light {
     position: relative;
     width: 30px;
     height: 10px;
