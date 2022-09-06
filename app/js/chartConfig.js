@@ -207,7 +207,8 @@ class stationCharts {
           display: true,
           labels: {
             color: 'rgb(255, 99, 132)',
-            position: 'left'
+            position: 'left',
+            align: 'start'
           }
         },
         title: {
