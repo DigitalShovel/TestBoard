@@ -203,14 +203,6 @@ class stationCharts {
     data: this.data,
     options: {
       plugins: {
-        legend: {
-          display: true,
-          labels: {
-            color: 'rgb(255, 99, 132)',
-            position: 'left',
-            align: 'start'
-          }
-        },
         title: {
           display: true,
           text: "CT - Graph"
