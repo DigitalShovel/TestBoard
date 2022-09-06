@@ -203,6 +203,9 @@ class stationCharts {
     data: this.data,
     options: {
       plugins: {
+        legend: {
+          display: true
+        },
         title: {
           display: true,
           text: "CT - Graph"
