@@ -63,7 +63,7 @@ function addStationTables(quantity) {
                         <div id="T${i}P1" class="modal">
                             <div class="modal__grid">
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -77,7 +77,7 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G1C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -91,7 +91,7 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G1C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -105,7 +105,7 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G1C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -119,7 +119,7 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G1C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -133,7 +133,7 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G1C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -147,7 +147,7 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G1C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -161,7 +161,7 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G1C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -181,7 +181,7 @@ function addStationTables(quantity) {
                                         <div id="T${i}G1R1" class="indicator__light"></div>
                                         Relay 1
                                     </span>
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--relay">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -198,7 +198,7 @@ function addStationTables(quantity) {
                                         <div id="T${i}G1R2" class="indicator__light"></div>
                                         Relay 2
                                     </span>
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--relay">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -215,7 +215,7 @@ function addStationTables(quantity) {
                                         <div id="T${i}G1R3" class="indicator__light"></div>
                                         Relay 3
                                     </span>
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--relay">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -232,7 +232,7 @@ function addStationTables(quantity) {
                                         <div id="T${i}G1R4" class="indicator__light"></div>
                                         Relay 4
                                     </span>
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--relay">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -249,7 +249,7 @@ function addStationTables(quantity) {
                                         <div id="T${i}G1R5" class="indicator__light"></div>
                                         Relay 5
                                     </span>
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--relay">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -266,7 +266,7 @@ function addStationTables(quantity) {
                                         <div id="T${i}G1R6" class="indicator__light"></div>
                                         Relay 6
                                     </span>
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--relay">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -283,7 +283,7 @@ function addStationTables(quantity) {
                                         <div id="T${i}G1R7" class="indicator__light"></div>
                                         Relay 7
                                     </span>
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--relay">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -356,7 +356,7 @@ function addStationTables(quantity) {
                         <div id="T${i}P2" class="modal">
                             <div class="modal__grid">
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -370,7 +370,7 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G2C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -384,7 +384,7 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G2C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -398,7 +398,7 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G2C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -412,7 +412,7 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G2C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -426,7 +426,7 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G2C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -440,7 +440,7 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G2C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -454,7 +454,7 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G2C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -474,7 +474,7 @@ function addStationTables(quantity) {
                                         <div id="T${i}G2R1" class="indicator__light"></div>
                                         Relay 1
                                     </span>
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--relay">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -491,7 +491,7 @@ function addStationTables(quantity) {
                                         <div id="T${i}G2R2" class="indicator__light"></div>
                                         Relay 2
                                     </span>
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--relay">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -508,7 +508,7 @@ function addStationTables(quantity) {
                                         <div id="T${i}G2R3" class="indicator__light"></div>
                                         Relay 3
                                     </span>
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--relay">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -525,7 +525,7 @@ function addStationTables(quantity) {
                                         <div id="T${i}G2R4" class="indicator__light"></div>
                                         Relay 4
                                     </span>
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--relay">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -542,7 +542,7 @@ function addStationTables(quantity) {
                                         <div id="T${i}G2R5" class="indicator__light"></div>
                                         Relay 5
                                     </span>
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--relay">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -559,7 +559,7 @@ function addStationTables(quantity) {
                                         <div id="T${i}G2R6" class="indicator__light"></div>
                                         Relay 6
                                     </span>
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--relay">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -576,7 +576,7 @@ function addStationTables(quantity) {
                                         <div id="T${i}G2R7" class="indicator__light"></div>
                                         Relay 7
                                     </span>
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--relay">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -649,7 +649,7 @@ function addStationTables(quantity) {
                         <div id="T${i}P3" class="modal">
                             <div class="modal__grid">
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -663,7 +663,7 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G3C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -677,7 +677,7 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G3C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -691,7 +691,7 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G3C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -705,7 +705,7 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G3C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -719,7 +719,7 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G3C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -733,7 +733,7 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G3C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -747,7 +747,7 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G3C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -767,7 +767,7 @@ function addStationTables(quantity) {
                                         <div id="T${i}G3R1" class="indicator__light"></div>
                                         Relay 1
                                     </span>
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--relay">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -784,7 +784,7 @@ function addStationTables(quantity) {
                                         <div id="T${i}G3R2" class="indicator__light"></div>
                                         Relay 2
                                     </span>
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--relay">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -801,7 +801,7 @@ function addStationTables(quantity) {
                                         <div id="T${i}G3R3" class="indicator__light"></div>
                                         Relay 3
                                     </span>
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--relay">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -818,7 +818,7 @@ function addStationTables(quantity) {
                                         <div id="T${i}G3R4" class="indicator__light"></div>
                                         Relay 4
                                     </span>
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--relay">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -835,7 +835,7 @@ function addStationTables(quantity) {
                                         <div id="T${i}G3R5" class="indicator__light"></div>
                                         Relay 5
                                     </span>
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--relay">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -852,7 +852,7 @@ function addStationTables(quantity) {
                                         <div id="T${i}G3R6" class="indicator__light"></div>
                                         Relay 6
                                     </span>
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--relay">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -869,7 +869,7 @@ function addStationTables(quantity) {
                                         <div id="T${i}G3R7" class="indicator__light"></div>
                                         Relay 7
                                     </span>
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--relay">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -942,7 +942,7 @@ function addStationTables(quantity) {
                         <div id="T${i}P4" class="modal">
                             <div class="modal__grid">
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -956,7 +956,7 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G4C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -970,7 +970,7 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G4C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -984,7 +984,7 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G4C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -998,7 +998,7 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G4C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1012,7 +1012,7 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G4C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1026,7 +1026,7 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G4C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1040,7 +1040,7 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G4C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1060,7 +1060,7 @@ function addStationTables(quantity) {
                                         <div id="T${i}G4R1" class="indicator__light"></div>
                                         Relay 1
                                     </span>
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--relay">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1077,7 +1077,7 @@ function addStationTables(quantity) {
                                         <div id="T${i}G4R2" class="indicator__light"></div>
                                         Relay 2
                                     </span>
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--relay">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1094,7 +1094,7 @@ function addStationTables(quantity) {
                                         <div id="T${i}G4R3" class="indicator__light"></div>
                                         Relay 3
                                     </span>
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--relay">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1111,7 +1111,7 @@ function addStationTables(quantity) {
                                         <div id="T${i}G4R4" class="indicator__light"></div>
                                         Relay 4
                                     </span>
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--relay">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1128,7 +1128,7 @@ function addStationTables(quantity) {
                                         <div id="T${i}G4R5" class="indicator__light"></div>
                                         Relay 5
                                     </span>
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--relay">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1145,7 +1145,7 @@ function addStationTables(quantity) {
                                         <div id="T${i}G4R6" class="indicator__light"></div>
                                         Relay 6
                                     </span>
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--relay">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1162,7 +1162,7 @@ function addStationTables(quantity) {
                                         <div id="T${i}G4R7" class="indicator__light"></div>
                                         Relay 7
                                     </span>
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--relay">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1235,7 +1235,7 @@ function addStationTables(quantity) {
                         <div id="T${i}P5" class="modal">
                             <div class="modal__grid">
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1249,7 +1249,7 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G5C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1263,7 +1263,7 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G5C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1277,7 +1277,7 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G5C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1291,7 +1291,7 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G5C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1305,7 +1305,7 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G5C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1319,7 +1319,7 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G5C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1333,7 +1333,7 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G5C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1353,7 +1353,7 @@ function addStationTables(quantity) {
                                         <div id="T${i}G5R1" class="indicator__light"></div>
                                         Relay 1
                                     </span>
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--relay">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1370,7 +1370,7 @@ function addStationTables(quantity) {
                                         <div id="T${i}G5R2" class="indicator__light"></div>
                                         Relay 2
                                     </span>
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--relay">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1387,7 +1387,7 @@ function addStationTables(quantity) {
                                         <div id="T${i}G5R3" class="indicator__light"></div>
                                         Relay 3
                                     </span>
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--relay">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1404,7 +1404,7 @@ function addStationTables(quantity) {
                                         <div id="T${i}G5R4" class="indicator__light"></div>
                                         Relay 4
                                     </span>
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--relay">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1421,7 +1421,7 @@ function addStationTables(quantity) {
                                         <div id="T${i}G5R5" class="indicator__light"></div>
                                         Relay 5
                                     </span>
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--relay">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1438,7 +1438,7 @@ function addStationTables(quantity) {
                                         <div id="T${i}G5R6" class="indicator__light"></div>
                                         Relay 6
                                     </span>
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--relay">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1455,7 +1455,7 @@ function addStationTables(quantity) {
                                         <div id="T${i}G5R7" class="indicator__light"></div>
                                         Relay 7
                                     </span>
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--relay">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1528,7 +1528,7 @@ function addStationTables(quantity) {
                         <div id="T${i}P6" class="modal">
                             <div class="modal__grid">
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1542,7 +1542,7 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G6C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1556,7 +1556,7 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G6C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1570,7 +1570,7 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G6C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1584,7 +1584,7 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G6C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1598,7 +1598,7 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G6C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1612,7 +1612,7 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G6C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1626,7 +1626,7 @@ function addStationTables(quantity) {
                                     <canvas id="T${i}G6C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--ct">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1646,7 +1646,7 @@ function addStationTables(quantity) {
                                         <div id="T${i}G6R1" class="indicator__light"></div>
                                         Relay 1
                                     </span>
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--relay">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1663,7 +1663,7 @@ function addStationTables(quantity) {
                                         <div id="T${i}G6R2" class="indicator__light"></div>
                                         Relay 2
                                     </span>
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--relay">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1680,7 +1680,7 @@ function addStationTables(quantity) {
                                         <div id="T${i}G6R3" class="indicator__light"></div>
                                         Relay 3
                                     </span>
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--relay">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1697,7 +1697,7 @@ function addStationTables(quantity) {
                                         <div id="T${i}G6R4" class="indicator__light"></div>
                                         Relay 4
                                     </span>
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--relay">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1714,7 +1714,7 @@ function addStationTables(quantity) {
                                         <div id="T${i}G6R5" class="indicator__light"></div>
                                         Relay 5
                                     </span>
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--relay">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1731,7 +1731,7 @@ function addStationTables(quantity) {
                                         <div id="T${i}G6R6" class="indicator__light"></div>
                                         Relay 6
                                     </span>
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--relay">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1748,7 +1748,7 @@ function addStationTables(quantity) {
                                         <div id="T${i}G6R7" class="indicator__light"></div>
                                         Relay 7
                                     </span>
-                                    <div class="indicator__failed">
+                                    <div class="indicator__failed indicator__failed--relay">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
