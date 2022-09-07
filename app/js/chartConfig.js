@@ -12,8 +12,8 @@ const movableScrollbarColor = "hsla(213, 100%, 80%, 1)";
 const movableScrollbarEdge = "hsla(213, 100%, 90%, 1)";
 
 //////// Chart Dimensions ///////
-let chartWidth = 400;
-let chartHeight = 400;
+let chartWidth = 600;
+let chartHeight = 600;
 
 //////////// Function to scroll the chart //////////////
 function moveScroll(movingChart) {
