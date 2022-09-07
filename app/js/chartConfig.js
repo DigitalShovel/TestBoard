@@ -12,8 +12,8 @@ const movableScrollbarColor = "hsla(213, 100%, 80%, 1)";
 const movableScrollbarEdge = "hsla(213, 100%, 90%, 1)";
 
 //////// Chart Dimensions ///////
-let chartWidth = 400;
-let chartHeight = 200;
+let chartWidth = 600;
+let chartHeight = 600;
 
 //////////// Function to scroll the chart //////////////
 function moveScroll(movingChart) {
@@ -202,12 +202,16 @@ class stationCharts {
     type: "line",
     data: this.data,
     options: {
-      // plugins: {
-      //   title: {
-      //     display: true,
-      //     text: "CT - Graph"
-      //   }
-      // },
+      plugins: {
+        legend: {
+          position: 'right',
+          align: 'start'
+        },
+        title: {
+          display: true,
+          text: "CT - Graph"
+        }
+      },
       layout: {
         padding: {
           right: 16,
