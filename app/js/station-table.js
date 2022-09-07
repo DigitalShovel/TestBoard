@@ -38,7 +38,7 @@ function addStationTables(quantity) {
                         <div id="T${i}F1" class="indicator__light indicator__light-table"></div>
                     </td>
                     <td>
-                        <button id="T${i}G1" onclick="showPopup('T${i}P1')" class="btn btn--unstyled popup__btn-show">
+                        <button id="T${i}G1" onclick="showModal('T${i}P1')" class="btn btn--unstyled modal__btn-show">
                         <svg class="station__icon station__icon--charts" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g filter="url(#filter0_i_118_644)">
                             <rect width="22" height="22" rx="3" fill="#2B3F55"/>
@@ -60,9 +60,9 @@ function addStationTables(quantity) {
                             </defs>
                         </svg>                        
                         </button>
-                        <div id="T${i}P1" class="popup">
-                            <div class="popup__grid">
-                                <div class="popup__grid-item">
+                        <div id="T${i}P1" class="modal">
+                            <div class="modal__grid">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -76,7 +76,7 @@ function addStationTables(quantity) {
                                     </div>
                                     <canvas id="T${i}G1C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
-                                <div class="popup__grid-item">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -90,7 +90,7 @@ function addStationTables(quantity) {
                                     </div>
                                     <canvas id="T${i}G1C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
-                                <div class="popup__grid-item">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -104,7 +104,7 @@ function addStationTables(quantity) {
                                     </div>
                                     <canvas id="T${i}G1C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
-                                <div class="popup__grid-item">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -118,7 +118,7 @@ function addStationTables(quantity) {
                                     </div>
                                     <canvas id="T${i}G1C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
-                                <div class="popup__grid-item">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -132,7 +132,7 @@ function addStationTables(quantity) {
                                     </div>
                                     <canvas id="T${i}G1C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
-                                <div class="popup__grid-item">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -146,7 +146,7 @@ function addStationTables(quantity) {
                                     </div>
                                     <canvas id="T${i}G1C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
-                                <div class="popup__grid-item">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -160,7 +160,7 @@ function addStationTables(quantity) {
                                     </div>
                                     <canvas id="T${i}G1C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
-                                <div class="popup__grid-item">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -313,7 +313,13 @@ function addStationTables(quantity) {
                                     </div>
                                 </div>
                             </div>
-                            <button id="T${i}B1" onclick="showPopup('T${i}P1')" class="popup__btn-hide btn btn--primary">Close</button>
+                            <button id="T${i}B1" onclick="showModal('T${i}P1')" class="modal__btn-hide btn">
+                                <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                        <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                            </button>
                         </div>
                     </td>
                     </tr>
@@ -325,7 +331,7 @@ function addStationTables(quantity) {
                         <div id="T${i}F2" class="indicator__light indicator__light-table"></div>
                     </td>
                     <td>
-                        <button id="T${i}G2" onclick="showPopup('T${i}P2')" class="btn btn--unstyled popup__btn-show">
+                        <button id="T${i}G2" onclick="showModal('T${i}P2')" class="btn btn--unstyled modal__btn-show">
                         <svg class="station__icon station__icon--charts" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g filter="url(#filter0_i_118_644)">
                             <rect width="22" height="22" rx="3" fill="#2B3F55"/>
@@ -347,9 +353,9 @@ function addStationTables(quantity) {
                             </defs>
                         </svg> 
                         </button>
-                        <div id="T${i}P2" class="popup">
-                            <div class="popup__grid">
-                                <div class="popup__grid-item">
+                        <div id="T${i}P2" class="modal">
+                            <div class="modal__grid">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -363,7 +369,7 @@ function addStationTables(quantity) {
                                     </div>
                                     <canvas id="T${i}G2C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
-                                <div class="popup__grid-item">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -377,7 +383,7 @@ function addStationTables(quantity) {
                                     </div>
                                     <canvas id="T${i}G2C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
-                                <div class="popup__grid-item">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -391,7 +397,7 @@ function addStationTables(quantity) {
                                     </div>
                                     <canvas id="T${i}G2C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
-                                <div class="popup__grid-item">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -405,7 +411,7 @@ function addStationTables(quantity) {
                                     </div>
                                     <canvas id="T${i}G2C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
-                                <div class="popup__grid-item">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -419,7 +425,7 @@ function addStationTables(quantity) {
                                     </div>
                                     <canvas id="T${i}G2C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
-                                <div class="popup__grid-item">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -433,7 +439,7 @@ function addStationTables(quantity) {
                                     </div>
                                     <canvas id="T${i}G2C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
-                                <div class="popup__grid-item">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -447,7 +453,7 @@ function addStationTables(quantity) {
                                     </div>
                                     <canvas id="T${i}G2C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
-                                <div class="popup__grid-item">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -600,7 +606,13 @@ function addStationTables(quantity) {
                                     </div>
                                 </div>
                             </div>
-                            <button id="T${i}B2" onclick="showPopup('T${i}P2')" class="popup__btn-hide btn btn--primary">Close</button>
+                            <button id="T${i}B2" onclick="showModal('T${i}P2')" class="modal__btn-hide btn">
+                                <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                        <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                            </button>
                         </div>
                     </td>
                     </tr>
@@ -612,7 +624,7 @@ function addStationTables(quantity) {
                         <div id="T${i}F3" class="indicator__light indicator__light-table"></div>
                     </td>
                     <td>
-                        <button id="T${i}G3" onclick="showPopup('T${i}P3')" class="btn btn--unstyled popup__btn-show">
+                        <button id="T${i}G3" onclick="showModal('T${i}P3')" class="btn btn--unstyled modal__btn-show">
                         <svg class="station__icon station__icon--charts" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g filter="url(#filter0_i_118_644)">
                             <rect width="22" height="22" rx="3" fill="#2B3F55"/>
@@ -634,9 +646,9 @@ function addStationTables(quantity) {
                             </defs>
                         </svg> 
                         </button>
-                        <div id="T${i}P3" class="popup">
-                            <div class="popup__grid">
-                                <div class="popup__grid-item">
+                        <div id="T${i}P3" class="modal">
+                            <div class="modal__grid">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -650,7 +662,7 @@ function addStationTables(quantity) {
                                     </div>
                                     <canvas id="T${i}G3C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
-                                <div class="popup__grid-item">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -664,7 +676,7 @@ function addStationTables(quantity) {
                                     </div>
                                     <canvas id="T${i}G3C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
-                                <div class="popup__grid-item">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -678,7 +690,7 @@ function addStationTables(quantity) {
                                     </div>
                                     <canvas id="T${i}G3C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
-                                <div class="popup__grid-item">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -692,7 +704,7 @@ function addStationTables(quantity) {
                                     </div>
                                     <canvas id="T${i}G3C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
-                                <div class="popup__grid-item">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -706,7 +718,7 @@ function addStationTables(quantity) {
                                     </div>
                                     <canvas id="T${i}G3C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
-                                <div class="popup__grid-item">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -720,7 +732,7 @@ function addStationTables(quantity) {
                                     </div>
                                     <canvas id="T${i}G3C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
-                                <div class="popup__grid-item">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -734,7 +746,7 @@ function addStationTables(quantity) {
                                     </div>
                                     <canvas id="T${i}G3C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
-                                <div class="popup__grid-item">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -887,7 +899,13 @@ function addStationTables(quantity) {
                                     </div>
                                 </div>
                             </div>
-                            <button id="T${i}B3" onclick="showPopup('T${i}P3')" class="popup__btn-hide btn btn--primary">Close</button>
+                            <button id="T${i}B3" onclick="showModal('T${i}P3')" class="modal__btn-hide btn">
+                                <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                        <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                            </button>
                         </div>
                     </td>
                     </tr>
@@ -899,7 +917,7 @@ function addStationTables(quantity) {
                         <div id="T${i}F4" class="indicator__light indicator__light-table"></div>
                     </td>
                     <td>
-                        <button id="T${i}G4" onclick="showPopup('T${i}P4')" class="btn btn--unstyled popup__btn-show">
+                        <button id="T${i}G4" onclick="showModal('T${i}P4')" class="btn btn--unstyled modal__btn-show">
                         <svg class="station__icon station__icon--charts" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g filter="url(#filter0_i_118_644)">
                             <rect width="22" height="22" rx="3" fill="#2B3F55"/>
@@ -921,9 +939,9 @@ function addStationTables(quantity) {
                             </defs>
                         </svg> 
                         </button>
-                        <div id="T${i}P4" class="popup">
-                            <div class="popup__grid">
-                                <div class="popup__grid-item">
+                        <div id="T${i}P4" class="modal">
+                            <div class="modal__grid">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -937,7 +955,7 @@ function addStationTables(quantity) {
                                     </div>
                                     <canvas id="T${i}G4C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
-                                <div class="popup__grid-item">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -951,7 +969,7 @@ function addStationTables(quantity) {
                                     </div>
                                     <canvas id="T${i}G4C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
-                                <div class="popup__grid-item">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -965,7 +983,7 @@ function addStationTables(quantity) {
                                     </div>
                                     <canvas id="T${i}G4C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
-                                <div class="popup__grid-item">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -979,7 +997,7 @@ function addStationTables(quantity) {
                                     </div>
                                     <canvas id="T${i}G4C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
-                                <div class="popup__grid-item">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -993,7 +1011,7 @@ function addStationTables(quantity) {
                                     </div>
                                     <canvas id="T${i}G4C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
-                                <div class="popup__grid-item">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -1007,7 +1025,7 @@ function addStationTables(quantity) {
                                     </div>
                                     <canvas id="T${i}G4C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
-                                <div class="popup__grid-item">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -1021,7 +1039,7 @@ function addStationTables(quantity) {
                                     </div>
                                     <canvas id="T${i}G4C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
-                                <div class="popup__grid-item">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -1174,7 +1192,13 @@ function addStationTables(quantity) {
                                     </div>
                                 </div>
                             </div>
-                            <button id="T${i}B4" onclick="showPopup('T${i}P4')" class="popup__btn-hide btn btn--primary">Close</button>
+                            <button id="T${i}B4" onclick="showModal('T${i}P4')" class="modal__btn-hide btn">
+                                <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                        <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                            </button>
                         </div>
                     </td>
                     </tr>
@@ -1186,7 +1210,7 @@ function addStationTables(quantity) {
                         <div id="T${i}F5" class="indicator__light indicator__light-table"></div>
                     </td>
                     <td>
-                        <button id="T${i}G5" onclick="showPopup('T${i}P5')" class="btn btn--unstyled popup__btn-show">
+                        <button id="T${i}G5" onclick="showModal('T${i}P5')" class="btn btn--unstyled modal__btn-show">
                         <svg class="station__icon station__icon--charts" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g filter="url(#filter0_i_118_644)">
                             <rect width="22" height="22" rx="3" fill="#2B3F55"/>
@@ -1208,9 +1232,9 @@ function addStationTables(quantity) {
                             </defs>
                         </svg> 
                         </button>
-                        <div id="T${i}P5" class="popup">
-                            <div class="popup__grid">
-                                <div class="popup__grid-item">
+                        <div id="T${i}P5" class="modal">
+                            <div class="modal__grid">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -1224,7 +1248,7 @@ function addStationTables(quantity) {
                                     </div>
                                     <canvas id="T${i}G5C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
-                                <div class="popup__grid-item">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -1238,7 +1262,7 @@ function addStationTables(quantity) {
                                     </div>
                                     <canvas id="T${i}G5C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
-                                <div class="popup__grid-item">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -1252,7 +1276,7 @@ function addStationTables(quantity) {
                                     </div>
                                     <canvas id="T${i}G5C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
-                                <div class="popup__grid-item">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -1266,7 +1290,7 @@ function addStationTables(quantity) {
                                     </div>
                                     <canvas id="T${i}G5C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
-                                <div class="popup__grid-item">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -1280,7 +1304,7 @@ function addStationTables(quantity) {
                                     </div>
                                     <canvas id="T${i}G5C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
-                                <div class="popup__grid-item">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -1294,7 +1318,7 @@ function addStationTables(quantity) {
                                     </div>
                                     <canvas id="T${i}G5C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
-                                <div class="popup__grid-item">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -1308,7 +1332,7 @@ function addStationTables(quantity) {
                                     </div>
                                     <canvas id="T${i}G5C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
-                                <div class="popup__grid-item">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -1461,7 +1485,13 @@ function addStationTables(quantity) {
                                     </div>
                                 </div>
                             </div>
-                            <button id="T${i}B5" onclick="showPopup('T${i}P5')" class="popup__btn-hide btn btn--primary">Close</button>
+                            <button id="T${i}B5" onclick="showModal('T${i}P5')" class="modal__btn-hide btn">
+                                <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                        <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                            </button>
                         </div>
                     </td>
                     </tr>
@@ -1473,7 +1503,7 @@ function addStationTables(quantity) {
                         <div id="T${i}F6" class="indicator__light indicator__light-table"></div>
                     </td>
                     <td>
-                        <button id="T${i}G6" onclick="showPopup('T${i}P6')" class="btn btn--unstyled popup__btn-show">
+                        <button id="T${i}G6" onclick="showModal('T${i}P6')" class="btn btn--unstyled modal__btn-show">
                         <svg class="station__icon station__icon--charts" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g filter="url(#filter0_i_118_644)">
                             <rect width="22" height="22" rx="3" fill="#2B3F55"/>
@@ -1495,9 +1525,9 @@ function addStationTables(quantity) {
                             </defs>
                         </svg> 
                         </button>
-                        <div id="T${i}P6" class="popup">
-                            <div class="popup__grid">
-                                <div class="popup__grid-item">
+                        <div id="T${i}P6" class="modal">
+                            <div class="modal__grid">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -1511,7 +1541,7 @@ function addStationTables(quantity) {
                                     </div>
                                     <canvas id="T${i}G6C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
-                                <div class="popup__grid-item">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -1525,7 +1555,7 @@ function addStationTables(quantity) {
                                     </div>
                                     <canvas id="T${i}G6C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
-                                <div class="popup__grid-item">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -1539,7 +1569,7 @@ function addStationTables(quantity) {
                                     </div>
                                     <canvas id="T${i}G6C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
-                                <div class="popup__grid-item">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -1553,7 +1583,7 @@ function addStationTables(quantity) {
                                     </div>
                                     <canvas id="T${i}G6C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
-                                <div class="popup__grid-item">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -1567,7 +1597,7 @@ function addStationTables(quantity) {
                                     </div>
                                     <canvas id="T${i}G6C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
-                                <div class="popup__grid-item">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -1581,7 +1611,7 @@ function addStationTables(quantity) {
                                     </div>
                                     <canvas id="T${i}G6C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
-                                <div class="popup__grid-item">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -1595,7 +1625,7 @@ function addStationTables(quantity) {
                                     </div>
                                     <canvas id="T${i}G6C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
-                                <div class="popup__grid-item">
+                                <div class="modal__grid-item">
                                     <div class="indicator__failed">
                                         <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
@@ -1748,7 +1778,13 @@ function addStationTables(quantity) {
                                     </div>
                                 </div>
                             </div>
-                            <button id="T${i}B6" onclick="showPopup('T${i}P6')" class="popup__btn-hide btn btn--primary">Close</button>
+                            <button id="T${i}B6" onclick="showModal('T${i}P6')" class="modal__btn-hide btn">
+                                <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                        <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                            </button>
                         </div>
                     </td>
                     </tr>
@@ -1758,7 +1794,7 @@ function addStationTables(quantity) {
                             <div class="indicator__light indicator__light-table"></div>
                         </td>
                         <td>
-                            <button id="T${i}G7" onclick="showPopup('T${i}P7')" class="btn btn--unstyled popup__btn-show">
+                            <button id="T${i}G7" onclick="showModal('T${i}P7')" class="btn btn--unstyled modal__btn-show">
                             <svg class="station__icon station__icon--charts" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g filter="url(#filter0_i_118_644)">
                                 <rect width="22" height="22" rx="3" fill="#2B3F55"/>
@@ -1780,26 +1816,32 @@ function addStationTables(quantity) {
                                 </defs>
                             </svg> 
                             </button>
-                            <div id="T${i}P7" class="popup">
-                                <div class="popup__grid">
-                                    <div class="popup__grid-item">
+                            <div id="T${i}P7" class="modal">
+                                <div class="modal__grid">
+                                    <div class="modal__grid-item">
                                     </div>
-                                    <div class="popup__grid-item">
+                                    <div class="modal__grid-item">
                                     </div>
-                                    <div class="popup__grid-item">
+                                    <div class="modal__grid-item">
                                     </div>
-                                    <div class="popup__grid-item">
+                                    <div class="modal__grid-item">
                                     </div>
-                                    <div class="popup__grid-item">
+                                    <div class="modal__grid-item">
                                     </div>
-                                    <div class="popup__grid-item">
+                                    <div class="modal__grid-item">
                                     </div>
-                                    <div class="popup__grid-item">
+                                    <div class="modal__grid-item">
                                     </div>
-                                    <div class="popup__grid-item">
+                                    <div class="modal__grid-item">
                                     </div>
                                 </div>
-                                <button id="T${i}B7" onclick="showPopup('T${i}P7')" class="popup__btn-hide btn btn--primary">Close</button>
+                                <button id="T${i}B7" onclick="showModal('T${i}P7')" class="modal__btn-hide btn">
+                                    <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
+                                        <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
                             </div>
                         </td>
                     </tr>
@@ -1840,9 +1882,9 @@ function removeStationTables() {
 
 let graphFlag = false;
 
-function showPopup(graphID) {
-  var popupGrid = document.getElementById(graphID);
-  popupGrid.classList.toggle("popup__show");
+function showModal(graphID) {
+  var modalGrid = document.getElementById(graphID);
+  modalGrid.classList.toggle("modal__show");
 }
 
 function refreshPIList(station, quantity, current) {

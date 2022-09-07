@@ -1,0 +1,76 @@
+.modal {
+  position: relative;
+  display: none;
+  position: fixed;
+  inset: 0;
+  max-height: 100%;
+  background-color: transparent;
+  padding: 2rem;
+  z-index: 999;
+  overflow-y: scroll;
+
+  &__show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__hide {
+    display: none;
+  }
+
+  &__grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+
+    @media (max-width: 1700px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: 1280px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 850px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &-item {
+      width: 400px;
+      height: 280px;
+      background-color: #fff;
+      border-radius: 5px;
+    }
+  }
+
+  &__btn-hide,
+  &__btn-hide svg {
+    circle { fill: var(--primary-color); }
+    path { stroke: var(--blue-200); }
+
+    &:hover {
+      circle { fill: var(--blue-400); }
+      path { stroke: var(--blue-100); }
+    }
+  }
+
+  &__btn-hide {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: transparent;
+  }
+}
+
+.modal:after {
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: -2;
+}

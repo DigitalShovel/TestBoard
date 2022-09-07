@@ -2,11 +2,6 @@
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   gap: 1rem;
-  width: 1248px;
-  position: fixed;
-  left: 50%;
-  top: 84%;
-  transform: translate(-50%, -50%);
   border-radius: 5px;
 
   &__content {
@@ -51,6 +46,7 @@
     gap: 0.3rem;
 
     &-icon {
+      min-width: 36px;
       &--fail {
         circle {
           fill: var(--danger-200);

@@ -13,7 +13,7 @@ const movableScrollbarEdge = "hsla(213, 100%, 90%, 1)";
 
 //////// Chart Dimensions ///////
 let chartWidth = 400;
-let chartHeight = 400;
+let chartHeight = 200;
 
 //////////// Function to scroll the chart //////////////
 function moveScroll(movingChart) {
@@ -240,7 +240,7 @@ class stationCharts {
             color: labelTextColor,
             font: {
               family: labelTextFont,
-              size: 14,
+              size: 12,
               weight: "bold",
               lineHeight: 1.2,
             },
