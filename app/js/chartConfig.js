@@ -204,7 +204,8 @@ class stationCharts {
     options: {
       plugins: {
         legend: {
-          position: 'chartArea'
+          position: 'right',
+          align: 'start'
         },
         title: {
           display: true,
