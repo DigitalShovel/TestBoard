@@ -107,7 +107,7 @@ var moveChart = {
     let drawCircleRight = new CircleChevron();
     drawCircleRight.draw(ctx, right, -5);*/
     /////////// Draw a scroll bar /////////////
-    const bpix = chart.options.layout.padding.bottom + 8;
+    const bpix = chart.options.layout.padding.bottom + 32;
     ctx.beginPath();
     ctx.fillStyle = scrollbarColor;
     ctx.rect(left + 15, bottom + bpix, width - 30, 8);
