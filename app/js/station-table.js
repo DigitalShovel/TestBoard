@@ -35,10 +35,10 @@ function addStationTables(quantity) {
                         Channel #1
                     </td>
                     <td>
-                        <div id="T${i}F1" class="indicator__light indicator__light-table"></div>
+                        <div id="S${i}F1" class="indicator__light indicator__light-table"></div>
                     </td>
                     <td>
-                        <button id="T${i}G1" onclick="showModal('T${i}P1')" class="btn btn--unstyled modal__btn-show">
+                        <button id="S${i}C1" onclick="showModal('S${i}P1')" class="btn btn--unstyled modal__btn-show">
                         <svg class="station__icon station__icon--charts" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g filter="url(#filter0_i_118_644)">
                             <rect width="22" height="22" rx="3" fill="#2B3F55"/>
@@ -60,11 +60,11 @@ function addStationTables(quantity) {
                             </defs>
                         </svg>                        
                         </button>
-                        <div id="T${i}P1" class="modal">
+                        <div id="S${i}P1" class="modal">
                             <div class="indicator">
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G1R1" class="indicator__light"></div>
+                                        <div id="S${i}C1R1" class="indicator__light"></div>
                                         Relay 1
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -81,7 +81,7 @@ function addStationTables(quantity) {
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G1R2" class="indicator__light"></div>
+                                        <div id="S${i}C1R2" class="indicator__light"></div>
                                         Relay 2
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -98,7 +98,7 @@ function addStationTables(quantity) {
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G1R3" class="indicator__light"></div>
+                                        <div id="S${i}C1R3" class="indicator__light"></div>
                                         Relay 3
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -115,7 +115,7 @@ function addStationTables(quantity) {
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G1R4" class="indicator__light"></div>
+                                        <div id="S${i}C1R4" class="indicator__light"></div>
                                         Relay 4
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -132,7 +132,7 @@ function addStationTables(quantity) {
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G1R5" class="indicator__light"></div>
+                                        <div id="S${i}C1R5" class="indicator__light"></div>
                                         Relay 5
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -149,7 +149,7 @@ function addStationTables(quantity) {
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G1R6" class="indicator__light"></div>
+                                        <div id="S${i}C1R6" class="indicator__light"></div>
                                         Relay 6
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -166,7 +166,7 @@ function addStationTables(quantity) {
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G1R7" class="indicator__light"></div>
+                                        <div id="S${i}C1R7" class="indicator__light"></div>
                                         Relay 7
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -183,7 +183,7 @@ function addStationTables(quantity) {
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G1R8" class="indicator__light"></div>
+                                        <div id="S${i}C1R8" class="indicator__light"></div>
                                         Relay 8
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -215,7 +215,7 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G1C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C1C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
@@ -232,7 +232,7 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G1C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C1C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
@@ -249,7 +249,7 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G1C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C1C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
@@ -266,7 +266,7 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G1C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C1C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
@@ -283,7 +283,7 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G1C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C1C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
@@ -300,7 +300,7 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G1C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C1C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
@@ -317,7 +317,7 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G1C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C1C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
@@ -334,10 +334,10 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G1C8" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C1C8" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                             </div>
-                            <button id="T${i}B1" onclick="showModal('T${i}P1')" class="modal__btn-hide btn">
+                            <button id="S${i}B1" onclick="showModal('S${i}P1')" class="modal__btn-hide btn">
                                 <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                         <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -352,10 +352,10 @@ function addStationTables(quantity) {
                         Channel #2
                     </td>
                     <td>
-                        <div id="T${i}F2" class="indicator__light indicator__light-table"></div>
+                        <div id="S${i}F2" class="indicator__light indicator__light-table"></div>
                     </td>
                     <td>
-                        <button id="T${i}G2" onclick="showModal('T${i}P2')" class="btn btn--unstyled modal__btn-show">
+                        <button id="S${i}C2" onclick="showModal('S${i}P2')" class="btn btn--unstyled modal__btn-show">
                         <svg class="station__icon station__icon--charts" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g filter="url(#filter0_i_118_644)">
                             <rect width="22" height="22" rx="3" fill="#2B3F55"/>
@@ -377,11 +377,11 @@ function addStationTables(quantity) {
                             </defs>
                         </svg> 
                         </button>
-                        <div id="T${i}P2" class="modal">
+                        <div id="S${i}P2" class="modal">
                             <div class="indicator">
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G2R1" class="indicator__light"></div>
+                                        <div id="S${i}C2R1" class="indicator__light"></div>
                                         Relay 1
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -398,7 +398,7 @@ function addStationTables(quantity) {
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G2R2" class="indicator__light"></div>
+                                        <div id="S${i}C2R2" class="indicator__light"></div>
                                         Relay 2
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -415,7 +415,7 @@ function addStationTables(quantity) {
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G2R3" class="indicator__light"></div>
+                                        <div id="S${i}C2R3" class="indicator__light"></div>
                                         Relay 3
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -432,7 +432,7 @@ function addStationTables(quantity) {
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G2R4" class="indicator__light"></div>
+                                        <div id="S${i}C2R4" class="indicator__light"></div>
                                         Relay 4
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -449,7 +449,7 @@ function addStationTables(quantity) {
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G2R5" class="indicator__light"></div>
+                                        <div id="S${i}C2R5" class="indicator__light"></div>
                                         Relay 5
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -466,7 +466,7 @@ function addStationTables(quantity) {
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G2R6" class="indicator__light"></div>
+                                        <div id="S${i}C2R6" class="indicator__light"></div>
                                         Relay 6
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -483,7 +483,7 @@ function addStationTables(quantity) {
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G2R7" class="indicator__light"></div>
+                                        <div id="S${i}C2R7" class="indicator__light"></div>
                                         Relay 7
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -500,7 +500,7 @@ function addStationTables(quantity) {
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G2R8" class="indicator__light"></div>
+                                        <div id="S${i}C2R8" class="indicator__light"></div>
                                         Relay 8
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -532,7 +532,7 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G2C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C2C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
@@ -549,7 +549,7 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G2C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C2C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
@@ -566,7 +566,7 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G2C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C2C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
@@ -583,7 +583,7 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G2C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C2C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
@@ -600,7 +600,7 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G2C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C2C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
@@ -617,7 +617,7 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G2C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C2C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
@@ -634,7 +634,7 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G2C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C2C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
@@ -651,10 +651,10 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G2C8" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C2C8" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                             </div>
-                            <button id="T${i}B2" onclick="showModal('T${i}P2')" class="modal__btn-hide btn">
+                            <button id="S${i}B2" onclick="showModal('S${i}P2')" class="modal__btn-hide btn">
                                 <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                         <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -669,10 +669,10 @@ function addStationTables(quantity) {
                         Channel #3
                     </td>
                     <td>
-                        <div id="T${i}F3" class="indicator__light indicator__light-table"></div>
+                        <div id="S${i}F3" class="indicator__light indicator__light-table"></div>
                     </td>
                     <td>
-                        <button id="T${i}G3" onclick="showModal('T${i}P3')" class="btn btn--unstyled modal__btn-show">
+                        <button id="S${i}C3" onclick="showModal('S${i}P3')" class="btn btn--unstyled modal__btn-show">
                         <svg class="station__icon station__icon--charts" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g filter="url(#filter0_i_118_644)">
                             <rect width="22" height="22" rx="3" fill="#2B3F55"/>
@@ -694,11 +694,11 @@ function addStationTables(quantity) {
                             </defs>
                         </svg> 
                         </button>
-                        <div id="T${i}P3" class="modal">
+                        <div id="S${i}P3" class="modal">
                             <div class="indicator">
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G3R1" class="indicator__light"></div>
+                                        <div id="S${i}C3R1" class="indicator__light"></div>
                                         Relay 1
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -715,7 +715,7 @@ function addStationTables(quantity) {
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G3R2" class="indicator__light"></div>
+                                        <div id="S${i}C3R2" class="indicator__light"></div>
                                         Relay 2
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -732,7 +732,7 @@ function addStationTables(quantity) {
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G3R3" class="indicator__light"></div>
+                                        <div id="S${i}C3R3" class="indicator__light"></div>
                                         Relay 3
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -749,7 +749,7 @@ function addStationTables(quantity) {
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G3R4" class="indicator__light"></div>
+                                        <div id="S${i}C3R4" class="indicator__light"></div>
                                         Relay 4
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -766,7 +766,7 @@ function addStationTables(quantity) {
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G3R5" class="indicator__light"></div>
+                                        <div id="S${i}C3R5" class="indicator__light"></div>
                                         Relay 5
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -783,7 +783,7 @@ function addStationTables(quantity) {
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G3R6" class="indicator__light"></div>
+                                        <div id="S${i}C3R6" class="indicator__light"></div>
                                         Relay 6
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -800,7 +800,7 @@ function addStationTables(quantity) {
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G3R7" class="indicator__light"></div>
+                                        <div id="S${i}C3R7" class="indicator__light"></div>
                                         Relay 7
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -817,7 +817,7 @@ function addStationTables(quantity) {
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G3R8" class="indicator__light"></div>
+                                        <div id="S${i}C3R8" class="indicator__light"></div>
                                         Relay 8
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -849,7 +849,7 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G3C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C3C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
@@ -866,7 +866,7 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G3C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C3C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
@@ -883,7 +883,7 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G3C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C3C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
@@ -900,7 +900,7 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G3C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C3C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
@@ -917,7 +917,7 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G3C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C3C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
@@ -934,7 +934,7 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G3C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C3C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
@@ -951,7 +951,7 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G3C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C3C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
@@ -968,10 +968,10 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G3C8" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C3C8" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                             </div>
-                            <button id="T${i}B3" onclick="showModal('T${i}P3')" class="modal__btn-hide btn">
+                            <button id="S${i}B3" onclick="showModal('S${i}P3')" class="modal__btn-hide btn">
                                 <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                         <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -986,10 +986,10 @@ function addStationTables(quantity) {
                         Channel #4
                     </td>
                     <td>
-                        <div id="T${i}F4" class="indicator__light indicator__light-table"></div>
+                        <div id="S${i}F4" class="indicator__light indicator__light-table"></div>
                     </td>
                     <td>
-                        <button id="T${i}G4" onclick="showModal('T${i}P4')" class="btn btn--unstyled modal__btn-show">
+                        <button id="S${i}C4" onclick="showModal('S${i}P4')" class="btn btn--unstyled modal__btn-show">
                         <svg class="station__icon station__icon--charts" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g filter="url(#filter0_i_118_644)">
                             <rect width="22" height="22" rx="3" fill="#2B3F55"/>
@@ -1011,11 +1011,11 @@ function addStationTables(quantity) {
                             </defs>
                         </svg> 
                         </button>
-                        <div id="T${i}P4" class="modal">
+                        <div id="S${i}P4" class="modal">
                             <div class="indicator">
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G4R1" class="indicator__light"></div>
+                                        <div id="S${i}C4R1" class="indicator__light"></div>
                                         Relay 1
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -1032,7 +1032,7 @@ function addStationTables(quantity) {
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G4R2" class="indicator__light"></div>
+                                        <div id="S${i}C4R2" class="indicator__light"></div>
                                         Relay 2
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -1049,7 +1049,7 @@ function addStationTables(quantity) {
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G4R3" class="indicator__light"></div>
+                                        <div id="S${i}C4R3" class="indicator__light"></div>
                                         Relay 3
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -1066,7 +1066,7 @@ function addStationTables(quantity) {
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G4R4" class="indicator__light"></div>
+                                        <div id="S${i}C4R4" class="indicator__light"></div>
                                         Relay 4
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -1083,7 +1083,7 @@ function addStationTables(quantity) {
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G4R5" class="indicator__light"></div>
+                                        <div id="S${i}C4R5" class="indicator__light"></div>
                                         Relay 5
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -1100,7 +1100,7 @@ function addStationTables(quantity) {
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G4R6" class="indicator__light"></div>
+                                        <div id="S${i}C4R6" class="indicator__light"></div>
                                         Relay 6
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -1117,7 +1117,7 @@ function addStationTables(quantity) {
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G4R7" class="indicator__light"></div>
+                                        <div id="S${i}C4R7" class="indicator__light"></div>
                                         Relay 7
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -1134,7 +1134,7 @@ function addStationTables(quantity) {
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G4R8" class="indicator__light"></div>
+                                        <div id="S${i}C4R8" class="indicator__light"></div>
                                         Relay 8
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -1166,7 +1166,7 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G4C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C4C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
@@ -1183,7 +1183,7 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G4C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C4C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
@@ -1200,7 +1200,7 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G4C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C4C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
@@ -1217,7 +1217,7 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G4C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C4C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
@@ -1234,7 +1234,7 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G4C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C4C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
@@ -1251,7 +1251,7 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G4C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C4C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
@@ -1268,7 +1268,7 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G4C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C4C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
@@ -1285,10 +1285,10 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G4C8" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C4C8" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                             </div>
-                            <button id="T${i}B4" onclick="showModal('T${i}P4')" class="modal__btn-hide btn">
+                            <button id="S${i}B4" onclick="showModal('S${i}P4')" class="modal__btn-hide btn">
                                 <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                         <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1303,10 +1303,10 @@ function addStationTables(quantity) {
                         Channel #5
                     </td>
                     <td>
-                        <div id="T${i}F5" class="indicator__light indicator__light-table"></div>
+                        <div id="S${i}F5" class="indicator__light indicator__light-table"></div>
                     </td>
                     <td>
-                        <button id="T${i}G5" onclick="showModal('T${i}P5')" class="btn btn--unstyled modal__btn-show">
+                        <button id="S${i}C5" onclick="showModal('S${i}P5')" class="btn btn--unstyled modal__btn-show">
                         <svg class="station__icon station__icon--charts" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g filter="url(#filter0_i_118_644)">
                             <rect width="22" height="22" rx="3" fill="#2B3F55"/>
@@ -1328,11 +1328,11 @@ function addStationTables(quantity) {
                             </defs>
                         </svg> 
                         </button>
-                        <div id="T${i}P5" class="modal">
+                        <div id="S${i}P5" class="modal">
                             <div class="indicator">
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G5R1" class="indicator__light"></div>
+                                        <div id="S${i}C5R1" class="indicator__light"></div>
                                         Relay 1
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -1349,7 +1349,7 @@ function addStationTables(quantity) {
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G5R2" class="indicator__light"></div>
+                                        <div id="S${i}C5R2" class="indicator__light"></div>
                                         Relay 2
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -1366,7 +1366,7 @@ function addStationTables(quantity) {
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G5R3" class="indicator__light"></div>
+                                        <div id="S${i}C5R3" class="indicator__light"></div>
                                         Relay 3
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -1383,7 +1383,7 @@ function addStationTables(quantity) {
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G5R4" class="indicator__light"></div>
+                                        <div id="S${i}C5R4" class="indicator__light"></div>
                                         Relay 4
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -1400,7 +1400,7 @@ function addStationTables(quantity) {
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G5R5" class="indicator__light"></div>
+                                        <div id="S${i}C5R5" class="indicator__light"></div>
                                         Relay 5
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -1417,7 +1417,7 @@ function addStationTables(quantity) {
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G5R6" class="indicator__light"></div>
+                                        <div id="S${i}C5R6" class="indicator__light"></div>
                                         Relay 6
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -1434,7 +1434,7 @@ function addStationTables(quantity) {
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G5R7" class="indicator__light"></div>
+                                        <div id="S${i}C5R7" class="indicator__light"></div>
                                         Relay 7
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -1451,7 +1451,7 @@ function addStationTables(quantity) {
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G5R8" class="indicator__light"></div>
+                                        <div id="S${i}C5R8" class="indicator__light"></div>
                                         Relay 8
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -1483,7 +1483,7 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G5C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C5C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
@@ -1500,7 +1500,7 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G5C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C5C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
@@ -1517,7 +1517,7 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G5C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C5C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
@@ -1534,7 +1534,7 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G5C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C5C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
@@ -1551,7 +1551,7 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G5C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C5C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
@@ -1568,7 +1568,7 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G5C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C5C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
@@ -1585,7 +1585,7 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G5C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C5C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
@@ -1602,10 +1602,10 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G5C8" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C5C8" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                             </div>
-                            <button id="T${i}B5" onclick="showModal('T${i}P5')" class="modal__btn-hide btn">
+                            <button id="S${i}B5" onclick="showModal('S${i}P5')" class="modal__btn-hide btn">
                                 <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                         <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1620,10 +1620,10 @@ function addStationTables(quantity) {
                         Channel #6
                     </td>
                     <td>
-                        <div id="T${i}F6" class="indicator__light indicator__light-table"></div>
+                        <div id="S${i}F6" class="indicator__light indicator__light-table"></div>
                     </td>
                     <td>
-                        <button id="T${i}G6" onclick="showModal('T${i}P6')" class="btn btn--unstyled modal__btn-show">
+                        <button id="S${i}C6" onclick="showModal('S${i}P6')" class="btn btn--unstyled modal__btn-show">
                         <svg class="station__icon station__icon--charts" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g filter="url(#filter0_i_118_644)">
                             <rect width="22" height="22" rx="3" fill="#2B3F55"/>
@@ -1645,11 +1645,11 @@ function addStationTables(quantity) {
                             </defs>
                         </svg> 
                         </button>
-                        <div id="T${i}P6" class="modal">
+                        <div id="S${i}P6" class="modal">
                             <div class="indicator">
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G6R1" class="indicator__light"></div>
+                                        <div id="S${i}C6R1" class="indicator__light"></div>
                                         Relay 1
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -1666,7 +1666,7 @@ function addStationTables(quantity) {
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G6R2" class="indicator__light"></div>
+                                        <div id="S${i}C6R2" class="indicator__light"></div>
                                         Relay 2
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -1683,7 +1683,7 @@ function addStationTables(quantity) {
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G6R3" class="indicator__light"></div>
+                                        <div id="S${i}C6R3" class="indicator__light"></div>
                                         Relay 3
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -1700,7 +1700,7 @@ function addStationTables(quantity) {
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G6R4" class="indicator__light"></div>
+                                        <div id="S${i}C6R4" class="indicator__light"></div>
                                         Relay 4
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -1717,7 +1717,7 @@ function addStationTables(quantity) {
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G6R5" class="indicator__light"></div>
+                                        <div id="S${i}C6R5" class="indicator__light"></div>
                                         Relay 5
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -1734,7 +1734,7 @@ function addStationTables(quantity) {
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G6R6" class="indicator__light"></div>
+                                        <div id="S${i}C6R6" class="indicator__light"></div>
                                         Relay 6
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -1751,7 +1751,7 @@ function addStationTables(quantity) {
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G6R7" class="indicator__light"></div>
+                                        <div id="S${i}C6R7" class="indicator__light"></div>
                                         Relay 7
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -1768,7 +1768,7 @@ function addStationTables(quantity) {
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G6R8" class="indicator__light"></div>
+                                        <div id="S${i}C6R8" class="indicator__light"></div>
                                         Relay 8
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
@@ -1800,7 +1800,7 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G6C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C6C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
@@ -1817,7 +1817,7 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G6C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C6C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
@@ -1834,7 +1834,7 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G6C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C6C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
@@ -1851,7 +1851,7 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G6C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C6C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
@@ -1868,7 +1868,7 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G6C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C6C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
@@ -1885,7 +1885,7 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G6C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C6C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
@@ -1902,7 +1902,7 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G6C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C6C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
@@ -1919,10 +1919,10 @@ function addStationTables(quantity) {
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G6C8" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C6C8" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                             </div>
-                            <button id="T${i}B6" onclick="showModal('T${i}P6')" class="modal__btn-hide btn">
+                            <button id="S${i}B6" onclick="showModal('S${i}P6')" class="modal__btn-hide btn">
                                 <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                         <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1938,7 +1938,7 @@ function addStationTables(quantity) {
                             <div class="indicator__light indicator__light-table"></div>
                         </td>
                         <td>
-                            <button id="T${i}G7" onclick="showModal('T${i}P7')" class="btn btn--unstyled modal__btn-show">
+                            <button id="S${i}C7" onclick="showModal('S${i}P7')" class="btn btn--unstyled modal__btn-show">
                             <svg class="station__icon station__icon--charts" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g filter="url(#filter0_i_118_644)">
                                 <rect width="22" height="22" rx="3" fill="#2B3F55"/>
@@ -1960,7 +1960,7 @@ function addStationTables(quantity) {
                                 </defs>
                             </svg> 
                             </button>
-                            <div id="T${i}P7" class="modal">
+                            <div id="S${i}P7" class="modal">
                                 <div class="modal__grid">
                                     <div class="modal__grid-item">
                                     </div>
@@ -1979,7 +1979,7 @@ function addStationTables(quantity) {
                                     <div class="modal__grid-item">
                                     </div>
                                 </div>
-                                <button id="T${i}B7" onclick="showModal('T${i}P7')" class="modal__btn-hide btn">
+                                <button id="S${i}B7" onclick="showModal('S${i}P7')" class="modal__btn-hide btn">
                                     <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                         <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
