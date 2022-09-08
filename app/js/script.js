@@ -227,7 +227,9 @@ function readCT(sta) {
               document.getElementById('S'+sta+'C'+n+'R'+m).classList.remove("indicator__light--fail", "indicator__light--success");
               if (valueRLYPI != valueRLYESP){
                 document.getElementById('S'+sta+'C'+n+'R'+m).classList.add("indicator__light--fail");
-                console.log(document.getElementById('S'+sta+'C'+n+'RN'+m).textContent);
+                // Add one failed attempt to the number
+                var failed_num = Number(document.getElementById('S'+sta+'C'+n+'RN'+m).textContent);
+                document.getElementById('S'+sta+'C'+n+'RN'+m).innerText(failed_num+1);
                 //document.getElementById('S'+sta+'C'+n+'RI'+m).classList.add("indicator__failed-icon--fail");
               }
               else {
