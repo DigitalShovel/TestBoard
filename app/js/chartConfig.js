@@ -110,7 +110,7 @@ var moveChart = {
     const bpix = chart.options.layout.padding.bottom + 25;
     ctx.beginPath();
     ctx.fillStyle = scrollbarColor;
-    ctx.rect(left + 15, bottom + bpix, width - 30, 15);
+    ctx.rect(left + 15, bottom + bpix, width - 30, 95);
     ctx.fill();
     ctx.closePath();
     /////////// Draw a arrow for scroll bar /////////////

@@ -163,16 +163,16 @@ function readCT(sta) {
           for(var n=1; n <=6; n++){
             BuildArray[sta][n][1].success &= data['Items'][i]['Success'][n];
             if (BuildArray[sta][n][1].success){
-              document.getElementById('T1F'+n).classList.remove("indicator__light--fail", "indicator__light--success");
-              document.getElementById('T1F'+n).classList.add("indicator__light--success");
-              document.getElementById('T'+sta+'F'+n).classList.remove("indicator__light--fail", "indicator__light--success");
-              document.getElementById('T'+sta+'F'+n).classList.add("indicator__light--success");
+              document.getElementById('T1F'+n).classList.remove("indicator-light--fail", "indicator-light--success");
+              document.getElementById('T1F'+n).classList.add("indicator-light--success");
+              document.getElementById('T'+sta+'F'+n).classList.remove("indicator-light--fail", "indicator-light--success");
+              document.getElementById('T'+sta+'F'+n).classList.add("indicator-light--success");
             }
             else {
-              document.getElementById('T1F'+n).classList.remove("indicator__light--fail", "indicator__light--success");
-              document.getElementById('T1F'+n).classList.add("indicator__light--fail");
-              document.getElementById('T'+sta+'F'+n).classList.remove("indicator__light--fail", "indicator__light--success");
-              document.getElementById('T'+sta+'F'+n).classList.add("indicator__light--fail");
+              document.getElementById('T1F'+n).classList.remove("indicator-light--fail", "indicator-light--success");
+              document.getElementById('T1F'+n).classList.add("indicator-light--fail");
+              document.getElementById('T'+sta+'F'+n).classList.remove("indicator-light--fail", "indicator-light--success");
+              document.getElementById('T'+sta+'F'+n).classList.add("indicator-light--fail");
             }
           }
           //////////////////////////////////////////////////////////////////////////////
@@ -224,12 +224,12 @@ function readCT(sta) {
               ////// Extract Relay data value //////
               var valueRLYPI = extractRLYData(data['Items'][i], 'RelayPI', n, m);
               var valueRLYESP = extractRLYData(data['Items'][i], 'RelayESP', n, m);
-              document.getElementById('T'+sta+'G'+n+'R'+m).classList.remove("indicator__light--fail", "indicator__light--success");
+              document.getElementById('T'+sta+'G'+n+'R'+m).classList.remove("indicator-light--fail", "indicator-light--success");
               if (valueRLYPI != valueRLYESP){
-                document.getElementById('T'+sta+'G'+n+'R'+m).classList.add("indicator__light--fail");
+                document.getElementById('T'+sta+'G'+n+'R'+m).classList.add("indicator-light--fail");
               }
               else {
-                document.getElementById('T'+sta+'G'+n+'R'+m).classList.add("indicator__light--success");
+                document.getElementById('T'+sta+'G'+n+'R'+m).classList.add("indicator-light--success");
               }
             }
           }
