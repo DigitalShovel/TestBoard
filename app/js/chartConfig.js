@@ -13,7 +13,7 @@ const movableScrollbarEdge = "hsla(213, 100%, 90%, 1)";
 
 //////// Chart Dimensions ///////
 let chartWidth = 400;
-let chartHeight = 230;
+let chartHeight = 300;
 
 //////////// Function to scroll the chart //////////////
 function moveScroll(movingChart) {

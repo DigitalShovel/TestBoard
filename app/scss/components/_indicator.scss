@@ -1,6 +1,6 @@
 .indicator {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
   gap: 1rem;
   border-radius: 5px;
 
@@ -42,16 +42,11 @@
   &__failed {
     display: flex;
     justify-content: center;
-    padding: 0.7rem 0.9rem;
     gap: 0.3rem;
     border-radius: 5px 5px 0 0;
 
-    &--ct {
-      background-color: var(--blue-100);
-    }
-
     &--relay {
-
+      padding: 0.7rem 0.9rem;
     }
 
     &-icon {
@@ -61,7 +56,7 @@
         stroke: var(--cool-gray-400);
         fill: none;
       }
-      
+
       &--fail {
         circle {
           fill: var(--danger-200);

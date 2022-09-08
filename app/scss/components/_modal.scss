@@ -9,10 +9,20 @@
   z-index: 999;
   overflow-y: scroll;
 
+  &:after {
+    position: fixed;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: -2;
+  }
+
   &__show {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 1rem;
   }
 
@@ -39,9 +49,10 @@
 
     &-item {
       width: 400px;
-      height: 300px;
+      height: 370px;
       background-color: #fff;
       border-radius: 5px;
+      overflow: hidden;
     }
   }
 
@@ -64,13 +75,18 @@
   }
 }
 
-.modal:after {
-  position: fixed;
-  content: "";
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 10px;
-  background: rgba(0, 0, 0, 0.9);
-  z-index: -2;
+.grid-item {
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    background-color: var(--blue-100);
+  }
+
+  &__title h3 {
+    font-size: 1rem;
+    letter-spacing: -1px;
+    // color: var(--cool-gray-400);
+  }
 }
