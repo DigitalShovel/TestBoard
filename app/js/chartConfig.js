@@ -107,7 +107,7 @@ var moveChart = {
     let drawCircleRight = new CircleChevron();
     drawCircleRight.draw(ctx, right, -5);*/
     /////////// Draw a scroll bar /////////////
-    const bpix = chart.options.layout.padding.bottom + 0;
+    const bpix = chart.options.layout.padding.bottom + 8;
     ctx.beginPath();
     ctx.fillStyle = scrollbarColor;
     ctx.rect(left + 15, bottom + bpix, width - 30, 8);
@@ -205,7 +205,7 @@ class stationCharts {
       layout: {
         padding: {
           right: 16,
-          bottom: 40,
+          bottom: 16,
           top: 8,
           left: 16,
         },
