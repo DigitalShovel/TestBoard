@@ -228,7 +228,7 @@ function readCT(sta) {
               if (valueRLYPI != valueRLYESP){
                 document.getElementById('S'+sta+'C'+n+'R'+m).classList.add("indicator__light--fail");
                 console.log(document.getElementById('S'+sta+'C'+n+'RN'+m).textContent);
-                document.getElementById('S'+sta+'C'+n+'RI'+m).classList.add("indicator__failed-icon--fail");
+                //document.getElementById('S'+sta+'C'+n+'RI'+m).classList.add("indicator__failed-icon--fail");
               }
               else {
                 document.getElementById('S'+sta+'C'+n+'R'+m).classList.add("indicator__light--success");
