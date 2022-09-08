@@ -110,14 +110,14 @@ var moveChart = {
     const bpix = chart.options.layout.padding.bottom + 25;
     ctx.beginPath();
     ctx.fillStyle = scrollbarColor;
-    ctx.rect(left + 15, bottom + bpix, width - 30, 95);
+    ctx.rect(left + 15, bottom + bpix, width - 30, 8);
     ctx.fill();
     ctx.closePath();
     /////////// Draw a arrow for scroll bar /////////////
     ctx.beginPath();
     ctx.fillStyle = movableScrollbarEdge;
-    ctx.rect(left, bottom + bpix, 15, 15);
-    ctx.rect(right - 15, bottom + bpix, 15, 15);
+    ctx.rect(left, bottom + bpix, 15, 8);
+    ctx.rect(right - 15, bottom + bpix, 15, 8);
     ctx.fill();
     ctx.closePath();
     /////////// Draw the movable scroll bar //////////////
@@ -132,7 +132,7 @@ var moveChart = {
     }
     ctx.beginPath();
     ctx.fillStyle = movableScrollbarColor;
-    ctx.rect(startingPoint, bottom + bpix, barWidth, 15);
+    ctx.rect(startingPoint, bottom + bpix, barWidth, 8);
     ctx.fill();
     ctx.closePath();
   },
@@ -205,7 +205,7 @@ class stationCharts {
       layout: {
         padding: {
           right: 16,
-          bottom: 36,
+          bottom: 16,
           top: 1,
           left: 16,
         },
