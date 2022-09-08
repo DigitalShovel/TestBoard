@@ -68,14 +68,14 @@ function addStationTables(quantity) {
                                         Relay 1
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C1RI1" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C1RN1">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -85,14 +85,14 @@ function addStationTables(quantity) {
                                         Relay 2
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C1RI2" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C1RN2">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -102,14 +102,14 @@ function addStationTables(quantity) {
                                         Relay 3
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C1RI3" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C1RN3">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -119,14 +119,14 @@ function addStationTables(quantity) {
                                         Relay 4
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C1RI4" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C1RN4">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -136,14 +136,14 @@ function addStationTables(quantity) {
                                         Relay 5
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C1RI5" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C1RN5">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -153,14 +153,14 @@ function addStationTables(quantity) {
                                         Relay 6
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C1RI6" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C1RN6">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -170,14 +170,14 @@ function addStationTables(quantity) {
                                         Relay 7
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C1RI7" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C1RN7">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -187,14 +187,14 @@ function addStationTables(quantity) {
                                         Relay 8
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C1RI8" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C1RN8">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -204,14 +204,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 1</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C1CI1" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C1CN1">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -221,14 +221,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 2</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C1CI2" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C1CN2">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -238,14 +238,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 3</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C1CI3" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C1CN3">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -255,14 +255,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 4</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C1CI4" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C1CN4">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -272,14 +272,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 5</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C1CI5" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C1CN5">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -289,14 +289,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 6</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C1CI6" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C1CN6">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -306,14 +306,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 7</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C1CI7" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C1CN7">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -323,14 +323,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 8</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C1CI8" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C1CN8">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -385,14 +385,14 @@ function addStationTables(quantity) {
                                         Relay 1
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C2RI1" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C2RN1">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -402,14 +402,14 @@ function addStationTables(quantity) {
                                         Relay 2
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C2RI2" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C2RN2">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -419,14 +419,14 @@ function addStationTables(quantity) {
                                         Relay 3
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C2RI3" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C2RN3">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -436,14 +436,14 @@ function addStationTables(quantity) {
                                         Relay 4
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C2RI4" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C2RN4">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -453,14 +453,14 @@ function addStationTables(quantity) {
                                         Relay 5
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C2RI5" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C2RN5">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -470,14 +470,14 @@ function addStationTables(quantity) {
                                         Relay 6
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C2RI6" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C2RN6">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -487,14 +487,14 @@ function addStationTables(quantity) {
                                         Relay 7
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C2RI7" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C2RN7">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -504,14 +504,14 @@ function addStationTables(quantity) {
                                         Relay 8
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C2RI8" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C2RN8">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -521,14 +521,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 1</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C2CI1" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C2CN1">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -538,14 +538,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 2</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C2CI2" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C2CN2">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -555,14 +555,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 3</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C2CI3" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C2CN3">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -572,14 +572,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 4</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C2CI4" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C2CN4">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -589,14 +589,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 5</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C2CI5" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C2CN5">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -606,14 +606,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 6</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C2CI6" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C2CN6">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -623,14 +623,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 7</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C2CI7" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C2CN7">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -640,14 +640,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 8</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C2CI8" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C2CN8">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -702,14 +702,14 @@ function addStationTables(quantity) {
                                         Relay 1
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C3RI1" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C3RN1">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -719,14 +719,14 @@ function addStationTables(quantity) {
                                         Relay 2
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C3RI2" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C3RN2">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -736,14 +736,14 @@ function addStationTables(quantity) {
                                         Relay 3
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C3RI3" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C3RN3">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -753,14 +753,14 @@ function addStationTables(quantity) {
                                         Relay 4
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C3RI4" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C3RN4">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -770,14 +770,14 @@ function addStationTables(quantity) {
                                         Relay 5
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C3RI5" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C3RN5">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -787,14 +787,14 @@ function addStationTables(quantity) {
                                         Relay 6
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C3RI6" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C3RN6">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -804,14 +804,14 @@ function addStationTables(quantity) {
                                         Relay 7
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C3RI7" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C3RN7">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -821,14 +821,14 @@ function addStationTables(quantity) {
                                         Relay 8
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C3RI8" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C3RN8">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -838,14 +838,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 1</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C3CI1" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C3CN1">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -855,14 +855,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 2</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C3CI2" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C3CN2">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -872,14 +872,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 3</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C3CI3" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C3CN3">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -889,14 +889,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 4</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C3CI4" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C3CN4">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -906,14 +906,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 5</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C3CI5" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C3CN5">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -923,14 +923,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 6</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C3CI6" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C3CN6">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -940,14 +940,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 7</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C3CI7" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C3CN7">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -957,14 +957,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 8</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C3CI8" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C3CN8">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -1019,14 +1019,14 @@ function addStationTables(quantity) {
                                         Relay 1
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C4RI1" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C4RN1">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -1036,14 +1036,14 @@ function addStationTables(quantity) {
                                         Relay 2
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C4RN2" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C4RN2">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -1053,14 +1053,14 @@ function addStationTables(quantity) {
                                         Relay 3
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C4RI3" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C4RN3">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -1070,14 +1070,14 @@ function addStationTables(quantity) {
                                         Relay 4
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C4RI4" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C4RN4">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -1087,14 +1087,14 @@ function addStationTables(quantity) {
                                         Relay 5
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C4RI5" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C4RN5">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -1104,14 +1104,14 @@ function addStationTables(quantity) {
                                         Relay 6
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C4RI6" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C4RN6">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -1121,14 +1121,14 @@ function addStationTables(quantity) {
                                         Relay 7
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C4RI7" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C4RN7">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -1138,14 +1138,14 @@ function addStationTables(quantity) {
                                         Relay 8
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C4RI8" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C4RN8">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -1155,14 +1155,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 1</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C4CI1" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C4CN1">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -1172,14 +1172,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 2</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C4CI2" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C4CN2">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -1189,14 +1189,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 3</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C4CI3" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C4CN3">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -1206,14 +1206,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 4</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C4CI4" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C4CN4">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -1223,14 +1223,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 5</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C4CI5" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C4CN5">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -1240,14 +1240,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 6</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C4CI6" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C4CN6">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -1257,14 +1257,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 7</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C4CI7" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C4CN7">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -1274,14 +1274,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 8</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C4CI8" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C4CN8">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -1336,14 +1336,14 @@ function addStationTables(quantity) {
                                         Relay 1
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C5RI1" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C5RN1">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -1353,14 +1353,14 @@ function addStationTables(quantity) {
                                         Relay 2
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C5RI2" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C5RN2">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -1370,14 +1370,14 @@ function addStationTables(quantity) {
                                         Relay 3
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C5RI3" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C5RN3">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -1387,14 +1387,14 @@ function addStationTables(quantity) {
                                         Relay 4
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C5RI4" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C5RN4">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -1404,14 +1404,14 @@ function addStationTables(quantity) {
                                         Relay 5
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C5RI5" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C5RN5">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -1421,14 +1421,14 @@ function addStationTables(quantity) {
                                         Relay 6
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C5RI6" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C5RN6">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -1438,14 +1438,14 @@ function addStationTables(quantity) {
                                         Relay 7
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C5RI7" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C5RN7">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -1455,14 +1455,14 @@ function addStationTables(quantity) {
                                         Relay 8
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C5RI8" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C5RN8">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -1472,14 +1472,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 1</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C5CI1" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C5CN1">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -1489,14 +1489,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 2</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C5CI2" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C5CN2">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -1506,14 +1506,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 3</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C5CI3" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C5CN3">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -1523,14 +1523,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 4</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C5CI4" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C5CN4">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -1540,14 +1540,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 5</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C5CI5" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C5CN5">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -1557,14 +1557,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 6</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C5CI6" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C5CN6">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -1574,14 +1574,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 7</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C5CI7" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C5CN7">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -1591,14 +1591,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 8</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C5CI8" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C5CN8">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -1653,14 +1653,14 @@ function addStationTables(quantity) {
                                         Relay 1
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C6RI1" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C6RN1">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -1670,14 +1670,14 @@ function addStationTables(quantity) {
                                         Relay 2
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C6RI2" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C6RN2">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -1687,14 +1687,14 @@ function addStationTables(quantity) {
                                         Relay 3
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C6RI3" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C6RN3">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -1704,14 +1704,14 @@ function addStationTables(quantity) {
                                         Relay 4
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C6RI4" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C6RN4">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -1721,14 +1721,14 @@ function addStationTables(quantity) {
                                         Relay 5
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C6RI5" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C6RN5">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -1738,14 +1738,14 @@ function addStationTables(quantity) {
                                         Relay 6
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C6RI6" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C6RN6">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -1755,14 +1755,14 @@ function addStationTables(quantity) {
                                         Relay 7
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C6RI7" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C6RN7">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -1772,14 +1772,14 @@ function addStationTables(quantity) {
                                         Relay 8
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C6RI8" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C6RN8">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -1789,14 +1789,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 1</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C6CI1" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C6CN1">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -1806,14 +1806,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 2</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C6CI2" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C6CN2">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -1823,14 +1823,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 3</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C6CI3" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C6CN3">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -1840,14 +1840,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 4</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C6CI4" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C6CN4">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -1857,14 +1857,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 5</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C6CI5" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C6CN5">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -1874,14 +1874,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 6</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C6CI6" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C6CN6">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -1891,14 +1891,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 7</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C6CI7" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C6CN7">0000</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -1908,14 +1908,14 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 8</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C6CI8" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C6CN8">0000</h5>
                                             </div>
                                         </div>
                                     </div>

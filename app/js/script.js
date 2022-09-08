@@ -215,7 +215,7 @@ function readCT(sta) {
             }
           }
           var timeResult = JSON.stringify(data['Items'][i]['Time']);
-          for(var n=1; n <=6; n++){
+          for(var n=1; n <= 6; n++){
             for(var m=1; m <= 8; m++){
               ///// Extract CT data value /////
               var valueCTPI = extractCTData(data['Items'][i], 'CTPI', n, m);
@@ -227,6 +227,8 @@ function readCT(sta) {
               document.getElementById('S'+sta+'C'+n+'R'+m).classList.remove("indicator__light--fail", "indicator__light--success");
               if (valueRLYPI != valueRLYESP){
                 document.getElementById('S'+sta+'C'+n+'R'+m).classList.add("indicator__light--fail");
+                document.getElementById('S'+sta+'C'+n+'RI'+m).classList.remove("indicator__failed-icon");
+                document.getElementById('S'+sta+'C'+n+'RI'+m).classList.add("indicator__failed-icon--fail");
               }
               else {
                 document.getElementById('S'+sta+'C'+n+'R'+m).classList.add("indicator__light--success");
