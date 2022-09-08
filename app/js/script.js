@@ -139,6 +139,7 @@ let maxDataPerChart = dataPerPlot; // Number of data plus one
 
 function readCT(sta) {
   var CUTvalue = true;
+  var numberTestCount = 0;
   if (sta != 0){
     var docClient = new AWS.DynamoDB.DocumentClient();
     var ctItem = {
@@ -227,17 +228,18 @@ function readCT(sta) {
               document.getElementById('S'+sta+'C'+n+'R'+m).classList.remove("indicator__light--fail", "indicator__light--success");
               if (valueRLYPI != valueRLYESP){
                 document.getElementById('S'+sta+'C'+n+'R'+m).classList.add("indicator__light--fail");
-                // Add one failed attempt to the number
-                var failed_num = 0;
-                failed_num = Number(document.getElementById('S'+sta+'C'+n+'RN'+m).textContent);
-                console.log("F: ", failed_num);
-                document.getElementById('S'+sta+'C'+n+'RN'+m).innerHTML = String(failed_num+1);
-                //document.getElementById('S'+sta+'C'+n+'RI'+m).classList.add("indicator__failed-icon--fail");
+                if (data['Items'][i]['TestNumber'] != numberTestCount) {
+                  var failednum = Number(document.getElementById('S'+sta+'C'+n+'RN'+m).textContent);
+                  document.getElementById('S'+sta+'C'+n+'RN'+m).innerHTML = String(failednum+1);
+                } 
               }
               else {
                 document.getElementById('S'+sta+'C'+n+'R'+m).classList.add("indicator__light--success");
               }
             }
+          }
+          if (data['Items'][i]['TestNumber'] != numberTestCount){
+            numberTestCount = data['Items'][i]['TestNumber'];
           }
         }
         if (data['Count'] != 0){
