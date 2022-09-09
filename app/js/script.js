@@ -21,7 +21,7 @@ function WebSocketTest() {
         var classElements = document.getElementsByClassName('logo-loading--disable');
         for (var i=0; i < classElements.length; i++){
           console.log("TEST: ", classElements.length);
-          classElements[i].className = "logo-loading";
+          classElements[0].classList.replace("logo-loading--disable", "logo-loading");
         }
       }
 
