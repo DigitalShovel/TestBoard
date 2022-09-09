@@ -232,6 +232,9 @@ function readCT(sta) {
                   var failednum = 0;
                   failednum = Number(document.getElementById('S'+sta+'C'+n+'RN'+m).textContent);
                   failednum += 1;
+                  if (failednum > data['Items'][i]['TestNumber']){
+                    failednum = Number(data['Items'][i]['TestNumber']);
+                  }
                   document.getElementById('S'+sta+'C'+n+'RN'+m).innerHTML = String(failednum);
                   if (failednum > 0){
                     document.getElementById('S'+sta+'C'+n+'RI'+m).classList.replace("indicator__failed-icon", "indicator__failed-icon--fail");
