@@ -234,6 +234,23 @@ function readCT(sta) {
               var valueRLYPI = extractRLYData(data['Items'][i], 'RelayPI', n, m);
               var valueRLYESP = extractRLYData(data['Items'][i], 'RelayESP', n, m);
               document.getElementById('S'+sta+'C'+n+'R'+m).classList.remove("indicator__light--fail", "indicator__light--success");
+
+              if (valueCTPI != valueCTESP){
+                ///////// Add the failed count number to the CT's //////////
+                if (data['Items'][i]['TestNumber'] != numberTestCount) {
+                  var failednumCT = 0;
+                  failednumCT = Number(document.getElementById('S'+sta+'C'+n+'CN'+m).textContent);
+                  failednumCT += 1;
+                  if (failednumCT > data['Items'][i]['TestNumber']){
+                    failednumCT = Number(data['Items'][i]['TestNumber']);
+                  }
+                  document.getElementById('S'+sta+'C'+n+'CN'+m).innerHTML = String(failednumCT);
+                  if (failednumCT > 0){
+                    document.getElementById('S'+sta+'C'+n+'CI'+m).classList.replace("indicator__failed-icon", "indicator__failed-icon--fail");
+                  }
+                }
+              }
+              ////////////////// Check for failed Relays ////////////////////
               if (valueRLYPI != valueRLYESP){
                 document.getElementById('S'+sta+'C'+n+'R'+m).classList.add("indicator__light--fail");
                 ///////// Add the failed count number to the relays //////////
