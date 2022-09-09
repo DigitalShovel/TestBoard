@@ -18,7 +18,7 @@ function WebSocketTest() {
       var received_msg = evt.data;
 
       if (received_msg == "\"Preparing new testbench database. Test will start in a few seconds.\"") {
-        var classElements = document.querySelectorAll('[class^="logo-loading"]');
+        var classElements = document.getElementsByClassName('logo-loading--disable');
         for (var i=0; i < classElements.length; i++){
           console.log("TEST: ", i);
           classElements[i].className = "logo-loading";
