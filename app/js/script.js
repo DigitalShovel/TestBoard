@@ -20,7 +20,7 @@ function WebSocketTest() {
       if (received_msg == "\"Preparing new testbench database. Test will start in a few seconds.\"") {
         var classElements = document.getElementsByClassName('logo-loading--disable');
         for (var i=0; i < classElements.length; i++){
-          console.log("TEST: ", i);
+          console.log("TEST: ", classElements.length);
           classElements[i].className = "logo-loading";
         }
       }
