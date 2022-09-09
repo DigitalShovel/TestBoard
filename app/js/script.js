@@ -233,7 +233,7 @@ function readCT(sta) {
                   failednum = Number(document.getElementById('S'+sta+'C'+n+'RN'+m).textContent);
                   document.getElementById('S'+sta+'C'+n+'RN'+m).innerHTML = String(failednum+1);
                   if (failednum > 0){
-                    document.getElementById('S'+sta+'C'+n+'RI'+m).className = "indicator__failed-icon--fail";
+                    document.getElementById('S'+sta+'C'+n+'RI'+m).classList.replace("indicator__failed-icon", "indicator__failed-icon--fail");
                   }
                 } 
               }
