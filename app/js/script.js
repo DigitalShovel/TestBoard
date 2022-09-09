@@ -228,6 +228,7 @@ function readCT(sta) {
               document.getElementById('S'+sta+'C'+n+'R'+m).classList.remove("indicator__light--fail", "indicator__light--success");
               if (valueRLYPI != valueRLYESP){
                 document.getElementById('S'+sta+'C'+n+'R'+m).classList.add("indicator__light--fail");
+                // Add the failed count number to the relays
                 if (data['Items'][i]['TestNumber'] != numberTestCount) {
                   var failednum = 0;
                   failednum = Number(document.getElementById('S'+sta+'C'+n+'RN'+m).textContent);
