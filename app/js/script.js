@@ -235,7 +235,7 @@ function readCT(sta) {
               var valueRLYESP = extractRLYData(data['Items'][i], 'RelayESP', n, m);
               document.getElementById('S'+sta+'C'+n+'R'+m).classList.remove("indicator__light--fail", "indicator__light--success");
 
-              if (valueCTPI != valueCTESP){
+              if (!data['Items'][i]['CTSuccess'][n][m]){
                 ///////// Add the failed count number to the CT's //////////
                 if (data['Items'][i]['TestNumber'] != numberTestCount) {
                   var failednumCT = 0;
