@@ -1036,7 +1036,7 @@ function addStationTables(quantity) {
                                         Relay 2
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg id="S${i}C4RN2" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C4RI2" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
