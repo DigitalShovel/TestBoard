@@ -16,6 +16,14 @@ function WebSocketTest() {
 
     ws.onmessage = function (evt) {
       var received_msg = evt.data;
+
+      if (received_msg == "\"Preparing new testbench database. Test will start in a few seconds.\"") {
+        var classElements = document.querySelectorAll('.logo-loading--disable');
+        for (var i=0; i < classElements.length; i++){
+          classElements[i].className = "logo-loading";
+        }
+      }
+
       if (received_msg == "\"Testbench Started!\"") {
         /////////////// Add Station Table ////////////////////
         removeStationTables();
