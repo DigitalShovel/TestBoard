@@ -228,7 +228,7 @@ function readCT(sta) {
               document.getElementById('S'+sta+'C'+n+'R'+m).classList.remove("indicator__light--fail", "indicator__light--success");
               if (valueRLYPI != valueRLYESP){
                 document.getElementById('S'+sta+'C'+n+'R'+m).classList.add("indicator__light--fail");
-                // Add the failed count number to the relays
+                ///////// Add the failed count number to the relays //////////
                 if (data['Items'][i]['TestNumber'] != numberTestCount) {
                   var failednum = 0;
                   failednum = Number(document.getElementById('S'+sta+'C'+n+'RN'+m).textContent);
@@ -240,7 +240,8 @@ function readCT(sta) {
                   if (failednum > 0){
                     document.getElementById('S'+sta+'C'+n+'RI'+m).classList.replace("indicator__failed-icon", "indicator__failed-icon--fail");
                   }
-                } 
+                }
+                ///////////////////////////////////////////////////////////// 
               }
               else {
                 document.getElementById('S'+sta+'C'+n+'R'+m).classList.add("indicator__light--success");
