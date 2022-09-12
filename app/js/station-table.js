@@ -1962,23 +1962,88 @@ function addStationTables(quantity) {
                             </button>
                             <div id="T${i}P7" class="modal">
                                 <div class="modal__grid">
-                                    <div class="modal__grid-item">
-                                    </div>
-                                    <div class="modal__grid-item">
-                                    </div>
-                                    <div class="modal__grid-item">
-                                    </div>
-                                    <div class="modal__grid-item">
-                                    </div>
-                                    <div class="modal__grid-item">
-                                    </div>
-                                    <div class="modal__grid-item">
-                                    </div>
-                                    <div class="modal__grid-item">
-                                    </div>
-                                    <div class="modal__grid-item">
+                                    <div class="widget__2-col">
+
+                                        <div class="widget__label widget__label--lg">
+                                            <div class="widget__label-name">Temperature Title 1</div>
+                                            <div class="widget__temp">
+                                                <div class="widget__temp-container">
+                                                <div id="temp1_bar" class="widget__temp-bar"></div>
+                                                </div>
+                                            </div>
+                                            <div id="temp1_text" class="widget__label-unit">°C</div>
+                                        </div>
+
+                                        <div class="widget__label widget__label--lg">
+                                            <div class="widget__label-name">Temperature Title 2</div>
+                                            <div class="widget__temp">
+                                                <div class="widget__temp-container">
+                                                <div id="temp2_bar" class="widget__temp-bar"></div>
+                                                </div>
+                                            </div>
+                                            <div id="temp2_text" class="widget__label-unit">°C</div>
+                                        </div>
+
+                                        <div class="widget__label widget__label--lg">
+                                            <div class="widget__label-name">Temperature Title 3</div>
+                                            <div class="widget__temp">
+                                                <div class="widget__temp-container">
+                                                <div id="temp3_bar" class="widget__temp-bar"></div>
+                                                </div>
+                                            </div>
+                                            <div id="temp3_text" class="widget__label-unit">°C</div>
+                                        </div>
+
+                                        <div class="widget__label widget__label--lg">
+                                            <div class="widget__label-name">Temperature Title 4</div>
+                                            <div class="widget__temp">
+                                                <div class="widget__temp-container">
+                                                <div id="temp4_bar" class="widget__temp-bar"></div>
+                                                </div>
+                                            </div>
+                                            <div id="temp4_text" class="widget__label-unit">°C</div>
+                                        </div>
+
+                                        <div class="widget__label widget__label--lg">
+                                            <div class="widget__label-name">Temperature Title 5</div>
+                                            <div class="widget__temp">
+                                                <div class="widget__temp-container">
+                                                <div id="temp5_bar" class="widget__temp-bar"></div>
+                                                </div>
+                                            </div>
+                                            <div id="temp5_text" class="widget__label-unit">°C</div>
+                                        </div>
+
+                                        <div class="widget__label widget__label--lg">
+                                            <div class="widget__label-name">Temperature Title 6</div>
+                                            <div class="widget__temp">
+                                                <div class="widget__temp-container">
+                                                <div id="temp6_bar" class="widget__temp-bar"></div>
+                                                </div>
+                                            </div>
+                                            <div id="temp6_text" class="widget__label-unit">°C</div>
+                                        </div>
                                     </div>
                                 </div>
+
+                                <div class="modal__grid-item">
+                                </div>
+                                <div class="modal__grid-item">
+                                </div>
+                                <div class="modal__grid-item">
+                                </div>
+                                <div class="modal__grid-item">
+                                </div>
+                                <div class="modal__grid-item">
+                                </div>
+                                <div class="modal__grid-item">
+                                </div>
+                                <div class="modal__grid-item">
+                                </div>
+                                <div class="modal__grid-item">
+                                </div>
+                                
+                            </div>
                                 <button id="T${i}B7" onclick="showModal('T${i}P7')" class="modal__btn-hide btn">
                                     <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
