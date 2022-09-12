@@ -24,6 +24,17 @@
     display: flex;
     align-items: flex-start;
     gap: 1rem;
+
+    &--centered {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      justify-content: center;
+
+      @media (max-width: 768px) {
+        align-items: flex-start;
+      }
+    }
   }
 
   &__hide {
@@ -32,38 +43,75 @@
 
   &__grid {
     display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(4, 1fr);
 
-    @media (max-width: 1700px) {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    @media (max-width: 1280px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    @media (max-width: 850px) {
-      grid-template-columns: repeat(1, 1fr);
-    }
-
-    &-item {
+    &-ct {
       width: 400px;
       height: 370px;
       background-color: #fff;
       border-radius: 5px;
       overflow: hidden;
     }
+
+    &-temp {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      background-color: var(--blue-600);
+      padding: 1rem;
+      border-radius: 5px;
+    }
+
+    &--ct {
+      gap: 1rem;
+      grid-template-columns: repeat(4, 1fr);
+
+      @media (max-width: 1700px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @media (max-width: 1280px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (max-width: 850px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    &--temp {
+      gap: 2rem;
+      grid-template-columns: repeat(4, 1fr);
+
+      @media (max-width: 1400px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @media (max-width: 1200px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      @media (max-width: 768px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
   }
 
   &__btn-hide,
   &__btn-hide svg {
-    circle { fill: var(--primary-color); }
-    path { stroke: var(--blue-200); }
+    circle {
+      fill: var(--primary-color);
+    }
+    path {
+      stroke: var(--blue-200);
+    }
 
     &:hover {
-      circle { fill: var(--blue-400); }
-      path { stroke: var(--blue-100); }
+      circle {
+        fill: var(--blue-400);
+      }
+      path {
+        stroke: var(--blue-100);
+      }
     }
   }
 
@@ -87,6 +135,5 @@
   &__title h3 {
     font-size: 1rem;
     letter-spacing: -1px;
-    // color: var(--cool-gray-400);
   }
 }
