@@ -246,7 +246,7 @@ class stationCharts {
   };
 
   createChart() {
-    var chartGraph = new Chart(document.getElementById("T" + this.station + "G" + this.channel + "C" + this.ct).getContext("2d"), this.config);
+    var chartGraph = new Chart(document.getElementById("S" + this.station + "C" + this.channel + "C" + this.ct).getContext("2d"), this.config);
     chartGraph.canvas.addEventListener("wheel", (e) => {
       scrollWheel(e);
     });

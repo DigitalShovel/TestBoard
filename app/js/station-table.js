@@ -35,10 +35,10 @@ function addStationTables(quantity) {
                         Channel #1
                     </td>
                     <td>
-                        <div id="T${i}F1" class="indicator__light indicator__light-table"></div>
+                        <div id="S${i}F1" class="indicator__light indicator__light-table"></div>
                     </td>
                     <td>
-                        <button id="T${i}G1" onclick="showModal('T${i}P1')" class="btn btn--unstyled modal__btn-show">
+                        <button id="S${i}C1" onclick="showModal('S${i}P1')" class="btn btn--unstyled modal__btn-show">
                         <svg class="station__icon station__icon--charts" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g filter="url(#filter0_i_118_644)">
                             <rect width="22" height="22" rx="3" fill="#2B3F55"/>
@@ -60,141 +60,141 @@ function addStationTables(quantity) {
                             </defs>
                         </svg>                        
                         </button>
-                        <div id="T${i}P1" class="modal">
+                        <div id="S${i}P1" class="modal">
                             <div class="indicator">
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G1R1" class="indicator__light"></div>
+                                        <div id="S${i}C1R1" class="indicator__light"></div>
                                         Relay 1
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C1RI1" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C1RN1">0000</h5>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G1R2" class="indicator__light"></div>
+                                        <div id="S${i}C1R2" class="indicator__light"></div>
                                         Relay 2
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C1RI2" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C1RN2">0000</h5>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G1R3" class="indicator__light"></div>
+                                        <div id="S${i}C1R3" class="indicator__light"></div>
                                         Relay 3
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C1RI3" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C1RN3">0000</h5>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G1R4" class="indicator__light"></div>
+                                        <div id="S${i}C1R4" class="indicator__light"></div>
                                         Relay 4
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C1RI4" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C1RN4">0000</h5>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G1R5" class="indicator__light"></div>
+                                        <div id="S${i}C1R5" class="indicator__light"></div>
                                         Relay 5
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C1RI5" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C1RN5">0000</h5>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G1R6" class="indicator__light"></div>
+                                        <div id="S${i}C1R6" class="indicator__light"></div>
                                         Relay 6
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C1RI6" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C1RN6">0000</h5>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G1R7" class="indicator__light"></div>
+                                        <div id="S${i}C1R7" class="indicator__light"></div>
                                         Relay 7
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C1RI7" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C1RN7">0000</h5>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G1R8" class="indicator__light"></div>
+                                        <div id="S${i}C1R8" class="indicator__light"></div>
                                         Relay 8
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C1RI8" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C1RN8">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -204,140 +204,140 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 1</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C1CI1" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C1CN1">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G1C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C1C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
                                         <h3>CT - 2</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C1CI2" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C1CN2">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G1C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C1C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
                                         <h3>CT - 3</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C1CI3" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C1CN3">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G1C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C1C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
                                         <h3>CT - 4</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C1CI4" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C1CN4">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G1C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C1C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
                                         <h3>CT - 5</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C1CI5" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C1CN5">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G1C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C1C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
                                         <h3>CT - 6</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C1CI6" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C1CN6">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G1C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C1C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
                                         <h3>CT - 7</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C1CI7" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C1CN7">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G1C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C1C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
                                         <h3>CT - 8</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C1CI8" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C1CN8">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G1C8" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C1C8" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                             </div>
-                            <button id="T${i}B1" onclick="showModal('T${i}P1')" class="modal__btn-hide btn">
+                            <button id="S${i}B1" onclick="showModal('S${i}P1')" class="modal__btn-hide btn">
                                 <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                         <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -352,10 +352,10 @@ function addStationTables(quantity) {
                         Channel #2
                     </td>
                     <td>
-                        <div id="T${i}F2" class="indicator__light indicator__light-table"></div>
+                        <div id="S${i}F2" class="indicator__light indicator__light-table"></div>
                     </td>
                     <td>
-                        <button id="T${i}G2" onclick="showModal('T${i}P2')" class="btn btn--unstyled modal__btn-show">
+                        <button id="S${i}C2" onclick="showModal('S${i}P2')" class="btn btn--unstyled modal__btn-show">
                         <svg class="station__icon station__icon--charts" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g filter="url(#filter0_i_118_644)">
                             <rect width="22" height="22" rx="3" fill="#2B3F55"/>
@@ -377,141 +377,141 @@ function addStationTables(quantity) {
                             </defs>
                         </svg> 
                         </button>
-                        <div id="T${i}P2" class="modal">
+                        <div id="S${i}P2" class="modal">
                             <div class="indicator">
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G2R1" class="indicator__light"></div>
+                                        <div id="S${i}C2R1" class="indicator__light"></div>
                                         Relay 1
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C2RI1" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C2RN1">0000</h5>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G2R2" class="indicator__light"></div>
+                                        <div id="S${i}C2R2" class="indicator__light"></div>
                                         Relay 2
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C2RI2" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C2RN2">0000</h5>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G2R3" class="indicator__light"></div>
+                                        <div id="S${i}C2R3" class="indicator__light"></div>
                                         Relay 3
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C2RI3" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C2RN3">0000</h5>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G2R4" class="indicator__light"></div>
+                                        <div id="S${i}C2R4" class="indicator__light"></div>
                                         Relay 4
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C2RI4" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C2RN4">0000</h5>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G2R5" class="indicator__light"></div>
+                                        <div id="S${i}C2R5" class="indicator__light"></div>
                                         Relay 5
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C2RI5" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C2RN5">0000</h5>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G2R6" class="indicator__light"></div>
+                                        <div id="S${i}C2R6" class="indicator__light"></div>
                                         Relay 6
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C2RI6" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C2RN6">0000</h5>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G2R7" class="indicator__light"></div>
+                                        <div id="S${i}C2R7" class="indicator__light"></div>
                                         Relay 7
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C2RI7" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C2RN7">0000</h5>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G2R8" class="indicator__light"></div>
+                                        <div id="S${i}C2R8" class="indicator__light"></div>
                                         Relay 8
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C2RI8" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C2RN8">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -521,140 +521,140 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 1</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C2CI1" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C2CN1">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G2C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C2C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
                                         <h3>CT - 2</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C2CI2" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C2CN2">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G2C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C2C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
                                         <h3>CT - 3</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C2CI3" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C2CN3">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G2C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C2C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
                                         <h3>CT - 4</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C2CI4" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C2CN4">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G2C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C2C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
                                         <h3>CT - 5</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C2CI5" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C2CN5">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G2C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C2C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
                                         <h3>CT - 6</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C2CI6" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C2CN6">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G2C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C2C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
                                         <h3>CT - 7</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C2CI7" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C2CN7">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G2C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C2C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
                                         <h3>CT - 8</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C2CI8" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C2CN8">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G2C8" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C2C8" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                             </div>
-                            <button id="T${i}B2" onclick="showModal('T${i}P2')" class="modal__btn-hide btn">
+                            <button id="S${i}B2" onclick="showModal('S${i}P2')" class="modal__btn-hide btn">
                                 <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                         <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -669,10 +669,10 @@ function addStationTables(quantity) {
                         Channel #3
                     </td>
                     <td>
-                        <div id="T${i}F3" class="indicator__light indicator__light-table"></div>
+                        <div id="S${i}F3" class="indicator__light indicator__light-table"></div>
                     </td>
                     <td>
-                        <button id="T${i}G3" onclick="showModal('T${i}P3')" class="btn btn--unstyled modal__btn-show">
+                        <button id="S${i}C3" onclick="showModal('S${i}P3')" class="btn btn--unstyled modal__btn-show">
                         <svg class="station__icon station__icon--charts" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g filter="url(#filter0_i_118_644)">
                             <rect width="22" height="22" rx="3" fill="#2B3F55"/>
@@ -694,141 +694,141 @@ function addStationTables(quantity) {
                             </defs>
                         </svg> 
                         </button>
-                        <div id="T${i}P3" class="modal">
+                        <div id="S${i}P3" class="modal">
                             <div class="indicator">
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G3R1" class="indicator__light"></div>
+                                        <div id="S${i}C3R1" class="indicator__light"></div>
                                         Relay 1
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C3RI1" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C3RN1">0000</h5>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G3R2" class="indicator__light"></div>
+                                        <div id="S${i}C3R2" class="indicator__light"></div>
                                         Relay 2
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C3RI2" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C3RN2">0000</h5>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G3R3" class="indicator__light"></div>
+                                        <div id="S${i}C3R3" class="indicator__light"></div>
                                         Relay 3
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C3RI3" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C3RN3">0000</h5>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G3R4" class="indicator__light"></div>
+                                        <div id="S${i}C3R4" class="indicator__light"></div>
                                         Relay 4
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C3RI4" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C3RN4">0000</h5>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G3R5" class="indicator__light"></div>
+                                        <div id="S${i}C3R5" class="indicator__light"></div>
                                         Relay 5
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C3RI5" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C3RN5">0000</h5>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G3R6" class="indicator__light"></div>
+                                        <div id="S${i}C3R6" class="indicator__light"></div>
                                         Relay 6
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C3RI6" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C3RN6">0000</h5>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G3R7" class="indicator__light"></div>
+                                        <div id="S${i}C3R7" class="indicator__light"></div>
                                         Relay 7
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C3RI7" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C3RN7">0000</h5>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G3R8" class="indicator__light"></div>
+                                        <div id="S${i}C3R8" class="indicator__light"></div>
                                         Relay 8
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C3RI8" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C3RN8">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -838,140 +838,140 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 1</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C3CI1" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C3CN1">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G3C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C3C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
                                         <h3>CT - 2</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C3CI2" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C3CN2">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G3C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C3C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
                                         <h3>CT - 3</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C3CI3" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C3CN3">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G3C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C3C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
                                         <h3>CT - 4</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C3CI4" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C3CN4">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G3C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C3C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
                                         <h3>CT - 5</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C3CI5" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C3CN5">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G3C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C3C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
                                         <h3>CT - 6</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C3CI6" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C3CN6">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G3C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C3C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
                                         <h3>CT - 7</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C3CI7" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C3CN7">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G3C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C3C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
                                         <h3>CT - 8</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C3CI8" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C3CN8">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G3C8" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C3C8" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                             </div>
-                            <button id="T${i}B3" onclick="showModal('T${i}P3')" class="modal__btn-hide btn">
+                            <button id="S${i}B3" onclick="showModal('S${i}P3')" class="modal__btn-hide btn">
                                 <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                         <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -986,10 +986,10 @@ function addStationTables(quantity) {
                         Channel #4
                     </td>
                     <td>
-                        <div id="T${i}F4" class="indicator__light indicator__light-table"></div>
+                        <div id="S${i}F4" class="indicator__light indicator__light-table"></div>
                     </td>
                     <td>
-                        <button id="T${i}G4" onclick="showModal('T${i}P4')" class="btn btn--unstyled modal__btn-show">
+                        <button id="S${i}C4" onclick="showModal('S${i}P4')" class="btn btn--unstyled modal__btn-show">
                         <svg class="station__icon station__icon--charts" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g filter="url(#filter0_i_118_644)">
                             <rect width="22" height="22" rx="3" fill="#2B3F55"/>
@@ -1011,141 +1011,141 @@ function addStationTables(quantity) {
                             </defs>
                         </svg> 
                         </button>
-                        <div id="T${i}P4" class="modal">
+                        <div id="S${i}P4" class="modal">
                             <div class="indicator">
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G4R1" class="indicator__light"></div>
+                                        <div id="S${i}C4R1" class="indicator__light"></div>
                                         Relay 1
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C4RI1" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C4RN1">0000</h5>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G4R2" class="indicator__light"></div>
+                                        <div id="S${i}C4R2" class="indicator__light"></div>
                                         Relay 2
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C4RI2" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C4RN2">0000</h5>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G4R3" class="indicator__light"></div>
+                                        <div id="S${i}C4R3" class="indicator__light"></div>
                                         Relay 3
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C4RI3" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C4RN3">0000</h5>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G4R4" class="indicator__light"></div>
+                                        <div id="S${i}C4R4" class="indicator__light"></div>
                                         Relay 4
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C4RI4" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C4RN4">0000</h5>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G4R5" class="indicator__light"></div>
+                                        <div id="S${i}C4R5" class="indicator__light"></div>
                                         Relay 5
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C4RI5" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C4RN5">0000</h5>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G4R6" class="indicator__light"></div>
+                                        <div id="S${i}C4R6" class="indicator__light"></div>
                                         Relay 6
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C4RI6" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C4RN6">0000</h5>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G4R7" class="indicator__light"></div>
+                                        <div id="S${i}C4R7" class="indicator__light"></div>
                                         Relay 7
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C4RI7" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C4RN7">0000</h5>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G4R8" class="indicator__light"></div>
+                                        <div id="S${i}C4R8" class="indicator__light"></div>
                                         Relay 8
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C4RI8" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C4RN8">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -1155,140 +1155,140 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 1</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C4CI1" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C4CN1">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G4C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C4C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
                                         <h3>CT - 2</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C4CI2" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C4CN2">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G4C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C4C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
                                         <h3>CT - 3</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C4CI3" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C4CN3">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G4C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C4C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
                                         <h3>CT - 4</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C4CI4" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C4CN4">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G4C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C4C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
                                         <h3>CT - 5</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C4CI5" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C4CN5">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G4C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C4C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
                                         <h3>CT - 6</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C4CI6" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C4CN6">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G4C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C4C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
                                         <h3>CT - 7</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C4CI7" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C4CN7">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G4C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C4C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
                                         <h3>CT - 8</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C4CI8" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C4CN8">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G4C8" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C4C8" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                             </div>
-                            <button id="T${i}B4" onclick="showModal('T${i}P4')" class="modal__btn-hide btn">
+                            <button id="S${i}B4" onclick="showModal('S${i}P4')" class="modal__btn-hide btn">
                                 <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                         <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1303,10 +1303,10 @@ function addStationTables(quantity) {
                         Channel #5
                     </td>
                     <td>
-                        <div id="T${i}F5" class="indicator__light indicator__light-table"></div>
+                        <div id="S${i}F5" class="indicator__light indicator__light-table"></div>
                     </td>
                     <td>
-                        <button id="T${i}G5" onclick="showModal('T${i}P5')" class="btn btn--unstyled modal__btn-show">
+                        <button id="S${i}C5" onclick="showModal('S${i}P5')" class="btn btn--unstyled modal__btn-show">
                         <svg class="station__icon station__icon--charts" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g filter="url(#filter0_i_118_644)">
                             <rect width="22" height="22" rx="3" fill="#2B3F55"/>
@@ -1328,141 +1328,141 @@ function addStationTables(quantity) {
                             </defs>
                         </svg> 
                         </button>
-                        <div id="T${i}P5" class="modal">
+                        <div id="S${i}P5" class="modal">
                             <div class="indicator">
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G5R1" class="indicator__light"></div>
+                                        <div id="S${i}C5R1" class="indicator__light"></div>
                                         Relay 1
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C5RI1" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C5RN1">0000</h5>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G5R2" class="indicator__light"></div>
+                                        <div id="S${i}C5R2" class="indicator__light"></div>
                                         Relay 2
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C5RI2" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C5RN2">0000</h5>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G5R3" class="indicator__light"></div>
+                                        <div id="S${i}C5R3" class="indicator__light"></div>
                                         Relay 3
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C5RI3" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C5RN3">0000</h5>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G5R4" class="indicator__light"></div>
+                                        <div id="S${i}C5R4" class="indicator__light"></div>
                                         Relay 4
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C5RI4" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C5RN4">0000</h5>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G5R5" class="indicator__light"></div>
+                                        <div id="S${i}C5R5" class="indicator__light"></div>
                                         Relay 5
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C5RI5" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C5RN5">0000</h5>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G5R6" class="indicator__light"></div>
+                                        <div id="S${i}C5R6" class="indicator__light"></div>
                                         Relay 6
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C5RI6" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C5RN6">0000</h5>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G5R7" class="indicator__light"></div>
+                                        <div id="S${i}C5R7" class="indicator__light"></div>
                                         Relay 7
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C5RI7" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C5RN7">0000</h5>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G5R8" class="indicator__light"></div>
+                                        <div id="S${i}C5R8" class="indicator__light"></div>
                                         Relay 8
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C5RI8" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C5RN8">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -1472,140 +1472,140 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 1</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C5CI1" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C5CN1">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G5C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C5C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
                                         <h3>CT - 2</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C5CI2" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C5CN2">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G5C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C5C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
                                         <h3>CT - 3</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C5CI3" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C5CN3">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G5C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C5C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
                                         <h3>CT - 4</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C5CI4" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C5CN4">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G5C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C5C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
                                         <h3>CT - 5</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C5CI5" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C5CN5">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G5C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C5C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
                                         <h3>CT - 6</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C5CI6" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C5CN6">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G5C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C5C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
                                         <h3>CT - 7</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C5CI7" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C5CN7">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G5C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C5C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
                                         <h3>CT - 8</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C5CI8" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C5CN8">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G5C8" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C5C8" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                             </div>
-                            <button id="T${i}B5" onclick="showModal('T${i}P5')" class="modal__btn-hide btn">
+                            <button id="S${i}B5" onclick="showModal('S${i}P5')" class="modal__btn-hide btn">
                                 <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                         <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1620,10 +1620,10 @@ function addStationTables(quantity) {
                         Channel #6
                     </td>
                     <td>
-                        <div id="T${i}F6" class="indicator__light indicator__light-table"></div>
+                        <div id="S${i}F6" class="indicator__light indicator__light-table"></div>
                     </td>
                     <td>
-                        <button id="T${i}G6" onclick="showModal('T${i}P6')" class="btn btn--unstyled modal__btn-show">
+                        <button id="S${i}C6" onclick="showModal('S${i}P6')" class="btn btn--unstyled modal__btn-show">
                         <svg class="station__icon station__icon--charts" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g filter="url(#filter0_i_118_644)">
                             <rect width="22" height="22" rx="3" fill="#2B3F55"/>
@@ -1645,141 +1645,141 @@ function addStationTables(quantity) {
                             </defs>
                         </svg> 
                         </button>
-                        <div id="T${i}P6" class="modal">
+                        <div id="S${i}P6" class="modal">
                             <div class="indicator">
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G6R1" class="indicator__light"></div>
+                                        <div id="S${i}C6R1" class="indicator__light"></div>
                                         Relay 1
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C6RI1" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C6RN1">0000</h5>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G6R2" class="indicator__light"></div>
+                                        <div id="S${i}C6R2" class="indicator__light"></div>
                                         Relay 2
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C6RI2" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C6RN2">0000</h5>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G6R3" class="indicator__light"></div>
+                                        <div id="S${i}C6R3" class="indicator__light"></div>
                                         Relay 3
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C6RI3" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C6RN3">0000</h5>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G6R4" class="indicator__light"></div>
+                                        <div id="S${i}C6R4" class="indicator__light"></div>
                                         Relay 4
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C6RI4" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C6RN4">0000</h5>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G6R5" class="indicator__light"></div>
+                                        <div id="S${i}C6R5" class="indicator__light"></div>
                                         Relay 5
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C6RI5" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C6RN5">0000</h5>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G6R6" class="indicator__light"></div>
+                                        <div id="S${i}C6R6" class="indicator__light"></div>
                                         Relay 6
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C6RI6" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C6RN6">0000</h5>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G6R7" class="indicator__light"></div>
+                                        <div id="S${i}C6R7" class="indicator__light"></div>
                                         Relay 7
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C6RI7" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C6RN7">0000</h5>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="indicator__content">
                                     <span class="indicator__title">
-                                        <div id="T${i}G6R8" class="indicator__light"></div>
+                                        <div id="S${i}C6R8" class="indicator__light"></div>
                                         Relay 8
                                     </span>
                                     <div class="indicator__failed indicator__failed--relay">
-                                        <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id="S${i}C6RI8" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                             <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         <div class="indicator__failed-text">
                                             <h4>Failed</h4>
-                                            <h5>0000</h5>
+                                            <h5 id="S${i}C6RN8">0000</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -1789,140 +1789,140 @@ function addStationTables(quantity) {
                                     <div class="grid-item__title">
                                         <h3>CT - 1</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C6CI1" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C6CN1">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G6C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C6C1" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
                                         <h3>CT - 2</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C6CI2" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C6CN2">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G6C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C6C2" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
                                         <h3>CT - 3</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C6CI3" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C6CN3">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G6C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C6C3" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
                                         <h3>CT - 4</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C6CI4" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C6CN4">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G6C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C6C4" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
                                         <h3>CT - 5</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C6CI5" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C6CN5">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G6C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C6C5" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
                                         <h3>CT - 6</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C6CI6" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C6CN6">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G6C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C6C6" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
                                         <h3>CT - 7</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C6CI7" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C6CN7">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G6C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C6C7" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                                 <div class="modal__grid-item">
                                     <div class="grid-item__title">
                                         <h3>CT - 8</h3>
                                         <div class="indicator__failed indicator__failed--ct">
-                                            <svg class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="S${i}C6CI8" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                                 <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                             <div class="indicator__failed-text">
                                                 <h4>Failed</h4>
-                                                <h5>0000</h5>
+                                                <h5 id="S${i}C6CN8">0000</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="T${i}G6C8" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
+                                    <canvas id="S${i}C6C8" class="chart" width="${chartWidth}" height="${chartHeight}"></canvas>
                                 </div>
                             </div>
-                            <button id="T${i}B6" onclick="showModal('T${i}P6')" class="modal__btn-hide btn">
+                            <button id="S${i}B6" onclick="showModal('S${i}P6')" class="modal__btn-hide btn">
                                 <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                         <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1938,7 +1938,7 @@ function addStationTables(quantity) {
                             <div class="indicator__light indicator__light-table"></div>
                         </td>
                         <td>
-                            <button id="T${i}G7" onclick="showModal('T${i}P7')" class="btn btn--unstyled modal__btn-show">
+                            <button id="S${i}C7" onclick="showModal('S${i}P7')" class="btn btn--unstyled modal__btn-show">
                             <svg class="station__icon station__icon--charts" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g filter="url(#filter0_i_118_644)">
                                 <rect width="22" height="22" rx="3" fill="#2B3F55"/>
@@ -1960,7 +1960,7 @@ function addStationTables(quantity) {
                                 </defs>
                             </svg> 
                             </button>
-                            <div id="T${i}P7" class="modal">
+                            <div id="S${i}P7" class="modal">
                                 <div class="modal__grid">
                                     <div class="widget__2-col">
 
@@ -2044,7 +2044,7 @@ function addStationTables(quantity) {
                                 </div>
                                 
                             </div>
-                                <button id="T${i}B7" onclick="showModal('T${i}P7')" class="modal__btn-hide btn">
+                                <button id="S${i}B7" onclick="showModal('S${i}P7')" class="modal__btn-hide btn">
                                     <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"/>
                                         <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"/>

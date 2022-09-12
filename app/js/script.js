@@ -16,6 +16,14 @@ function WebSocketTest() {
 
     ws.onmessage = function (evt) {
       var received_msg = evt.data;
+
+      if (received_msg == "\"Preparing new testbench database. Test will start in a few seconds.\"") {
+        var classElements = document.getElementsByClassName('logo-loading--disable');
+        for (var i=0; i < classElements.length; i++){
+          classElements[0].classList.replace("logo-loading--disable", "logo-loading");
+        }
+      }
+
       if (received_msg == "\"Testbench Started!\"") {
         /////////////// Add Station Table ////////////////////
         removeStationTables();
@@ -139,6 +147,7 @@ let maxDataPerChart = dataPerPlot; // Number of data plus one
 
 function readCT(sta) {
   var CUTvalue = true;
+  var numberTestCount = 0;
   if (sta != 0){
     var docClient = new AWS.DynamoDB.DocumentClient();
     var ctItem = {
@@ -163,16 +172,16 @@ function readCT(sta) {
           for(var n=1; n <=6; n++){
             BuildArray[sta][n][1].success &= data['Items'][i]['Success'][n];
             if (BuildArray[sta][n][1].success){
-              document.getElementById('T1F'+n).classList.remove("indicator-light--fail", "indicator-light--success");
-              document.getElementById('T1F'+n).classList.add("indicator-light--success");
-              document.getElementById('T'+sta+'F'+n).classList.remove("indicator-light--fail", "indicator-light--success");
-              document.getElementById('T'+sta+'F'+n).classList.add("indicator-light--success");
+              document.getElementById('S1F'+n).classList.remove("indicator__light--fail", "indicator__light--success");
+              document.getElementById('S1F'+n).classList.add("indicator__light--success");
+              document.getElementById('S'+sta+'F'+n).classList.remove("indicator__light--fail", "indicator__light--success");
+              document.getElementById('S'+sta+'F'+n).classList.add("indicator__light--success");
             }
             else {
-              document.getElementById('T1F'+n).classList.remove("indicator-light--fail", "indicator-light--success");
-              document.getElementById('T1F'+n).classList.add("indicator-light--fail");
-              document.getElementById('T'+sta+'F'+n).classList.remove("indicator-light--fail", "indicator-light--success");
-              document.getElementById('T'+sta+'F'+n).classList.add("indicator-light--fail");
+              document.getElementById('S1F'+n).classList.remove("indicator__light--fail", "indicator__light--success");
+              document.getElementById('S1F'+n).classList.add("indicator__light--fail");
+              document.getElementById('S'+sta+'F'+n).classList.remove("indicator__light--fail", "indicator__light--success");
+              document.getElementById('S'+sta+'F'+n).classList.add("indicator__light--fail");
             }
           }
           //////////////////////////////////////////////////////////////////////////////
@@ -215,7 +224,7 @@ function readCT(sta) {
             }
           }
           var timeResult = JSON.stringify(data['Items'][i]['Time']);
-          for(var n=1; n <=6; n++){
+          for(var n=1; n <= 6; n++){
             for(var m=1; m <= 8; m++){
               ///// Extract CT data value /////
               var valueCTPI = extractCTData(data['Items'][i], 'CTPI', n, m);
@@ -224,14 +233,49 @@ function readCT(sta) {
               ////// Extract Relay data value //////
               var valueRLYPI = extractRLYData(data['Items'][i], 'RelayPI', n, m);
               var valueRLYESP = extractRLYData(data['Items'][i], 'RelayESP', n, m);
-              document.getElementById('T'+sta+'G'+n+'R'+m).classList.remove("indicator-light--fail", "indicator-light--success");
+              document.getElementById('S'+sta+'C'+n+'R'+m).classList.remove("indicator__light--fail", "indicator__light--success");
+
+              ////////////////// Check for failed CT's /////////////////////
+              if (!data['Items'][i]['CTSuccess'][n][m]){
+                ///////// Add the failed count number to the CT's //////////
+                if (data['Items'][i]['TestNumber'] != numberTestCount) {
+                  var failednumCT = 0;
+                  failednumCT = Number(document.getElementById('S'+sta+'C'+n+'CN'+m).textContent);
+                  failednumCT += 1;
+                  if (failednumCT > data['Items'][i]['TestNumber']){
+                    failednumCT = Number(data['Items'][i]['TestNumber']);
+                  }
+                  document.getElementById('S'+sta+'C'+n+'CN'+m).innerHTML = String(failednumCT);
+                  if (failednumCT > 0){
+                    document.getElementById('S'+sta+'C'+n+'CI'+m).classList.replace("indicator__failed-icon", "indicator__failed-icon--fail");
+                  }
+                }
+              }
+              ////////////////// Check for failed Relays ////////////////////
               if (valueRLYPI != valueRLYESP){
-                document.getElementById('T'+sta+'G'+n+'R'+m).classList.add("indicator-light--fail");
+                document.getElementById('S'+sta+'C'+n+'R'+m).classList.add("indicator__light--fail");
+                ///////// Add the failed count number to the relays //////////
+                if (data['Items'][i]['TestNumber'] != numberTestCount) {
+                  var failednum = 0;
+                  failednum = Number(document.getElementById('S'+sta+'C'+n+'RN'+m).textContent);
+                  failednum += 1;
+                  if (failednum > data['Items'][i]['TestNumber']){
+                    failednum = Number(data['Items'][i]['TestNumber']);
+                  }
+                  document.getElementById('S'+sta+'C'+n+'RN'+m).innerHTML = String(failednum);
+                  if (failednum > 0){
+                    document.getElementById('S'+sta+'C'+n+'RI'+m).classList.replace("indicator__failed-icon", "indicator__failed-icon--fail");
+                  }
+                }
+                ///////////////////////////////////////////////////////////// 
               }
               else {
-                document.getElementById('T'+sta+'G'+n+'R'+m).classList.add("indicator-light--success");
+                document.getElementById('S'+sta+'C'+n+'R'+m).classList.add("indicator__light--success");
               }
             }
+          }
+          if (data['Items'][i]['TestNumber'] != numberTestCount){
+            numberTestCount = data['Items'][i]['TestNumber'];
           }
         }
         if (data['Count'] != 0){
