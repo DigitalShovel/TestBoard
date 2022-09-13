@@ -2385,7 +2385,9 @@ function addStationTables(quantity) {
                                 </div>
 
                                 <div class="widget__label widget__label--lg">
-                                    <div class="widget__label-name">TBM</div>
+                                    <div class="widget__label-name">TBM
+                                        <div class="tooltip">Test Board Module</div>
+                                    </div>
                                     <div class="widget__temp">
                                         <div class="widget__temp-container">
                                             <div id="temp1_bar" class="widget__temp-bar"></div>
@@ -2411,7 +2413,9 @@ function addStationTables(quantity) {
                                 </div>
 
                                 <div class="widget__label widget__label--lg">
-                                    <div class="widget__label-name">TBM</div>
+                                    <div class="widget__label-name">TBM
+                                        <div class="tooltip">Test Board Module</div>
+                                    </div>
                                     <div class="widget__temp">
                                         <div class="widget__temp-container">
                                             <div id="temp2_bar" class="widget__temp-bar"></div>
@@ -2436,7 +2440,9 @@ function addStationTables(quantity) {
                                 </div>
 
                                 <div class="widget__label widget__label--lg">
-                                    <div class="widget__label-name">TBM</div>
+                                    <div class="widget__label-name">TBM
+                                        <div class="tooltip">Test Board Module</div>
+                                    </div>
                                     <div class="widget__temp">
                                         <div class="widget__temp-container">
                                             <div id="temp2_bar" class="widget__temp-bar"></div>
@@ -2461,7 +2467,9 @@ function addStationTables(quantity) {
                                 </div>
 
                                 <div class="widget__label widget__label--lg">
-                                    <div class="widget__label-name">TBM</div>
+                                    <div class="widget__label-name">TBM
+                                        <div class="tooltip">Test Board Module</div>
+                                    </div>
                                     <div class="widget__temp">
                                         <div class="widget__temp-container">
                                             <div id="temp2_bar" class="widget__temp-bar"></div>
@@ -2487,7 +2495,9 @@ function addStationTables(quantity) {
                                 </div>
 
                                 <div class="widget__label widget__label--lg">
-                                    <div class="widget__label-name">TBM</div>
+                                    <div class="widget__label-name">TBM
+                                        <div class="tooltip">Test Board Module</div>
+                                    </div>
                                     <div class="widget__temp">
                                         <div class="widget__temp-container">
                                             <div id="temp2_bar" class="widget__temp-bar"></div>
@@ -2512,7 +2522,9 @@ function addStationTables(quantity) {
                                 </div>
 
                                 <div class="widget__label widget__label--lg">
-                                    <div class="widget__label-name">TBM</div>
+                                    <div class="widget__label-name">TBM
+                                        <div class="tooltip">Test Board Module</div>
+                                    </div>
                                     <div class="widget__temp">
                                         <div class="widget__temp-container">
                                             <div id="temp2_bar" class="widget__temp-bar"></div>
@@ -2537,7 +2549,9 @@ function addStationTables(quantity) {
                                 </div>
 
                                 <div class="widget__label widget__label--lg">
-                                    <div class="widget__label-name">TBM</div>
+                                    <div class="widget__label-name">TBM
+                                        <div class="tooltip">Test Board Module</div>
+                                    </div>
                                     <div class="widget__temp">
                                         <div class="widget__temp-container">
                                             <div id="temp2_bar" class="widget__temp-bar"></div>
@@ -2562,7 +2576,9 @@ function addStationTables(quantity) {
                                 </div>
 
                                 <div class="widget__label widget__label--lg">
-                                    <div class="widget__label-name">TBM</div>
+                                    <div class="widget__label-name">TBM
+                                        <div class="tooltip">Test Board Module</div>
+                                    </div>
                                     <div class="widget__temp">
                                         <div class="widget__temp-container">
                                             <div id="temp2_bar" class="widget__temp-bar"></div>
@@ -2624,12 +2640,12 @@ let graphFlag = false;
 
 function showModal(graphID) {
   var modalGrid = document.getElementById(graphID);
-  modalGrid.classList.toggle("modal__show");
+  modalGrid.classList.toggle("modal__show--channels");
 }
 
 function showModalCentered(graphID) {
     var modalGrid = document.getElementById(graphID);
-    modalGrid.classList.toggle("modal__show--centered");
+    modalGrid.classList.toggle("modal__show--temps");
   }
 
 function refreshPIList(station, quantity, current) {
