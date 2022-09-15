@@ -2,6 +2,7 @@
   display: grid;
   grid-template-rows: repeat(8, 1fr);
   gap: 1rem;
+  min-width: 110px;
   border-radius: 5px;
 
   &__content {
