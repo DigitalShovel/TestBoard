@@ -1,268 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <!-- Meta Tags -->
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="dist/style.min.css" />
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="dist/style.min.css">
+    <!-- Page Title -->
+    <title>DS - AWS Testing Boards</title>
 
-  <!-- Page Title -->
-  <title>Digital Shovel - AWS Board Testing Dashboard</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
 
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Scripts -->
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- <script defer src="app/js/modal.js"></script> -->
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="app/js/chartConfig.js"></script>
+    <script defer src="https://sdk.amazonaws.com/js/aws-sdk-2.7.16.min.js"></script>
+    <script defer src="app/js/aws.cognito-sdk.min.js"></script>
+    <script defer src="app/js/amazon-cognito-identity.min.js"></script>
+    <script defer src="app/js/station-table.js"></script>
+    <script defer src="app/js/progress-circle.js"></script>
+    <script defer src="app/js/script.js"></script>
 
-  <!-- Scripts -->
-  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <!-- <script defer src="app/js/modal.js"></script> -->
-  <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script defer src="app/js/chartConfig.js"></script>
-  <script defer src="https://sdk.amazonaws.com/js/aws-sdk-2.7.16.min.js"></script>
-  <script defer src="app/js/aws.cognito-sdk.min.js"></script>
-  <script defer src="app/js/amazon-cognito-identity.min.js"></script>
-  <script defer src="app/js/station-table.js"></script>
-  <script defer src="app/js/progress-circle.js"></script>
-  <script defer src="app/js/script.js"></script>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  </head>
 
-
-  <!-- Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
-</head>
-
-<body>
-  <header>
-    <div class="navbar">
-      <ul class="flex jc-sb ai-c gap--sm">
-        <li class="navbar__logo">
-          <picture>
-            <source media="(min-width: 601px)" srcset="images/logo_white-text.svg">
-            <source media="(max-width: 600px)" srcset="images/logo_symbol_colored.png">
-            <img src="images/logo_gray-text.svg" alt="Digital Shovel Logo">
-          </picture>
-        </li>
-        <li>
-          <h1 class="navbar__heading text--white">
-            <span>Digital Shovel</span>
-            <span class="navbar__heading--emphasis">AWS Board Testing Dashboard</span>
-          </h1>
-        </li>
-        <li>
-          <a class="btn btn--primary as-end"
-            href="https://testbench.auth.ca-central-1.amazoncognito.com/login?client_id=55ffriv2knsvpt7n1p49m6gghb&response_type=token&scope=aws.cognito.signin.user.admin+email+openid+profile&redirect_uri=https://ds-testboard.netlify.app/">Login
-            <svg class="btn__chevron" width="13" height="12" viewBox="0 0 13 12" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M7.49 6L7.5 6" stroke="var(--blue-100)" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round" />
-              <path d="M2.5 1L7.95455 6L2.5 11" stroke="var(--blue-100)" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg>
-          </a>
-        </li>
-      </ul>
-    </div>
-
-    <nav class="actionbar">
-      <ul class="flex flex-wrap ai-c gap--md">
-        <li>
-          <button class="btn btn--tertiary btn--has-icon flex ai-c gap--sm" onclick="mapStationWebSocket();">
-            <svg class="actionbar__icon actionbar__icon--map" width="22" height="22" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <g filter="url(#a)">
-                <rect width="22" height="22" rx="3" fill="#2B3F55" />
-                <rect x="4" y="4" width="14" height="7" rx="1" fill="#4D7299" />
-                <path d="M11 11v2m0 2v-2m-5 2v-2h5m0 0h5v2" stroke="#88A5C3" stroke-linejoin="round" />
-                <rect x="4" y="15" width="4" height="3" rx=".5" fill="#4D7299" />
-                <rect x="9" y="15" width="4" height="3" rx=".5" fill="#4D7299" />
-                <rect x="14" y="15" width="4" height="3" rx=".5" fill="#4D7299" />
-              </g>
-              <defs>
-                <filter id="a" x="0" y="0" width="22" height="22" filterUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB">
-                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                  <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-                  <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                    result="hardAlpha" />
-                  <feOffset dy="1" />
-                  <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
-                  <feColorMatrix values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.05 0" />
-                  <feBlend in2="shape" result="effect1_innerShadow_82_2" />
-                </filter>
-              </defs>
-            </svg>
-            <span>Map Station</span>
-          </button>
-        </li>
-        <li>
-          <button onclick="readItem()" class="btn btn--tertiary btn--has-icon flex ai-c gap--sm">
-            <svg class="actionbar__icon actionbar__icon--refresh" width="22" height="22" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <g filter="url(#a)">
-                <rect width="22" height="22" rx="3" fill="#2B3F55" />
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M7.393 10.495C7.65 8.461 9.24 7 11.023 7c.866 0 1.668.333 2.307.908a1 1 0 0 0 1.338-1.487C13.691 5.541 12.42 5 11.024 5c-3.008 0-5.36 2.464-5.639 5.471l-.388-.5a.555.555 0 0 0-.37-.228.54.54 0 0 0-.418.116.56.56 0 0 0-.207.388.572.572 0 0 0 .132.42l1.586 2.018a.782.782 0 0 0 .613.31.793.793 0 0 0 .616-.299l1.781-2.051a.565.565 0 0 0-.048-.772.536.536 0 0 0-.367-.127.541.541 0 0 0-.444.206l-.478.543Z"
-                  fill="#4D7299" />
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M14.663 11.514c-.21 2.01-1.799 3.489-3.618 3.489a3.465 3.465 0 0 1-2.369-.949 1 1 0 0 0-1.36 1.466 5.465 5.465 0 0 0 3.729 1.483c3.02 0 5.402-2.465 5.624-5.48l.34.428a.547.547 0 1 0 .857-.679L16.29 9.306a.774.774 0 0 0-1.223-.01l-1.628 1.998a.543.543 0 0 0 .048.751.54.54 0 0 0 .365.124.547.547 0 0 0 .442-.2l.37-.455Z"
-                  fill="#88A5C3" />
-              </g>
-              <defs>
-                <filter id="a" x="0" y="0" width="22" height="22" filterUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB">
-                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                  <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-                  <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                    result="hardAlpha" />
-                  <feOffset dy="1" />
-                  <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
-                  <feColorMatrix values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.05 0" />
-                  <feBlend in2="shape" result="effect1_innerShadow_82_10" />
-                </filter>
-              </defs>
-            </svg>
-            <span>Refresh</span>
-          </button>
-        </li>
-        <li class="flex ai-c gap--sm">
-          <input class="input__text" type="text" name="input-data" id="inputData" placeholder="Enter amount of tests">
-          <button onclick="WebSocketTest()" class="btn btn--tertiary btn--has-icon">
-            <svg class="actionbar__icon actionbar__icon--play" width="22" height="22" viewBox="0 0 22 22" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <g filter="url(#filter0_i_43_61)">
-                <rect width="22" height="22" rx="3" fill="#2B3F55" />
-                <path
-                  d="M15.2253 10.5642C15.5651 10.7554 15.5651 11.2446 15.2253 11.4358L8.74513 15.0809C8.41183 15.2683 8 15.0275 8 14.6451L8 7.35492C8 6.97251 8.41183 6.73165 8.74513 6.91914L15.2253 10.5642Z"
-                  fill="#4D7299" />
-              </g>
-              <defs>
-                <filter id="filter0_i_43_61" x="0" y="0" width="22" height="22" filterUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB">
-                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                  <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                    result="hardAlpha" />
-                  <feOffset dy="1" />
-                  <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
-                  <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.05 0" />
-                  <feBlend mode="normal" in2="shape" result="effect1_innerShadow_43_61" />
-                </filter>
-              </defs>
-            </svg>
-          </button>
-          <button onclick="stopTestWebSocket()" class="btn btn--tertiary btn--has-icon" type="reset">
-            <svg class="actionbar__icon actionbar__icon--stop" width="22" height="22" viewBox="0 0 22 22" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <g filter="url(#filter0_i_43_64)">
-                <rect width="22" height="22" rx="3" fill="#2B3F55" />
-                <rect x="16" y="5.5" width="10" height="10" rx="1" transform="rotate(90 16 5.5)" fill="#4D7299" />
-              </g>
-              <defs>
-                <filter id="filter0_i_43_64" x="0" y="0" width="22" height="22" filterUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB">
-                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                  <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                    result="hardAlpha" />
-                  <feOffset dy="1" />
-                  <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
-                  <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.05 0" />
-                  <feBlend mode="normal" in2="shape" result="effect1_innerShadow_43_64" />
-                </filter>
-              </defs>
-            </svg>
-          </button>
-        </li>
-      </ul>
-    </nav>
-  </header>
-
-  <aside class="sidebar gap--md">
-    <div class="list">
-      <div class="list__2-col">
-        <h2 class="list__heading">Pi List</h2>
-        <h2 class="list__heading list__heading--secondary" id="PI_Devices">Loading...</h2>
-        <h3 class="list__subheading">MAC Address</h3>
-        <h3 class="list__subheading">Assign Station</h3>
+  <body>
+    <header>
+      <div class="navbar">
+        <ul class="flex jc-sb ai-c gap--sm">
+          <li class="navbar__logo">
+            <picture>
+              <source media="(min-width: 601px)" srcset="images/logo_white-text.svg" />
+              <source media="(max-width: 600px)" srcset="images/logo_symbol_colored.png" />
+              <img src="images/logo_gray-text.svg" alt="Digital Shovel Logo" />
+            </picture>
+          </li>
+          <li class="flex ai-start gap--md">
+            <img class="navbar__logo--product" src="images/aws-testing.svg" alt="AWS Testing Boards Logo" />
+            <h1 class="navbar__heading">
+              <span class="navbar__heading--title">AWS Testing Boards</span>
+              <span class="navbar__heading--subtitle">A Digital Shovel Product</span>
+            </h1>
+          </li>
+          <li>
+            <a class="btn btn--primary as-end" href="https://testbench.auth.ca-central-1.amazoncognito.com/login?client_id=55ffriv2knsvpt7n1p49m6gghb&response_type=token&scope=aws.cognito.signin.user.admin+email+openid+profile&redirect_uri=https://ds-testboard.netlify.app/"
+              >Login
+              <svg class="btn__chevron" width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.49 6L7.5 6" stroke="var(--blue-100)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M2.5 1L7.95455 6L2.5 11" stroke="var(--blue-100)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
-      <div id="PI_LIST" class="list__2-col list__2-col--scrollable">
-        <div class="list__item" id="PI#1">Empty</div>
-        <div class="list__item">
+
+      <nav class="actionbar">
+        <ul class="flex flex-wrap ai-c gap--md">
+          <li>
+            <button class="btn btn--tertiary btn--has-icon flex ai-c gap--sm" onclick="mapStationWebSocket();">
+              <svg class="actionbar__icon actionbar__icon--map" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#a)">
+                  <rect width="22" height="22" rx="3" fill="#2B3F55" />
+                  <rect x="4" y="4" width="14" height="7" rx="1" fill="#4D7299" />
+                  <path d="M11 11v2m0 2v-2m-5 2v-2h5m0 0h5v2" stroke="#88A5C3" stroke-linejoin="round" />
+                  <rect x="4" y="15" width="4" height="3" rx=".5" fill="#4D7299" />
+                  <rect x="9" y="15" width="4" height="3" rx=".5" fill="#4D7299" />
+                  <rect x="14" y="15" width="4" height="3" rx=".5" fill="#4D7299" />
+                </g>
+                <defs>
+                  <filter id="a" x="0" y="0" width="22" height="22" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                    <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                    <feOffset dy="1" />
+                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                    <feColorMatrix values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.05 0" />
+                    <feBlend in2="shape" result="effect1_innerShadow_82_2" />
+                  </filter>
+                </defs>
+              </svg>
+              <span>Map Station</span>
+            </button>
+          </li>
+          <li>
+            <button onclick="readItem()" class="btn btn--tertiary btn--has-icon flex ai-c gap--sm">
+              <svg class="actionbar__icon actionbar__icon--refresh" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#a)">
+                  <rect width="22" height="22" rx="3" fill="#2B3F55" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M7.393 10.495C7.65 8.461 9.24 7 11.023 7c.866 0 1.668.333 2.307.908a1 1 0 0 0 1.338-1.487C13.691 5.541 12.42 5 11.024 5c-3.008 0-5.36 2.464-5.639 5.471l-.388-.5a.555.555 0 0 0-.37-.228.54.54 0 0 0-.418.116.56.56 0 0 0-.207.388.572.572 0 0 0 .132.42l1.586 2.018a.782.782 0 0 0 .613.31.793.793 0 0 0 .616-.299l1.781-2.051a.565.565 0 0 0-.048-.772.536.536 0 0 0-.367-.127.541.541 0 0 0-.444.206l-.478.543Z" fill="#4D7299" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M14.663 11.514c-.21 2.01-1.799 3.489-3.618 3.489a3.465 3.465 0 0 1-2.369-.949 1 1 0 0 0-1.36 1.466 5.465 5.465 0 0 0 3.729 1.483c3.02 0 5.402-2.465 5.624-5.48l.34.428a.547.547 0 1 0 .857-.679L16.29 9.306a.774.774 0 0 0-1.223-.01l-1.628 1.998a.543.543 0 0 0 .048.751.54.54 0 0 0 .365.124.547.547 0 0 0 .442-.2l.37-.455Z" fill="#88A5C3" />
+                </g>
+                <defs>
+                  <filter id="a" x="0" y="0" width="22" height="22" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                    <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                    <feOffset dy="1" />
+                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                    <feColorMatrix values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.05 0" />
+                    <feBlend in2="shape" result="effect1_innerShadow_82_10" />
+                  </filter>
+                </defs>
+              </svg>
+              <span>Refresh</span>
+            </button>
+          </li>
+          <li class="flex ai-c gap--sm">
+            <input class="input__text" type="text" name="input-data" id="inputData" placeholder="Enter amount of tests" />
+            <button onclick="WebSocketTest()" class="btn btn--tertiary btn--has-icon">
+              <svg class="actionbar__icon actionbar__icon--play" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_i_43_61)">
+                  <rect width="22" height="22" rx="3" fill="#2B3F55" />
+                  <path d="M15.2253 10.5642C15.5651 10.7554 15.5651 11.2446 15.2253 11.4358L8.74513 15.0809C8.41183 15.2683 8 15.0275 8 14.6451L8 7.35492C8 6.97251 8.41183 6.73165 8.74513 6.91914L15.2253 10.5642Z" fill="#4D7299" />
+                </g>
+                <defs>
+                  <filter id="filter0_i_43_61" x="0" y="0" width="22" height="22" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                    <feOffset dy="1" />
+                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.05 0" />
+                    <feBlend mode="normal" in2="shape" result="effect1_innerShadow_43_61" />
+                  </filter>
+                </defs>
+              </svg>
+            </button>
+            <button onclick="stopTestWebSocket()" class="btn btn--tertiary btn--has-icon" type="reset">
+              <svg class="actionbar__icon actionbar__icon--stop" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_i_43_64)">
+                  <rect width="22" height="22" rx="3" fill="#2B3F55" />
+                  <rect x="16" y="5.5" width="10" height="10" rx="1" transform="rotate(90 16 5.5)" fill="#4D7299" />
+                </g>
+                <defs>
+                  <filter id="filter0_i_43_64" x="0" y="0" width="22" height="22" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                    <feOffset dy="1" />
+                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.05 0" />
+                    <feBlend mode="normal" in2="shape" result="effect1_innerShadow_43_64" />
+                  </filter>
+                </defs>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <aside class="sidebar gap--md">
+      <div class="list">
+        <div class="list__2-col">
+          <h2 class="list__heading">Pi List</h2>
+          <h2 class="list__heading list__heading--secondary" id="PI_Devices">Loading...</h2>
+          <h3 class="list__subheading">MAC Address</h3>
+          <h3 class="list__subheading">Assign Station</h3>
+        </div>
+        <div id="PI_LIST" class="list__2-col list__2-col--scrollable">
+          <div class="list__item" id="PI#1">Empty</div>
+          <div class="list__item">
             <select name="stations" id="station-1">
               <option id="P1Default" value="0">Unassigned</option>
             </select>
-        </div>
-        <div class="list__item" id="PI#2">Empty</div>
-        <div class="list__item">
-          <select name="stations" id="station-2">
-            <option id="P2Default" value="0">Unassigned</option>
-          </select>
-        </div>
-        <div class="list__item" id="PI#3">Empty</div>
-        <div class="list__item">
-          <select name="stations" id="station-3">
-            <option id="P3Default" value="0">Unassigned</option>
-          </select>
-        </div>
-        <div class="list__item" id="PI#4">Empty</div>
-        <div class="list__item">
-          <select name="stations" id="station-4">
-            <option id="P4Default" value="0">Unassigned</option>
-          </select>
-        </div>
-        <div class="list__item" id="PI#5">Empty</div>
-        <div class="list__item">
-          <select name="stations" id="station-5">
-            <option id="P5Default" value="0">Unassigned</option>
-          </select>
-        </div>
-      </div>
-    </div>
-
-    <div class="list">
-      <div class="list__2-col">
-        <h2 class="list__heading">TBM List</h2>
-        <h2 class="list__heading" id="ESP_Devices">Loading...</h2>
-        <h3 class="list__subheading">MAC Address</h3>
-        <h3 class="list__subheading">Station - Channel</h3>
-      </div>
-      <div id="ESP_LIST" class="list__2-col list__2-col--scrollable">
-        <div class="list__item" id="ESP#1">Empty</div>
-        <div class="list__item">
-          <p id="ESP1Detail" class="list__item-label">S0 - CH0</p>
-        </div>
-        <div class="list__item" id="ESP#2">Empty</div>
-        <div class="list__item">
-          <p id="ESP2Detail" class="list__item-label">S0 - CH0</p>
-        </div>
-        <div class="list__item" id="ESP#3">Empty</div>
-        <div class="list__item">
-          <p id="ESP3Detail" class="list__item-label">S0 - CH0</p>
-        </div>
-        <div class="list__item" id="ESP#4">Empty</div>
-        <div class="list__item">
-          <p id="ESP4Detail" class="list__item-label">S0 - CH0</p>
-        </div>
-        <div class="list__item" id="ESP#5">Empty</div>
-        <div class="list__item">
-          <p id="ESP5Detail" class="list__item-label">S0 - CH0</p>
+          </div>
+          <div class="list__item" id="PI#2">Empty</div>
+          <div class="list__item">
+            <select name="stations" id="station-2">
+              <option id="P2Default" value="0">Unassigned</option>
+            </select>
+          </div>
+          <div class="list__item" id="PI#3">Empty</div>
+          <div class="list__item">
+            <select name="stations" id="station-3">
+              <option id="P3Default" value="0">Unassigned</option>
+            </select>
+          </div>
+          <div class="list__item" id="PI#4">Empty</div>
+          <div class="list__item">
+            <select name="stations" id="station-4">
+              <option id="P4Default" value="0">Unassigned</option>
+            </select>
+          </div>
+          <div class="list__item" id="PI#5">Empty</div>
+          <div class="list__item">
+            <select name="stations" id="station-5">
+              <option id="P5Default" value="0">Unassigned</option>
+            </select>
+          </div>
         </div>
       </div>
-    </div>
-  </aside>
 
-  <main class="main">
+      <div class="list">
+        <div class="list__2-col">
+          <h2 class="list__heading">TBM List</h2>
+          <h2 class="list__heading" id="ESP_Devices">Loading...</h2>
+          <h3 class="list__subheading">MAC Address</h3>
+          <h3 class="list__subheading">Station - Channel</h3>
+        </div>
+        <div id="ESP_LIST" class="list__2-col list__2-col--scrollable">
+          <div class="list__item" id="ESP#1">Empty</div>
+          <div class="list__item">
+            <p id="ESP1Detail" class="list__item-label">S0 - CH0</p>
+          </div>
+          <div class="list__item" id="ESP#2">Empty</div>
+          <div class="list__item">
+            <p id="ESP2Detail" class="list__item-label">S0 - CH0</p>
+          </div>
+          <div class="list__item" id="ESP#3">Empty</div>
+          <div class="list__item">
+            <p id="ESP3Detail" class="list__item-label">S0 - CH0</p>
+          </div>
+          <div class="list__item" id="ESP#4">Empty</div>
+          <div class="list__item">
+            <p id="ESP4Detail" class="list__item-label">S0 - CH0</p>
+          </div>
+          <div class="list__item" id="ESP#5">Empty</div>
+          <div class="list__item">
+            <p id="ESP5Detail" class="list__item-label">S0 - CH0</p>
+          </div>
+        </div>
+      </div>
+    </aside>
 
-    <div id="table_container_body" class="grid grid__5-col gap--lg">
-      <!-- This is where the dynamically stations is added -->
-    </div>
-
-  </main>
-</body>
-
+    <main class="main">
+      <div id="table_container_body" class="grid grid__5-col gap--lg">
+        <!-- This is where the dynamically stations is added -->
+      </div>
+    </main>
+  </body>
 </html>
