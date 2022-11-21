@@ -2741,7 +2741,7 @@ function removeESPList(quantity) {
         </div>
     `);
   if (quantity > 5) {
-    for (var i = 6; i < quantity; i++)
+    for (var i = 6; i <= quantity; i++)
       $("#ESP_LIST").append(`
         <div class="list__item" id="ESP#${i}">Empty</div>
         <div class="list__item">
