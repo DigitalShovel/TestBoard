@@ -120,7 +120,6 @@ function checkLogin() {
   });
   if (idToken != null) {
       console.log("User Signed In!");
-      console.log("TBM:");
       auth();
   }
 }
