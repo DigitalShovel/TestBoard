@@ -2609,21 +2609,13 @@ function addStationTables(quantity) {
     // Create charts for Stations #STA
     var chArray = [0];
     for (var k = 1; k <= 6; k++) {
-        delete CT1;
         var CT1 = new stationCharts(i, k, 1);
-        delete CT2;
         var CT2 = new stationCharts(i, k, 2);
-        delete CT3;
         var CT3 = new stationCharts(i, k, 3);
-        delete CT4;
         var CT4 = new stationCharts(i, k, 4);
-        delete CT5;
         var CT5 = new stationCharts(i, k, 5);
-        delete CT6;
         var CT6 = new stationCharts(i, k, 6);
-        delete CT7;
         var CT7 = new stationCharts(i, k, 7);
-        delete CT8;
         var CT8 = new stationCharts(i, k, 8);
         CT1.createChart();
         CT2.createChart();
