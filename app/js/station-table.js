@@ -2725,7 +2725,6 @@ function refreshESPList(station, channel, current) {
 }
 
 function removeESPList(quantity) {
-    console.log("TBM:",quantity);
   $("#ESP_LIST").empty();
   $("#ESP_LIST").append(`
     <div class="list__item" id="ESP#1">Empty</div>
