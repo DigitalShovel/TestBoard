@@ -178,8 +178,8 @@ function readCT(sta) {
               document.getElementById('S'+sta+'F'+n).classList.add("indicator__light--success");
             }
             else {
-              document.getElementById('S1F'+n).classList.remove("indicator__light--fail", "indicator__light--success");
-              document.getElementById('S1F'+n).classList.add("indicator__light--fail");
+              //document.getElementById('S1F'+n).classList.remove("indicator__light--fail", "indicator__light--success");
+              //document.getElementById('S1F'+n).classList.add("indicator__light--fail");
               document.getElementById('S'+sta+'F'+n).classList.remove("indicator__light--fail", "indicator__light--success");
               document.getElementById('S'+sta+'F'+n).classList.add("indicator__light--fail");
             }
