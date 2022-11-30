@@ -172,8 +172,8 @@ function readCT(sta) {
           for(var n=1; n <=6; n++){
             BuildArray[sta][n][1].success &= data['Items'][i]['Success'][n];
             if (BuildArray[sta][n][1].success){
-              document.getElementById('S1F'+n).classList.remove("indicator__light--fail", "indicator__light--success");
-              document.getElementById('S1F'+n).classList.add("indicator__light--success");
+              //document.getElementById('S1F'+n).classList.remove("indicator__light--fail", "indicator__light--success");
+              //document.getElementById('S1F'+n).classList.add("indicator__light--success");
               document.getElementById('S'+sta+'F'+n).classList.remove("indicator__light--fail", "indicator__light--success");
               document.getElementById('S'+sta+'F'+n).classList.add("indicator__light--success");
             }
