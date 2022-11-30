@@ -1,4 +1,4 @@
-const urlAccess = "https://testbench.auth.ca-central-1.amazoncognito.com/login?client_id=55ffriv2knsvpt7n1p49m6gghb&response_type=token&scope=aws.cognito.signin.user.admin+email+openid+profile&redirect_uri=https://ds-testboard.netlify.app/";
+const urlAccess = "https://testbench.auth.ca-central-1.amazoncognito.com/login?client_id=55ffriv2knsvpt7n1p49m6gghb&response_type=token&scope=aws.cognito.signin.user.admin+email+openid+profile&redirect_uri=https://ds-testbench.netlify.app/";
 
 
 //////////////////// Websockets ///////////////////////
@@ -172,14 +172,14 @@ function readCT(sta) {
           for(var n=1; n <=6; n++){
             BuildArray[sta][n][1].success &= data['Items'][i]['Success'][n];
             if (BuildArray[sta][n][1].success){
-              document.getElementById('S1F'+n).classList.remove("indicator__light--fail", "indicator__light--success");
-              document.getElementById('S1F'+n).classList.add("indicator__light--success");
+              //document.getElementById('S1F'+n).classList.remove("indicator__light--fail", "indicator__light--success");
+              //document.getElementById('S1F'+n).classList.add("indicator__light--success");
               document.getElementById('S'+sta+'F'+n).classList.remove("indicator__light--fail", "indicator__light--success");
               document.getElementById('S'+sta+'F'+n).classList.add("indicator__light--success");
             }
             else {
-              document.getElementById('S1F'+n).classList.remove("indicator__light--fail", "indicator__light--success");
-              document.getElementById('S1F'+n).classList.add("indicator__light--fail");
+              //document.getElementById('S1F'+n).classList.remove("indicator__light--fail", "indicator__light--success");
+              //document.getElementById('S1F'+n).classList.add("indicator__light--fail");
               document.getElementById('S'+sta+'F'+n).classList.remove("indicator__light--fail", "indicator__light--success");
               document.getElementById('S'+sta+'F'+n).classList.add("indicator__light--fail");
             }

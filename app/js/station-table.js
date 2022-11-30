@@ -2609,23 +2609,23 @@ function addStationTables(quantity) {
     // Create charts for Stations #STA
     var chArray = [0];
     for (var k = 1; k <= 6; k++) {
-      var CT1 = new stationCharts(i, k, 1);
-      var CT2 = new stationCharts(i, k, 2);
-      var CT3 = new stationCharts(i, k, 3);
-      var CT4 = new stationCharts(i, k, 4);
-      var CT5 = new stationCharts(i, k, 5);
-      var CT6 = new stationCharts(i, k, 6);
-      var CT7 = new stationCharts(i, k, 7);
-      var CT8 = new stationCharts(i, k, 8);
-      CT1.createChart();
-      CT2.createChart();
-      CT3.createChart();
-      CT4.createChart();
-      CT5.createChart();
-      CT6.createChart();
-      CT7.createChart();
-      CT8.createChart();
-      chArray.push([0, CT1, CT2, CT3, CT4, CT5, CT6, CT7, CT8]);
+        var CT1 = new stationCharts(i, k, 1);
+        var CT2 = new stationCharts(i, k, 2);
+        var CT3 = new stationCharts(i, k, 3);
+        var CT4 = new stationCharts(i, k, 4);
+        var CT5 = new stationCharts(i, k, 5);
+        var CT6 = new stationCharts(i, k, 6);
+        var CT7 = new stationCharts(i, k, 7);
+        var CT8 = new stationCharts(i, k, 8);
+        CT1.createChart();
+        CT2.createChart();
+        CT3.createChart();
+        CT4.createChart();
+        CT5.createChart();
+        CT6.createChart();
+        CT7.createChart();
+        CT8.createChart();
+        chArray.push([0, CT1, CT2, CT3, CT4, CT5, CT6, CT7, CT8]);
     }
     BuildArray.push(chArray);
   }
@@ -2741,7 +2741,7 @@ function removeESPList(quantity) {
         </div>
     `);
   if (quantity > 5) {
-    for (var i = 6; i < quantity; i++)
+    for (var i = 6; i <= quantity; i++)
       $("#ESP_LIST").append(`
         <div class="list__item" id="ESP#${i}">Empty</div>
         <div class="list__item">

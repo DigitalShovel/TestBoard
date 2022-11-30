@@ -41,14 +41,21 @@
       <ul class="flex jc-sb ai-c gap--sm">
         <li class="navbar__logo">
           <picture>
-            <source media="(min-width: 601px)" srcset="images/logo_test-bench.svg" />
-            <source media="(max-width: 600px)" srcset="images/logo_symbol_test-bench.svg" />
-            <img src="images/logo_test-bench.svg" alt="Digital Shovel Test Bench Logo" />
+            <source media="(min-width: 601px)" srcset="images/logo_white-text.svg" />
+            <source media="(max-width: 600px)" srcset="images/logo_symbol_colored.png" />
+            <img src="images/logo_gray-text.svg" alt="Digital Shovel Logo" />
           </picture>
+        </li>
+        <li class="flex ai-start gap--md">
+          <img class="navbar__logo--product" src="images/aws-testing.svg" alt="AWS Testing Boards Logo" />
+          <h1 class="navbar__heading">
+            <span class="navbar__heading--title">AWS Testing Boards</span>
+            <span class="navbar__heading--subtitle">A Digital Shovel Product</span>
+          </h1>
         </li>
         <li>
           <a class="btn btn--primary as-end"
-            href="https://testbench.auth.ca-central-1.amazoncognito.com/login?client_id=55ffriv2knsvpt7n1p49m6gghb&response_type=token&scope=aws.cognito.signin.user.admin+email+openid+profile&redirect_uri=https://ds-testboard.netlify.app/">Login
+            href="https://testbench.auth.ca-central-1.amazoncognito.com/login?client_id=55ffriv2knsvpt7n1p49m6gghb&response_type=token&scope=aws.cognito.signin.user.admin+email+openid+profile&redirect_uri=https://ds-testbench.netlify.app/">Login
             <svg class="btn__chevron" width="13" height="12" viewBox="0 0 13 12" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path d="M7.49 6L7.5 6" stroke="var(--blue-100)" stroke-width="2" stroke-linecap="round"
@@ -93,7 +100,7 @@
           </button>
         </li>
         <li>
-          <button onclick="readItem()" class="btn btn--tertiary btn--has-icon flex ai-c gap--sm">
+          <button onclick="window.location.reload()" class="btn btn--tertiary btn--has-icon flex ai-c gap--sm">
             <svg class="actionbar__icon actionbar__icon--refresh" width="22" height="22" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <g filter="url(#a)">
