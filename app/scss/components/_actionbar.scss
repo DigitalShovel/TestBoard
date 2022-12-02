@@ -1,9 +1,10 @@
 .actionbar {
   padding: 1rem 2rem;
   border-bottom: 1px solid var(--blue-800);
+  background-color: var(--blue-1000);
 
   @media (max-width: 600px) {
-    padding: 1rem
+    padding: 1rem;
   }
 
   li:nth-child(3) {
