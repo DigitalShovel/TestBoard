@@ -23,55 +23,55 @@
   li:hover {
     .actionbar__icon--map {
       rect {
-        fill: var(--primary-color);
+        fill: var(--blue-500);
       }
-      
+
       rect:nth-child(1) {
         fill: var(--blue-700);
       }
 
       path {
-        stroke: var(--blue-100);
+        stroke: var(--blue-50);
       }
     }
-    
+
     .actionbar__icon--refresh {
       rect {
         fill: var(--blue-700);
       }
 
       path:nth-child(2) {
-        fill: var(--primary-color);
+        fill: var(--blue-500);
       }
 
       path:last-child {
-        fill: var(--blue-100);
+        fill: var(--blue-50);
       }
     }
 
     span {
-      color: var(--blue-100);
+      color: var(--blue-50);
     }
   }
 
   .btn:hover {
     .actionbar__icon--play {
       rect {
-        fill: var(--success-700);
+        fill: var(--teal-500);
       }
 
       path {
-        fill: var(--success-500);
+        fill: var(--teal-200);
       }
     }
 
     .actionbar__icon--stop {
       rect:nth-child(1) {
-        fill: var(--danger-700);
+        fill: var(--red-500);
       }
 
       rect:nth-child(2) {
-        fill: var(--danger-500);
+        fill: var(--red-200);
       }
     }
   }

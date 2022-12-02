@@ -69,8 +69,8 @@
   }
 
   &--primary {
-    background-color: var(--primary-color);
-    color: var(--blue-100);
+    background-color: var(--blue-500);
+    color: var(--blue-50);
     border-radius: 100vh;
 
     &:hover {
@@ -83,7 +83,7 @@
   }
 
   &--secondary {
-    border: 1px solid var(--blue-100);
+    border: 1px solid var(--blue-50);
     background-color: transparent;
     color: white;
 
@@ -107,13 +107,13 @@
   }
 
   &--white {
-    background-color: var(--blue-100);
-    color: var(--primary-color);
+    background-color: var(--blue-50);
+    color: var(--blue-500);
   }
 
   &--unstyled {
     padding: 0;
     background-color: transparent;
-    color: var(--primary-color);
+    color: var(--blue-500);
   }
 }

@@ -2369,222 +2369,323 @@ function addStationTables(quantity) {
                     </button>
                     <div id="S${i}P7" class="modal">
                         <div class="modal__grid modal__grid--temp">
-                            <div class="modal__grid-temp">
-                                <div class="widget__heading-container">
-                                    <h2 class="widget__heading">Temperature 1</h2>
-                                </div>
-
-                                <div class="widget__label widget__label--lg">
-                                    <div class="widget__label-name">Pi</div>
-                                    <div class="widget__temp">
-                                        <div class="widget__temp-container">
-                                            <div id="temp1_bar" class="widget__temp-bar"></div>
+                            <div class="temp">
+                                <div class="temp__title-container">
+                                    <h3 class="temp__title">TEMP - 1</h3>
+                                    <div class="indicator__failed indicator__failed--ct">
+                                        <svg id="S1C1CI1" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"></circle>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        <div class="indicator__failed-text indicator__failed-text--dark-theme">
+                                            <h4>Failed</h4>
+                                            <h5 id="S1C1CN1">0000</h5>
                                         </div>
                                     </div>
-                                    <div id="temp1_text" class="widget__label-unit">°C</div>
                                 </div>
 
-                                <div class="widget__label widget__label--lg">
-                                    <div class="widget__label-name">TBM
-                                        <div class="tooltip">Test Board Module</div>
-                                    </div>
-                                    <div class="widget__temp">
-                                        <div class="widget__temp-container">
-                                            <div id="temp1_bar" class="widget__temp-bar"></div>
-                                        </div>
-                                    </div>
-                                    <div id="temp1_text" class="widget__label-unit">°C</div>
+                                <div class="temp__widget-container">
+                                  <div class="widget__label widget__label--lg widget__label-temp">
+                                      <div class="widget__label-name">Pi</div>
+                                      <div class="widget__temp">
+                                          <div class="widget__temp-container">
+                                              <div id="temp1_bar" class="widget__temp-bar"></div>
+                                          </div>
+                                      </div>
+                                      <div id="temp1_text" class="widget__label-unit">°C</div>
+                                  </div>
+                                  <div class="widget__label widget__label--lg widget__label-temp">
+                                      <div class="widget__label-name">TBM
+                                          <div class="tooltip">Test Board Module</div>
+                                      </div>
+                                      <div class="widget__temp">
+                                          <div class="widget__temp-container">
+                                              <div id="temp1_bar" class="widget__temp-bar"></div>
+                                          </div>
+                                      </div>
+                                      <div id="temp1_text" class="widget__label-unit">°C</div>
+                                  </div>
                                 </div>
                             </div>
 
-                            <div class="modal__grid-temp">
-                                <div class="widget__heading-container">
-                                    <h2 class="widget__heading">Temperature 2</h2>
-                                </div>
-
-                                <div class="widget__label widget__label--lg">
-                                    <div class="widget__label-name">Pi</div>
-                                    <div class="widget__temp">
-                                        <div class="widget__temp-container">
-                                            <div id="temp2_bar" class="widget__temp-bar"></div>
+                            <div class="temp">
+                                <div class="temp__title-container">
+                                    <h3 class="temp__title">TEMP - 2</h3>
+                                    <div class="indicator__failed indicator__failed--ct">
+                                        <svg id="S1C1CI1" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"></circle>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        <div class="indicator__failed-text indicator__failed-text--dark-theme">
+                                            <h4>Failed</h4>
+                                            <h5 id="S1C1CN1">0000</h5>
                                         </div>
                                     </div>
-                                    <div id="temp2_text" class="widget__label-unit">°C</div>
                                 </div>
 
-                                <div class="widget__label widget__label--lg">
-                                    <div class="widget__label-name">TBM
-                                        <div class="tooltip">Test Board Module</div>
-                                    </div>
-                                    <div class="widget__temp">
-                                        <div class="widget__temp-container">
-                                            <div id="temp2_bar" class="widget__temp-bar"></div>
-                                        </div>
-                                    </div>
-                                    <div id="temp2_text" class="widget__label-unit">°C</div>
+                                <div class="temp__widget-container">
+                                  <div class="widget__label widget__label--lg widget__label-temp">
+                                      <div class="widget__label-name">Pi</div>
+                                      <div class="widget__temp">
+                                          <div class="widget__temp-container">
+                                              <div id="temp2_bar" class="widget__temp-bar"></div>
+                                          </div>
+                                      </div>
+                                      <div id="temp2_text" class="widget__label-unit">°C</div>
+                                  </div>
+                                  <div class="widget__label widget__label--lg widget__label-temp">
+                                      <div class="widget__label-name">TBM
+                                          <div class="tooltip">Test Board Module</div>
+                                      </div>
+                                      <div class="widget__temp">
+                                          <div class="widget__temp-container">
+                                              <div id="temp2_bar" class="widget__temp-bar"></div>
+                                          </div>
+                                      </div>
+                                      <div id="temp2_text" class="widget__label-unit">°C</div>
+                                  </div>
                                 </div>
                             </div>
 
-                            <div class="modal__grid-temp">
-                                <div class="widget__heading-container">
-                                    <h2 class="widget__heading">Temperature 3</h2>
-                                </div>
-                                <div class="widget__label widget__label--lg">
-                                    <div class="widget__label-name">Pi</div>
-                                    <div class="widget__temp">
-                                        <div class="widget__temp-container">
-                                            <div id="temp2_bar" class="widget__temp-bar"></div>
+                            <div class="temp">
+                                <div class="temp__title-container">
+                                    <h3 class="temp__title">TEMP - 3</h3>
+                                    <div class="indicator__failed indicator__failed--ct">
+                                        <svg id="S1C1CI1" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"></circle>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        <div class="indicator__failed-text indicator__failed-text--dark-theme">
+                                            <h4>Failed</h4>
+                                            <h5 id="S1C1CN1">0000</h5>
                                         </div>
                                     </div>
-                                    <div id="temp2_text" class="widget__label-unit">°C</div>
                                 </div>
 
-                                <div class="widget__label widget__label--lg">
-                                    <div class="widget__label-name">TBM
-                                        <div class="tooltip">Test Board Module</div>
-                                    </div>
-                                    <div class="widget__temp">
-                                        <div class="widget__temp-container">
-                                            <div id="temp2_bar" class="widget__temp-bar"></div>
-                                        </div>
-                                    </div>
-                                    <div id="temp2_text" class="widget__label-unit">°C</div>
+                                <div class="temp__widget-container">
+                                  <div class="widget__label widget__label--lg widget__label-temp">
+                                      <div class="widget__label-name">Pi</div>
+                                      <div class="widget__temp">
+                                          <div class="widget__temp-container">
+                                              <div id="temp3_bar" class="widget__temp-bar"></div>
+                                          </div>
+                                      </div>
+                                      <div id="temp3_text" class="widget__label-unit">°C</div>
+                                  </div>
+                                  <div class="widget__label widget__label--lg widget__label-temp">
+                                      <div class="widget__label-name">TBM
+                                          <div class="tooltip">Test Board Module</div>
+                                      </div>
+                                      <div class="widget__temp">
+                                          <div class="widget__temp-container">
+                                              <div id="temp3_bar" class="widget__temp-bar"></div>
+                                          </div>
+                                      </div>
+                                      <div id="temp3_text" class="widget__label-unit">°C</div>
+                                  </div>
                                 </div>
                             </div>
 
-                            <div class="modal__grid-temp">
-                                <div class="widget__heading-container">
-                                    <h2 class="widget__heading">Temperature 4</h2>
-                                </div>
-                                <div class="widget__label widget__label--lg">
-                                    <div class="widget__label-name">Pi</div>
-                                    <div class="widget__temp">
-                                        <div class="widget__temp-container">
-                                            <div id="temp2_bar" class="widget__temp-bar"></div>
+                            <div class="temp">
+                                <div class="temp__title-container">
+                                    <h3 class="temp__title">TEMP - 4</h3>
+                                    <div class="indicator__failed indicator__failed--ct">
+                                        <svg id="S1C1CI1" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"></circle>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        <div class="indicator__failed-text indicator__failed-text--dark-theme">
+                                            <h4>Failed</h4>
+                                            <h5 id="S1C1CN1">0000</h5>
                                         </div>
                                     </div>
-                                    <div id="temp2_text" class="widget__label-unit">°C</div>
                                 </div>
 
-                                <div class="widget__label widget__label--lg">
-                                    <div class="widget__label-name">TBM
-                                        <div class="tooltip">Test Board Module</div>
-                                    </div>
-                                    <div class="widget__temp">
-                                        <div class="widget__temp-container">
-                                            <div id="temp2_bar" class="widget__temp-bar"></div>
-                                        </div>
-                                    </div>
-                                    <div id="temp2_text" class="widget__label-unit">°C</div>
+                                <div class="temp__widget-container">
+                                  <div class="widget__label widget__label--lg widget__label-temp">
+                                      <div class="widget__label-name">Pi</div>
+                                      <div class="widget__temp">
+                                          <div class="widget__temp-container">
+                                              <div id="temp4_bar" class="widget__temp-bar"></div>
+                                          </div>
+                                      </div>
+                                      <div id="temp4_text" class="widget__label-unit">°C</div>
+                                  </div>
+                                  <div class="widget__label widget__label--lg widget__label-temp">
+                                      <div class="widget__label-name">TBM
+                                          <div class="tooltip">Test Board Module</div>
+                                      </div>
+                                      <div class="widget__temp">
+                                          <div class="widget__temp-container">
+                                              <div id="temp4_bar" class="widget__temp-bar"></div>
+                                          </div>
+                                      </div>
+                                      <div id="temp4_text" class="widget__label-unit">°C</div>
+                                  </div>
                                 </div>
                             </div>
 
-                            <div class="modal__grid-temp">
-                                <div class="widget__heading-container">
-                                    <h2 class="widget__heading">Temperature 5</h2>
-                                </div>
-
-                                <div class="widget__label widget__label--lg">
-                                    <div class="widget__label-name">Pi</div>
-                                    <div class="widget__temp">
-                                        <div class="widget__temp-container">
-                                            <div id="temp2_bar" class="widget__temp-bar"></div>
+                            <div class="temp">
+                                <div class="temp__title-container">
+                                    <h3 class="temp__title">TEMP - 5</h3>
+                                    <div class="indicator__failed indicator__failed--ct">
+                                        <svg id="S1C1CI1" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"></circle>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        <div class="indicator__failed-text indicator__failed-text--dark-theme">
+                                            <h4>Failed</h4>
+                                            <h5 id="S1C1CN1">0000</h5>
                                         </div>
                                     </div>
-                                    <div id="temp2_text" class="widget__label-unit">°C</div>
                                 </div>
 
-                                <div class="widget__label widget__label--lg">
-                                    <div class="widget__label-name">TBM
-                                        <div class="tooltip">Test Board Module</div>
-                                    </div>
-                                    <div class="widget__temp">
-                                        <div class="widget__temp-container">
-                                            <div id="temp2_bar" class="widget__temp-bar"></div>
-                                        </div>
-                                    </div>
-                                    <div id="temp2_text" class="widget__label-unit">°C</div>
+                                <div class="temp__widget-container">
+                                  <div class="widget__label widget__label--lg widget__label-temp">
+                                      <div class="widget__label-name">Pi</div>
+                                      <div class="widget__temp">
+                                          <div class="widget__temp-container">
+                                              <div id="temp5_bar" class="widget__temp-bar"></div>
+                                          </div>
+                                      </div>
+                                      <div id="temp5_text" class="widget__label-unit">°C</div>
+                                  </div>
+                                  <div class="widget__label widget__label--lg widget__label-temp">
+                                      <div class="widget__label-name">TBM
+                                          <div class="tooltip">Test Board Module</div>
+                                      </div>
+                                      <div class="widget__temp">
+                                          <div class="widget__temp-container">
+                                              <div id="temp5_bar" class="widget__temp-bar"></div>
+                                          </div>
+                                      </div>
+                                      <div id="temp5_text" class="widget__label-unit">°C</div>
+                                  </div>
                                 </div>
                             </div>
 
-                            <div class="modal__grid-temp">
-                                <div class="widget__heading-container">
-                                    <h2 class="widget__heading">Temperature 6</h2>
-                                </div>
-                                <div class="widget__label widget__label--lg">
-                                    <div class="widget__label-name">Pi</div>
-                                    <div class="widget__temp">
-                                        <div class="widget__temp-container">
-                                            <div id="temp2_bar" class="widget__temp-bar"></div>
+                            <div class="temp">
+                                <div class="temp__title-container">
+                                    <h3 class="temp__title">TEMP - 6</h3>
+                                    <div class="indicator__failed indicator__failed--ct">
+                                        <svg id="S1C1CI1" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"></circle>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        <div class="indicator__failed-text indicator__failed-text--dark-theme">
+                                            <h4>Failed</h4>
+                                            <h5 id="S1C1CN1">0000</h5>
                                         </div>
                                     </div>
-                                    <div id="temp2_text" class="widget__label-unit">°C</div>
                                 </div>
 
-                                <div class="widget__label widget__label--lg">
-                                    <div class="widget__label-name">TBM
-                                        <div class="tooltip">Test Board Module</div>
-                                    </div>
-                                    <div class="widget__temp">
-                                        <div class="widget__temp-container">
-                                            <div id="temp2_bar" class="widget__temp-bar"></div>
-                                        </div>
-                                    </div>
-                                    <div id="temp2_text" class="widget__label-unit">°C</div>
+                                <div class="temp__widget-container">
+                                  <div class="widget__label widget__label--lg widget__label-temp">
+                                      <div class="widget__label-name">Pi</div>
+                                      <div class="widget__temp">
+                                          <div class="widget__temp-container">
+                                              <div id="temp6_bar" class="widget__temp-bar"></div>
+                                          </div>
+                                      </div>
+                                      <div id="temp6_text" class="widget__label-unit">°C</div>
+                                  </div>
+                                  <div class="widget__label widget__label--lg widget__label-temp">
+                                      <div class="widget__label-name">TBM
+                                          <div class="tooltip">Test Board Module</div>
+                                      </div>
+                                      <div class="widget__temp">
+                                          <div class="widget__temp-container">
+                                              <div id="temp6_bar" class="widget__temp-bar"></div>
+                                          </div>
+                                      </div>
+                                      <div id="temp6_text" class="widget__label-unit">°C</div>
+                                  </div>
                                 </div>
                             </div>
 
-                            <div class="modal__grid-temp">
-                                <div class="widget__heading-container">
-                                    <h2 class="widget__heading">Temperature 7</h2>
-                                </div>
-                                <div class="widget__label widget__label--lg">
-                                    <div class="widget__label-name">Pi</div>
-                                    <div class="widget__temp">
-                                        <div class="widget__temp-container">
-                                            <div id="temp2_bar" class="widget__temp-bar"></div>
+                            <div class="temp">
+                                <div class="temp__title-container">
+                                    <h3 class="temp__title">TEMP - 7</h3>
+                                    <div class="indicator__failed indicator__failed--ct">
+                                        <svg id="S1C1CI1" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"></circle>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        <div class="indicator__failed-text indicator__failed-text--dark-theme">
+                                            <h4>Failed</h4>
+                                            <h5 id="S1C1CN1">0000</h5>
                                         </div>
                                     </div>
-                                    <div id="temp2_text" class="widget__label-unit">°C</div>
                                 </div>
 
-                                <div class="widget__label widget__label--lg">
-                                    <div class="widget__label-name">TBM
-                                        <div class="tooltip">Test Board Module</div>
-                                    </div>
-                                    <div class="widget__temp">
-                                        <div class="widget__temp-container">
-                                            <div id="temp2_bar" class="widget__temp-bar"></div>
-                                        </div>
-                                    </div>
-                                    <div id="temp2_text" class="widget__label-unit">°C</div>
+                                <div class="temp__widget-container">
+                                  <div class="widget__label widget__label--lg widget__label-temp">
+                                      <div class="widget__label-name">Pi</div>
+                                      <div class="widget__temp">
+                                          <div class="widget__temp-container">
+                                              <div id="temp7_bar" class="widget__temp-bar"></div>
+                                          </div>
+                                      </div>
+                                      <div id="temp7_text" class="widget__label-unit">°C</div>
+                                  </div>
+                                  <div class="widget__label widget__label--lg widget__label-temp">
+                                      <div class="widget__label-name">TBM
+                                          <div class="tooltip">Test Board Module</div>
+                                      </div>
+                                      <div class="widget__temp">
+                                          <div class="widget__temp-container">
+                                              <div id="temp7_bar" class="widget__temp-bar"></div>
+                                          </div>
+                                      </div>
+                                      <div id="temp7_text" class="widget__label-unit">°C</div>
+                                  </div>
                                 </div>
                             </div>
 
-                            <div class="modal__grid-temp">
-                                <div class="widget__heading-container">
-                                    <h2 class="widget__heading">Temperature 8</h2>
-                                </div>
-                                <div class="widget__label widget__label--lg">
-                                    <div class="widget__label-name">Pi</div>
-                                    <div class="widget__temp">
-                                        <div class="widget__temp-container">
-                                            <div id="temp2_bar" class="widget__temp-bar"></div>
+                            <div class="temp">
+                                <div class="temp__title-container">
+                                    <h3 class="temp__title">TEMP - 8</h3>
+                                    <div class="indicator__failed indicator__failed--ct">
+                                        <svg id="S1C1CI1" class="indicator__failed-icon" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18.2856" cy="18" r="14.7273" fill="#EEF1F6"></circle>
+                                            <path d="M23.1946 13.0909L13.3765 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M13.3766 13.0909L23.1948 22.9091" stroke="#AABED4" stroke-width="3.27273" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        <div class="indicator__failed-text indicator__failed-text--dark-theme">
+                                            <h4>Failed</h4>
+                                            <h5 id="S1C1CN1">0000</h5>
                                         </div>
                                     </div>
-                                    <div id="temp2_text" class="widget__label-unit">°C</div>
                                 </div>
 
-                                <div class="widget__label widget__label--lg">
-                                    <div class="widget__label-name">TBM
-                                        <div class="tooltip">Test Board Module</div>
-                                    </div>
-                                    <div class="widget__temp">
-                                        <div class="widget__temp-container">
-                                            <div id="temp2_bar" class="widget__temp-bar"></div>
-                                        </div>
-                                    </div>
-                                    <div id="temp2_text" class="widget__label-unit">°C</div>
+                                <div class="temp__widget-container">
+                                  <div class="widget__label widget__label--lg widget__label-temp">
+                                      <div class="widget__label-name">Pi</div>
+                                      <div class="widget__temp">
+                                          <div class="widget__temp-container">
+                                              <div id="temp8_bar" class="widget__temp-bar"></div>
+                                          </div>
+                                      </div>
+                                      <div id="temp8_text" class="widget__label-unit">°C</div>
+                                  </div>
+                                  <div class="widget__label widget__label--lg widget__label-temp">
+                                      <div class="widget__label-name">TBM
+                                          <div class="tooltip">Test Board Module</div>
+                                      </div>
+                                      <div class="widget__temp">
+                                          <div class="widget__temp-container">
+                                              <div id="temp8_bar" class="widget__temp-bar"></div>
+                                          </div>
+                                      </div>
+                                      <div id="temp8_text" class="widget__label-unit">°C</div>
+                                  </div>
                                 </div>
                             </div>
 
@@ -2609,23 +2710,23 @@ function addStationTables(quantity) {
     // Create charts for Stations #STA
     var chArray = [0];
     for (var k = 1; k <= 6; k++) {
-        var CT1 = new stationCharts(i, k, 1);
-        var CT2 = new stationCharts(i, k, 2);
-        var CT3 = new stationCharts(i, k, 3);
-        var CT4 = new stationCharts(i, k, 4);
-        var CT5 = new stationCharts(i, k, 5);
-        var CT6 = new stationCharts(i, k, 6);
-        var CT7 = new stationCharts(i, k, 7);
-        var CT8 = new stationCharts(i, k, 8);
-        CT1.createChart();
-        CT2.createChart();
-        CT3.createChart();
-        CT4.createChart();
-        CT5.createChart();
-        CT6.createChart();
-        CT7.createChart();
-        CT8.createChart();
-        chArray.push([0, CT1, CT2, CT3, CT4, CT5, CT6, CT7, CT8]);
+      var CT1 = new stationCharts(i, k, 1);
+      var CT2 = new stationCharts(i, k, 2);
+      var CT3 = new stationCharts(i, k, 3);
+      var CT4 = new stationCharts(i, k, 4);
+      var CT5 = new stationCharts(i, k, 5);
+      var CT6 = new stationCharts(i, k, 6);
+      var CT7 = new stationCharts(i, k, 7);
+      var CT8 = new stationCharts(i, k, 8);
+      CT1.createChart();
+      CT2.createChart();
+      CT3.createChart();
+      CT4.createChart();
+      CT5.createChart();
+      CT6.createChart();
+      CT7.createChart();
+      CT8.createChart();
+      chArray.push([0, CT1, CT2, CT3, CT4, CT5, CT6, CT7, CT8]);
     }
     BuildArray.push(chArray);
   }
@@ -2644,9 +2745,9 @@ function showModal(graphID) {
 }
 
 function showModalCentered(graphID) {
-    var modalGrid = document.getElementById(graphID);
-    modalGrid.classList.toggle("modal__show--temps");
-  }
+  var modalGrid = document.getElementById(graphID);
+  modalGrid.classList.toggle("modal__show--temps");
+}
 
 function refreshPIList(station, quantity, current) {
   if (station != 0) {

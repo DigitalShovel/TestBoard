@@ -1,39 +1,39 @@
 .modal {
   position: relative;
-  display: none;
   position: fixed;
-  inset: 0;
-  max-height: 100%;
-  background-color: transparent;
-  padding: 2rem;
   z-index: 999;
+  display: none;
   overflow-y: scroll;
+  max-height: 100%;
+  padding: 2rem;
+  background-color: transparent;
+  inset: 0;
 
   &:after {
     position: fixed;
-    content: "";
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 10px;
-    background: rgba(0, 0, 0, 0.9);
-    backdrop-filter: blur(5px);
     z-index: -2;
+    top: 0;
+    right: 10px;
+    bottom: 0;
+    left: 0;
+    content: "";
+    background: rgba(0, 0, 0, .9);
+    backdrop-filter: blur(5px);
   }
 
   &__show {
     &--channels {
       display: grid;
-      grid-template-columns: 110px 1fr;
       align-items: flex-start;
       gap: 1rem;
+      grid-template-columns: 110px 1fr;
     }
 
     &--temps {
       display: flex;
-      gap: 1rem;
       align-items: center;
       justify-content: center;
+      gap: 1rem;
 
       @media (max-width: 768px) {
         align-items: flex-start;
@@ -49,21 +49,21 @@
     display: grid;
 
     &-ct {
+      overflow: hidden;
       width: 400px;
       height: 370px;
-      background-color: #fff;
       border-radius: 5px;
-      overflow: hidden;
+      background-color: #fff;
     }
 
     &-temp {
       position: relative;
       display: flex;
+      overflow: hidden;
       flex-direction: column;
-      gap: 0.5rem;
-      background-color: var(--blue-600);
-      padding: 1rem;
+      gap: .5rem;
       border-radius: 5px;
+      background-color: var(--blue-600);
     }
 
     &--ct {
@@ -94,7 +94,7 @@
       @media (max-width: 1200px) {
         grid-template-columns: repeat(2, 1fr);
       }
-      
+
       @media (max-width: 768px) {
         grid-template-columns: repeat(1, 1fr);
       }
@@ -104,18 +104,20 @@
   &__btn-hide,
   &__btn-hide svg {
     circle {
-      fill: var(--primary-color);
+      fill: var(--blue-500);
     }
+
     path {
-      stroke: var(--blue-200);
+      stroke: var(--blue-100);
     }
 
     &:hover {
       circle {
         fill: var(--blue-400);
       }
+
       path {
-        stroke: var(--blue-100);
+        stroke: var(--blue-50);
       }
     }
   }
@@ -128,13 +130,44 @@
   }
 }
 
+.temp {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  border-radius: 5px;
+  background-color: var(--blue-600);
+
+  &__title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+    border-radius: 5px 5px 0 0;
+    background-color: var(--blue-800);
+  }
+
+  &__title {
+    font-size: 1rem;
+    letter-spacing: -.3px;
+
+    color: var(--blue-50);
+  }
+
+  &__widget-container {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: 1rem;
+  }
+}
+
 .grid-item {
   &__title {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5rem 1rem;
-    background-color: var(--blue-100);
+    padding: .5rem 1rem;
+    background-color: var(--cool-gray-50);
   }
 
   &__title h3 {

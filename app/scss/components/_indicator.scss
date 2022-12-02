@@ -17,7 +17,7 @@
     padding: 0.5rem 0.8rem;
     align-items: center;
     justify-content: center;
-    background-color: var(--cool-gray-200);
+    background-color: var(--cool-gray-50);
     text-transform: uppercase;
   }
 
@@ -32,11 +32,11 @@
     }
 
     &--success {
-      background-color: var(--success-700);
+      background-color: var(--teal-500);
     }
 
     &--fail {
-      background-color: var(--danger-500);
+      background-color: var(--red-400);
     }
   }
 
@@ -54,17 +54,17 @@
       min-width: 36px;
 
       circle {
-        stroke: var(--cool-gray-400);
+        stroke: var(--blue-gray-200);
         fill: none;
       }
 
       &--fail {
         circle {
-          fill: var(--danger-200);
+          fill: var(--red-200);
         }
 
         path {
-          stroke: var(--danger-500);
+          stroke: var(--red-500);
         }
       }
     }
@@ -80,13 +80,19 @@
       font-size: 0.6rem;
       letter-spacing: 0.5px;
       text-transform: uppercase;
-      color: var(--cool-gray-400);
+      color: var(--blue-gray-400);
     }
 
     &-text h5 {
       margin-top: -4px;
       font-weight: 600;
       letter-spacing: -0.5px;
+    }
+
+    &-text--dark-theme {
+      h5 {
+        color: var(--blue-gray-50);
+      }
     }
   }
 }

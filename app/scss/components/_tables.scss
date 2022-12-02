@@ -9,7 +9,7 @@ table {
   }
 
   th {
-    background-color: var(--blue-150);
+    background-color: var(--blue-50);
     letter-spacing: -0.1px;
   }
 
@@ -53,7 +53,7 @@ table {
 
     tr {
       &:not(:last-child) {
-        border-bottom: 1px solid var(--blue-200);
+        border-bottom: 1px solid var(--blue-50);
       }
 
       &:last-child {
@@ -67,7 +67,7 @@ table {
       }
 
       td:not(:last-child) {
-        border-right: 1px solid var(--blue-200);
+        border-right: 1px solid var(--blue-50);
       }
     }
   }
@@ -114,13 +114,13 @@ table {
   }
 
   &__heading {
-    color: var(--blue-100);
+    color: var(--blue-50);
     font-size: 0.9rem;
     background-color: var(--blue-700);
   }
 
   &__subheading {
-    background-color: var(--blue-150);
+    background-color: var(--blue-50);
     border-right: none !important;
     font-weight: 600;
     letter-spacing: -0.1px;
@@ -179,19 +179,19 @@ table {
     }
 
     rect:nth-child(2) {
-      fill: var(--blue-100);
+      fill: var(--blue-50);
     }
 
     rect:nth-child(3) {
-      fill: var(--primary-color);
+      fill: var(--blue-500);
     }
 
     rect:nth-child(4) {
-      fill: var(--blue-100);
+      fill: var(--blue-50);
     }
 
     rect:nth-child(5) {
-      fill: var(--primary-color);
+      fill: var(--blue-500);
     }
   }
 }
@@ -199,7 +199,7 @@ table {
 .logo-loading {
   max-height: 18px;
   animation: rotate 2000ms linear forwards infinite;
-  
+
   &--disable {
     animation: none;
   }
@@ -209,6 +209,7 @@ table {
   from {
     transform: rotateY(0deg);
   }
+
   to {
     transform: rotateY(360deg);
   }

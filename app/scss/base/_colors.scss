@@ -1,57 +1,83 @@
 // Color Palette
 
 :root {
-  --primary-color: hsla(213, 75%, 54%, 1);
-  --blue-100: hsla(213, 100%, 97%, 1);
-  --blue-150: hsla(213, 100%, 95%, 1);
-  --blue-200: hsla(213, 100%, 90%, 1);
-  --blue-300: hsla(213, 100%, 80%, 1);
-  --blue-400: hsla(213, 69%, 70%, 1);
-  --blue-500: hsla(213, 69%, 60%, 1);
-  --blue-600: hsla(213, 69%, 42%, 1);
-  --blue-700: hsla(213, 78%, 32%, 1);
-  --blue-800: hsla(213, 78%, 22%, 1);
-  --blue-900: hsla(213, 78%, 16%, 1);
-
-  --yellow-600: hsla(42, 87%, 55%, 1);
-  --yellow-200: hsla(48, 100%, 88%, 1);
+  --blue-50: hsl(202, 100%, 95%);
+  --blue-100: hsl(204, 100%, 86%);
+  --blue-200: hsl(206, 93%, 73%);
+  --blue-300: hsl(208, 88%, 62%);
+  --blue-400: hsl(210, 83%, 53%);
+  --blue-500: hsl(213, 75%, 54%);
+  --blue-600: hsl(214, 95%, 36%);
+  --blue-700: hsl(215, 96%, 32%);
+  --blue-800: hsl(216, 98%, 25%);
+  --blue-900: hsl(218, 100%, 17%);
 
   --blend-color-dark: hsla(0, 0%, 0%, 0.5);
-  --blend-color-light: hsla(0, 0%, 100%, 0.5);
+  --blend-color-light: hsla(255, 255%, 100%, 0.5);
 
-  --warm-gray-100: hsla(216, 5%, 98%, 1);
-  --warm-gray-200: hsla(214, 5%, 90%, 1);
-  --warm-gray-300: hsla(211, 10%, 80%, 1);
-  --warm-gray-400: hsla(211, 15%, 70%, 1);
-  --warm-gray-500: hsla(211, 15%, 60%, 1);
-  --warm-gray-600: hsla(211, 15%, 43%, 1);
+  --warm-gray-50: hsl(0, 0%, 99%);
+  --warm-gray-100: hsl(0, 0%, 95%);
+  --warm-gray-200: hsl(210, 4%, 90%);
+  --warm-gray-300: hsl(211, 5%, 80%);
+  --warm-gray-400: hsl(211, 5%, 70%);
+  --warm-gray-500: hsl(211, 5%, 60%);
+  --warm-gray-600: hsl(211, 5%, 50%);
+  --warm-gray-700: hsl(211, 5%, 40%);
+  --warm-gray-800: hsl(211, 5%, 30%);
+  --warm-gray-900: hsl(211, 5%, 20%);
 
-  --cool-gray-100: hsla(216, 100%, 98%, 1);
-  --cool-gray-200: hsla(214, 50%, 95%, 1);
-  --cool-gray-300: hsla(211, 32%, 85%, 1);
-  --cool-gray-400: hsla(211, 30%, 70%, 1);
-  --cool-gray-500: hsla(211, 33%, 55%, 1);
-  --cool-gray-600: hsla(211, 30%, 43%, 1);
-  --cool-gray-700: hsla(211, 30%, 33%, 1);
-  --cool-gray-800: hsla(211, 30%, 23%, 1);
+  --cool-gray-50: hsl(210, 33%, 97%);
+  --cool-gray-100: hsl(207, 15%, 91%);
+  --cool-gray-200: hsl(210, 16%, 82%);
+  --cool-gray-300: hsl(211, 13%, 65%);
+  --cool-gray-400: hsl(211, 10%, 53%);
+  --cool-gray-500: hsl(211, 12%, 43%);
+  --cool-gray-600: hsl(209, 14%, 37%);
+  --cool-gray-700: hsl(209, 18%, 30%);
+  --cool-gray-800: hsl(209, 20%, 25%);
+  --cool-gray-900: hsl(210, 24%, 16%);
 
-  --danger-100: hsla(0, 49%, 97%, 1);
-  --danger-200: hsla(0, 49%, 90%, 1);
-  --danger-500: hsla(0, 74%, 65%, 1);
-  --danger-600: hsla(360, 54%, 55%, 1);
-  --danger-700: hsla(360, 50%, 45%, 1);
+  --blue-gray-50: hsl(210, 36%, 96%);
+  --blue-gray-100: hsl(212, 33%, 89%);
+  --blue-gray-200: hsl(210, 31%, 80%);
+  --blue-gray-300: hsl(211, 27%, 70%);
+  --blue-gray-400: hsl(209, 23%, 60%);
+  --blue-gray-500: hsl(210, 22%, 49%);
+  --blue-gray-600: hsl(209, 28%, 39%);
+  --blue-gray-700: hsl(209, 34%, 30%);
+  --blue-gray-800: hsl(211, 39%, 23%);
+  --blue-gray-900: hsl(209, 61%, 16%);
 
-  --warning-100: hsla(43, 49%, 97%, 1);
-  --warning-200: hsla(43, 49%, 90%, 1);
-  --warning-500: hsla(40, 74%, 65%, 1);
-  --warning-600: hsla(40, 54%, 55%, 1);
-  --warning-700: hsla(40, 50%, 45%, 1);
+  --red-50: hsl(360, 100%, 97%);
+  --red-100: hsl(360, 82%, 89%);
+  --red-200: hsl(360, 77%, 78%);
+  --red-300: hsl(360, 71%, 66%);
+  --red-400: hsl(360, 64%, 55%);
+  --red-500: hsl(360, 67%, 44%);
+  --red-600: hsl(360, 72%, 38%);
+  --red-700: hsl(360, 79%, 32%);
+  --red-800: hsl(360, 85%, 25%);
+  --red-900: hsl(360, 92%, 20%);
 
-  --success-100: hsla(148, 49%, 97%, 1);
-  --success-200: hsla(148, 49%, 90%, 1);
-  --success-500: hsla(148, 64%, 65%, 1);
-  --success-600: hsla(148, 54%, 55%, 1);
-  --success-700: hsla(148, 50%, 45%, 1);
-  --success-800: hsla(148, 50%, 35%, 1);
-  --success-900: hsla(148, 50%, 25%, 1);
+  --yellow-50: hsl(49, 100%, 96%);
+  --yellow-100: hsl(48, 100%, 88%);
+  --yellow-200: hsl(48, 95%, 76%);
+  --yellow-300: hsl(48, 94%, 68%);
+  --yellow-400: hsl(44, 92%, 63%);
+  --yellow-500: hsl(42, 87%, 55%);
+  --yellow-600: hsl(36, 77%, 49%);
+  --yellow-700: hsl(29, 80%, 44%);
+  --yellow-800: hsl(22, 82%, 39%);
+  --yellow-900: hsl(15, 86%, 30%);
+
+  --teal-50: hsl(165, 67%, 96%);
+  --teal-100: hsl(163, 75%, 87%);
+  --teal-200: hsl(162, 73%, 74%);
+  --teal-300: hsl(164, 70%, 63%);
+  --teal-400: hsl(166, 64%, 49%);
+  --teal-500: hsl(168, 78%, 41%);
+  --teal-600: hsl(170, 91%, 32%);
+  --teal-700: hsl(172, 94%, 26%);
+  --teal-800: hsl(172, 98%, 20%);
+  --teal-900: hsl(176, 100%, 13%);
 }
