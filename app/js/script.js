@@ -403,7 +403,15 @@ function scanning(PIList, ESPList, dynamClient) {
       }
       espQtyOLD = espQty;
       if (espQty > 0) {
-        console.log("List: ", data["Items"])
+
+        const sortByTwo = (arr = []) => {
+          arr.sort((a, b) => {
+             return a.Station - b.Station || a.Channel - b.Channel;
+          });
+        };
+        sortByTwo(data["Items"]);
+        console.log(data["Items"]);
+
         for (let i = 0; i < espQty; i++) {
           document.getElementById("ESP#" + (i + 1)).innerHTML = data["Items"][i]["MacAddress"];
           refreshESPList(data["Items"][i]["Station"], data["Items"][i]["Channel"], i + 1);
