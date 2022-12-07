@@ -410,7 +410,6 @@ function scanning(PIList, ESPList, dynamClient) {
           });
         };
         sortByTwo(data["Items"]);
-        console.log(data["Items"]);
 
         for (let i = 0; i < espQty; i++) {
           document.getElementById("ESP#" + (i + 1)).innerHTML = data["Items"][i]["MacAddress"];
