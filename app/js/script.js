@@ -170,13 +170,9 @@ function readCT(sta) {
           for (var n = 1; n <= 6; n++) {
             BuildArray[sta][n][1].success &= data["Items"][i]["Success"][n];
             if (BuildArray[sta][n][1].success) {
-              //document.getElementById('S1F'+n).classList.remove("indicator__light--fail", "indicator__light--success");
-              //document.getElementById('S1F'+n).classList.add("indicator__light--success");
               document.getElementById("S" + sta + "F" + n).classList.remove("indicator__light--fail", "indicator__light--success");
               document.getElementById("S" + sta + "F" + n).classList.add("indicator__light--success");
             } else {
-              //document.getElementById('S1F'+n).classList.remove("indicator__light--fail", "indicator__light--success");
-              //document.getElementById('S1F'+n).classList.add("indicator__light--fail");
               document.getElementById("S" + sta + "F" + n).classList.remove("indicator__light--fail", "indicator__light--success");
               document.getElementById("S" + sta + "F" + n).classList.add("indicator__light--fail");
             }
@@ -407,6 +403,7 @@ function scanning(PIList, ESPList, dynamClient) {
       }
       espQtyOLD = espQty;
       if (espQty > 0) {
+        console.log("List: ", data["Items"])
         for (let i = 0; i < espQty; i++) {
           document.getElementById("ESP#" + (i + 1)).innerHTML = data["Items"][i]["MacAddress"];
           refreshESPList(data["Items"][i]["Station"], data["Items"][i]["Channel"], i + 1);
