@@ -2390,10 +2390,10 @@ function addStationTables(quantity) {
                                       <div class="widget__label-name">Pi</div>
                                       <div class="widget__temp">
                                           <div class="widget__temp-container">
-                                              <div id="temp1_bar" class="widget__temp-bar"></div>
+                                              <div id="S${i}temp1_bar" class="widget__temp-bar"></div>
                                           </div>
                                       </div>
-                                      <div id="temp1_text" class="widget__label-unit">°C</div>
+                                      <div id="S${i}temp1_text" class="widget__label-unit">°C</div>
                                   </div>
                                   <div class="widget__label widget__label--lg widget__label-temp">
                                       <div class="widget__label-name">TBM
@@ -2430,10 +2430,10 @@ function addStationTables(quantity) {
                                       <div class="widget__label-name">Pi</div>
                                       <div class="widget__temp">
                                           <div class="widget__temp-container">
-                                              <div id="temp2_bar" class="widget__temp-bar"></div>
+                                              <div id="S${i}temp2_bar" class="widget__temp-bar"></div>
                                           </div>
                                       </div>
-                                      <div id="temp2_text" class="widget__label-unit">°C</div>
+                                      <div id="S${i}temp2_text" class="widget__label-unit">°C</div>
                                   </div>
                                   <div class="widget__label widget__label--lg widget__label-temp">
                                       <div class="widget__label-name">TBM
@@ -2470,10 +2470,10 @@ function addStationTables(quantity) {
                                       <div class="widget__label-name">Pi</div>
                                       <div class="widget__temp">
                                           <div class="widget__temp-container">
-                                              <div id="temp3_bar" class="widget__temp-bar"></div>
+                                              <div id="S${i}temp3_bar" class="widget__temp-bar"></div>
                                           </div>
                                       </div>
-                                      <div id="temp3_text" class="widget__label-unit">°C</div>
+                                      <div id="S${i}temp3_text" class="widget__label-unit">°C</div>
                                   </div>
                                   <div class="widget__label widget__label--lg widget__label-temp">
                                       <div class="widget__label-name">TBM
@@ -2510,10 +2510,10 @@ function addStationTables(quantity) {
                                       <div class="widget__label-name">Pi</div>
                                       <div class="widget__temp">
                                           <div class="widget__temp-container">
-                                              <div id="temp4_bar" class="widget__temp-bar"></div>
+                                              <div id="S${i}temp4_bar" class="widget__temp-bar"></div>
                                           </div>
                                       </div>
-                                      <div id="temp4_text" class="widget__label-unit">°C</div>
+                                      <div id="S${i}temp4_text" class="widget__label-unit">°C</div>
                                   </div>
                                   <div class="widget__label widget__label--lg widget__label-temp">
                                       <div class="widget__label-name">TBM
@@ -2550,10 +2550,10 @@ function addStationTables(quantity) {
                                       <div class="widget__label-name">Pi</div>
                                       <div class="widget__temp">
                                           <div class="widget__temp-container">
-                                              <div id="temp5_bar" class="widget__temp-bar"></div>
+                                              <div id="S${i}temp5_bar" class="widget__temp-bar"></div>
                                           </div>
                                       </div>
-                                      <div id="temp5_text" class="widget__label-unit">°C</div>
+                                      <div id="S${i}temp5_text" class="widget__label-unit">°C</div>
                                   </div>
                                   <div class="widget__label widget__label--lg widget__label-temp">
                                       <div class="widget__label-name">TBM
@@ -2590,10 +2590,10 @@ function addStationTables(quantity) {
                                       <div class="widget__label-name">Pi</div>
                                       <div class="widget__temp">
                                           <div class="widget__temp-container">
-                                              <div id="temp6_bar" class="widget__temp-bar"></div>
+                                              <div id="S${i}temp6_bar" class="widget__temp-bar"></div>
                                           </div>
                                       </div>
-                                      <div id="temp6_text" class="widget__label-unit">°C</div>
+                                      <div id="S${i}temp6_text" class="widget__label-unit">°C</div>
                                   </div>
                                   <div class="widget__label widget__label--lg widget__label-temp">
                                       <div class="widget__label-name">TBM
@@ -2630,10 +2630,10 @@ function addStationTables(quantity) {
                                       <div class="widget__label-name">Pi</div>
                                       <div class="widget__temp">
                                           <div class="widget__temp-container">
-                                              <div id="temp7_bar" class="widget__temp-bar"></div>
+                                              <div id="S${i}temp7_bar" class="widget__temp-bar"></div>
                                           </div>
                                       </div>
-                                      <div id="temp7_text" class="widget__label-unit">°C</div>
+                                      <div id="S${i}temp7_text" class="widget__label-unit">°C</div>
                                   </div>
                                   <div class="widget__label widget__label--lg widget__label-temp">
                                       <div class="widget__label-name">TBM
@@ -2670,10 +2670,10 @@ function addStationTables(quantity) {
                                       <div class="widget__label-name">Pi</div>
                                       <div class="widget__temp">
                                           <div class="widget__temp-container">
-                                              <div id="temp8_bar" class="widget__temp-bar"></div>
+                                              <div id="S${i}temp8_bar" class="widget__temp-bar"></div>
                                           </div>
                                       </div>
-                                      <div id="temp8_text" class="widget__label-unit">°C</div>
+                                      <div id="S${i}temp8_text" class="widget__label-unit">°C</div>
                                   </div>
                                   <div class="widget__label widget__label--lg widget__label-temp">
                                       <div class="widget__label-name">TBM

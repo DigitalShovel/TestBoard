@@ -144,6 +144,10 @@ function auth() {
 const dataPerPlot = 91;
 let maxDataPerChart = dataPerPlot; // Number of data plus one
 
+// Temperature Limits Variables //
+var tempMin = -40;  // Given in Celsius
+var tempMax = 60; // Given in Celsius
+
 function readCT(sta) {
   var CUTvalue = true;
   var numberTestCount = 0;
@@ -225,6 +229,11 @@ function readCT(sta) {
               var valueRLYPI = extractRLYData(data["Items"][i], "RelayPI", n, m);
               var valueRLYESP = extractRLYData(data["Items"][i], "RelayESP", n, m);
               document.getElementById("S" + sta + "C" + n + "R" + m).classList.remove("indicator__light--fail", "indicator__light--success");
+              ////// Extract Temp data value //////
+              var valueTEMPPI = extractTEMPData(data["Items"][i], "Temp", m);
+              var percTemp = Number((tempMax - Number(valueTEMPPI))*100/(tempMax - tempMin)).toFixed(2);
+              document.getElementById("S" + sta + "temp" + m + "_bar").style.clipPath = 'inset(0 '+percTemp+'% 0 0)';
+              document.getElementById("S" + sta + "temp" + m + "_text").innerHTML = Number(valueTEMPPI).toFixed(0)+'°C';
 
               ////////////////// Check for failed CT's /////////////////////
               if (!data["Items"][i]["CTSuccess"][n][m]) {
@@ -305,6 +314,11 @@ function extractCTData(data, attribute, channel, ctnum) {
 ///////////////// Collect Relay data from DB //////////////////
 function extractRLYData(data, attribute, channel, ctnum) {
   return data[attribute][channel - 1][String("RLY" + ctnum)];
+}
+
+///////////////// Collect Temp data from DB //////////////////
+function extractTEMPData(data, attribute, tempnum) {
+  return data[attribute][0][String("Temp" + tempnum)];
 }
 
 ///////////////// Add & Remove Data to Chart ////////////////////
