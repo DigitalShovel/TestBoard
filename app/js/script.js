@@ -233,7 +233,7 @@ function readCT(sta) {
               var valueTEMPPI = extractTEMPData(data["Items"][i], "Temp", m);
               var percTemp = Number((tempMax - Number(valueTEMPPI))*100/(tempMax - tempMin)).toFixed(2);
               document.getElementById("S" + sta + "temp" + m + "_bar").style.clipPath = 'inset(0 '+percTemp+'% 0 0)';
-              document.getElementById("S" + sta + "temp" + m + "_text").innerHTML = Number(valueTEMPPI).toFixed(0)+'°C';
+              document.getElementById("S" + sta + "temp" + m + "_text").innerHTML = Number(valueTEMPPI).toFixed(1)+'°C';
 
               ////////////////// Check for failed CT's /////////////////////
               if (!data["Items"][i]["CTSuccess"][n][m]) {
