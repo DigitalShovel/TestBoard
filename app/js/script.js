@@ -144,6 +144,10 @@ function auth() {
 const dataPerPlot = 91;
 let maxDataPerChart = dataPerPlot; // Number of data plus one
 
+// Temperature Limits Variables //
+var tempMin = -40;  // Given in Celsius
+var tempMax = 60; // Given in Celsius
+
 function readCT(sta) {
   var CUTvalue = true;
   var numberTestCount = 0;
@@ -170,13 +174,9 @@ function readCT(sta) {
           for (var n = 1; n <= 6; n++) {
             BuildArray[sta][n][1].success &= data["Items"][i]["Success"][n];
             if (BuildArray[sta][n][1].success) {
-              //document.getElementById('S1F'+n).classList.remove("indicator__light--fail", "indicator__light--success");
-              //document.getElementById('S1F'+n).classList.add("indicator__light--success");
               document.getElementById("S" + sta + "F" + n).classList.remove("indicator__light--fail", "indicator__light--success");
               document.getElementById("S" + sta + "F" + n).classList.add("indicator__light--success");
             } else {
-              //document.getElementById('S1F'+n).classList.remove("indicator__light--fail", "indicator__light--success");
-              //document.getElementById('S1F'+n).classList.add("indicator__light--fail");
               document.getElementById("S" + sta + "F" + n).classList.remove("indicator__light--fail", "indicator__light--success");
               document.getElementById("S" + sta + "F" + n).classList.add("indicator__light--fail");
             }
@@ -229,6 +229,11 @@ function readCT(sta) {
               var valueRLYPI = extractRLYData(data["Items"][i], "RelayPI", n, m);
               var valueRLYESP = extractRLYData(data["Items"][i], "RelayESP", n, m);
               document.getElementById("S" + sta + "C" + n + "R" + m).classList.remove("indicator__light--fail", "indicator__light--success");
+              ////// Extract Temp data value //////
+              var valueTEMPPI = extractTEMPData(data["Items"][i], "Temp", m);
+              var percTemp = Number((tempMax - Number(valueTEMPPI))*100/(tempMax - tempMin)).toFixed(2);
+              document.getElementById("S" + sta + "temp" + m + "_bar").style.clipPath = 'inset(0 '+percTemp+'% 0 0)';
+              document.getElementById("S" + sta + "temp" + m + "_text").innerHTML = Number(valueTEMPPI).toFixed(1)+'°C';
 
               ////////////////// Check for failed CT's /////////////////////
               if (!data["Items"][i]["CTSuccess"][n][m]) {
@@ -309,6 +314,11 @@ function extractCTData(data, attribute, channel, ctnum) {
 ///////////////// Collect Relay data from DB //////////////////
 function extractRLYData(data, attribute, channel, ctnum) {
   return data[attribute][channel - 1][String("RLY" + ctnum)];
+}
+
+///////////////// Collect Temp data from DB //////////////////
+function extractTEMPData(data, attribute, tempnum) {
+  return data[attribute][0][String("Temp" + tempnum)];
 }
 
 ///////////////// Add & Remove Data to Chart ////////////////////
@@ -407,6 +417,14 @@ function scanning(PIList, ESPList, dynamClient) {
       }
       espQtyOLD = espQty;
       if (espQty > 0) {
+
+        const sortByTwo = (arr = []) => {
+          arr.sort((a, b) => {
+             return a.Station - b.Station || a.Channel - b.Channel;
+          });
+        };
+        sortByTwo(data["Items"]);
+
         for (let i = 0; i < espQty; i++) {
           document.getElementById("ESP#" + (i + 1)).innerHTML = data["Items"][i]["MacAddress"];
           refreshESPList(data["Items"][i]["Station"], data["Items"][i]["Channel"], i + 1);
