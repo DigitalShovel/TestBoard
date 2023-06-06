@@ -122,7 +122,16 @@
             <span>Refresh</span>
           </button>
         </li>
-        <li class="flex ai-c gap--sm">
+        <li class="actionbar__divider">
+          <select name="environment" id="environment" title="Select Environment">
+            <option value="default">Select Environment</option>
+            <option value="Mercury">Mercury</option>
+            <option value="Venus">Venus</option>
+            <option value="Earth">Earth</option>
+            <option value="Mars">Mars</option>
+          </select>
+        </li>
+        <li class="actionbar__divider flex ai-c gap--sm">
           <input class="input__text" type="text" name="input-data" id="inputData" placeholder="Enter amount of tests" />
           <button onclick="WebSocketTest()" class="btn btn--tertiary btn--has-icon">
             <svg class="actionbar__icon actionbar__icon--play" width="22" height="22" viewBox="0 0 22 22" fill="none"

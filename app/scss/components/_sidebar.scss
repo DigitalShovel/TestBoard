@@ -13,6 +13,10 @@
   border-right: 1px solid var(--blue-800);
   z-index: 99;
 
+  @media (min-height: 900px) {
+    overflow-y: auto;
+  }
+
   @media (max-width: 600px) {
     padding: 1rem;
     width: 100%;

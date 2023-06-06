@@ -7,7 +7,7 @@
     padding: 1rem;
   }
 
-  li:nth-child(3) {
+  &__divider {
     padding-left: 1rem;
     border-left: 1px solid var(--blue-800);
 
