@@ -10,7 +10,7 @@ function WebSocketTest() {
 
     ws.onopen = function () {
       // Web Socket is connected, send data using send()
-      ws.send('{"action": "sendMessage","message":' + inputData + "}");
+      ws.send('{"action": "sendMessage","message":' + inputData + ',"Environment":' + document.getElementById("environment").value + "}");
     };
 
     ws.onmessage = function (evt) {
