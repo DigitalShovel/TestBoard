@@ -419,17 +419,18 @@ function scanning(PIList, ESPList, dynamClient) {
       /////////////// Add Station Table ////////////////////
       removeStationTables(); 
       addStationTables(piQuantity);
-      for (var k = 1; k <= piQuantity; k++) {
+      /*for (var k = 1; k <= piQuantity; k++) {
         readCT(k);
-      }
+      }*/
 
 
       ///////////////////////////////////////////////////////////
       /////////////// Refresh chart every 5 seconds /////////////
       var inverval_timer = setInterval(function () {
-        for (var k = 1; k <= piQuantity; k++) {
+        /*for (var k = 1; k <= piQuantity; k++) {
           readCT(k);
-        }
+        }*/
+        handler();
       }, 500);
       /////////////////////////////////////////////////////////
       /////////////////////////////////////////////////////////
