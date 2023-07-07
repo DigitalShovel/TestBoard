@@ -380,6 +380,7 @@ function scanning(PIList, ESPList, dynamClient) {
   ///////////////////  Build PI List //////////////////////
   dynamClient.query(PIList, function (err, data) {
     if (err) {
+      console.log(err);
       location.replace(urlAccess);
     } else {
       piQuantity = parseInt(JSON.stringify(data["Count"], "0", 2));
