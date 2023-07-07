@@ -358,8 +358,13 @@ function readItem() {
   var docClient = new AWS.DynamoDB.DocumentClient();
 
   var item1 = {
-    TableName: "IoT_Testing_Unit_RaspPI",
+    //TableName: "IoT_Testing_Unit_RaspPI",
     //ProjectionExpression: "MacAddress"
+    TableName: "IoT_Testing_Unit_RaspPI",
+    KeyConditionExpression: "Environment = :environment",
+    ExpressionAttributeValues: {
+      ":environment": document.getElementById("environment").value,
+    },
   };
 
   var item2 = {
@@ -373,7 +378,7 @@ function readItem() {
 
 function scanning(PIList, ESPList, dynamClient) {
   ///////////////////  Build PI List //////////////////////
-  dynamClient.scan(PIList, function (err, data) {
+  dynamClient.query(PIList, function (err, data) {
     if (err) {
       location.replace(urlAccess);
     } else {
