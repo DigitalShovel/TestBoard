@@ -358,13 +358,8 @@ function readItem() {
   var docClient = new AWS.DynamoDB.DocumentClient();
 
   var item1 = {
-    //TableName: "IoT_Testing_Unit_RaspPI",
-    //ProjectionExpression: "MacAddress"
     TableName: "IoT_Testing_Unit_RaspPI",
-    KeyConditionExpression: "Environment = :environment",
-    ExpressionAttributeValues: {
-      ":environment": "Mercury",
-    },
+    //ProjectionExpression: "MacAddress"
   };
 
   var item2 = {
@@ -378,15 +373,14 @@ function readItem() {
 
 function scanning(PIList, ESPList, dynamClient) {
   ///////////////////  Build PI List //////////////////////
-  dynamClient.query(PIList, function (err, data) {
+  dynamClient.scan(PIList, function (err, data) {
     if (err) {
-      console.log(err);
-      //location.replace(urlAccess);
+      location.replace(urlAccess);
     } else {
       piQuantity = parseInt(JSON.stringify(data["Count"], "0", 2));
       document.getElementById("PI_Devices").innerHTML = piQuantity + " device(s)";
       /////////////// Add Station Table ////////////////////
-      removeStationTables();
+      removeStationTables(); 
       addStationTables(piQuantity);
       for (var k = 1; k <= piQuantity; k++) {
         readCT(k);
