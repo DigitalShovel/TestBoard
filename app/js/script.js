@@ -98,11 +98,7 @@ function stopTestWebSocket() {
 function checkStations() {
   var stationDict = {};
   for (var i = 0; i < piQuantity; i++) {
-    if (parseInt(document.getElementById("station-" + (i + 1)).value) == 0){
-      console.log("Empty");
-      continue;
-    }
-    else {
+    if (parseInt(document.getElementById("station-" + (i + 1)).value) != 0){
       stationDict[String(document.getElementById("PI#" + (i + 1)).textContent)] = {'Station': document.getElementById("station-" + (i + 1)).value, 'Environ':  document.getElementById("environment").value};//document.getElementById("station-" + (i + 1)).value;
       console.log(stationDict);
     }
