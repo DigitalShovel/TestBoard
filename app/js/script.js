@@ -149,8 +149,15 @@ let maxDataPerChart = dataPerPlot; // Number of data plus one
 // Temperature Limits Variables //
 var tempMin = -40;  // Given in Celsius
 var tempMax = 60; // Given in Celsius
+let environmentOLD = 0;
 
 function readCT(sta) {
+
+  if (String(document.getElementById("environment").value) != environmentOLD){
+    console.log("Different");
+    readItem();
+  }
+
   var CUTvalue = true;
   var numberTestCount = 0;
   if (sta != 0) {
@@ -368,6 +375,7 @@ function readItem() {
     //ProjectionExpression: "MacAddress"
   };
   scanning(item1, item2, docClient);
+  environmentOLD = String(document.getElementById("environment").value);
 }
 
 ///////////////////  Scan Database in DynamoDB //////////////////////
@@ -397,6 +405,9 @@ function scanning(PIList, ESPList, dynamClient) {
       for (var k = 1; k <= piQuantity; k++) {
         readCT(k);
       }
+
+
+      ///////////////////////////////////////////////////////////
       /////////////// Refresh chart every 5 seconds /////////////
       var inverval_timer = setInterval(function () {
         for (var k = 1; k <= piQuantity; k++) {
@@ -404,6 +415,8 @@ function scanning(PIList, ESPList, dynamClient) {
         }
       }, 500);
       /////////////////////////////////////////////////////////
+      /////////////////////////////////////////////////////////
+
       removePIList(piQuantity);
       for (let i = 0; i < piQtyOLD; i++) {
         document.getElementById("PI#" + (i + 1)).innerHTML = "Empty";
