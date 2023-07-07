@@ -424,14 +424,14 @@ function scanning(PIList, ESPList, dynamClient) {
       ///////////////////////////////////////////////////////////
       /////////////// Refresh chart every 5 seconds /////////////
       var inverval_timer = setInterval(function () {
-        /*for (var k = 1; k <= piQuantity; k++) {
+        for (var k = 1; k <= piQuantity; k++) {
           readCT(k);
-        }*/
-        handler();
+        }
+        /*handler();
         if (String(document.getElementById("environment").value) != environmentOLD){
           readItem();
-        }
-      }, 5000);
+        }*/
+      }, 500);
       /////////////////////////////////////////////////////////
       /////////////////////////////////////////////////////////
 
