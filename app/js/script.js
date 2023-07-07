@@ -360,6 +360,7 @@ let totalPI = 0;
 let espQtyOLD = 0;
 var piQuantity = 0;
 var espQty = 0;
+var piQ = 0;
 
 function readItem() {
   var docClient = new AWS.DynamoDB.DocumentClient();
@@ -377,6 +378,7 @@ function readItem() {
   environmentOLD = String(document.getElementById("environment").value);
 }
 
+let arrayOfPromises = [];
 
 ///////// Run script in parallel /////////////
 async function process(arrayOfPromises) {
@@ -385,10 +387,13 @@ async function process(arrayOfPromises) {
   return;
 }
 async function handler() {
-  let arrayOfPromises = [
+  /*let arrayOfPromises = [
     readCT(1),
     readCT(2),
-  ];
+  ];*/
+  for (var i = 1; i <= piQ; i++){
+    arrayOfPromises.push(readCT(i));
+  }
   
   await process(arrayOfPromises);
 }
@@ -401,11 +406,9 @@ function scanning(PIList, ESPList, dynamClient) {
     if (err) {
       location.replace(urlAccess);
     } else {
-      console.log(data);
-
       ////// Check PI quantity based on environment /////
       totalPI = parseInt(JSON.stringify(data["Count"], "0", 2));
-      var piQ = 0;
+      piQ = 0;
       for (let i = 0; i < totalPI; i++){
         if ((data["Items"][i]["Environment"] == "Sun") | (data["Items"][i]["Environment"] == String(document.getElementById("environment").value))){
           piQ += 1;
