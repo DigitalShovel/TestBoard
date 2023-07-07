@@ -98,7 +98,12 @@ function stopTestWebSocket() {
 function checkStations() {
   var stationDict = {};
   for (var i = 0; i < piQuantity; i++) {
-    stationDict[String(document.getElementById("PI#" + (i + 1)).textContent)] = {'Station': document.getElementById("station-" + (i + 1)).value, 'Environ':  document.getElementById("environment").value};//document.getElementById("station-" + (i + 1)).value;
+    if (document.getElementById("station-" + (i + 1)).value > 0){
+      continue
+    }
+    else {
+      stationDict[String(document.getElementById("PI#" + (i + 1)).textContent)] = {'Station': document.getElementById("station-" + (i + 1)).value, 'Environ':  document.getElementById("environment").value};//document.getElementById("station-" + (i + 1)).value;
+    }
   }
   return stationDict;
 }
