@@ -377,6 +377,7 @@ function scanning(PIList, ESPList, dynamClient) {
     if (err) {
       location.replace(urlAccess);
     } else {
+      console.log(data);
       piQuantity = parseInt(JSON.stringify(data["Count"], "0", 2));
       document.getElementById("PI_Devices").innerHTML = piQuantity + " device(s)";
       /////////////// Add Station Table ////////////////////
