@@ -154,7 +154,6 @@ let environmentOLD = 0;
 function readCT(sta) {
 
   if (String(document.getElementById("environment").value) != environmentOLD){
-    console.log("Different");
     readItem();
   }
 
@@ -376,6 +375,24 @@ function readItem() {
   };
   scanning(item1, item2, docClient);
   environmentOLD = String(document.getElementById("environment").value);
+}
+
+
+///////// Run script in parallel /////////////
+async function process(arrayOfPromises) {
+  console.time(`process`);
+  let responses = await Promise.all(arrayOfPromises);
+  for(let r of responses) {}
+  console.timeEnd(`process`);
+  return;
+}
+async function handler() {
+  let arrayOfPromises = [
+    readCT(1),
+    readCT(2),
+  ];
+  
+  await process(arrayOfPromises);
 }
 
 ///////////////////  Scan Database in DynamoDB //////////////////////
