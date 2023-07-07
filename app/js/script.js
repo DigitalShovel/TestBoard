@@ -363,7 +363,7 @@ function readItem() {
     TableName: "IoT_Testing_Unit_RaspPI",
     KeyConditionExpression: "Environment = :environment",
     ExpressionAttributeValues: {
-      ":environment": String(document.getElementById("environment").value),
+      ":environment": "Mercury",
     },
   };
 
