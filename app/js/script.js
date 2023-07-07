@@ -152,11 +152,6 @@ var tempMax = 60; // Given in Celsius
 let environmentOLD = 0;
 
 function readCT(sta) {
-
-  if (String(document.getElementById("environment").value) != environmentOLD){
-    readItem();
-  }
-
   var CUTvalue = true;
   var numberTestCount = 0;
   if (sta != 0) {
