@@ -151,11 +151,12 @@ var tempMin = -40;  // Given in Celsius
 var tempMax = 60; // Given in Celsius
 let environmentOLD = 0;
 
+var docClient = new AWS.DynamoDB.DocumentClient();
+
 function readCT(sta) {
   var CUTvalue = true;
   var numberTestCount = 0;
   if (sta != 0) {
-    var docClient = new AWS.DynamoDB.DocumentClient();
     var ctItem = {
       TableName: "IoT_Result",
       KeyConditionExpression: "Station = :station and #Time > :lastTime",
