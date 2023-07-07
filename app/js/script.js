@@ -172,7 +172,7 @@ function readCT(sta) {
         //alert(JSON.stringify(err, undefined, 2));
         console.log("Failed to read DB. Inform server admin.");
       } else {
-        console.log("Got Data from Station:"+sta+"Data Count: "+data["Count"]);
+        console.log("Got Data from Station:" +sta+ " Data Count: "+data["Count"]);
         for (let i = 0; i < data["Count"]; i++) {
           ////////////////////////  Change Failed Status Light  ////////////////////////
           for (var n = 1; n <= 6; n++) {
