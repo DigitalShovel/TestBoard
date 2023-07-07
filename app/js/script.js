@@ -380,10 +380,8 @@ function readItem() {
 
 ///////// Run script in parallel /////////////
 async function process(arrayOfPromises) {
-  console.time(`process`);
   let responses = await Promise.all(arrayOfPromises);
-  for(let r of responses) {}
-  console.timeEnd(`process`);
+  //for(let r of responses) {}
   return;
 }
 async function handler() {
