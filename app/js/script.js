@@ -151,7 +151,7 @@ var tempMin = -40;  // Given in Celsius
 var tempMax = 60; // Given in Celsius
 let environmentOLD = 0;
 
-var docClient = new AWS.DynamoDB.DocumentClient();
+let docClient = new AWS.DynamoDB.DocumentClient();
 
 function readCT(sta) {
   var CUTvalue = true;
