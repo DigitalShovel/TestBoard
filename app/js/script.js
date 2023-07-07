@@ -353,7 +353,6 @@ let piQtyOLD = 0;
 let totalPI = 0;
 let espQtyOLD = 0;
 var piQuantity = 0;
-var piQ = 0;
 var espQty = 0;
 
 function readItem() {
@@ -383,6 +382,7 @@ function scanning(PIList, ESPList, dynamClient) {
 
       ////// Check PI quantity based on environment /////
       totalPI = parseInt(JSON.stringify(data["Count"], "0", 2));
+      var piQ = 0;
       for (let i = 0; i < totalPI; i++){
         if ((data["Items"][i]["Environment"] == "Sun") | (data["Items"][i]["Environment"] == String(document.getElementById("environment").value))){
           piQ += 1;
