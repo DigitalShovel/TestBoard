@@ -432,6 +432,9 @@ function scanning(PIList, ESPList, dynamClient) {
           readCT(k);
         }*/
         handler();
+        if (String(document.getElementById("environment").value) != environmentOLD){
+          readItem();
+        }
       }, 5000);
       /////////////////////////////////////////////////////////
       /////////////////////////////////////////////////////////
