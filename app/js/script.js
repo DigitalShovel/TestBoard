@@ -350,8 +350,10 @@ function removeData(chart) {
 
 ///////////// Set DB table to be scanned /////////////////
 let piQtyOLD = 0;
+let totalPI = 0;
 let espQtyOLD = 0;
 var piQuantity = 0;
+var piQ = 0;
 var espQty = 0;
 
 function readItem() {
@@ -378,6 +380,15 @@ function scanning(PIList, ESPList, dynamClient) {
       location.replace(urlAccess);
     } else {
       console.log(data);
+
+      ////// Check PI quantity based on environment /////
+      totalPI = parseInt(JSON.stringify(data["Count"], "0", 2));
+      for (let i = 0; i < totalPI; i++){
+        if ((data["Items"][i]["Environment"] == "Sun") | (data["Items"][i]["Environment"] == String(document.getElementById("environment").value))){
+          piQ += 1;
+        }
+      }
+      console.log(piQ);
       piQuantity = parseInt(JSON.stringify(data["Count"], "0", 2));
       document.getElementById("PI_Devices").innerHTML = piQuantity + " device(s)";
       /////////////// Add Station Table ////////////////////
