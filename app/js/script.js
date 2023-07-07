@@ -98,7 +98,7 @@ function stopTestWebSocket() {
 function checkStations() {
   var stationDict = {};
   for (var i = 0; i < piQuantity; i++) {
-    if (document.getElementById("station-" + (i + 1)).value = 0){
+    if (document.getElementById("station-" + (i + 1)).value == 0){
       continue
     }
     else {
